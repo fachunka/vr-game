@@ -1,2 +1,2 @@
-# vr-game
-VR game
+# VR Game
+A VR Game
