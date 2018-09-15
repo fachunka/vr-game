@@ -22,4 +22,12 @@ public class destructionController : MonoBehaviour {
         }
 		
 	}
+    void OnTriggerEnter (Collider col)
+    {
+        if(col.gameObject.tag == "GameController")
+        {
+            Instantiate(remains, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+    }
 }

@@ -13,7 +13,7 @@ public class DoorAnim : MonoBehaviour {
 	
     void OnTriggerEnter (Collider col)
     {
-        if(col.gameObject.name == "RightHand" || col.gameObject.name == "LeftHand")
+        if(col.gameObject.tag == "GameController")
         {
             ani.enabled = true;
             Debug.Log("Hello");
@@ -22,7 +22,7 @@ public class DoorAnim : MonoBehaviour {
     
     void OnTriggerExit (Collider col)
     {
-        if(col.gameObject.name == "RightHand" || col.gameObject.name == "LeftHand")
+        if(col.gameObject.tag == "GameController")
         {
             ani.enabled = false;
             Debug.Log("Goodbye");
