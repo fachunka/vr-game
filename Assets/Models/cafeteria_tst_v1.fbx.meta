@@ -1,0 +1,733 @@
+fileFormatVersion: 2
+guid: bdf952589252c4cfb875e27d16eb2b9a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cafeteria1_big_window_pCube9
+    100002: Cafeteria1_DOOR
+    100004: Cafeteria1_DOOR6
+    100006: Cafeteria1_elevator5
+    100008: Cafeteria1_elevator7
+    100010: Cafeteria1_elevator9
+    100012: Cafeteria1_Floor
+    100014: Cafeteria1_group4_wall15
+    100016: Cafeteria1_group5_wall22
+    100018: Cafeteria1_wall35
+    100020: Cafeteria1_wall48
+    100022: Cafeteria1_wall74
+    100024: Cafeteria1_wall75
+    100026: Cafeteria1_wall77
+    100028: Cafeteria1_wall89
+    100030: //RootNode
+    100032: DOOR10
+    100034: DOOR11
+    100036: DOOR12
+    100038: DOOR13
+    100040: DOOR14
+    100042: DOOR15
+    100044: DOOR16
+    100046: DOOR17
+    100048: DOOR7
+    100050: DOOR8
+    100052: DOOR9
+    100054: elevator1
+    100056: elevator11
+    100058: elevator12
+    100060: group10
+    100062: group11
+    100064: group12
+    100066: group13
+    100068: group14
+    100070: group15
+    100072: group16
+    100074: group3_wall59
+    100076: group7
+    100078: group8
+    100080: group9
+    100082: Lamp
+    100084: Lamp1
+    100086: Lamp2
+    100088: Lamp3
+    100090: Lamp4
+    100092: Lamp5
+    100094: Lamp6
+    100096: Lamp7
+    100098: Lamp8
+    100100: Lamp9
+    100102: pCube12
+    100104: pCube13
+    100106: pCube14
+    100108: pCube14 1
+    100110: pCube14 2
+    100112: pCube14 3
+    100114: pCube14 4
+    100116: pCube14 5
+    100118: pCube14 6
+    100120: pCube14 7
+    100122: pCube14 8
+    100124: pCube14 9
+    100126: pCube15
+    100128: pCube15 1
+    100130: pCube15 2
+    100132: pCube15 3
+    100134: pCube15 4
+    100136: pCube15 5
+    100138: pCube15 6
+    100140: pCube15 7
+    100142: pCube15 8
+    100144: pCube15 9
+    100146: pCube16
+    100148: pCube16 1
+    100150: pCube16 2
+    100152: pCube16 3
+    100154: pCube16 4
+    100156: pCube16 5
+    100158: pCube16 6
+    100160: pCube16 7
+    100162: pCube16 8
+    100164: pCube16 9
+    100166: pCube17
+    100168: pCube17 1
+    100170: pCube17 2
+    100172: pCube17 3
+    100174: pCube17 4
+    100176: pCube17 5
+    100178: pCube17 6
+    100180: pCube17 7
+    100182: pCube17 8
+    100184: pCube17 9
+    100186: pCube18
+    100188: pCube18 1
+    100190: pCube18 2
+    100192: pCube18 3
+    100194: pCube18 4
+    100196: pCube18 5
+    100198: pCube18 6
+    100200: pCube18 7
+    100202: pCube18 8
+    100204: pCube18 9
+    100206: pCube19
+    100208: pCube19 1
+    100210: pCube19 2
+    100212: pCube19 3
+    100214: pCube19 4
+    100216: pCube19 5
+    100218: pCube19 6
+    100220: pCube19 7
+    100222: pCube19 8
+    100224: pCube19 9
+    100226: pCube20
+    100228: platform
+    100230: Table
+    100232: Table 1
+    100234: Table 2
+    100236: Table 3
+    100238: Table 4
+    100240: Table 5
+    100242: Table 6
+    100244: Table 7
+    100246: Table 8
+    100248: Table 9
+    100250: tables
+    100252: tube
+    100254: wall33
+    100256: wall44
+    100258: wall45
+    100260: wall46
+    100262: wall74
+    100264: wall79
+    100266: wall84
+    100268: wall85
+    100270: wall87
+    400000: Cafeteria1_big_window_pCube9
+    400002: Cafeteria1_DOOR
+    400004: Cafeteria1_DOOR6
+    400006: Cafeteria1_elevator5
+    400008: Cafeteria1_elevator7
+    400010: Cafeteria1_elevator9
+    400012: Cafeteria1_Floor
+    400014: Cafeteria1_group4_wall15
+    400016: Cafeteria1_group5_wall22
+    400018: Cafeteria1_wall35
+    400020: Cafeteria1_wall48
+    400022: Cafeteria1_wall74
+    400024: Cafeteria1_wall75
+    400026: Cafeteria1_wall77
+    400028: Cafeteria1_wall89
+    400030: //RootNode
+    400032: DOOR10
+    400034: DOOR11
+    400036: DOOR12
+    400038: DOOR13
+    400040: DOOR14
+    400042: DOOR15
+    400044: DOOR16
+    400046: DOOR17
+    400048: DOOR7
+    400050: DOOR8
+    400052: DOOR9
+    400054: elevator1
+    400056: elevator11
+    400058: elevator12
+    400060: group10
+    400062: group11
+    400064: group12
+    400066: group13
+    400068: group14
+    400070: group15
+    400072: group16
+    400074: group3_wall59
+    400076: group7
+    400078: group8
+    400080: group9
+    400082: Lamp
+    400084: Lamp1
+    400086: Lamp2
+    400088: Lamp3
+    400090: Lamp4
+    400092: Lamp5
+    400094: Lamp6
+    400096: Lamp7
+    400098: Lamp8
+    400100: Lamp9
+    400102: pCube12
+    400104: pCube13
+    400106: pCube14
+    400108: pCube14 1
+    400110: pCube14 2
+    400112: pCube14 3
+    400114: pCube14 4
+    400116: pCube14 5
+    400118: pCube14 6
+    400120: pCube14 7
+    400122: pCube14 8
+    400124: pCube14 9
+    400126: pCube15
+    400128: pCube15 1
+    400130: pCube15 2
+    400132: pCube15 3
+    400134: pCube15 4
+    400136: pCube15 5
+    400138: pCube15 6
+    400140: pCube15 7
+    400142: pCube15 8
+    400144: pCube15 9
+    400146: pCube16
+    400148: pCube16 1
+    400150: pCube16 2
+    400152: pCube16 3
+    400154: pCube16 4
+    400156: pCube16 5
+    400158: pCube16 6
+    400160: pCube16 7
+    400162: pCube16 8
+    400164: pCube16 9
+    400166: pCube17
+    400168: pCube17 1
+    400170: pCube17 2
+    400172: pCube17 3
+    400174: pCube17 4
+    400176: pCube17 5
+    400178: pCube17 6
+    400180: pCube17 7
+    400182: pCube17 8
+    400184: pCube17 9
+    400186: pCube18
+    400188: pCube18 1
+    400190: pCube18 2
+    400192: pCube18 3
+    400194: pCube18 4
+    400196: pCube18 5
+    400198: pCube18 6
+    400200: pCube18 7
+    400202: pCube18 8
+    400204: pCube18 9
+    400206: pCube19
+    400208: pCube19 1
+    400210: pCube19 2
+    400212: pCube19 3
+    400214: pCube19 4
+    400216: pCube19 5
+    400218: pCube19 6
+    400220: pCube19 7
+    400222: pCube19 8
+    400224: pCube19 9
+    400226: pCube20
+    400228: platform
+    400230: Table
+    400232: Table 1
+    400234: Table 2
+    400236: Table 3
+    400238: Table 4
+    400240: Table 5
+    400242: Table 6
+    400244: Table 7
+    400246: Table 8
+    400248: Table 9
+    400250: tables
+    400252: tube
+    400254: wall33
+    400256: wall44
+    400258: wall45
+    400260: wall46
+    400262: wall74
+    400264: wall79
+    400266: wall84
+    400268: wall85
+    400270: wall87
+    2100000: lambert1
+    2300000: Cafeteria1_big_window_pCube9
+    2300002: Cafeteria1_DOOR
+    2300004: Cafeteria1_DOOR6
+    2300006: Cafeteria1_elevator5
+    2300008: Cafeteria1_elevator7
+    2300010: Cafeteria1_elevator9
+    2300012: Cafeteria1_Floor
+    2300014: Cafeteria1_group4_wall15
+    2300016: Cafeteria1_group5_wall22
+    2300018: Cafeteria1_wall35
+    2300020: Cafeteria1_wall48
+    2300022: Cafeteria1_wall74
+    2300024: Cafeteria1_wall75
+    2300026: Cafeteria1_wall77
+    2300028: Cafeteria1_wall89
+    2300030: DOOR10
+    2300032: DOOR11
+    2300034: DOOR12
+    2300036: DOOR13
+    2300038: DOOR14
+    2300040: DOOR15
+    2300042: DOOR16
+    2300044: DOOR17
+    2300046: DOOR7
+    2300048: DOOR8
+    2300050: DOOR9
+    2300052: elevator1
+    2300054: elevator11
+    2300056: elevator12
+    2300058: group3_wall59
+    2300060: Lamp
+    2300062: Lamp1
+    2300064: Lamp2
+    2300066: Lamp3
+    2300068: Lamp4
+    2300070: Lamp5
+    2300072: Lamp6
+    2300074: Lamp7
+    2300076: Lamp8
+    2300078: Lamp9
+    2300080: pCube12
+    2300082: pCube13
+    2300084: pCube14
+    2300086: pCube14 1
+    2300088: pCube14 2
+    2300090: pCube14 3
+    2300092: pCube14 4
+    2300094: pCube14 5
+    2300096: pCube14 6
+    2300098: pCube14 7
+    2300100: pCube14 8
+    2300102: pCube14 9
+    2300104: pCube15
+    2300106: pCube15 1
+    2300108: pCube15 2
+    2300110: pCube15 3
+    2300112: pCube15 4
+    2300114: pCube15 5
+    2300116: pCube15 6
+    2300118: pCube15 7
+    2300120: pCube15 8
+    2300122: pCube15 9
+    2300124: pCube16
+    2300126: pCube16 1
+    2300128: pCube16 2
+    2300130: pCube16 3
+    2300132: pCube16 4
+    2300134: pCube16 5
+    2300136: pCube16 6
+    2300138: pCube16 7
+    2300140: pCube16 8
+    2300142: pCube16 9
+    2300144: pCube17
+    2300146: pCube17 1
+    2300148: pCube17 2
+    2300150: pCube17 3
+    2300152: pCube17 4
+    2300154: pCube17 5
+    2300156: pCube17 6
+    2300158: pCube17 7
+    2300160: pCube17 8
+    2300162: pCube17 9
+    2300164: pCube18
+    2300166: pCube18 1
+    2300168: pCube18 2
+    2300170: pCube18 3
+    2300172: pCube18 4
+    2300174: pCube18 5
+    2300176: pCube18 6
+    2300178: pCube18 7
+    2300180: pCube18 8
+    2300182: pCube18 9
+    2300184: pCube19
+    2300186: pCube19 1
+    2300188: pCube19 2
+    2300190: pCube19 3
+    2300192: pCube19 4
+    2300194: pCube19 5
+    2300196: pCube19 6
+    2300198: pCube19 7
+    2300200: pCube19 8
+    2300202: pCube19 9
+    2300204: pCube20
+    2300206: platform
+    2300208: Table
+    2300210: Table 1
+    2300212: Table 2
+    2300214: Table 3
+    2300216: Table 4
+    2300218: Table 5
+    2300220: Table 6
+    2300222: Table 7
+    2300224: Table 8
+    2300226: Table 9
+    2300228: tube
+    2300230: wall33
+    2300232: wall44
+    2300234: wall45
+    2300236: wall46
+    2300238: wall74
+    2300240: wall79
+    2300242: wall84
+    2300244: wall85
+    2300246: wall87
+    3300000: Cafeteria1_big_window_pCube9
+    3300002: Cafeteria1_DOOR
+    3300004: Cafeteria1_DOOR6
+    3300006: Cafeteria1_elevator5
+    3300008: Cafeteria1_elevator7
+    3300010: Cafeteria1_elevator9
+    3300012: Cafeteria1_Floor
+    3300014: Cafeteria1_group4_wall15
+    3300016: Cafeteria1_group5_wall22
+    3300018: Cafeteria1_wall35
+    3300020: Cafeteria1_wall48
+    3300022: Cafeteria1_wall74
+    3300024: Cafeteria1_wall75
+    3300026: Cafeteria1_wall77
+    3300028: Cafeteria1_wall89
+    3300030: DOOR10
+    3300032: DOOR11
+    3300034: DOOR12
+    3300036: DOOR13
+    3300038: DOOR14
+    3300040: DOOR15
+    3300042: DOOR16
+    3300044: DOOR17
+    3300046: DOOR7
+    3300048: DOOR8
+    3300050: DOOR9
+    3300052: elevator1
+    3300054: elevator11
+    3300056: elevator12
+    3300058: group3_wall59
+    3300060: Lamp
+    3300062: Lamp1
+    3300064: Lamp2
+    3300066: Lamp3
+    3300068: Lamp4
+    3300070: Lamp5
+    3300072: Lamp6
+    3300074: Lamp7
+    3300076: Lamp8
+    3300078: Lamp9
+    3300080: pCube12
+    3300082: pCube13
+    3300084: pCube14
+    3300086: pCube14 1
+    3300088: pCube14 2
+    3300090: pCube14 3
+    3300092: pCube14 4
+    3300094: pCube14 5
+    3300096: pCube14 6
+    3300098: pCube14 7
+    3300100: pCube14 8
+    3300102: pCube14 9
+    3300104: pCube15
+    3300106: pCube15 1
+    3300108: pCube15 2
+    3300110: pCube15 3
+    3300112: pCube15 4
+    3300114: pCube15 5
+    3300116: pCube15 6
+    3300118: pCube15 7
+    3300120: pCube15 8
+    3300122: pCube15 9
+    3300124: pCube16
+    3300126: pCube16 1
+    3300128: pCube16 2
+    3300130: pCube16 3
+    3300132: pCube16 4
+    3300134: pCube16 5
+    3300136: pCube16 6
+    3300138: pCube16 7
+    3300140: pCube16 8
+    3300142: pCube16 9
+    3300144: pCube17
+    3300146: pCube17 1
+    3300148: pCube17 2
+    3300150: pCube17 3
+    3300152: pCube17 4
+    3300154: pCube17 5
+    3300156: pCube17 6
+    3300158: pCube17 7
+    3300160: pCube17 8
+    3300162: pCube17 9
+    3300164: pCube18
+    3300166: pCube18 1
+    3300168: pCube18 2
+    3300170: pCube18 3
+    3300172: pCube18 4
+    3300174: pCube18 5
+    3300176: pCube18 6
+    3300178: pCube18 7
+    3300180: pCube18 8
+    3300182: pCube18 9
+    3300184: pCube19
+    3300186: pCube19 1
+    3300188: pCube19 2
+    3300190: pCube19 3
+    3300192: pCube19 4
+    3300194: pCube19 5
+    3300196: pCube19 6
+    3300198: pCube19 7
+    3300200: pCube19 8
+    3300202: pCube19 9
+    3300204: pCube20
+    3300206: platform
+    3300208: Table
+    3300210: Table 1
+    3300212: Table 2
+    3300214: Table 3
+    3300216: Table 4
+    3300218: Table 5
+    3300220: Table 6
+    3300222: Table 7
+    3300224: Table 8
+    3300226: Table 9
+    3300228: tube
+    3300230: wall33
+    3300232: wall44
+    3300234: wall45
+    3300236: wall46
+    3300238: wall74
+    3300240: wall79
+    3300242: wall84
+    3300244: wall85
+    3300246: wall87
+    4300000: elevator1
+    4300002: wall33
+    4300004: wall44
+    4300006: wall45
+    4300008: wall46
+    4300010: tube
+    4300012: elevator11
+    4300014: elevator12
+    4300016: platform
+    4300018: wall74
+    4300020: DOOR7
+    4300022: DOOR8
+    4300024: wall79
+    4300026: wall84
+    4300028: wall85
+    4300030: wall87
+    4300032: pCube12
+    4300034: pCube13
+    4300036: Lamp
+    4300038: pCube17
+    4300040: pCube18
+    4300042: pCube19
+    4300044: Table
+    4300046: pCube14
+    4300048: pCube15
+    4300050: pCube16
+    4300052: pCube17
+    4300054: pCube18
+    4300056: pCube19
+    4300058: Table
+    4300060: pCube14
+    4300062: pCube15
+    4300064: pCube16
+    4300066: pCube17
+    4300068: pCube18
+    4300070: pCube19
+    4300072: Table
+    4300074: pCube14
+    4300076: pCube15
+    4300078: pCube16
+    4300080: pCube17
+    4300082: pCube18
+    4300084: pCube19
+    4300086: Table
+    4300088: pCube14
+    4300090: pCube15
+    4300092: pCube16
+    4300094: pCube17
+    4300096: pCube18
+    4300098: pCube19
+    4300100: Table
+    4300102: pCube14
+    4300104: pCube15
+    4300106: pCube16
+    4300108: pCube17
+    4300110: pCube18
+    4300112: pCube19
+    4300114: Table
+    4300116: pCube14
+    4300118: pCube15
+    4300120: pCube16
+    4300122: pCube17
+    4300124: pCube18
+    4300126: pCube19
+    4300128: Table
+    4300130: pCube14
+    4300132: pCube15
+    4300134: pCube16
+    4300136: pCube17
+    4300138: pCube18
+    4300140: pCube19
+    4300142: Table
+    4300144: pCube14
+    4300146: pCube15
+    4300148: pCube16
+    4300150: pCube17
+    4300152: pCube18
+    4300154: pCube19
+    4300156: Table
+    4300158: pCube14
+    4300160: pCube15
+    4300162: pCube16
+    4300164: pCube17
+    4300166: pCube18
+    4300168: pCube19
+    4300170: Table
+    4300172: pCube14
+    4300174: pCube15
+    4300176: pCube16
+    4300178: Lamp1
+    4300180: Lamp2
+    4300182: Lamp3
+    4300184: Lamp4
+    4300186: Lamp5
+    4300188: Lamp6
+    4300190: Lamp7
+    4300192: Lamp8
+    4300194: Lamp9
+    4300196: DOOR9
+    4300198: DOOR10
+    4300200: DOOR11
+    4300202: DOOR12
+    4300204: DOOR13
+    4300206: DOOR14
+    4300208: DOOR15
+    4300210: DOOR16
+    4300212: DOOR17
+    4300214: Cafeteria1_Floor
+    4300216: Cafeteria1_wall35
+    4300218: Cafeteria1_big_window_pCube9
+    4300220: Cafeteria1_group5_wall22
+    4300222: Cafeteria1_group4_wall15
+    4300224: Cafeteria1_DOOR
+    4300226: Cafeteria1_wall74
+    4300228: Cafeteria1_DOOR6
+    4300230: Cafeteria1_elevator5
+    4300232: Cafeteria1_elevator7
+    4300234: Cafeteria1_elevator9
+    4300236: Cafeteria1_wall75
+    4300238: Cafeteria1_wall77
+    4300240: Cafeteria1_wall48
+    4300242: Cafeteria1_wall89
+    4300244: pCube20
+    4300246: group3_wall59
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
