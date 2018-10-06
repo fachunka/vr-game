@@ -7,6 +7,10 @@ public class ControllerGrabObject : MonoBehaviour
     private GameObject collidingObject;
     private GameObject objectInHand;
 
+    //HandAnimation
+    public bool onTriggerEnterActivated = false;
+    //HandAnimation
+
     private SteamVR_Controller.Device Controller
     {
         get { return SteamVR_Controller.Input((int)trackedObj.index); }
@@ -31,8 +35,15 @@ public class ControllerGrabObject : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        Debug.Log("trigger pressed");
+
+        //HandAnimation
+        onTriggerEnterActivated = true;
+        //
+
         SetCollidingObject(other);
     }
+
 
     public void OnTriggerStay(Collider other)
     {
@@ -47,6 +58,10 @@ public class ControllerGrabObject : MonoBehaviour
         }
 
         collidingObject = null;
+
+        //HandAnimation
+        onTriggerEnterActivated = false;
+        //
     }
 
 

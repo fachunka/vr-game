@@ -8,6 +8,7 @@ public class DoorAnim : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
         ani.enabled = false;
 	}
 	
