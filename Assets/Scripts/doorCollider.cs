@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class doorCollider : MonoBehaviour {
     
-    public bool inLift = false;
-    public GameObject Lift;
+    private bool inLift = false;
+    private GameObject Lift;
     
     void Start()
     {
@@ -16,7 +16,8 @@ public class doorCollider : MonoBehaviour {
     void FixedUpdate()
     {
         if(inLift){
-        transform.parent.position -= transform.up * Time.deltaTime;
+//        transform.position -= transform.up * Time.deltaTime;
+        transform.root.position -= transform.up * Time.deltaTime;
         Lift.transform.position -= transform.up * Time.deltaTime;
 //        Debug.Log("hi", Lift);
         }
@@ -31,7 +32,7 @@ public class doorCollider : MonoBehaviour {
         if(col.gameObject.name == "Lift")
         {
             inLift = true;
-            Debug.Log("you're now in a lift");
+//            Debug.Log("you're now in a lift");
         }
     }
 }
