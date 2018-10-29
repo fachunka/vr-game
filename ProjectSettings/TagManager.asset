@@ -7,6 +7,8 @@ TagManager:
   - Door
   - Lift
   - FadeTrigger
+  - Scissors
+  - Key
   layers:
   - Default
   - TransparentFX
