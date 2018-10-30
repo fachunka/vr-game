@@ -35,7 +35,7 @@ public class ControllerGrabObject : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("trigger pressed");
+//        Debug.Log("trigger pressed");
 
         //HandAnimation
         onTriggerEnterActivated = true;
