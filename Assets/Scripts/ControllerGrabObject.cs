@@ -5,7 +5,7 @@ public class ControllerGrabObject : MonoBehaviour
     private SteamVR_TrackedObject trackedObj;
 
     private GameObject collidingObject;
-    private GameObject objectInHand;
+    public GameObject objectInHand;
 
     //HandAnimation
     public bool onTriggerEnterActivated = false;
@@ -84,7 +84,7 @@ public class ControllerGrabObject : MonoBehaviour
         }
     }
 
-    private void GrabObject()
+    public void GrabObject()
     {
         objectInHand = collidingObject;
         collidingObject = null;

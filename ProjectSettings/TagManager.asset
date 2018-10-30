@@ -7,6 +7,11 @@ TagManager:
   - Door
   - Lift
   - FadeTrigger
+  - Scissors
+  - Button
+  - ScissorAnimateTrigger
+  - Cube
+  - MeatChunk
   layers:
   - Default
   - TransparentFX
