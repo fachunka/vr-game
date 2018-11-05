@@ -26,6 +26,8 @@ public class destructionController : MonoBehaviour {
     void OnTriggerEnter (Collider col)
     {
         //if(col.gameObject.tag == "GameController")
+
+        //when scissors collide with meat, it breaks down into three pieces
         if(col.gameObject.tag == "Scissors")
         {
             Instantiate(remains, transform.position, transform.rotation);
