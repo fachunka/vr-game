@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MonsterPlantResize : MonoBehaviour {
     bool monsterFeeded = false;
+    bool meatChunkDeleted = false;
 
 	// Use this for initialization
 	void Start () {
@@ -11,16 +12,26 @@ public class MonsterPlantResize : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    void OnTriggerEnter(Collider col)
+	void Update () 
     {
-        //if object collides with chunk of meat
+        //if meatchunk collides, make it disappear
+        if (monsterFeeded == true)
+        {
+            if (meatChunkDeleted == false)
+            {
+                Debug.Log("Monster feeded, deleting meat chunk");
+                GameObject.Find("Meat Chunk").transform.localScale = new Vector3(0, 0, 0);
+                meatChunkDeleted = true;
+            }
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        //if object collides with meat chunk, make it small
         if (monsterFeeded == false)
         {
-            if (col.tag == "MeatChunk")
+            if (other.gameObject.tag == "MeatChunk")
             {
                 Debug.Log("Monster feeded");
                 transform.localScale = new Vector3(0.15f, 0.3f, 0.15f);

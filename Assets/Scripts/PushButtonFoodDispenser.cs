@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PushButtonFoodDispenser : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    private GameObject meat;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -21,11 +24,14 @@ public class PushButtonFoodDispenser : MonoBehaviour {
     {
         if(other.gameObject.tag == "Button")
         {
-            Debug.Log("button pushed");
-            GameObject Lime = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            Lime.AddComponent<Rigidbody>();
-            Lime.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-            Lime.transform.position = new Vector3(-2, 2, 0.2f);
+            Instantiate(meat, transform.position, transform.rotation);
+
+            //create cute object called lime
+            //Debug.Log("button pushed");
+            //GameObject Lime = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            //Lime.AddComponent<Rigidbody>();
+            //Lime.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            //Lime.transform.position = new Vector3(-2, 2, 0.2f);
         }
     }
 }
