@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 55851884}
   - component: {fileID: 55851883}
   m_Layer: 0
-  m_Name: StoryObjct
+  m_Name: StoryObject1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -501,7 +501,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e2782f5b398ef4e2fa92c0acab830a0e, type: 2}
+  - {fileID: 2100000, guid: 1ba94d7c9343f4def8cafaf0874e7019, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -535,8 +535,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 55851882}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
-  m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 0.29999998}
+  m_LocalPosition: {x: 0, y: 1.9, z: -1.45}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 24
@@ -3198,7 +3198,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1529907787}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 15, z: 1}
@@ -3299,7 +3299,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1529907787}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.1750683, y: 0.0041242978, z: 0.036450975}
@@ -3921,7 +3921,7 @@ GameObject:
   - component: {fileID: 1190092161}
   m_Layer: 0
   m_Name: Stove
-  m_TagString: Untagged
+  m_TagString: Stove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4369,7 +4369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dd93dc6c2124849ab22a2cf9a1e364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meat: {fileID: 1398926448136218, guid: 34314bc443db4437a96318abffebd9e1, type: 2}
+  meat: {fileID: 1411875868051998, guid: 34314bc443db4437a96318abffebd9e1, type: 2}
 --- !u!114 &1757883556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4398,6 +4398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meatChunk: {fileID: 1810496444}
+  meat: {fileID: 1411875868051998, guid: 34314bc443db4437a96318abffebd9e1, type: 2}
   scissors: {fileID: 1234266448}
   inAnimateScissorsGameObject: {fileID: 1757883545}
 --- !u!114 &1757883558
@@ -4467,6 +4468,7 @@ GameObject:
   - component: {fileID: 1810496449}
   - component: {fileID: 1810496448}
   - component: {fileID: 1810496447}
+  - component: {fileID: 1810496445}
   m_Layer: 0
   m_Name: Meat Chunk
   m_TagString: MeatChunk
@@ -4474,6 +4476,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1810496445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1810496444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38bb4f8c2e1984af4a7f5aa4b218b299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MainTexture: {fileID: 2800000, guid: bb0d5cc376ce14aa98c078d023ef4c1c, type: 3}
 --- !u!54 &1810496447
 Rigidbody:
   m_ObjectHideFlags: 0

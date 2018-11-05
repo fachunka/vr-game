@@ -3,36 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PickupJ : MonoBehaviour {
-
+public class PickupJ : MonoBehaviour
+{
     //GameObjects
     private GameObject rightHand;
+    private GameObject myMeat;
     public GameObject meatChunk;
+    public GameObject meat;
     public GameObject scissors;
 
     //accessing script from ScissorStatusChange
-   public GameObject inAnimateScissorsGameObject;
+    public GameObject inAnimateScissorsGameObject;
 
-
-
-    //    private GameObject camera;
+    //private GameObject camera;
 
     //Current Object Name
     private string currentObj;
 
     //Player Location
     private Vector3 loc;
-    //    private Vector3 posx;
+    //private Vector3 posx;
 
     //Bools
     private bool inHand;
     private bool triggerEnteredMeatChunk;
+    private bool triggerEnteredMeat;
     private bool triggerEnteredScissors;
 
     //Sound
     //public AudioClip soundClip;
     //public AudioSource soundSource;
 
+    private void Awake()
+    {
+        myMeat = Instantiate(meat, Vector3.zero, Quaternion.identity);
+    }
 
     // Use this for initialization
     void Start()
@@ -44,6 +49,7 @@ public class PickupJ : MonoBehaviour {
         //Bools
         inHand = false;
         triggerEnteredMeatChunk = false;
+        triggerEnteredMeat = false;
         triggerEnteredScissors = false;
 
         //Sound
@@ -74,7 +80,6 @@ public class PickupJ : MonoBehaviour {
             {
                 print("m key was pressed");
 
-
                 meatChunk.transform.parent = rightHand.transform;
                 meatChunk.transform.localPosition = Vector3.zero;
                 //                Reset(key);
@@ -82,20 +87,17 @@ public class PickupJ : MonoBehaviour {
                 meatChunk.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 meatChunk.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
-
                 meatChunk.GetComponent<Rigidbody>().useGravity = false;
                 meatChunk.GetComponent<BoxCollider>().isTrigger = true;
 
                 inHand = true;
                 //Debug.Log(inHand);
 
-
                 //Debug.Log(rightHand.gameObject.transform.GetChild(1).gameObject);
             }
-
         }
 
-        // drop key item
+        //drop key item
         if (currentObj == "Meat Chunk" && Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 2)
         {
             print("m key was pressed");
@@ -112,7 +114,6 @@ public class PickupJ : MonoBehaviour {
             inHand = false;
             //Debug.Log(inHand);
             currentObj = "null";
-
         }
 
         //-------------------------------------------------------------------------------------------
@@ -130,38 +131,36 @@ public class PickupJ : MonoBehaviour {
                 scissors.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 scissors.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
-
                 scissors.GetComponent<Rigidbody>().useGravity = false;
                 scissors.GetComponent<BoxCollider>().isTrigger = true;
 
                 inHand = true;
                 //Debug.Log(inHand);
 
-
                 //Debug.Log(rightHand.gameObject.transform.GetChild(1).gameObject);
             }
         }
 
-        // drop scissors item
-        //if ((currentObj == "ScissorsInanimate" && Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 2))
-        //{
-        //    print("m key was pressed");
-        //    scissors.transform.parent = null;
-        //    scissors.transform.localPosition = new Vector3(loc.x, 2.0f, loc.z);
-        //    //                Reset(key);
-        //    scissors.transform.rotation = Quaternion.Euler(0, 0, 0);
-        //    scissors.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        //    scissors.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        //drop scissors item
+        if ((currentObj == "ScissorsInanimate" && Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 2))
+        {
+            print("m key was pressed");
+            scissors.transform.parent = null;
+            scissors.transform.localPosition = new Vector3(loc.x, 2.0f, loc.z);
+            //                Reset(key);
+            scissors.transform.rotation = Quaternion.Euler(0, 0, 0);
+            scissors.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            scissors.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
-        //    scissors.GetComponent<Rigidbody>().useGravity = true;
-        //    scissors.GetComponent<BoxCollider>().isTrigger = false;
+            scissors.GetComponent<Rigidbody>().useGravity = true;
+            scissors.GetComponent<BoxCollider>().isTrigger = false;
 
-        //    inHand = false;
-        //    //Debug.Log(inHand);
-        //    currentObj = "null";
-        //}
+            inHand = false;
+            //Debug.Log(inHand);
+            currentObj = "null";
+        }
 
-        // drop and make dissappear scissors item when inanimate scissors collide with box
+        //drop and make dissappear scissors item when inanimate scissors collide with box
         if ((currentObj == "ScissorsInanimate" && ScissorStatusChangeScript.letGoInAnimateScissors == true))
         {
             print("let go scissors");
@@ -183,18 +182,71 @@ public class PickupJ : MonoBehaviour {
             ScissorStatusChangeScript.letGoInAnimateScissors = false;
         }
 
+        //-------------------------------------------------------------------------------------------
+        //meat pickup
+        if (triggerEnteredMeat == true)
+        {
+            if (Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 1)
+            {
+                print("m key was pressed");
+
+                myMeat.transform.parent = rightHand.transform;
+                myMeat.transform.localPosition = Vector3.zero;
+                //                Reset(key);
+                myMeat.transform.rotation = Quaternion.Euler(0, 90, 0);
+                myMeat.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                myMeat.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+
+                myMeat.GetComponent<Rigidbody>().useGravity = false;
+                myMeat.GetComponent<BoxCollider>().isTrigger = true;
+
+                inHand = true;
+                //Debug.Log(inHand);
+
+                //Debug.Log(rightHand.gameObject.transform.GetChild(1).gameObject);
+            }
+        }
+
+        //drop meat item
+        if (currentObj == "Meat(Clone)" && Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 2)
+        {
+            print("m key was pressed");
+
+            myMeat.transform.parent = null;
+            myMeat.transform.localPosition = new Vector3(loc.x, 2.0f, loc.z);
+            //                Reset(key);
+            myMeat.transform.rotation = Quaternion.Euler(0, 90, 0);
+            myMeat.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            myMeat.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+            myMeat.GetComponent<Rigidbody>().useGravity = true;
+            myMeat.GetComponent<BoxCollider>().isTrigger = false;
+
+            inHand = false;
+            //Debug.Log(inHand);
+            currentObj = "null";
+        }
+        //-------------------------------------------------------------------------------------------
     }
 
 
     void OnTriggerEnter(Collider col)
     {
-
         // We set this variable to indicate that character is in trigger
+
         // meat chunk trigger
         if (col.gameObject.name == "Meat Chunk Trigger")
         {
             Debug.Log("touching Meat Chunk");
             triggerEnteredMeatChunk = true;
+        }
+
+        // meat trigger
+        if (col.gameObject.name == "Meat Trigger")
+        {
+            Debug.Log("touching Meat");
+            triggerEnteredMeat = true;
         }
 
         // scissors trigger
@@ -209,12 +261,19 @@ public class PickupJ : MonoBehaviour {
     void OnTriggerExit(Collider col)
     {
         // We reset this variable since character is no longer in the trigger
+
         // meat chunk trigger
-       if (col.gameObject.name == "Meat Chunk Trigger")
+        if (col.gameObject.name == "Meat Chunk Trigger")
         {
             Debug.Log("not touching Meat Chunk");
             triggerEnteredMeatChunk = false;
+        }
 
+        // meat trigger
+        if (col.gameObject.name == "Meat Trigger")
+        {
+            Debug.Log("not touching Meat");
+            triggerEnteredMeat = false;
         }
 
         // scissors trigger
@@ -222,9 +281,7 @@ public class PickupJ : MonoBehaviour {
         {
             Debug.Log("not touching scissors");
             triggerEnteredScissors = false;
-
         }
-
     }
 
     //reset dynamic

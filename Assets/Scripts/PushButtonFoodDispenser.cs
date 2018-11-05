@@ -2,27 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PushButtonFoodDispenser : MonoBehaviour {
+public class PushButtonFoodDispenser : MonoBehaviour
+{
 
     [SerializeField]
     private GameObject meat;
 
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () 
+    void Start()
     {
-		//limit the button movement
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //limit the button movement
         //collide = push with limitation
-	}
+    }
 
     //when the player touches button create lime
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Button")
+        if (other.gameObject.tag == "Button")
         {
             Instantiate(meat, transform.position, transform.rotation);
 

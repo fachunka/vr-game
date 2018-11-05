@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterPlantResize : MonoBehaviour {
+public class MonsterPlantResize : MonoBehaviour
+{
     bool monsterFeeded = false;
     bool meatChunkDeleted = false;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () 
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         //if meatchunk collides, make it disappear
         if (monsterFeeded == true)
