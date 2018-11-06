@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ControllerGrabObjectNotSim : MonoBehaviour
+public class ControllerGrabObjectNew : MonoBehaviour
 {
     private SteamVR_TrackedObject trackedObj;
 
