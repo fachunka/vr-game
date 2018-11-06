@@ -16,14 +16,14 @@ public class destructionController : MonoBehaviour
     }
 
     // Update is called once per frame
-    //void Update () {
-    //       if (Input.GetKey("space"))
-    //       {
-    //           Instantiate(remains, transform.position, transform.rotation);
-    //           Destroy(gameObject);
-    //       }
+    void Update () {
+           if (Input.GetKey("space"))
+           {
+               Instantiate(remains, transform.position, transform.rotation);
+               Destroy(gameObject);
+           }
 
-    //}
+    }
 
     void OnTriggerEnter(Collider col)
     {
