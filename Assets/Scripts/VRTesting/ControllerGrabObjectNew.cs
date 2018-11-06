@@ -1,16 +1,41 @@
 using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControllerGrabObjectNew : MonoBehaviour
 {
     private SteamVR_TrackedObject trackedObj;
 
+
+    //GameObjects
+    private GameObject rightHand;
+    public GameObject key;
+    public GameObject lime;
+    public GameObject lidopen;
     private GameObject collidingObject;
     public GameObject objectInHand;
 
+    //Current Object Name
+    private string currentObj;
+
     //HandAnimation
     public bool onTriggerEnterActivated = false;
-    //HandAnimation
 
+    //Player Location
+    private Vector3 loc;
+//    private Vector3 posx;
+
+
+    //Bools
+    private bool inHand;
+    private bool triggerEnteredKey;
+    private bool triggerEnteredLime;
+
+    //Sound
+    public AudioClip soundClip;
+    public AudioSource soundSource;
+  
     private SteamVR_Controller.Device Controller
     {
         get { return SteamVR_Controller.Input((int)trackedObj.index); }
