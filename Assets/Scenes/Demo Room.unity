@@ -3582,9 +3582,10 @@ GameObject:
   - component: {fileID: 1404822925}
   - component: {fileID: 1404822926}
   - component: {fileID: 1404822927}
-  - component: {fileID: 1404822933}
   - component: {fileID: 1404822928}
   - component: {fileID: 1404822930}
+  - component: {fileID: 1404822934}
+  - component: {fileID: 1404822933}
   m_Layer: 0
   m_Name: Controller (right)
   m_TagString: GameController
@@ -3704,7 +3705,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1404822924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5647c459446974ecba065a68701803db, type: 3}
+  m_Script: {fileID: 11500000, guid: a49d7131e696e431f8fad80d8f748259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meat: {fileID: 1411875868051998, guid: 34314bc443db4437a96318abffebd9e1, type: 2}
+  scissors: {fileID: 1433207333895220, guid: ba2716fea1d8f4aca82dc0adfc39f91b, type: 2}
+  inAnimateScissorsGameObject: {fileID: 1404822924}
+--- !u!114 &1404822934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1404822924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d43f47e9d4d4dae8932f2fa419f562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animateScissors: {fileID: 1519760490}

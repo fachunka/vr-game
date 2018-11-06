@@ -7,7 +7,7 @@ public class VRPickupJ : MonoBehaviour
     //GameObjects
     private GameObject rightHand;
     private GameObject myMeat;
-    public GameObject meatChunk;
+    //public GameObject meatChunk;
     public GameObject meat;
     public GameObject scissors;
 
@@ -47,7 +47,6 @@ public class VRPickupJ : MonoBehaviour
 
         //Bools
         inHand = false;
-        triggerEnteredMeatChunk = false;
         triggerEnteredMeat = false;
         triggerEnteredScissors = false;
 
@@ -60,7 +59,7 @@ public class VRPickupJ : MonoBehaviour
     {
         //get ScissorStatusChange component - script 
         //from public gameobject which contains this script
-        ScissorStatusChange ScissorStatusChangeScript = inAnimateScissorsGameObject.GetComponent<ScissorStatusChange>();
+        VRScissorStatusChange ScissorStatusChangeScript = inAnimateScissorsGameObject.GetComponent<VRScissorStatusChange>();
 
         //-------------------------------------------------------------------------------------------
         loc = rightHand.transform.localPosition;
@@ -72,92 +71,6 @@ public class VRPickupJ : MonoBehaviour
         }
 
         //-------------------------------------------------------------------------------------------
-        //key pickup
-        if (triggerEnteredMeatChunk == true)
-        {
-            if (Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 1)
-            {
-                print("m key was pressed");
-
-                meatChunk.transform.parent = rightHand.transform;
-                meatChunk.transform.localPosition = Vector3.zero;
-                //                Reset(key);
-                meatChunk.transform.rotation = Quaternion.Euler(0, 90, 0);
-                meatChunk.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                meatChunk.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-
-                meatChunk.GetComponent<Rigidbody>().useGravity = false;
-                meatChunk.GetComponent<BoxCollider>().isTrigger = true;
-
-                inHand = true;
-                //Debug.Log(inHand);
-
-                //Debug.Log(rightHand.gameObject.transform.GetChild(1).gameObject);
-            }
-        }
-
-        //drop key item
-        if (currentObj == "Meat Chunk" && Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 2)
-        {
-            print("m key was pressed");
-            meatChunk.transform.parent = null;
-            meatChunk.transform.localPosition = new Vector3(loc.x, 2.0f, loc.z);
-            //                Reset(key);
-            meatChunk.transform.rotation = Quaternion.Euler(0, 90, 0);
-            meatChunk.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            meatChunk.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-
-            meatChunk.GetComponent<Rigidbody>().useGravity = true;
-            meatChunk.GetComponent<BoxCollider>().isTrigger = false;
-
-            inHand = false;
-            //Debug.Log(inHand);
-            currentObj = "null";
-        }
-
-        //-------------------------------------------------------------------------------------------
-        //scissors pickup
-        if (triggerEnteredScissors == true)
-        {
-            if (Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 1)
-            {
-                print("m key was pressed");
-
-                scissors.transform.parent = rightHand.transform;
-                scissors.transform.localPosition = Vector3.zero;
-                //                Reset(key);
-                scissors.transform.rotation = Quaternion.Euler(0, 0, 0);
-                scissors.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                scissors.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-
-                scissors.GetComponent<Rigidbody>().useGravity = false;
-                scissors.GetComponent<BoxCollider>().isTrigger = true;
-
-                inHand = true;
-                //Debug.Log(inHand);
-
-                //Debug.Log(rightHand.gameObject.transform.GetChild(1).gameObject);
-            }
-        }
-
-        //drop scissors item
-        if ((currentObj == "ScissorsInanimate" && Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 2))
-        {
-            print("m key was pressed");
-            scissors.transform.parent = null;
-            scissors.transform.localPosition = new Vector3(loc.x, 2.0f, loc.z);
-            //                Reset(key);
-            scissors.transform.rotation = Quaternion.Euler(0, 0, 0);
-            scissors.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            scissors.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-
-            scissors.GetComponent<Rigidbody>().useGravity = true;
-            scissors.GetComponent<BoxCollider>().isTrigger = false;
-
-            inHand = false;
-            //Debug.Log(inHand);
-            currentObj = "null";
-        }
 
         //drop and make dissappear scissors item when inanimate scissors collide with box
         if ((currentObj == "ScissorsInanimate" && ScissorStatusChangeScript.letGoInAnimateScissors == true))
@@ -179,52 +92,6 @@ public class VRPickupJ : MonoBehaviour
             currentObj = "null";
 
             ScissorStatusChangeScript.letGoInAnimateScissors = false;
-        }
-
-        //-------------------------------------------------------------------------------------------
-        //meat pickup
-        if (triggerEnteredMeat == true)
-        {
-            if (Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 1)
-            {
-                print("m key was pressed");
-
-                myMeat.transform.parent = rightHand.transform;
-                myMeat.transform.localPosition = Vector3.zero;
-                //                Reset(key);
-                myMeat.transform.rotation = Quaternion.Euler(0, 90, 0);
-                myMeat.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                myMeat.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-
-
-                myMeat.GetComponent<Rigidbody>().useGravity = false;
-                myMeat.GetComponent<BoxCollider>().isTrigger = true;
-
-                inHand = true;
-                //Debug.Log(inHand);
-
-                //Debug.Log(rightHand.gameObject.transform.GetChild(1).gameObject);
-            }
-        }
-
-        //drop meat item
-        if (currentObj == "Meat(Clone)" && Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 2)
-        {
-            print("m key was pressed");
-
-            myMeat.transform.parent = null;
-            myMeat.transform.localPosition = new Vector3(loc.x, 2.0f, loc.z);
-            //                Reset(key);
-            myMeat.transform.rotation = Quaternion.Euler(0, 90, 0);
-            myMeat.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            myMeat.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-
-            myMeat.GetComponent<Rigidbody>().useGravity = true;
-            myMeat.GetComponent<BoxCollider>().isTrigger = false;
-
-            inHand = false;
-            //Debug.Log(inHand);
-            currentObj = "null";
         }
         //-------------------------------------------------------------------------------------------
     }

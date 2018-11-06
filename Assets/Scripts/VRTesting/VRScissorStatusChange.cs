@@ -74,23 +74,23 @@ public class VRScissorStatusChange : MonoBehaviour
         }
 
 
-        //drop animate scissors 
-        if (currentObj == "ScissorsAnimateNonPrefab" && rightHand.gameObject.transform.childCount == 2)
-        {
-            animateScissors.transform.parent = null;
-            animateScissors.transform.localPosition = new Vector3(loc.x, 2.0f, loc.z);
-            //                Reset(key);
-            animateScissors.transform.rotation = Quaternion.Euler(0, 0, 0);
-            animateScissors.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            animateScissors.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        ////drop animate scissors 
+        //if (currentObj == "ScissorsAnimateNonPrefab" && rightHand.gameObject.transform.childCount == 2)
+        //{
+        //    animateScissors.transform.parent = null;
+        //    animateScissors.transform.localPosition = new Vector3(loc.x, 2.0f, loc.z);
+        //    //                Reset(key);
+        //    animateScissors.transform.rotation = Quaternion.Euler(0, 0, 0);
+        //    animateScissors.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        //    animateScissors.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
-            animateScissors.GetComponent<Rigidbody>().useGravity = true;
-            animateScissors.GetComponent<BoxCollider>().isTrigger = false;
+        //    animateScissors.GetComponent<Rigidbody>().useGravity = true;
+        //    animateScissors.GetComponent<BoxCollider>().isTrigger = false;
 
-            inHand = false;
-            //Debug.Log(inHand);
-            currentObj = "null";
-        }
+        //    inHand = false;
+        //    //Debug.Log(inHand);
+        //    currentObj = "null";
+        //}
     }
 
     void OnTriggerEnter(Collider col)
