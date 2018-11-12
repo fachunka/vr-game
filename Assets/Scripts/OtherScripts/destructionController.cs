@@ -10,30 +10,38 @@ public class destructionController : MonoBehaviour
     [SerializeField]
     private GameObject remains;
 
+    public GameObject gameObContainingScript;
+
     // Use this for initialization
     void Start()
     {
+
     }
 
     // Update is called once per frame
-    void Update () {
-           if (Input.GetKey("space"))
-           {
-               Instantiate(remains, transform.position, transform.rotation);
-               Destroy(gameObject);
-           }
-
+    void Update()
+    {
+        if (Input.GetKey("space"))
+        {
+            Instantiate(remains, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter(Collider col)
     {
-        //if(col.gameObject.tag == "GameController")
-
-        //when scissors collide with meat, it breaks down into three pieces
+        ChangeTexture ChangeTextureScript = gameObContainingScript.GetComponent<ChangeTexture>();
+        
+        //when scissors collide with "cooked" meat, it breaks down into three pieces
         if (col.gameObject.tag == "Scissors")
         {
-            Instantiate(remains, transform.position, transform.rotation);
-            Destroy(gameObject);
+            if (ChangeTextureScript.meatTextureChanged == true)
+            {
+                print("breaking meat");
+                Instantiate(remains, transform.position, transform.rotation);
+                Destroy(gameObject);
+                //gameObject.transform.localScale = new Vector3(0, 0, 0);
+            }
         }
     }
 }

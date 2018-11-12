@@ -11,27 +11,39 @@ public class ChangeTexture : MonoBehaviour
 {
 
     //Set these Textures in the Inspector
-    public Texture m_MainTexture;
     Renderer m_Renderer;
+    public Texture m_MainTexture;
+
+    public bool meatTextureChanged;
+    float currentTime;
 
     // Use this for initialization
     void Start()
     {
         //Fetch the Renderer from the GameObject
         m_Renderer = GetComponent<Renderer>();
+
+        meatTextureChanged = false;
+    }
+
+    private void Update()
+    {
+        //Debug.Log("CurrentTime" + currentTime);
+        //Debug.Log("DeltaTime" + Time.fixedTime);
+
+        if (Time.fixedTime - currentTime >= 3 && currentTime > 0)
+        {
+            m_Renderer.material.SetTexture("_MainTex", m_MainTexture);
+            meatTextureChanged = true;
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Stove")
         {
-            m_Renderer.material.SetTexture("_MainTex", m_MainTexture);
-            //create cute object called lime
-            //Debug.Log("button pushed");
-            //GameObject Lime = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            //Lime.AddComponent<Rigidbody>();
-            //Lime.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-            //Lime.transform.position = new Vector3(-2, 2, 0.2f);
+            print("collided stove");
+            currentTime = Time.fixedTime;
         }
     }
 }

@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VRPickupJ : MonoBehaviour
+public class PickupJNotSim : MonoBehaviour
 {
     //GameObjects
     private GameObject rightHand;
-    private GameObject myMeat;
+    //private GameObject myMeat;
     //public GameObject meatChunk;
     public GameObject meat;
     public GameObject scissors;
 
     //accessing script from ScissorStatusChange
     public GameObject inAnimateScissorsGameObject;
+    public GameObject ControllerInfo;
+
 
     //private GameObject camera;
 
@@ -35,10 +37,9 @@ public class VRPickupJ : MonoBehaviour
 
     private void Awake()
     {
-        myMeat = Instantiate(meat, Vector3.zero, Quaternion.identity);
+        //myMeat = Instantiate(meat, Vector3.zero, Quaternion.identity);
     }
 
-    // Use this for initialization
     void Start()
     {
         //Object
@@ -54,16 +55,16 @@ public class VRPickupJ : MonoBehaviour
         //soundSource.clip = soundClip;
     }
 
-    // Update is called once per frame
     void Update()
     {
         //get ScissorStatusChange component - script 
         //from public gameobject which contains this script
-        VRScissorStatusChange ScissorStatusChangeScript = inAnimateScissorsGameObject.GetComponent<VRScissorStatusChange>();
+        ScissorStatusChangeNotSim ScissorStatusChangeScript = inAnimateScissorsGameObject.GetComponent<ScissorStatusChangeNotSim>();
 
         //-------------------------------------------------------------------------------------------
         loc = rightHand.transform.localPosition;
         //Debug.Log(rightHand.gameObject.transform.childCount);
+
         if (rightHand.gameObject.transform.childCount == 2)
         {
             currentObj = rightHand.gameObject.transform.GetChild(1).gameObject.name;
@@ -76,20 +77,20 @@ public class VRPickupJ : MonoBehaviour
         if ((currentObj == "ScissorsInanimate" && ScissorStatusChangeScript.letGoInAnimateScissors == true))
         {
             print("let go scissors");
-            scissors.transform.parent = null;
-            scissors.transform.localPosition = new Vector3(loc.x, 2.0f, loc.z);
-            scissors.transform.localScale = new Vector3(0, 0, 0);
-            //                Reset(key);
-            scissors.transform.rotation = Quaternion.Euler(0, 0, 0);
-            scissors.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            scissors.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            //scissors.transform.parent = null;
+            //scissors.transform.localPosition = new Vector3(loc.x, 2.0f, loc.z);
+            //scissors.transform.localScale = new Vector3(0, 0, 0);
+            ////                Reset(key);
+            //scissors.transform.rotation = Quaternion.Euler(0, 0, 0);
+            //scissors.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            //scissors.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
-            scissors.GetComponent<Rigidbody>().useGravity = true;
-            scissors.GetComponent<BoxCollider>().isTrigger = false;
+            //scissors.GetComponent<Rigidbody>().useGravity = true;
+            //scissors.GetComponent<BoxCollider>().isTrigger = false;
 
-            inHand = false;
-            //Debug.Log(inHand);
-            currentObj = "null";
+            //inHand = false;
+            ////Debug.Log(inHand);
+            //currentObj = "null";
 
             ScissorStatusChangeScript.letGoInAnimateScissors = false;
         }

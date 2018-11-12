@@ -11,9 +11,11 @@ public class PickupJ : MonoBehaviour
     public GameObject meatChunk;
     public GameObject meat;
     public GameObject scissors;
+    public GameObject remainsCube1/*, remainsCube2, remainsCube3*/;
+    public GameObject storyObject1;
 
     //accessing script from ScissorStatusChange
-    public GameObject inAnimateScissorsGameObject;
+    public GameObject gameObContainingScript;
 
     //private GameObject camera;
 
@@ -29,6 +31,8 @@ public class PickupJ : MonoBehaviour
     private bool triggerEnteredMeatChunk;
     private bool triggerEnteredMeat;
     private bool triggerEnteredScissors;
+    private bool triggerEnteredRemainsCube1/*, triggerEnteredRemainsCube2, triggerEnteredRemainsCube3*/;
+    private bool triggerEnteredstoryObject1;
 
     //Sound
     //public AudioClip soundClip;
@@ -51,6 +55,10 @@ public class PickupJ : MonoBehaviour
         triggerEnteredMeatChunk = false;
         triggerEnteredMeat = false;
         triggerEnteredScissors = false;
+        triggerEnteredRemainsCube1 = false;
+        triggerEnteredstoryObject1 = false;
+        //triggerEnteredRemainsCube2 = false;
+        //triggerEnteredRemainsCube3 = false;
 
         //Sound
         //soundSource.clip = soundClip;
@@ -61,7 +69,7 @@ public class PickupJ : MonoBehaviour
     {
         //get ScissorStatusChange component - script 
         //from public gameobject which contains this script
-        ScissorStatusChange ScissorStatusChangeScript = inAnimateScissorsGameObject.GetComponent<ScissorStatusChange>();
+        ScissorStatusChange ScissorStatusChangeScript = gameObContainingScript.GetComponent<ScissorStatusChange>();
 
         //-------------------------------------------------------------------------------------------
         loc = rightHand.transform.localPosition;
@@ -202,6 +210,7 @@ public class PickupJ : MonoBehaviour
                 myMeat.GetComponent<BoxCollider>().isTrigger = true;
 
                 inHand = true;
+
                 //Debug.Log(inHand);
 
                 //Debug.Log(rightHand.gameObject.transform.GetChild(1).gameObject);
@@ -228,6 +237,96 @@ public class PickupJ : MonoBehaviour
             currentObj = "null";
         }
         //-------------------------------------------------------------------------------------------
+        //remainsCube pickup
+        if (triggerEnteredRemainsCube1 == true)
+        {
+            if (Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 1)
+            {
+                print("m key was pressed");
+
+                remainsCube1.transform.parent = rightHand.transform;
+                remainsCube1.transform.localPosition = Vector3.zero;
+                //                Reset(key);
+                remainsCube1.transform.rotation = Quaternion.Euler(0, 90, 0);
+                remainsCube1.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                remainsCube1.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+
+                remainsCube1.GetComponent<Rigidbody>().useGravity = false;
+                remainsCube1.GetComponent<BoxCollider>().isTrigger = true;
+
+                inHand = true;
+                //Debug.Log(inHand);
+
+                //Debug.Log(rightHand.gameObject.transform.GetChild(1).gameObject);
+            }
+        }
+
+        //drop remainsCube item
+        if (currentObj == "Cube (1)" && Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 2)
+        {
+            print("m key was pressed");
+
+            remainsCube1.transform.parent = null;
+            remainsCube1.transform.localPosition = new Vector3(loc.x, 2.0f, loc.z);
+            //                Reset(key);
+            remainsCube1.transform.rotation = Quaternion.Euler(0, 90, 0);
+            remainsCube1.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            remainsCube1.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+            remainsCube1.GetComponent<Rigidbody>().useGravity = true;
+            remainsCube1.GetComponent<BoxCollider>().isTrigger = false;
+
+            inHand = false;
+            //Debug.Log(inHand);
+            currentObj = "null";
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //storyObject1 pickup
+        if (triggerEnteredstoryObject1 == true)
+        {
+            if (Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 1)
+            {
+                print("m key was pressed");
+
+                storyObject1.transform.parent = rightHand.transform;
+                storyObject1.transform.localPosition = Vector3.zero;
+                //                Reset(key);
+                storyObject1.transform.rotation = Quaternion.Euler(0, 90, 0);
+                storyObject1.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                storyObject1.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+
+                storyObject1.GetComponent<Rigidbody>().useGravity = false;
+                storyObject1.GetComponent<BoxCollider>().isTrigger = true;
+
+                inHand = true;
+                //Debug.Log(inHand);
+
+                //Debug.Log(rightHand.gameObject.transform.GetChild(1).gameObject);
+            }
+        }
+
+        //drop storyObject1 item
+        if (currentObj == "StoryObject1" && Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 2)
+        {
+            print("m key was pressed");
+
+            storyObject1.transform.parent = null;
+            storyObject1.transform.localPosition = new Vector3(loc.x + 0.6f, 2.0f, loc.z);
+            //                Reset(key);
+            storyObject1.transform.rotation = Quaternion.Euler(0, 90, 0);
+            storyObject1.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            storyObject1.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+            storyObject1.GetComponent<Rigidbody>().useGravity = true;
+            storyObject1.GetComponent<BoxCollider>().isTrigger = false;
+
+            inHand = false;
+            //Debug.Log(inHand);
+            currentObj = "null";
+        }
     }
 
 
@@ -255,6 +354,20 @@ public class PickupJ : MonoBehaviour
             Debug.Log("touching scissors");
             triggerEnteredScissors = true;
         }
+
+        // remainsCube1 trigger
+        if (col.gameObject.name == "Cube (1) Trigger")
+        {
+            Debug.Log("touching remainsCube 1");
+            triggerEnteredRemainsCube1 = true;
+        }
+
+        // storyObject1 trigger
+        if (col.gameObject.name == "StoryObject1 Trigger")
+        {
+            Debug.Log("touching stroyObject 1");
+            triggerEnteredstoryObject1 = true;
+        }
     }
 
 
@@ -281,6 +394,20 @@ public class PickupJ : MonoBehaviour
         {
             Debug.Log("not touching scissors");
             triggerEnteredScissors = false;
+        }
+
+        // remainsCube1 trigger
+        if (col.gameObject.name == "Cube (1) Trigger")
+        {
+            Debug.Log("not touching remainsCube 1");
+            triggerEnteredRemainsCube1 = false;
+        }
+
+        // storyObject1 trigger
+        if (col.gameObject.name == "StoryObject1 Trigger")
+        {
+            Debug.Log("not touching stroyObject 1");
+            triggerEnteredstoryObject1 = false;
         }
     }
 

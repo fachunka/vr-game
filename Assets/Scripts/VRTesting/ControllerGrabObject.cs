@@ -20,14 +20,14 @@ public class ControllerGrabObject : MonoBehaviour
     {
         trackedObj = GetComponent<SteamVR_TrackedObject>();
     }
-    
+
     private void SetCollidingObject(Collider col)
     {
         if (collidingObject || !col.GetComponent<Rigidbody>())
         {
             return;
         }
-        
+
         collidingObject = col.gameObject;
     }
 
@@ -35,7 +35,7 @@ public class ControllerGrabObject : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-//        Debug.Log("trigger pressed");
+        //        Debug.Log("trigger pressed");
 
         //HandAnimation
         onTriggerEnterActivated = true;
@@ -82,6 +82,12 @@ public class ControllerGrabObject : MonoBehaviour
                 ReleaseObject();
             }
         }
+
+        //added by Jung to execute 'change mode of the scissor'
+        //if ()
+        //{
+        //    ReleaseObject();
+        //}
     }
 
     public void GrabObject()

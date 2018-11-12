@@ -22,8 +22,10 @@ public class MonsterPlantResize : MonoBehaviour
             if (meatChunkDeleted == false)
             {
                 Debug.Log("Monster feeded, deleting meat chunk");
-                GameObject.Find("Meat Chunk").transform.localScale = new Vector3(0, 0, 0);
-                meatChunkDeleted = true;
+                //find object that collided with monster and delete the gameobject
+                //Destroy(gameObject);
+                GameObject.Find("Cube (1)").transform.localScale = new Vector3(0, 0, 0);
+                meatChunkDeleted = true;           
             }
         }
     }

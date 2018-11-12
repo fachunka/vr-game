@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PushButtonFoodDispenser : MonoBehaviour
 {
-
     [SerializeField]
     private GameObject meat;
+
+    Vector3 positionMeat;
 
     // Use this for initialization
     void Start()
     {
-
+        positionMeat = new Vector3(0.1f, 0, 0.3f);
     }
 
     // Update is called once per frame
@@ -26,14 +27,17 @@ public class PushButtonFoodDispenser : MonoBehaviour
     {
         if (other.gameObject.tag == "Button")
         {
-            Instantiate(meat, transform.position, transform.rotation);
+            //create meat prefab
+            Instantiate(meat, transform.position + positionMeat, Quaternion.identity);
 
-            //create cute object called lime
+            //create object called lime
             //Debug.Log("button pushed");
             //GameObject Lime = GameObject.CreatePrimitive(PrimitiveType.Cube);
             //Lime.AddComponent<Rigidbody>();
             //Lime.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             //Lime.transform.position = new Vector3(-2, 2, 0.2f);
+
+            //new Vector3(-2, 2, 0.2f)
         }
     }
 }
