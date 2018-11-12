@@ -6,20 +6,23 @@ public class PushButtonFoodDispenser : MonoBehaviour
 {
     [SerializeField]
     private GameObject meat;
+    public GameObject lime;
 
-    Vector3 positionMeat;
+    public float status;
+
+    Vector3 positionPork;
 
     // Use this for initialization
     void Start()
     {
-        positionMeat = new Vector3(0.1f, 0, 0.3f);
+        positionPork = new Vector3(0.1f, 0, 0.3f);
+        
+        status = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //limit the button movement
-        //collide = push with limitation
     }
 
     //when the player touches button create lime
@@ -27,9 +30,16 @@ public class PushButtonFoodDispenser : MonoBehaviour
     {
         if (other.gameObject.tag == "Button")
         {
-            //create meat prefab
-            Instantiate(meat, transform.position + positionMeat, Quaternion.identity);
+            if (status % 2 == 0)
+            {
+                //create pork prefab
+                Instantiate(meat, transform.position + positionPork, Quaternion.identity);
+            }
 
+            else
+            {
+                Instantiate(lime, transform.position + positionPork, Quaternion.identity);
+            }
             //create object called lime
             //Debug.Log("button pushed");
             //GameObject Lime = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -39,5 +49,11 @@ public class PushButtonFoodDispenser : MonoBehaviour
 
             //new Vector3(-2, 2, 0.2f)
         }
+
+        if (other.gameObject.tag == "ButtonCategory")
+        {
+            status += 1;
+        }
+
     }
 }

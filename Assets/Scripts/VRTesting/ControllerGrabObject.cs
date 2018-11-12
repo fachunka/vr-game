@@ -7,9 +7,13 @@ public class ControllerGrabObject : MonoBehaviour
     private GameObject collidingObject;
     public GameObject objectInHand;
 
-    //HandAnimation
+    //HandAnimation, added by Jung
     public bool onTriggerEnterActivated = false;
-    //HandAnimation
+    //
+
+    //figure out whether object is released and sends it to returnPosition script, added by Jung
+    public bool releasedObject = false;
+    //
 
     private SteamVR_Controller.Device Controller
     {
@@ -73,6 +77,10 @@ public class ControllerGrabObject : MonoBehaviour
             {
                 GrabObject();
             }
+
+            //added by Jung
+            releasedObject = false;
+            //
         }
 
         if (Controller.GetHairTriggerUp())
@@ -81,6 +89,10 @@ public class ControllerGrabObject : MonoBehaviour
             {
                 ReleaseObject();
             }
+
+            //added by Jung
+            releasedObject = true;
+            //
         }
 
         //added by Jung to execute 'change mode of the scissor'
@@ -88,6 +100,7 @@ public class ControllerGrabObject : MonoBehaviour
         //{
         //    ReleaseObject();
         //}
+        //
     }
 
     public void GrabObject()

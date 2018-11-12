@@ -34,6 +34,8 @@ public class PickupJ : MonoBehaviour
     private bool triggerEnteredRemainsCube1/*, triggerEnteredRemainsCube2, triggerEnteredRemainsCube3*/;
     private bool triggerEnteredstoryObject1;
 
+    public bool releasedObject = false;
+
     //Sound
     //public AudioClip soundClip;
     //public AudioSource soundSource;
@@ -305,6 +307,8 @@ public class PickupJ : MonoBehaviour
                 //Debug.Log(inHand);
 
                 //Debug.Log(rightHand.gameObject.transform.GetChild(1).gameObject);
+
+                releasedObject = false;
             }
         }
 
@@ -326,6 +330,8 @@ public class PickupJ : MonoBehaviour
             inHand = false;
             //Debug.Log(inHand);
             currentObj = "null";
+
+            releasedObject = true;
         }
     }
 

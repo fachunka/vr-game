@@ -9,6 +9,7 @@ TagManager:
   - Scissors
   - Button
   - Stove
+  - ButtonCategory
   layers:
   - Default
   - TransparentFX

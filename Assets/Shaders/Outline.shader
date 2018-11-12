@@ -5,7 +5,7 @@
         _Color("Main Color", Color) = (0,0,0,1.0)
 		_MainTex ("Texture", 2D) = "white" {}
         _OutlineColor("Outline Color", Color) = (0,0,0,1.0)
-        _OutlineWidth("Outline Width", Range(1.0,1.1)) = 1.04
+        uniform float _OutlineWidth("Outline Width", Range(1.01,1.1)) = 1.04
 	}
     
     CGINCLUDE

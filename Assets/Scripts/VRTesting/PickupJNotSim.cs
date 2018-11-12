@@ -13,7 +13,7 @@ public class PickupJNotSim : MonoBehaviour
 
     //accessing script from ScissorStatusChange
     public GameObject inAnimateScissorsGameObject;
-    public GameObject ControllerInfo;
+    //public GameObject ControllerInfo;
 
 
     //private GameObject camera;
@@ -72,7 +72,6 @@ public class PickupJNotSim : MonoBehaviour
         }
 
         //-------------------------------------------------------------------------------------------
-
         //drop and make dissappear scissors item when inanimate scissors collide with box
         if ((currentObj == "ScissorsInanimate" && ScissorStatusChangeScript.letGoInAnimateScissors == true))
         {
@@ -100,8 +99,6 @@ public class PickupJNotSim : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        // We set this variable to indicate that character is in trigger
-
         // meat chunk trigger
         if (col.gameObject.name == "Meat Chunk Trigger")
         {
@@ -127,8 +124,6 @@ public class PickupJNotSim : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
-        // We reset this variable since character is no longer in the trigger
-
         // meat chunk trigger
         if (col.gameObject.name == "Meat Chunk Trigger")
         {
