@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MonsterPlantResize : MonoBehaviour
 {
-    bool monsterFeeded = false;
+    public bool monsterFeeded = false;
     bool meatChunkDeleted = false;
 
     // Use this for initialization
