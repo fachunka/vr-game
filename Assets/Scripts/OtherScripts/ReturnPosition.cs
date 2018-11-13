@@ -25,10 +25,10 @@ public class ReturnPosition : MonoBehaviour
     //storyobject going back to its original position when thrown back
     void Update()
     {
-        PickupJ PickupJScript = gameObContainingScript.GetComponent<PickupJ>();
+        //PickupJ PickupJScript = gameObContainingScript.GetComponent<PickupJ>();
 
         //if(gameObject.transform.position)
-        if (Input.GetKeyDown("r") || PickupJScript.releasedObject == true)
+        if (Input.GetKeyDown("r") /*|| PickupJScript.releasedObject == true*/)
         {
             StartDrift();
         }
