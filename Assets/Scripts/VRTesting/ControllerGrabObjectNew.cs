@@ -107,6 +107,12 @@ public class ControllerGrabObjectNew : MonoBehaviour
                 ReleaseObject();
             }
         }
+        if (objectInHand){
+
+                if (objectInHand.gameObject.name == "Key"){
+                    Debug.Log(objectInHand.gameObject.name);
+                }
+        }
     }
 
     public void GrabObject()
