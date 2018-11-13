@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: fc43749209c664a9e940d99616649d98
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: box_bottom
+    100002: //RootNode
+    100004: box_top1
+    100006: handle_L
+    100008: handle_part_1
+    100010: handle_part_1 1
+    100012: handle_part_2
+    100014: handle_part_2 1
+    100016: handle_R
+    100018: hinge_down_part
+    100020: hinge_down_part 1
+    100022: hinge_down_screw
+    100024: hinge_down_screw 1
+    100026: hinge_down_screw2
+    100028: hinge_down_screw2 1
+    100030: hinge_L_down
+    100032: hinge_L_up
+    100034: hinge_middle_part
+    100036: hinge_middle_part 1
+    100038: hinge_R_down
+    100040: hinge_R_up
+    100042: hinge_up_part
+    100044: hinge_up_part 1
+    100046: hinge_up_screw
+    100048: hinge_up_screw 1
+    100050: hinge_up_screw2
+    100052: hinge_up_screw2 1
+    100054: inside_bottom
+    100056: lock
+    100058: name_plate
+    400000: box_bottom
+    400002: //RootNode
+    400004: box_top1
+    400006: handle_L
+    400008: handle_part_1
+    400010: handle_part_1 1
+    400012: handle_part_2
+    400014: handle_part_2 1
+    400016: handle_R
+    400018: hinge_down_part
+    400020: hinge_down_part 1
+    400022: hinge_down_screw
+    400024: hinge_down_screw 1
+    400026: hinge_down_screw2
+    400028: hinge_down_screw2 1
+    400030: hinge_L_down
+    400032: hinge_L_up
+    400034: hinge_middle_part
+    400036: hinge_middle_part 1
+    400038: hinge_R_down
+    400040: hinge_R_up
+    400042: hinge_up_part
+    400044: hinge_up_part 1
+    400046: hinge_up_screw
+    400048: hinge_up_screw 1
+    400050: hinge_up_screw2
+    400052: hinge_up_screw2 1
+    400054: inside_bottom
+    400056: lock
+    400058: name_plate
+    2100000: aiStandardSurface3
+    2100002: lambert1
+    2300000: box_bottom
+    2300002: box_top1
+    2300004: handle_part_1
+    2300006: handle_part_1 1
+    2300008: handle_part_2
+    2300010: handle_part_2 1
+    2300012: hinge_down_part
+    2300014: hinge_down_part 1
+    2300016: hinge_down_screw
+    2300018: hinge_down_screw 1
+    2300020: hinge_down_screw2
+    2300022: hinge_down_screw2 1
+    2300024: hinge_middle_part
+    2300026: hinge_middle_part 1
+    2300028: hinge_up_part
+    2300030: hinge_up_part 1
+    2300032: hinge_up_screw
+    2300034: hinge_up_screw 1
+    2300036: hinge_up_screw2
+    2300038: hinge_up_screw2 1
+    2300040: inside_bottom
+    2300042: lock
+    2300044: name_plate
+    3300000: box_bottom
+    3300002: box_top1
+    3300004: handle_part_1
+    3300006: handle_part_1 1
+    3300008: handle_part_2
+    3300010: handle_part_2 1
+    3300012: hinge_down_part
+    3300014: hinge_down_part 1
+    3300016: hinge_down_screw
+    3300018: hinge_down_screw 1
+    3300020: hinge_down_screw2
+    3300022: hinge_down_screw2 1
+    3300024: hinge_middle_part
+    3300026: hinge_middle_part 1
+    3300028: hinge_up_part
+    3300030: hinge_up_part 1
+    3300032: hinge_up_screw
+    3300034: hinge_up_screw 1
+    3300036: hinge_up_screw2
+    3300038: hinge_up_screw2 1
+    3300040: inside_bottom
+    3300042: lock
+    3300044: name_plate
+    4300000: box_bottom
+    4300002: inside_bottom
+    4300004: lock
+    4300006: hinge_middle_part
+    4300008: hinge_down_part
+    4300010: hinge_down_screw
+    4300012: hinge_down_screw2
+    4300014: hinge_middle_part
+    4300016: hinge_down_part
+    4300018: hinge_down_screw2
+    4300020: hinge_down_screw
+    4300022: handle_part_2
+    4300024: handle_part_1
+    4300026: handle_part_2
+    4300028: handle_part_1
+    4300030: box_top1
+    4300032: hinge_up_part
+    4300034: hinge_up_screw
+    4300036: hinge_up_screw2
+    4300038: hinge_up_part
+    4300040: hinge_up_screw
+    4300042: hinge_up_screw2
+    4300044: name_plate
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface3
+    second: {fileID: 2100000, guid: 4cd41f7dc1f24490f900c3d956e58d0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 4cd41f7dc1f24490f900c3d956e58d0d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
