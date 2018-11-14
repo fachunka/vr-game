@@ -6,6 +6,7 @@ public class ControllerGrabObject : MonoBehaviour
 
     private GameObject collidingObject;
     public GameObject objectInHand;
+    public string objectInHandName;
 
     //HandAnimation, added by Jung
     public bool onTriggerEnterActivated = false;
@@ -106,6 +107,7 @@ public class ControllerGrabObject : MonoBehaviour
     public void GrabObject()
     {
         objectInHand = collidingObject;
+        objectInHandName = collidingObject.name;
         collidingObject = null;
         var joint = AddFixedJoint();
         joint.connectedBody = objectInHand.GetComponent<Rigidbody>();
@@ -130,5 +132,7 @@ public class ControllerGrabObject : MonoBehaviour
         }
 
         objectInHand = null;
+        objectInHandName = null;
+
     }
 }

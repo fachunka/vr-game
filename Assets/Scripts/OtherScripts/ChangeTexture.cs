@@ -17,6 +17,8 @@ public class ChangeTexture : MonoBehaviour
     public bool meatTextureChanged;
     float currentTime;
 
+    public GameObject cameraRig;
+
     // Use this for initialization
     void Start()
     {

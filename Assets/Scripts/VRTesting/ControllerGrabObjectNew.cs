@@ -60,13 +60,26 @@ public class ControllerGrabObjectNew : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-//        Debug.Log("trigger pressed");
+       Debug.Log("trigger pressed");
 
         //HandAnimation
         onTriggerEnterActivated = true;
         //
 
         SetCollidingObject(other);
+
+        Debug.Log(other);
+
+       if (objectInHand){
+            Debug.Log("hi");
+                if (objectInHand.gameObject.name == "Key"){
+                    Debug.Log(objectInHand.gameObject.name);
+                SteamVR_Fade.Start(Color.black, 0);
+                //SteamVR_Fade.Start(Color.clear, 1);
+
+                SceneManager.LoadScene("SampleScene");
+                }
+        }
     }
 
 
@@ -107,6 +120,7 @@ public class ControllerGrabObjectNew : MonoBehaviour
                 ReleaseObject();
             }
         }
+
     }
 
     public void GrabObject()
