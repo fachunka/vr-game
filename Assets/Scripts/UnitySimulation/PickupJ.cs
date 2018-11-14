@@ -8,6 +8,7 @@ public class PickupJ : MonoBehaviour
     //GameObjects
     private GameObject rightHand;
     private GameObject myMeat;
+    public GameObject key;
     public GameObject meatChunk;
     public GameObject meat;
     public GameObject scissors;
@@ -28,6 +29,7 @@ public class PickupJ : MonoBehaviour
 
     //Bools
     private bool inHand;
+    private bool triggerEnteredKey;
     private bool triggerEnteredMeatChunk;
     private bool triggerEnteredMeat;
     private bool triggerEnteredScissors;
@@ -84,6 +86,51 @@ public class PickupJ : MonoBehaviour
 
         //-------------------------------------------------------------------------------------------
         //key pickup
+        if (triggerEnteredKey == true)
+        {
+            if (Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 1)
+            {
+                print("m key was pressed");
+
+                key.transform.parent = rightHand.transform;
+                key.transform.localPosition = Vector3.zero;
+                //                Reset(key);
+                key.transform.rotation = Quaternion.Euler(0, 90, 0);
+                key.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                key.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+
+                key.GetComponent<Rigidbody>().useGravity = false;
+                key.GetComponent<BoxCollider>().isTrigger = true;
+
+                inHand = true;
+                Debug.Log(inHand);
+
+                Debug.Log(rightHand.gameObject.transform.GetChild(1).gameObject);
+            }
+        }
+
+        // drop item
+        if (currentObj == "Key" && Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 2)
+        {
+            print("m key was pressed");
+            key.transform.parent = null;
+            key.transform.localPosition = new Vector3(loc.x, 2.0f, loc.z);
+            //                Reset(key);
+            key.transform.rotation = Quaternion.Euler(0, 90, 0);
+            key.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            key.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+            key.GetComponent<Rigidbody>().useGravity = true;
+            key.GetComponent<BoxCollider>().isTrigger = false;
+
+            inHand = false;
+            Debug.Log(inHand);
+            currentObj = "null";
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //meatchunk pickup
         if (triggerEnteredMeatChunk == true)
         {
             if (Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 1)
@@ -107,7 +154,7 @@ public class PickupJ : MonoBehaviour
             }
         }
 
-        //drop key item
+        //drop meatchunk item
         if (currentObj == "Meat Chunk" && Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 2)
         {
             print("m key was pressed");
@@ -338,7 +385,31 @@ public class PickupJ : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        //Chest trigger
+        //if (col.gameObject.name == "Chest")
+        //{
+        //    Debug.Log("Benylin?");
+        //    if (rightHand.gameObject.transform.GetChild(1).gameObject.name == "Key")
+        //    {
+        //        soundSource.Play();
+        //        Debug.Log("No Benylin");
+        //    }
+        //    else if (rightHand.gameObject.transform.GetChild(1).gameObject.name == "Lime")
+        //    {
+        //        soundSource.Play();
+        //        Debug.Log("Yes Benylin");
+        //        lidopen.GetComponent<Animator>().SetBool("open", true);
+        //   
+        //}
+
         // We set this variable to indicate that character is in trigger
+
+        //Key trigger
+        if (col.gameObject.name == "Key Trigger")
+        {
+            Debug.Log("touching key");
+            triggerEnteredKey = true;
+        }
 
         // meat chunk trigger
         if (col.gameObject.name == "Meat Chunk Trigger")
@@ -380,6 +451,13 @@ public class PickupJ : MonoBehaviour
     void OnTriggerExit(Collider col)
     {
         // We reset this variable since character is no longer in the trigger
+
+        //Key trigger
+        if (col.gameObject.name == "Key Trigger")
+        {
+            Debug.Log("not touching key");
+            triggerEnteredKey = false;
+        }
 
         // meat chunk trigger
         if (col.gameObject.name == "Meat Chunk Trigger")
