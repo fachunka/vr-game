@@ -6,32 +6,16 @@ public class MonsterPlantResize : MonoBehaviour
 {
     public bool monsterFeeded = false;
     bool meatChunkDeleted = false;
-    GameObject inHand;
-    Component[] grabObjects;
 
     // Use this for initialization
     void Start()
     {
-        inHand = GameObject.Find("[CameraRig]");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        grabObjects = inHand.GetComponentsInChildren<ControllerGrabObject>();
-
-       // inHand = GameObject.Find("[CameraRig]/Controller (right)").GetComponent<ControllerGrabObject>().objectInHand;
-       // Debug.Log(GameObject.Find("[CameraRig]/Controller (right)").GetComponent<ControllerGrabObject>().objectInHand);
-
-        //Debug.Log(GameObject.Find("[CameraRig]/Controller (right)").GetComponent<ControllerGrabObject>().objectInHandName);
-        //Debug.Log(GameObject.Find("[CameraRig]").GetComponentInChildren<ControllerGrabObject>().objectInHandName);
-        //Debug.Log(GetComponent<ControllerGrabObject>().objectInHandName);
-        //Debug.Log(inHand.GetComponentInChildren<ControllerGrabObject>().objectInHandName);
-        foreach (ControllerGrabObject grabObj in grabObjects)
-        {
-            Debug.Log(grabObj.objectInHandName);
-        }
-
         //if meatchunk collides, make it disappear
         if (monsterFeeded == true)
         {
@@ -41,7 +25,7 @@ public class MonsterPlantResize : MonoBehaviour
                 //find object that collided with monster and delete the gameobject
                 //Destroy(gameObject);
                 GameObject.Find("Cube (1)").transform.localScale = new Vector3(0, 0, 0);
-                meatChunkDeleted = true;           
+                meatChunkDeleted = true;
             }
         }
     }

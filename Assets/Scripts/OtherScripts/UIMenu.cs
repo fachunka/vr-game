@@ -27,7 +27,7 @@ public class UIMenu : MonoBehaviour
     void Update()
     {
         MonsterPlantResize MonsterPlantResizeScript = gameObContainingScript.GetComponent<MonsterPlantResize>();
-        if(MonsterPlantResizeScript.monsterFeeded == true)
+        if (MonsterPlantResizeScript.monsterFeeded == true)
         {
             enableScriptAppear = true;
         }
@@ -37,7 +37,7 @@ public class UIMenu : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(enableScriptAppear == true)
+        if (enableScriptAppear == true)
         {
             UICanvas.enabled = true;
         }

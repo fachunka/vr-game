@@ -8,9 +8,13 @@ public class PickupJ : MonoBehaviour
     //GameObjects
     private GameObject rightHand;
     private GameObject myMeat;
+    private GameObject myLime;
+
     public GameObject key;
     public GameObject meatChunk;
     public GameObject meat;
+    public GameObject lime;
+    public GameObject lidopen;
     public GameObject scissors;
     public GameObject remainsCube1/*, remainsCube2, remainsCube3*/;
     public GameObject storyObject1;
@@ -32,19 +36,22 @@ public class PickupJ : MonoBehaviour
     private bool triggerEnteredKey;
     private bool triggerEnteredMeatChunk;
     private bool triggerEnteredMeat;
+    private bool triggerEnteredLime;
     private bool triggerEnteredScissors;
     private bool triggerEnteredRemainsCube1/*, triggerEnteredRemainsCube2, triggerEnteredRemainsCube3*/;
     private bool triggerEnteredstoryObject1;
 
-    public bool releasedObject = false;
+    public bool releasedObjectForReturn = false;
+    public bool releasedObjectForReturnKey = false;
 
     //Sound
-    //public AudioClip soundClip;
-    //public AudioSource soundSource;
+    public AudioClip soundClip;
+    public AudioSource soundSource;
 
     private void Awake()
     {
         myMeat = Instantiate(meat, Vector3.zero, Quaternion.identity);
+        myLime = Instantiate(lime, Vector3.zero, Quaternion.identity);
     }
 
     // Use this for initialization
@@ -65,7 +72,7 @@ public class PickupJ : MonoBehaviour
         //triggerEnteredRemainsCube3 = false;
 
         //Sound
-        //soundSource.clip = soundClip;
+        soundSource.clip = soundClip;
     }
 
     // Update is called once per frame
@@ -123,6 +130,54 @@ public class PickupJ : MonoBehaviour
 
             key.GetComponent<Rigidbody>().useGravity = true;
             key.GetComponent<BoxCollider>().isTrigger = false;
+
+            inHand = false;
+            Debug.Log(inHand);
+            currentObj = "null";
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //lime pickup
+        if (triggerEnteredLime == true)
+        {
+            if (Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 1)
+            {
+                print("m key was pressed");
+
+
+                myLime.transform.parent = rightHand.transform;
+                myLime.transform.localPosition = Vector3.zero;
+                //                    Reset(lime);
+                myLime.transform.rotation = Quaternion.Euler(0, 90, 0);
+                myLime.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                myLime.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+                myLime.GetComponent<Rigidbody>().useGravity = false;
+                myLime.GetComponent<CapsuleCollider>().isTrigger = true;
+
+                inHand = true;
+                Debug.Log(inHand);
+
+
+                Debug.Log(rightHand.gameObject.transform.GetChild(1).gameObject);
+            }
+
+
+        }
+
+        // drop item
+        if (currentObj == "lime(Clone)" && Input.GetKeyDown("m") && rightHand.gameObject.transform.childCount == 2)
+        {
+            print("m key was pressed");
+            myLime.transform.parent = null;
+            myLime.transform.localPosition = new Vector3(loc.x, 2.0f, loc.z);
+            //                Reset(lime);
+            myLime.transform.rotation = Quaternion.Euler(0, 90, 0);
+            myLime.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            myLime.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+            myLime.GetComponent<Rigidbody>().useGravity = true;
+            myLime.GetComponent<CapsuleCollider>().isTrigger = false;
 
             inHand = false;
             Debug.Log(inHand);
@@ -355,7 +410,7 @@ public class PickupJ : MonoBehaviour
 
                 //Debug.Log(rightHand.gameObject.transform.GetChild(1).gameObject);
 
-                releasedObject = false;
+                releasedObjectForReturn = false;
             }
         }
 
@@ -378,7 +433,32 @@ public class PickupJ : MonoBehaviour
             //Debug.Log(inHand);
             currentObj = "null";
 
-            releasedObject = true;
+            releasedObjectForReturn = true;
+        }
+    }
+
+    //script to drop object from another script
+    public void DropObjectKey()
+    {
+        if (currentObj =="Key" & rightHand.gameObject.transform.childCount == 2)
+        {
+            print("drop object function called");
+
+            key.transform.parent = null;
+            key.transform.localPosition = new Vector3(loc.x + 0.6f, 2.0f, loc.z);
+            //                Reset(key);
+            key.transform.rotation = Quaternion.Euler(0, 90, 0);
+            key.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            key.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+            key.GetComponent<Rigidbody>().useGravity = true;
+            key.GetComponent<BoxCollider>().isTrigger = false;
+
+            inHand = false;
+            //Debug.Log(inHand);
+            currentObj = "null";
+
+            releasedObjectForReturnKey = true;
         }
     }
 
@@ -386,21 +466,21 @@ public class PickupJ : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         //Chest trigger
-        //if (col.gameObject.name == "Chest")
-        //{
-        //    Debug.Log("Benylin?");
-        //    if (rightHand.gameObject.transform.GetChild(1).gameObject.name == "Key")
-        //    {
-        //        soundSource.Play();
-        //        Debug.Log("No Benylin");
-        //    }
-        //    else if (rightHand.gameObject.transform.GetChild(1).gameObject.name == "Lime")
-        //    {
-        //        soundSource.Play();
-        //        Debug.Log("Yes Benylin");
-        //        lidopen.GetComponent<Animator>().SetBool("open", true);
-        //   
-        //}
+        if (col.gameObject.name == "Chest")
+        {
+            Debug.Log("Benylin?");
+            if (rightHand.gameObject.transform.GetChild(1).gameObject.name == "Key")
+            {
+                soundSource.Play();
+                Debug.Log("No Benylin");
+            }
+            else if (rightHand.gameObject.transform.GetChild(1).gameObject.name == "lime(Clone)")
+            {
+                soundSource.Play();
+                Debug.Log("Yes Benylin");
+                lidopen.GetComponent<Animator>().SetBool("open", true);
+            }
+        }
 
         // We set this variable to indicate that character is in trigger
 
@@ -409,6 +489,13 @@ public class PickupJ : MonoBehaviour
         {
             Debug.Log("touching key");
             triggerEnteredKey = true;
+        }
+
+        //Lime trigger
+        if (col.gameObject.name == "lime Trigger")
+        {
+            Debug.Log("touching lime");
+            triggerEnteredLime = true;
         }
 
         // meat chunk trigger
@@ -450,13 +537,18 @@ public class PickupJ : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
-        // We reset this variable since character is no longer in the trigger
-
         //Key trigger
         if (col.gameObject.name == "Key Trigger")
         {
             Debug.Log("not touching key");
             triggerEnteredKey = false;
+        }
+
+        //Lime trigger
+        if (col.gameObject.name == "lime Trigger")
+        {
+            Debug.Log("not touching lime");
+            triggerEnteredLime = false;
         }
 
         // meat chunk trigger

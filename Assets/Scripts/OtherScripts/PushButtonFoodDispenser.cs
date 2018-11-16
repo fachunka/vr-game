@@ -16,7 +16,7 @@ public class PushButtonFoodDispenser : MonoBehaviour
     void Start()
     {
         positionPork = new Vector3(0.1f, 0, 0.3f);
-        
+
         status = 1;
     }
 
