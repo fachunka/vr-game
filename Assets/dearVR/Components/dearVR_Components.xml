@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dearVR_Components</name>
+    </assembly>
+    <members>
+        <member name="T:DearVR.DearVRManager">
+            <summary>
+            Dear VR manager. A singleton manager class for dearVR global settings
+            </summary></member>
+        <member name="P:DearVR.DearVRManager.DearListener">
+            <summary>
+            Gets or sets the listener used by dearVR.
+            </summary>
+            <value>The dear listener.</value></member>
+        <member name="P:DearVR.DearVRManager.Instance">
+            <summary>
+            Use this to access the singleton instance of DearVRManager
+            </summary>
+            <value>The instance.</value></member>
+        <member name="P:DearVR.DearVRManager.SetRoomGeo">
+            <summary>
+            if set to true, room geometry is sent to the engine and used for reflections, turning this on will turn
+            off <see cref="P:DearVR.DearVRManager.RoomAnalyzer" />
+            </summary>
+            <value><c>true</c> if set room geo; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRManager.RoomAnalyzer">
+            <summary>
+            if set to true, room geometry is calculated by ray tracing and sent to the engine and used for reflections
+            turning this on would turn <see cref="P:DearVR.DearVRManager.SetRoomGeo" /> off
+            </summary>
+            <value><c>true</c> if set room geo; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRManager.DebugRoomAnalyzer">
+            <summary>
+            turns room analyzer debuging rays off/on
+            </summary></member>
+        <member name="P:DearVR.DearVRManager.RoomUpdateFreq">
+            <summary>
+            how often room geometries are updated with ray tracing
+            </summary></member>
+        <member name="P:DearVR.DearVRManager.UpDownGeo">
+            <summary>
+            Gets or sets up side and down side of room geometry.
+            </summary>
+            <value>Up down geo.</value></member>
+        <member name="P:DearVR.DearVRManager.FrontBackGeo">
+            <summary>
+            Gets or sets the front side and back side of room geometry.
+            </summary>
+            <value>The front back geo.</value></member>
+        <member name="P:DearVR.DearVRManager.LeftRightGeo">
+            <summary>
+            Gets or sets the left side and the right side of room geometry.
+            </summary>
+            <value>The left right geo.</value></member>
+        <member name="P:DearVR.DearVRManager.Bypass3DAudio">
+            <summary>
+            <see cref="T:DearVR.DearVRManager" /> Bypass the bniaural rendering for all sources, reflections and reverb processing
+            are still active. effectively enabling speaker mode.
+            Note: Loudspeaker Mode enables you to switch from 3D Audio for headphones to a loudspeaker compatible mix.
+            Distance attenuation, Reflection, and Reverb levels are still maintained.
+            </summary>
+            <value><c>true</c> if bypass3 D audio; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRManager.RoomMask">
+            <summary>
+            layers used for the raytracing of room geoemtries.
+            </summary>
+            <value>The room mask.</value></member>
+        <member name="T:DearVR.DearVRSerializedReverb">
+            <summary>
+            Dear VR serialized reverb. a container for reverb sends with indices
+            </summary></member>
+        <member name="F:DearVR.DearVRSerializedReverb.roomIndex">
+            <summary>
+            The index of the reverb room, to send the reverb to.
+            </summary></member>
+        <member name="F:DearVR.DearVRSerializedReverb.send">
+            <summary>
+            how much of the signal should be sent, to the reverb channel
+            </summary></member>
+        <member name="T:DearVR.DearVRSource">
+            <summary>
+            Dear VR source, equivalent to Unity's AudioSource, is responsible for object based binaural sounds
+            This is the class you would need to put on your objects, almost all aspects of sound can be adjusted
+            from this class.
+            </summary></member>
+        <member name="T:DearVR.DearVRSource.RoomList">
+            <summary>
+            the virtual acoustics, simulating different environments
+            </summary></member>
+        <member name="F:DearVR.DearVRSource.occlusionWallMask">
+            <summary>
+            The occlusion mask. Used for ray tracing occluding objects.
+            all objects having this layer, will be considered for occlussion
+            </summary></member>
+        <member name="F:DearVR.DearVRSource.obstructionWallMask">
+            <summary>
+            The obstruction mask. Used for ray tracing obstructing objects.
+            all objects having this layer, will be considered for obstruction
+            </summary></member>
+        <member name="F:DearVR.DearVRSource.occlusionRayUpdateTime">
+            <summary>
+            how often should ray casting be performed for occlusion.
+            </summary></member>
+        <member name="F:DearVR.DearVRSource.obstructionRayUpdateTime">
+            <summary>
+            how often should ray casting be performed for obstruction.
+            </summary></member>
+        <member name="F:DearVR.DearVRSource.audioSource">
+            <summary>
+            The audio source this dearVRSource instance references
+            Deprecated: Please use <see cref="P:DearVR.DearVRSource.currentAudioSource" />
+            </summary></member>
+        <member name="P:DearVR.DearVRSource.currentAudioSource">
+            <summary>
+            Gets the current audio source, being processed by dearVR
+            </summary>
+            <value>The current audio source.</value></member>
+        <member name="F:DearVR.DearVRSource.clipIsPlaying">
+            <summary>
+            The clip on the source is currenlty playing.
+            </summary></member>
+        <member name="P:DearVR.DearVRSource.GainLevel">
+            <summary>
+            master gain of audio.
+            </summary>
+            <value>The gain level.</value></member>
+        <member name="P:DearVR.DearVRSource.DirectLevel">
+            <summary>
+            Direct gain of the source, before reverb and reflection.
+            </summary>
+            <value>The direct level.</value></member>
+        <member name="P:DearVR.DearVRSource.ReflectionLevel">
+            <summary>
+            Gets or sets the reflection level.
+            </summary>
+            <value>The reflection level.</value></member>
+        <member name="P:DearVR.DearVRSource.ReverbLevel">
+            <summary>
+            Gets or sets the reverb level.
+            </summary>
+            <value>The reverb level.</value></member>
+        <member name="P:DearVR.DearVRSource.AzimuthCorrection">
+            <summary>
+            Gets or sets the azimuth correction. Can be used to scale the positioning of sounds
+            </summary>
+            <value>The azimuth correction.</value></member>
+        <member name="P:DearVR.DearVRSource.DistanceCorrection">
+            <summary>
+            Gets or sets the distance correction. Can be used to scale the positioning of sounds
+            </summary>
+            <value>The distance correction.</value></member>
+        <member name="P:DearVR.DearVRSource.UseUnityDistance">
+            <summary>
+            should the engnine use unity distancec attenaution?.
+            </summary>
+            <value><c>true</c> if use unity distance; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRSource.Auralization">
+            <summary>
+            turns realtime auralization. This uses realtime room geometries to calculate realtime reflections.
+            NOTE: only works if either <see cref="P:DearVR.DearVRManager.RoomAnalyzer" /> or
+            <see cref="P:DearVR.DearVRManager.SetRoomGeo" /> are set to true.
+            </summary>
+            <value><c>true</c> if auralization; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRSource.RoomPreset">
+            <summary>
+            Gets or sets the room preset.(aka virtual acoustic preset)
+            </summary>
+            <value>The room preset.</value></member>
+        <member name="P:DearVR.DearVRSource.InternalReverb">
+            <summary>
+            if set to true, this instance uses its own reverb engine, independent of the reverb send plugin
+            </summary>
+            <value><c>true</c> if internal reverb; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRSource.PerformanceMode">
+            <summary>
+            activating this bypasses processing during idle state. Play Audio Sources only with <see cref="M:DearVR.DearVRSource.DearVRPlay" /> ,
+            <see cref="M:DearVR.DearVRSource.DearVRPlayOneShot(UnityEngine.AudioClip)" /> or
+            <see cref="P:DearVR.DearVRSource.DearVRPlayOnAwake" />  flag.
+            WARNING: Do not use the Play() or PlayOnAwake flag in Performace Mode!"
+            </summary>
+            <value><c>true</c> if performance mode; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRSource.DearVRPlayOnAwake">
+            <summary>
+            should the audio play on awake
+            </summary>
+            <value><c>true</c> if dear VR play on awake; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRSource.Bypass">
+            <summary>
+            if set to true bypasses the dearVR engine.
+            </summary>
+            <value><c>true</c> if bypass; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRSource.IsProcessing">
+            <summary>
+            Gets a value indicating whether the engine is actually processing audio.
+            </summary>
+            <value><c>true</c> if this instance is processing; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRSource.ReverbStopOverlap">
+            <summary>
+            Gets or sets the reverb tail in seconds, if using <see cref="M:DearVR.DearVRSource.DearVRPlay" /> or
+            <see cref="M:DearVR.DearVRSource.DearVRPlayOneShot(UnityEngine.AudioClip)" />, this variable is used to deactivate processing in engine
+            </summary>
+            <value>The reverb stop overlap.</value></member>
+        <member name="P:DearVR.DearVRSource.InputChannel">
+            <summary>
+            which side of stereo channel to use for binaural processing.
+            NOTE: Due to an update in Unity's Spatial framework, changing this would not have any effect.
+            Even with stereo files, only the left channel is used as input
+            </summary>
+            <value>The input channel.</value></member>
+        <member name="P:DearVR.DearVRSource.ReflectionLP">
+            <summary>
+            lowpass filter frequency on reflections
+            </summary>
+            <value>The reflection L.</value></member>
+        <member name="P:DearVR.DearVRSource.ReverbLP">
+            <summary>
+            lowpass filter frequency on reverb
+            </summary>
+            <value>The reverb L.</value></member>
+        <member name="P:DearVR.DearVRSource.RoomSize">
+            <summary>
+            Sets the roomsize, that can be used to adjust the reverb tail. If <see cref="P:DearVR.DearVRSource.Auralization" /> is on, then
+            this also has an effect on reflections
+            </summary>
+            <value>The size of the room.</value></member>
+        <member name="P:DearVR.DearVRSource.BassBoost">
+            <summary>
+            filter, used to boost up the low end. Sometimes this is necessary to build up more low end, when binauralising sounds.
+            </summary>
+            <value><c>true</c> if bass boost; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRSource.OcclusionLevel">
+            <summary>
+            How much occlusion should have and effect on the sound
+            </summary>
+            <value>The occlusion level.</value></member>
+        <member name="P:DearVR.DearVRSource.ObstructionLevel">
+            <summary>
+            how much obstruction should have an effect on the sound
+            </summary>
+            <value>The obstruction level.</value></member>
+        <member name="P:DearVR.DearVRSource.OcclusionActiv">
+            <summary>
+            activates occlusion for this source
+            </summary>
+            <value><c>true</c> if occlusion activ; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRSource.ObstructionActiv">
+            <summary>
+            activates obstruction for this source
+            </summary>
+            <value><c>true</c> if obstruction activ; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRSource.ForceOcclusion">
+            <summary>
+            occlusion should be active irrespective of ray casting.
+            </summary>
+            <value><c>true</c> if force occlusion; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRSource.ForceObstruction">
+            <summary>
+            obstruction should be active for this source, irrespective of ray casting.
+            </summary>
+            <value><c>true</c> if force obstruction; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRSource.OcclusionDebugRayCast">
+            <summary>
+            Show debug ray casts used for occlusion
+            </summary>
+            <value><c>true</c> if occlusion debug ray cast; otherwise, <c>false</c>.</value></member>
+        <member name="P:DearVR.DearVRSource.OcclusionRayUpdateFreq">
+            <summary>
+            ray casting frequency used for occlusion detection
+            </summary>
+            <value>The occlusion ray update freq.</value></member>
+        <member name="P:DearVR.DearVRSource.ObstructionRayUpdateFreq">
+            <summary>
+            ray casting frequency used for obstruction detection
+            </summary>
+            <value>The obstruction ray update freq.</value></member>
+        <member name="P:DearVR.DearVRSource.ObstructionDebugRayCast">
+            <summary>
+            Show debug ray casts used for obstruction
+            </summary>
+            <value><c>true</c> if occlusion debug ray cast; otherwise, <c>false</c>.</value></member>
+        <member name="M:DearVR.DearVRSource.SetReverbSends(DearVR.DearVRSerializedReverb[])">
+            <summary>
+            use this fuction to set the the reverb sends, these will be used to send the binauralised sound to the reverb bus
+            only used if internal reverb is inactive
+            </summary>
+            <param name="rl">Rl.</param></member>
+        <member name="M:DearVR.DearVRSource.GetReverbSendList">
+            <summary>
+            returns an instance of current reverb send structure, can be used to edit the reverb structure with a subsequent call to
+            <see cref="M:DearVR.DearVRSource.SetReverbSends(DearVR.DearVRSerializedReverb[])" />
+            </summary>
+            <returns>The reverb send list.</returns></member>
+        <member name="M:DearVR.DearVRSource.SetReverbSends">
+            <summary>
+            used internaly by dearVR, do not use this function to set reverb sends
+            instead use <see cref="M:DearVR.DearVRSource.GetReverbSendList" /> and <see cref="M:DearVR.DearVRSource.SetReverbSends(DearVR.DearVRSerializedReverb[])" />
+            </summary></member>
+        <member name="M:DearVR.DearVRSource.ReverbSendsChanged">
+            <summary>
+            used internaly by dearVR, calling this function would not have any effect from client side
+            </summary>
+            <returns><c>true</c>, if sends changed was reverbed, <c>false</c> otherwise.</returns></member>
+        <member name="M:DearVR.DearVRSource.DearVRPlay">
+            <summary>
+            plays the source in performance mode, Unity processes all audio sources irrespective of them playing or not,
+            this method circumvents that problem, by deactivating the processing in dearVR
+            if you use this method you have to use <see cref="M:DearVR.DearVRSource.DearVRStop" /> since this accounts for the
+            reverb tail before stopping dearVR processing, Also you can change <see cref="P:DearVR.DearVRSource.ReverbStopOverlap" />  to account for different reverb tails
+            after which the actual stop takes place.
+            </summary></member>
+        <member name="M:DearVR.DearVRSource.DearVRPlayOneShot(UnityEngine.AudioClip)">
+            <summary>
+            plays the source in performance mode and with oneshot, essentially calling unity's
+            PlayOneShot <see cref="M:UnityEngine.AudioSource.PlayOneShot(UnityEngine.AudioClip,System.Single)" />
+            <see cref="M:DearVR.DearVRSource.DearVRPlay" />
+            </summary>
+            <param name="clip">Clip.</param></member>
+        <member name="M:DearVR.DearVRSource.DearVRStop">
+            <summary>
+            Stops the audio and then processing after <see cref="P:DearVR.DearVRSource.ReverbStopOverlap" /> (in seconds) is over
+            </summary></member>
+        <member name="M:DearVR.DearVRSource.EnableBypassPerformance">
+            <summary>
+            Enables the bypass performance.
+            </summary></member>
+    </members>
+</doc>
