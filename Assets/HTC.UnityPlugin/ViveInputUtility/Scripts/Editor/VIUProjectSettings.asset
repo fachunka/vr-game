@@ -14,3 +14,4 @@ MonoBehaviour:
   m_ignoreKeys:
   - VirtualRealitySupportedwithOpenVR
   - VirtualRealitySupportedwithOculus
+  - DoNotShowUpdate.v1.9.0
