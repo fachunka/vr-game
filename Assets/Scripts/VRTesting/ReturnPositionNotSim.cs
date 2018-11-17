@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //tutorial: https://www.youtube.com/watch?v=0Tpm0AyUQQU
+//script for testing in vr machine
 
 public class ReturnPositionNotSim : MonoBehaviour
 {
@@ -25,12 +26,14 @@ public class ReturnPositionNotSim : MonoBehaviour
     //storyobject going back to its original position when thrown back
     void Update()
     {
-        PickupJ PickupJScript = gameObContainingScript.GetComponent<PickupJ>();
+        ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript.GetComponent<ControllerGrabObject>();
 
-        //if(gameObject.transform.position)
-        if (Input.GetKeyDown("r"))
+        //if game object is released, startdrift
+        //get the boolean 'releasedObject' from 'ControllerGrabObject' script
+        if (Input.GetKeyDown("r") || ControllerGrabObjectScript.releasedObject == true )
         {
             StartDrift();
+            ControllerGrabObjectScript.releasedObject = false;
         }
 
         if (isDrifting)

@@ -133,6 +133,12 @@ public class ControllerGrabObject : MonoBehaviour
 
         objectInHand = null;
         objectInHandName = null;
-
     }
+
+    //added by Jung to execute 'MonsterSpitObjectNotSim'
+    public void ReleaseObjectControlledByOtherScript()
+    {
+        ReleaseObject();
+    }
+    //
 }

@@ -12,10 +12,13 @@ public class destructionController : MonoBehaviour
 
     public GameObject gameObContainingScript;
 
+    bool touchingScissors;
+    float currentTime;
+
     // Use this for initialization
     void Start()
     {
-
+        touchingScissors = false;
     }
 
     // Update is called once per frame
@@ -26,21 +29,31 @@ public class destructionController : MonoBehaviour
             Instantiate(remains, transform.position, transform.rotation);
             Destroy(gameObject);
         }
+
+        //if time has changed 3seconds, instantiate meatchunk
+        if (touchingScissors == true)
+        {
+            if (Time.fixedTime - currentTime >= 3 && currentTime > 0)
+            {
+                print("breaking meat");
+                Instantiate(remains, transform.position, transform.rotation);
+                Destroy(gameObject);
+                touchingScissors = false;
+            }
+        }
     }
 
     void OnTriggerEnter(Collider col)
     {
         ChangeTexture ChangeTextureScript = gameObContainingScript.GetComponent<ChangeTexture>();
-        
+
         //when scissors collide with "cooked" meat, it breaks down into three pieces
         if (col.gameObject.tag == "Scissors")
         {
             if (ChangeTextureScript.meatTextureChanged == true)
             {
-                print("breaking meat");
-                Instantiate(remains, transform.position, transform.rotation);
-                Destroy(gameObject);
-                //gameObject.transform.localScale = new Vector3(0, 0, 0);
+                currentTime = Time.fixedTime;
+                touchingScissors = true;
             }
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //tutorial: https://www.youtube.com/watch?v=0Tpm0AyUQQU
+//script for testing in unity (simulator)
 
 public class ReturnPosition : MonoBehaviour
 {

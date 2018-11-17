@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//script for testing in unity (simulator)
+
 public class PickupJ : MonoBehaviour
 {
     //GameObjects

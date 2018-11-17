@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//script for testing in vr machine
+
 public class PickupJNotSim : MonoBehaviour
 {
     //GameObjects

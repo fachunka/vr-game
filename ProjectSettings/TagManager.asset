@@ -10,6 +10,11 @@ TagManager:
   - Button
   - Stove
   - ButtonCategory
+  - Key
+  - Door
+  - RecipeScreen
+  - Plane
+  - Bottle
   layers:
   - Default
   - TransparentFX
