@@ -20,8 +20,8 @@ public class SteamVR_PlayArea : MonoBehaviour
 	public enum Size
 	{
 		Calibrated,
-        _600x600,
 		_400x300,
+		_300x300,
 		_300x225,
 		_200x150
 	}
@@ -277,4 +277,3 @@ public class SteamVR_PlayArea : MonoBehaviour
 		BuildMesh();
 	}
 }
-
