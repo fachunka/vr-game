@@ -77,6 +77,8 @@ public class MonsterSpitObject : MonoBehaviour
         {
             Debug.Log("Something wrong feeded");
             releaseObjectInHand = true;
+
+            gameObject.SendMessage("playSpit");     // play spitting audio (call playSpit function in the monsterPlantAudio.cs script)
         }
 
     }

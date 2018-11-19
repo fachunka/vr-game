@@ -6,10 +6,10 @@ using UnityEngine.Audio;
 public class meatAudio : MonoBehaviour
 {
 
-    public AudioClip audioClip;
-    public AudioSource audioSource;
-
+    public AudioClip meatClip;
+    public AudioSource meatSource;
     public float MaxVol = 1.0f;
+
     public float fadeInTime = 1.0f;
     public float fadeOutTime = 0.5f;
 
@@ -19,7 +19,7 @@ public class meatAudio : MonoBehaviour
 
     void start()
     {
-        audioSource.volume = 0.0f;
+        meatSource.volume = 0.0f;
     }
 
     void OnTriggerEnter(Collider other)
@@ -35,13 +35,14 @@ public class meatAudio : MonoBehaviour
     IEnumerator fadeIn()
     {
         isPlaying = true;
-        audioSource.clip = audioClip;
-        audioSource.Play();
+        meatSource.clip = meatClip;
+        meatSource.loop = true;
+        meatSource.Play();
 
         while (volume < MaxVol)
         {
             volume += Time.deltaTime / fadeInTime;
-            audioSource.volume = volume;
+            meatSource.volume = volume;
             print(volume);
             yield return new WaitForSeconds(0);
         }
@@ -62,19 +63,19 @@ public class meatAudio : MonoBehaviour
         while (volume > 0.0f)
         {
             volume -= Time.deltaTime / fadeOutTime;
-            audioSource.volume = volume;
+            meatSource.volume = volume;
             yield return new WaitForSeconds(0);
         }
 
-        audioSource.volume = 0.0f;
-        audioSource.Stop();
+        meatSource.volume = 0.0f;
+        meatSource.Stop();
 
     }
 
 /*
     void PlayAudio()
         {
-            audioource.clip = audioClip;
+            audioSource.clip = audioClip;
             audioSource.Play();
 
         }
