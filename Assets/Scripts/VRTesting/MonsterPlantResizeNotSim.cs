@@ -23,16 +23,16 @@ public class MonsterPlantResizeNotSim : MonoBehaviour
             if (meatChunkDeleted == false)
             {
                 Debug.Log("Monster feeded, deleting meat chunk");
-                //find object that collided with monster and delete the gameobject
 
+                //find object that collided with monster, release it and delete the gameobject
                 ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript.GetComponent<ControllerGrabObject>();
                 if (ControllerGrabObjectScript.objectInHand != null)
                 {
                     if (ControllerGrabObjectScript.objectInHand)
                     {
                         ControllerGrabObjectScript.ReleaseObjectControlledByOtherScript();
+                        Destroy(ControllerGrabObjectScript.objectInHand);
                     }
-
                 }
 
                 meatChunkDeleted = true;
