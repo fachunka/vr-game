@@ -9,46 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1932257191682992}
+  m_RootGameObject: {fileID: 1594559347179180}
   m_IsPrefabAsset: 1
---- !u!1 &1932257191682992
+--- !u!1 &1594559347179180
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4418796021147362}
-  - component: {fileID: 33373821493258278}
-  - component: {fileID: 23457215746430302}
-  - component: {fileID: 54019579126288484}
-  - component: {fileID: 65628324790716404}
+  - component: {fileID: 4983380740597092}
+  - component: {fileID: 33727488914653136}
+  - component: {fileID: 23794165033173636}
+  - component: {fileID: 65091674673084248}
+  - component: {fileID: 54681581837991720}
   m_Layer: 0
-  m_Name: Ugali
-  m_TagString: Ugali
+  m_Name: MirendaLeaf
+  m_TagString: MirendaLeaf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4418796021147362
+--- !u!4 &4983380740597092
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1932257191682992}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.16, y: 1.79, z: -1.39}
-  m_LocalScale: {x: 0.2, y: 0.01, z: 0.2}
+  m_GameObject: {fileID: 1594559347179180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.028, y: 1.8, z: -1.429}
+  m_LocalScale: {x: 0.1, y: 0.01, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23457215746430302
+--- !u!23 &23794165033173636
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1932257191682992}
+  m_GameObject: {fileID: 1594559347179180}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -58,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: b48435c7564b744df8e3cbc6df1c30d1, type: 2}
+  - {fileID: 2100000, guid: 361e322f070254c89a104894aa653b18, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,19 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33373821493258278
+--- !u!33 &33727488914653136
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1932257191682992}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54019579126288484
+  m_GameObject: {fileID: 1594559347179180}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54681581837991720
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1932257191682992}
+  m_GameObject: {fileID: 1594559347179180}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -100,15 +100,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65628324790716404
+--- !u!65 &65091674673084248
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1932257191682992}
+  m_GameObject: {fileID: 1594559347179180}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

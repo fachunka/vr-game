@@ -4,7 +4,7 @@ public class ControllerGrabObject : MonoBehaviour
 {
     private SteamVR_TrackedObject trackedObj;
 
-    private GameObject collidingObject;
+    public GameObject collidingObject;
     public GameObject objectInHand;
     public string objectInHandName;
 
