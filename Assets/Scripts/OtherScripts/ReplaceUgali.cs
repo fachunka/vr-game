@@ -7,6 +7,9 @@ public class ReplaceUgali : MonoBehaviour
 {
     public GameObject gameObContainingScript;
     public GameObject Ugali;
+    public GameObject Stove2;
+
+    Vector3 UgaliPosition;
 
     bool replaceObjects;
 
@@ -14,8 +17,8 @@ public class ReplaceUgali : MonoBehaviour
     void Start()
     {
         replaceObjects = false;
+        UgaliPosition = new Vector3(0, 0.6f, 0);
     }
-
 
     // Update is called once per frame
     void Update()
@@ -23,7 +26,8 @@ public class ReplaceUgali : MonoBehaviour
         if (replaceObjects == true)
         {
             //run this in 2seconds(after 2seconds)
-            Invoke("Replace", 2);
+            Invoke("Replace", 3);
+            replaceObjects = false;
         }
     }
 
@@ -31,7 +35,7 @@ public class ReplaceUgali : MonoBehaviour
     {
         StoveCollision StoveCollisionScript = gameObContainingScript.GetComponent<StoveCollision>();
 
-        if (other.gameObject.tag == "controller")
+        if (other.gameObject.tag == "GameController")
         {
             print("button clicked");
 
@@ -47,13 +51,11 @@ public class ReplaceUgali : MonoBehaviour
 
     void Replace()
     {
-        GameObject ugali = Instantiate(Ugali, transform.position, transform.rotation) as GameObject;
+        GameObject ugali = Instantiate(Ugali, Stove2.transform.position + UgaliPosition, Stove2.transform.rotation) as GameObject;
 
         Destroy(GameObject.FindWithTag("Cornmeal"));
         Destroy(GameObject.FindWithTag("Chicken"));
         Destroy(GameObject.FindWithTag("MirendaLeaf"));
-
-        replaceObjects = false;
     }
 
     //private void OnCollisionStay(Collision collision)
