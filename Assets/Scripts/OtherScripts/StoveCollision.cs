@@ -37,19 +37,19 @@ public class StoveCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Cornmeal")
         {
-            print("cornmealTouching");
+            //print("cornmealTouching");
             cornmealTouching = true;
         }
     
         if (collision.gameObject.tag == "MirendaLeaf")
         {
-            print("mirendaLeafTouching");
+            //print("mirendaLeafTouching");
             mirendaLeafTouching = true;
         }
 
         if (collision.gameObject.tag == "Chicken")
         {
-            print("chickenTouching");
+            //print("chickenTouching");
             chickenTouching = true;
         }
     }
