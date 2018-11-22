@@ -170,7 +170,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1659025866581064}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7b97bb290b124e1494ef05609922b61, type: 3}
   m_Name: 
@@ -188,3 +188,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fa343bc66e0417e8ae8f11585902c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chestHalf: {fileID: 1820254755362716, guid: 5f5eb262abbda4ece9a5d9745bd4591c, type: 2}
