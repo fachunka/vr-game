@@ -6,16 +6,26 @@ public class MonsterPlantResize : MonoBehaviour
 {
     public bool monsterFeeded = false;
     bool meatChunkDeleted = false;
+    GameObject inHand;
+    Component[] grabObjects;
 
     // Use this for initialization
     void Start()
     {
-
+        inHand = GameObject.Find("[CameraRig]");
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        grabObjects = inHand.GetComponentsInChildren<ControllerGrabObject>();
+
+        foreach (ControllerGrabObject grabObj in grabObjects)
+        {
+            Debug.Log(grabObj.objectInHandName);
+        }
+
         //if meatchunk collides, make it disappear
         if (monsterFeeded == true)
         {
