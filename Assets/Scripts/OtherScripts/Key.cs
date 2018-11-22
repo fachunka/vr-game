@@ -7,12 +7,12 @@ public class Key : MonoBehaviour
     public GameObject chestHalf;
 
 
-    private bool keyInBox = false;
+    private bool keyInBox;
 
     // Use this for initialization
     void Start()
     {
-
+        keyInBox = false;
     }
 
     // Update is called once per frame
@@ -21,6 +21,7 @@ public class Key : MonoBehaviour
 
         if (keyInBox == true)
         {
+            print("destroyed?");
             Destroy(this.gameObject);
         }
 
@@ -34,8 +35,6 @@ public class Key : MonoBehaviour
             keyInBox = true;
             print("collided key");
 
-            chestHalf = Instantiate(chestHalf, transform.position, Quaternion.identity) as GameObject;
-            Destroy(GameObject.Find("boxHalfOpenPrefab"));
         }
 
     }
