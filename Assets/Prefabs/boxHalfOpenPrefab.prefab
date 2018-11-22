@@ -502,6 +502,7 @@ GameObject:
   - component: {fileID: 4682932638586368}
   - component: {fileID: 54518392980320804}
   - component: {fileID: 65826011357954998}
+  - component: {fileID: 114112716935409956}
   m_Layer: 0
   m_Name: boxHalfOpenPrefab
   m_TagString: Untagged
@@ -833,8 +834,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1820254755362716}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 3.44, y: 4.03, z: 3.234}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 1.959, y: 1.662739, z: 1.146}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4603977584870060}
@@ -843,7 +844,7 @@ Transform:
   - {fileID: 4578156012691892}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4699967337180260
 Transform:
   m_ObjectHideFlags: 1
@@ -2037,6 +2038,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.41913334, y: 0.08133376, z: 0.29560032}
   m_Center: {x: -0.00000005960464, y: -0.0023892522, z: 0.0013141483}
+--- !u!114 &114112716935409956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1820254755362716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb312e42f11a472f816fa3e4341d1d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestFully: {fileID: 0}
+  chestFullyOpened: 0
 --- !u!114 &114319749224974488
 MonoBehaviour:
   m_ObjectHideFlags: 1
