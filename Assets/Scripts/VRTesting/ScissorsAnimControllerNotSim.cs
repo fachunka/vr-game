@@ -16,7 +16,7 @@ public class ScissorsAnimControllerNotSim : MonoBehaviour {
     {
         if (col.gameObject.name == "Meat")
         {
-            print("touching Meat");
+            print("touching Meat, animating scissors");
             anim.Play("Scissors2");
         }
     }

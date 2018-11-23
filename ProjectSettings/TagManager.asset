@@ -15,6 +15,12 @@ TagManager:
   - RecipeScreen
   - Plane
   - Bottle
+  - Ugali
+  - Cornmeal
+  - Chicken
+  - MirendaLeaf
+  - ButtonUgali
+  - Lime
   layers:
   - Default
   - TransparentFX

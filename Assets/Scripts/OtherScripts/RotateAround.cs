@@ -23,10 +23,24 @@ public class RotateAround : MonoBehaviour {
 
     void OrbitAround()
     {
-        //transform.RotateAround(axis.transform.position, Vector3.down, rdiusSpeed * Time.deltaTime);
         transform.RotateAround(axis.transform.position, Vector3.down, rotationSpeed * Time.deltaTime);
         desiredPosition = (transform.position - axis.transform.position).normalized * radius + axis.transform.position;
         transform.position = Vector3.MoveTowards(transform.position, desiredPosition, Time.deltaTime * radiusSpeed);
     }
 
+    //when grabbed with hand(this time scissors), stop rotation and enable the UI screen
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Scissors")
+        {
+            print("rotating ball collided with scissors");
+        }
+    }
+    
+    void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "Scissors")
+        {
+        }
+    }
 }
