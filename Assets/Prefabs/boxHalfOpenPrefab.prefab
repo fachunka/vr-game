@@ -502,6 +502,8 @@ GameObject:
   - component: {fileID: 4682932638586368}
   - component: {fileID: 54518392980320804}
   - component: {fileID: 65826011357954998}
+  - component: {fileID: 82096691788616716}
+  - component: {fileID: 114754223049996628}
   m_Layer: 0
   m_Name: boxHalfOpenPrefab
   m_TagString: Untagged
@@ -2037,6 +2039,102 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.41913334, y: 0.08133376, z: 0.29560032}
   m_Center: {x: -0.00000005960464, y: -0.0023892522, z: 0.0013141483}
+--- !u!82 &82096691788616716
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1820254755362716}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243623359943734346, guid: 65cc1c8c5b9f9472a9f58495ea1f3d8f,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: dc8ddb0945d154b1d931453419f44590, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 8
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &114319749224974488
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2051,3 +2149,55 @@ MonoBehaviour:
   toReplace: {fileID: 1203142612451316, guid: 3d37f987b43e94194b5242657083837c, type: 2}
   scissorsBox: {fileID: 1200463573016142, guid: a2e1c43418ad54b84a2fcb8577a7cfca,
     type: 2}
+--- !u!114 &114754223049996628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1820254755362716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1461815862, guid: 6fc5cdeb2b2664cd69b743656e623709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  occlusionWallMask:
+    serializedVersion: 2
+    m_Bits: 55
+  obstructionWallMask:
+    serializedVersion: 2
+    m_Bits: 55
+  occlusionRayUpdateTime: 1
+  obstructionRayUpdateTime: 1
+  audioSource: {fileID: 0}
+  clipIsPlaying: 0
+  gainLevel: 0
+  directLevel: 0
+  reflectionLevel: 0
+  reverbLevel: 0
+  azimuthCorrection: 1
+  distanceCorrection: 1
+  useUnityDistance: 0
+  auralization: 0
+  roomPreset: 40
+  internalReverb: 1
+  performanceMode: 0
+  dearVRPlayOnAwake: 0
+  bypass: 0
+  bypassPerformance: 0
+  reverbStopOverlap: 1
+  inputChannel: 0
+  reflectionLP: 20000
+  reverbLP: 20000
+  roomSize: 100
+  bassBoost: 0
+  occlusionLevel: 0.6
+  obsturctionLevel: 0.6
+  occlusionActiv: 0
+  obstructionActiv: 0
+  forceOcclusion: 0
+  forceObstruction: 0
+  occlusionDebugRayCast: 0
+  occlusionRayUpdateFreq: 0.2
+  obstructionRayUpdateFreq: 0.2
+  obstructionDebugRayCast: 0
+  reverbSends: []
