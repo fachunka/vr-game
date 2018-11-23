@@ -1723,6 +1723,7 @@ GameObject:
   - component: {fileID: 346580204}
   - component: {fileID: 346580203}
   - component: {fileID: 346580202}
+  - component: {fileID: 346580208}
   m_Layer: 0
   m_Name: Upper_piece
   m_TagString: Untagged
@@ -1868,6 +1869,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1624251, y: 0.0041241455, z: 0.049210314}
   m_Center: {x: 0.010921869, y: 0.0069243778, z: -0.016042816}
+--- !u!114 &346580208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 346580200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ffefdb82157410dac3b3078ea0c24e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scissorClips:
+  - {fileID: 8300000, guid: bef8fe41854a44461864d0e6d338a636, type: 3}
+  - {fileID: 8300000, guid: 0537dfcd30a4741f09d03828abcbac63, type: 3}
+  - {fileID: 8300000, guid: 09bed69824d274448bcbc4eacfe03e4b, type: 3}
+  scissorSource: {fileID: 1519760494}
 --- !u!1 &353150334 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1972882599956372, guid: ba2716fea1d8f4aca82dc0adfc39f91b,
@@ -6857,7 +6874,6 @@ GameObject:
   - component: {fileID: 1519760495}
   - component: {fileID: 1519760492}
   - component: {fileID: 1519760491}
-  - component: {fileID: 1519760496}
   - component: {fileID: 1519760494}
   - component: {fileID: 1519760493}
   m_Layer: 0
@@ -7060,22 +7076,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1519760496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1519760490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66ffefdb82157410dac3b3078ea0c24e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scissorClips:
-  - {fileID: 8300000, guid: bef8fe41854a44461864d0e6d338a636, type: 3}
-  - {fileID: 8300000, guid: 0537dfcd30a4741f09d03828abcbac63, type: 3}
-  - {fileID: 8300000, guid: 09bed69824d274448bcbc4eacfe03e4b, type: 3}
-  scissorSource: {fileID: 1519760494}
 --- !u!1 &1528408861 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1775775688037094, guid: 02e5c3b5a75c34dc29c191c4ba2bb064,
