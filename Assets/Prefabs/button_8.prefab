@@ -346,4 +346,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObContainingScript: {fileID: 0}
   Ugali: {fileID: 1932257191682992, guid: 3acd838de522a45cfaf68e174500f157, type: 2}
-  Stove2: {fileID: 0}
+  StoveUgaliDish: {fileID: 0}

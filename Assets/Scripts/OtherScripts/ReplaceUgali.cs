@@ -7,16 +7,18 @@ public class ReplaceUgali : MonoBehaviour
 {
     public GameObject gameObContainingScript;
     public GameObject Ugali;
-    public GameObject Stove2;
+    public GameObject StoveUgaliDish;
 
     Vector3 UgaliPosition;
 
     bool replaceObjects;
+    bool handNotTouchedButtonBefore;
 
     // Use this for initialization
     void Start()
     {
         replaceObjects = false;
+        handNotTouchedButtonBefore = true;
         UgaliPosition = new Vector3(0, 0.6f, 0);
     }
 
@@ -35,23 +37,35 @@ public class ReplaceUgali : MonoBehaviour
     {
         StoveCollision StoveCollisionScript = gameObContainingScript.GetComponent<StoveCollision>();
 
+        //if gamecontroller collider with button
         if (other.gameObject.tag == "GameController")
         {
             print("button clicked");
 
-            //if button has been pressed
+            //if all the ingredients are colliding with stove
             if (StoveCollisionScript.ingredientsCollided == true)
             {
-                print("replacing with Uganda dish");
-                replaceObjects = true;
-                StoveCollisionScript.ingredientsCollided = false;
+                //if hands were not touching the button before(to prevent clicking button several times once)
+                if (handNotTouchedButtonBefore == true)
+                {
+                    print("replacing with Uganda dish");
+                    replaceObjects = true;
+                    StoveCollisionScript.ingredientsCollided = false;
+                     
+                    handNotTouchedButtonBefore = false;
+                }
             }
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        handNotTouchedButtonBefore = true;
+    }
+
     void Replace()
     {
-        GameObject ugali = Instantiate(Ugali, Stove2.transform.position + UgaliPosition, Stove2.transform.rotation) as GameObject;
+        GameObject ugali = Instantiate(Ugali, StoveUgaliDish.transform.position + UgaliPosition, StoveUgaliDish.transform.rotation) as GameObject;
 
         Destroy(GameObject.FindWithTag("Cornmeal"));
         Destroy(GameObject.FindWithTag("Chicken"));
@@ -69,17 +83,3 @@ public class ReplaceUgali : MonoBehaviour
     //    //Debug.Log(collision.Length);
     //}
 }
-
-
-// if (Stove2.gameObject.tag == "Cornmeal" && Stove2.gameObject.tag == "Chicken" && Stove2.gameObject.tag == "MirendaLeaf")
-//        {
-//            print("all ingredients collected");
-
-//            //if button has been pressed
-//            if (other.gameObject.tag == "ButtonUgali")
-//            {
-//                print("replacing with Uganda dish");
-//replaceObjects = true;
-//    }
-
-//}

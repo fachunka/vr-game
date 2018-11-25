@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class ReturnPositionNotSim : MonoBehaviour
 {
-    public GameObject gameObContainingScript;
+    public GameObject[] gameObContainingScript;
 
     Vector3 startPosition, driftPosition;
     Quaternion startRotation, driftRotation;
@@ -26,11 +26,13 @@ public class ReturnPositionNotSim : MonoBehaviour
     //storyobject going back to its original position when thrown back
     void Update()
     {
-        ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript.GetComponent<ControllerGrabObject>();
+        //get script from "ControllerGrabObject" script
+        //have to get data from both right and left hand
+        ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript[0].GetComponent<ControllerGrabObject>();
 
         //if game object is released, startdrift
         //get the boolean 'releasedObject' from 'ControllerGrabObject' script
-        if (Input.GetKeyDown("r") || ControllerGrabObjectScript.releasedObject == true )
+        if (/*Input.GetKeyDown("r") || */ControllerGrabObjectScript.releasedObject == true )
         {
             StartDrift();
             ControllerGrabObjectScript.releasedObject = false;

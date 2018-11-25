@@ -21,6 +21,8 @@ TagManager:
   - MirendaLeaf
   - ButtonUgali
   - Lime
+  - StoryObject
+  - Meat
   layers:
   - Default
   - TransparentFX

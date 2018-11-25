@@ -14,7 +14,7 @@ public class ScissorsAnimControllerNotSim : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "Meat")
+        if (col.gameObject.tag == "Meat")
         {
             print("touching Meat, animating scissors");
             anim.Play("Scissors2");
@@ -23,7 +23,7 @@ public class ScissorsAnimControllerNotSim : MonoBehaviour {
 
     void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.name == "Meat")
+        if (col.gameObject.tag == "Meat")
         {
             anim.Play("Not Moving State");
         }
