@@ -41,9 +41,9 @@ GameObject:
   - component: {fileID: 54072514034931192}
   - component: {fileID: 114624993861223904}
   - component: {fileID: 114984233230007550}
+  - component: {fileID: 114168084511276852}
   - component: {fileID: 82054734008534550}
   - component: {fileID: 114032661961078792}
-  - component: {fileID: 114168084511276852}
   - component: {fileID: 65468894240865898}
   m_Layer: 0
   m_Name: Meat
@@ -175,7 +175,8 @@ AudioSource:
   m_GameObject: {fileID: 1411875868051998}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243623359943734346, guid: 65cc1c8c5b9f9472a9f58495ea1f3d8f,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -326,7 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meatClip: {fileID: 8300000, guid: 503f62aad0bbf43ab8315e4e42315641, type: 3}
-  meatSource: {fileID: 0}
+  meatSource: {fileID: 82054734008534550}
   MaxVol: 1
   fadeInTime: 1
   fadeOutTime: 0.5

@@ -14,9 +14,11 @@ public class meatScreenAudio : MonoBehaviour
     private bool porkPlayed = false;
     private bool chickenPlayed = false;
 
-    public void playMeatScreen(float beepNumber)
+    public void playMeatScreen(float beepNumber)        // receives beepNumber float (SendMessage) from changeFoodDispenserCategory.cs script
     {
         beepNumberInt = (int)beepNumber;
+        print("porkPlayed = " + porkPlayed);
+        print("chickenPlayed = " + chickenPlayed);
 
         if (beepNumberInt == 1 && porkPlayed == false)
         {

@@ -150,6 +150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4532099335091854}
+  - component: {fileID: 114786114922459004}
   - component: {fileID: 82524436442568238}
   - component: {fileID: 114920831623218238}
   m_Layer: 0
@@ -2156,6 +2157,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114786114922459004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1203142612451316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6144c271c30ab4dd6b10f502f07b5e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxClatterClips:
+  - {fileID: 8300000, guid: e6db71e19d8f04709a7083148939791b, type: 3}
+  - {fileID: 8300000, guid: 008750ed947154c3f84d12a408c66c40, type: 3}
+  - {fileID: 8300000, guid: 0d3434d2e78a046bfb2d50e8817af7ae, type: 3}
+  - {fileID: 8300000, guid: 601e8e9a36240422eb27de3ca40f9963, type: 3}
+  - {fileID: 8300000, guid: 5c9e49505fbdf42e995b2c77b60d5312, type: 3}
+  - {fileID: 8300000, guid: f836f6a55ea9f45a4ae69f0fd1f87ae2, type: 3}
+  - {fileID: 8300000, guid: 358d6535d8a1347d4bf454144b40c940, type: 3}
+  - {fileID: 8300000, guid: b0c92e45d97ff48d290e8167050cfcce, type: 3}
+  - {fileID: 8300000, guid: 359af12c8f942402fab49d22e1f562d6, type: 3}
+  - {fileID: 8300000, guid: a055d5a20f7d643f5af2eab71814a8f2, type: 3}
+  - {fileID: 8300000, guid: 39102b6b58bf64213bf994b20d4c2d41, type: 3}
+  - {fileID: 8300000, guid: ad30d7b9b972d4b42887af804b933b6a, type: 3}
 --- !u!114 &114920831623218238
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -29,14 +29,14 @@ public class changeFoodDispenserCategory : MonoBehaviour {
             m_Renderer.material.SetTexture("_MainTex", m_PorkTexture);
             porkTextureChanged = true;
 
-            gameObject.SendMessage("playMeatScreen", 1f);     // play meat screen beep up (call playMeatScreen function with float 0 in the plantAudio.cs script)
+            gameObject.SendMessage("playMeatScreen", 1f);     // play meat screen beep up (call playMeatScreen function with float 0 in meatScreenAudio.cs script)
         }
         else
         {
             //print("change to chicken texture");
             m_Renderer.material.SetTexture("_MainTex", m_ChickenTexture);
 
-            gameObject.SendMessage("playMeatScreen", 2f);     // play meat screen beep down (call playMeatScreen function with int 1 in the plantAudio.cs script)
+            gameObject.SendMessage("playMeatScreen", 2f);     // play meat screen beep down (call playMeatScreen function with int 1 in meatScreenAudio.cs script)
 
         }
     }
