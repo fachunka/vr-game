@@ -18,8 +18,8 @@ public class BlinkButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Mathf.Ceil(Time.fixedTime));
-        Debug.Log(Mathf.Ceil(Time.fixedTime) % 2);
+        //Debug.Log(Mathf.Ceil(Time.fixedTime));
+        //Debug.Log(Mathf.Ceil(Time.fixedTime) % 2);
 
         if (turnOnBlinkButton == true)
         {
