@@ -50,6 +50,9 @@ public class MonsterPlantResize : MonoBehaviour
                 Debug.Log("Monster feeded");
                 transform.localScale = new Vector3(0.15f, 0.3f, 0.15f);
                 monsterFeeded = true;
+
+                gameObject.SendMessage("playEating");     // call playEating function (play eating and then sleeping sound) in the monsterPlantAudio.cs
+
             }
         }
     }
