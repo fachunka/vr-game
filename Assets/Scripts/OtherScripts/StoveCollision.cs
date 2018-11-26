@@ -61,9 +61,11 @@ public class StoveCollision : MonoBehaviour
             BlinkButtonScript.turnOnBlinkButton = true;
         }
         //if it's not 3, deactivate button
-        else if (!(objectColliding == 3))
+        else if (objectColliding != 3)
         {
             BlinkButtonScript.turnOnBlinkButton = false;
+            BlinkButtonScript.material.DisableKeyword("_EMISSION");
+
         }
     }
 

@@ -24,6 +24,8 @@ TagManager:
   - StoryObject
   - Meat
   - MonsterPlant
+  - ButtonVeg
+  - ButtonCategoryVeg
   layers:
   - Default
   - TransparentFX
