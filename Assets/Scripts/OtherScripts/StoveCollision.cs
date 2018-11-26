@@ -25,10 +25,20 @@ public class StoveCollision : MonoBehaviour
         objectColliding = 0;
     }
 
+    public void Reset()
+    {
+        ingredientsCollided = false;
+        cornmealTouching = false;
+        mirendaLeafTouching = false;
+        chickenTouching = false;
+        objectColliding = 0;
+    }
     //-----------------------------------------------------------------------------------------------------------------
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(objectColliding);
+
         BlinkButton BlinkButtonScript = gameObContainingScript.GetComponent<BlinkButton>();
 
         //Debug.Log("Number of object colliding stove2: " + objectColliding);
@@ -51,9 +61,11 @@ public class StoveCollision : MonoBehaviour
             BlinkButtonScript.turnOnBlinkButton = true;
         }
         //if it's not 3, deactivate button
-        else if (!(objectColliding == 3))
+        else if (objectColliding != 3)
         {
             BlinkButtonScript.turnOnBlinkButton = false;
+            BlinkButtonScript.material.DisableKeyword("_EMISSION");
+
         }
     }
 

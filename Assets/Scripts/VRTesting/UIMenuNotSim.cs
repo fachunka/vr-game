@@ -38,14 +38,17 @@ public class UIMenuNotSim : MonoBehaviour {
         //code for canvasRecipe
         if (enableScriptAppear == true)
         {
-            UICanvas.enabled = true;
+            if (other.gameObject.tag == "GameController")
+            {
+                UICanvas.enabled = true;
+            }
         }
 
         //code for canvasMainUI, if the rotating ball collides with key object, then enable the canvasMainUI
-        if (other.gameObject.tag == ("Key"))
-        {
-            UICanvasMainUI.enabled = true;
-        }
+        //if (other.gameObject.tag == ("Key"))
+        //{
+        //    UICanvasMainUI.enabled = true;
+        //}
     }
 
     private void OnTriggerExit(Collider other)
@@ -54,9 +57,9 @@ public class UIMenuNotSim : MonoBehaviour {
         UICanvas.enabled = false;
 
         //code for canvasMainUI
-        if (other.gameObject.tag == ("Key"))
-        {
-            UICanvasMainUI.enabled = false;
-        }
+        //if (other.gameObject.tag == ("Key"))
+        //{
+        //    UICanvasMainUI.enabled = false;
+        //}
     }
 }

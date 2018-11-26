@@ -11,12 +11,15 @@ public class BlinkButton : MonoBehaviour
     void Start()
     {
         turnOnBlinkButton = false;
+        material.DisableKeyword("_EMISSION");
+
     }
 
     // Update is called once per frame
     void Update()
     {
         //Debug.Log(Mathf.Ceil(Time.fixedTime));
+        //Debug.Log(Mathf.Ceil(Time.fixedTime) % 2);
 
         if (turnOnBlinkButton == true)
         {

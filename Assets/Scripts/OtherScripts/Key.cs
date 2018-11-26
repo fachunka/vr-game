@@ -5,7 +5,7 @@ using UnityEngine;
 public class Key : MonoBehaviour
 {
     public GameObject chestHalf;
-
+    public GameObject gameObContainingScript;
 
     private bool keyInBox;
 
@@ -18,22 +18,25 @@ public class Key : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (keyInBox == true)
         {
-            print("destroyed?");
+            print("Key destroyed?");
             Destroy(this.gameObject);
         }
+
 
     }
 
     void OnTriggerEnter(Collider other)
     {
-
+  
         if (other.gameObject.name == "boxClosedPrefab")
         {
             keyInBox = true;
             print("collided key");
+            print(keyInBox);
+
+            Destroy(GameObject.FindWithTag("Key"));
 
         }
 

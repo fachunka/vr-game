@@ -32,7 +32,7 @@ public class ReplaceUgali : MonoBehaviour
         if (replaceObjects == true)
         {
             //run this in 2seconds(after 2seconds)
-            Invoke("Replace", 2);
+            Invoke("Replace", 0);
             replaceObjects = false;
         }
     }
@@ -80,10 +80,14 @@ public class ReplaceUgali : MonoBehaviour
 
     void Replace()
     {
+        StoveCollision StoveCollisionScript = gameObContainingScript.GetComponent<StoveCollision>();
+
         GameObject ugali = Instantiate(Ugali, StoveUgaliDish.transform.position + UgaliPosition, StoveUgaliDish.transform.rotation) as GameObject;
 
         Destroy(GameObject.FindWithTag("Cornmeal"));
         Destroy(GameObject.FindWithTag("Chicken"));
         Destroy(GameObject.FindWithTag("MirendaLeaf"));
+
+        StoveCollisionScript.Reset();
     }
 }

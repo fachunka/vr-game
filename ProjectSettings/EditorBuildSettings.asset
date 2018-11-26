@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene2.unity
+    path: Assets/Scenes/Old Scenes/SampleScene2.unity
     guid: 75ff20260282c417cbb7a9b229fe7fc8
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Old Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Comic test_laura.unity
     guid: 9189572d7f25b426eb35c1d5fa121dc9
   - enabled: 0
-    path: Assets/Scenes/Lift_Test laura.unity
+    path: Assets/Scenes/Old Scenes/Lift_Test laura.unity
     guid: d6152e4db255c4cd48dbf2563829d190
   - enabled: 0
-    path: Assets/Scenes/Lift_Test.unity
+    path: Assets/Scenes/Old Scenes/Lift_Test.unity
     guid: 24787de29a23b405fab4bdade34dcae9
   - enabled: 0
     path: Assets/Scenes/Demo Room J.unity
@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Comic_Test_Matias.unity
     guid: 15a103e48b3504d4baebb40c499d3d09
   - enabled: 1
-    path: Assets/Scenes/Demo Room J Matias.unity
+    path: Assets/Scenes/Demo Room Matias.unity
     guid: 28976901284084fe8908e706f93b309e
+  - enabled: 1
+    path: Assets/Scenes/Demo Room VR Testing J.unity
+    guid: 0197345b6dd8e40d98e435ec0f83d7db
   m_configObjects: {}

@@ -49,6 +49,7 @@ public class MonsterPlantResizeNotSim : MonoBehaviour
             {
                 Debug.Log("Monster feeded");
                 transform.localScale = new Vector3(0.15f, 0.3f, 0.15f);
+                transform.position = new Vector3(-1.83f, 1.06f, 1.198f);
                 monsterFeeded = true;
             }
         }

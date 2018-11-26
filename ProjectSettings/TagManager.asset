@@ -23,6 +23,9 @@ TagManager:
   - Lime
   - StoryObject
   - Meat
+  - MonsterPlant
+  - ButtonVeg
+  - ButtonCategoryVeg
   layers:
   - Default
   - TransparentFX
