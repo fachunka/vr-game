@@ -282,7 +282,13 @@ Prefab:
       propertyPath: gameObContainingScript
       value: 
       objectReference: {fileID: 1917934966}
-    m_RemovedComponents: []
+    - target: {fileID: 54772878390892352, guid: ffa5fc73160f946b6b3f4955e053c0d2,
+        type: 2}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 54392540598012794, guid: ffa5fc73160f946b6b3f4955e053c0d2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: ffa5fc73160f946b6b3f4955e053c0d2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &94534425
@@ -696,42 +702,19 @@ Prefab:
       propertyPath: m_RootOrder
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 114380896506840428, guid: b6b0f51676a734f8194b5c6dd36ae9a9,
+        type: 2}
+      propertyPath: gameObContainingScript2
+      value: 
+      objectReference: {fileID: 1903354262}
+    - target: {fileID: 114135662536483658, guid: b6b0f51676a734f8194b5c6dd36ae9a9,
+        type: 2}
+      propertyPath: gameObContainingScript
+      value: 
+      objectReference: {fileID: 1401865266}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6b0f51676a734f8194b5c6dd36ae9a9, type: 2}
   m_IsPrefabAsset: 0
---- !u!21 &204360272
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &231570593
 Prefab:
   m_ObjectHideFlags: 0
@@ -873,7 +856,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1232259877113302, guid: e62c8a0697dee4233b867fc324a37dd8, type: 2}
       propertyPath: m_Name
-      value: Dispenser_meat
+      value: Dispenser_vegi
       objectReference: {fileID: 0}
     - target: {fileID: 477402, guid: cb3370c18187bb444b240cfb08dcc02f, type: 2}
       propertyPath: m_RootOrder
@@ -881,7 +864,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1232259877113302, guid: e62c8a0697dee4233b867fc324a37dd8, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980332457418708, guid: e62c8a0697dee4233b867fc324a37dd8, type: 2}
+      propertyPath: m_TagString
+      value: ButtonCategory
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e62c8a0697dee4233b867fc324a37dd8, type: 2}
@@ -1285,7 +1272,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dd93dc6c2124849ab22a2cf9a1e364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meat: {fileID: 1411875868051998, guid: 34314bc443db4437a96318abffebd9e1, type: 2}
+  pork: {fileID: 0}
+  chikenDrum: {fileID: 0}
+  fish: {fileID: 0}
   lime: {fileID: 1541628108268850, guid: 6f7e57d158bd24b11bd783889b0e7dc7, type: 2}
   status: 0
 --- !u!114 &311956263
@@ -1578,7 +1567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 330199827}
   m_Layer: 0
-  m_Name: Dispenser_lemon
+  m_Name: Dispenser_meat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2086,6 +2075,10 @@ Prefab:
     - target: {fileID: 4980911666810358, guid: 98513f71f737342899d2a26379d9b339, type: 2}
       propertyPath: m_RootOrder
       value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494292572960022, guid: 98513f71f737342899d2a26379d9b339, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98513f71f737342899d2a26379d9b339, type: 2}
@@ -3605,6 +3598,7 @@ GameObject:
   - component: {fileID: 958565460}
   - component: {fileID: 958565459}
   - component: {fileID: 958565458}
+  - component: {fileID: 958565465}
   - component: {fileID: 958565464}
   - component: {fileID: 958565457}
   m_Layer: 0
@@ -3652,7 +3646,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dd93dc6c2124849ab22a2cf9a1e364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meat: {fileID: 1411875868051998, guid: 34314bc443db4437a96318abffebd9e1, type: 2}
+  pork: {fileID: 0}
+  chikenDrum: {fileID: 0}
+  fish: {fileID: 0}
   lime: {fileID: 1541628108268850, guid: 6f7e57d158bd24b11bd783889b0e7dc7, type: 2}
   status: 0
 --- !u!114 &958565459
@@ -3736,6 +3732,22 @@ MonoBehaviour:
   meat: {fileID: 1411875868051998, guid: 34314bc443db4437a96318abffebd9e1, type: 2}
   scissors: {fileID: 1433207333895220, guid: ba2716fea1d8f4aca82dc0adfc39f91b, type: 2}
   inAnimateScissorsGameObject: {fileID: 1917934966}
+--- !u!114 &958565465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 958565455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c44a326c1394e91abe29d9ef14ce71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lime: {fileID: 0}
+  cornMeal: {fileID: 0}
+  mirandaLeaf: {fileID: 0}
+  banana: {fileID: 0}
+  status: 0
 --- !u!1 &964517018
 GameObject:
   m_ObjectHideFlags: 0
@@ -5008,6 +5020,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400054, guid: 332b9cc93c53943daa8aab0d659130d1,
     type: 3}
   m_PrefabInternal: {fileID: 1224028529}
+--- !u!1 &1270483537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1994157940511340, guid: ffa5fc73160f946b6b3f4955e053c0d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 86628944}
+--- !u!136 &1270483538
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270483537}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1297181444
 GameObject:
   m_ObjectHideFlags: 0
@@ -5180,7 +5210,7 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1336025401}
-  m_Mesh: {fileID: 2126238957}
+  m_Mesh: {fileID: 2103313871}
 --- !u!23 &1336025405
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5197,7 +5227,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 204360272}
+  - {fileID: 1721783528}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5238,6 +5268,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1813902811330294, guid: ffa5fc73160f946b6b3f4955e053c0d2,
     type: 2}
   m_PrefabInternal: {fileID: 86628944}
+--- !u!1 &1401865266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1612220781999778, guid: f05455bf087a04a37b2c3eaae4a5e066,
+    type: 2}
+  m_PrefabInternal: {fileID: 111264878}
 --- !u!1001 &1454726697
 Prefab:
   m_ObjectHideFlags: 0
@@ -5705,6 +5740,39 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1619918622}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &1721783528
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1726188238
 GameObject:
   m_ObjectHideFlags: 0
@@ -6606,6 +6674,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1900889769}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1903354262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1284071680113916, guid: f05455bf087a04a37b2c3eaae4a5e066,
+    type: 2}
+  m_PrefabInternal: {fileID: 111264878}
 --- !u!1 &1917934966
 GameObject:
   m_ObjectHideFlags: 0
@@ -6621,6 +6694,7 @@ GameObject:
   - component: {fileID: 1917934973}
   - component: {fileID: 1917934972}
   - component: {fileID: 1917934971}
+  - component: {fileID: 1917934969}
   - component: {fileID: 1917934968}
   - component: {fileID: 1917934970}
   m_Layer: 0
@@ -6660,6 +6734,23 @@ MonoBehaviour:
   meat: {fileID: 1411875868051998, guid: 34314bc443db4437a96318abffebd9e1, type: 2}
   scissors: {fileID: 1433207333895220, guid: ba2716fea1d8f4aca82dc0adfc39f91b, type: 2}
   inAnimateScissorsGameObject: {fileID: 1917934966}
+--- !u!114 &1917934969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1917934966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c44a326c1394e91abe29d9ef14ce71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lime: {fileID: 1541628108268850, guid: 6f7e57d158bd24b11bd783889b0e7dc7, type: 2}
+  cornMeal: {fileID: 1494292572960022, guid: 98513f71f737342899d2a26379d9b339, type: 2}
+  mirandaLeaf: {fileID: 1594559347179180, guid: 2960b7f5023aa4847801509cdead540c,
+    type: 2}
+  banana: {fileID: 1503013433001070, guid: 198449ffcbc264c9297033648119a048, type: 2}
+  status: 0
 --- !u!65 &1917934970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6683,7 +6774,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dd93dc6c2124849ab22a2cf9a1e364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meat: {fileID: 1411875868051998, guid: 34314bc443db4437a96318abffebd9e1, type: 2}
+  pork: {fileID: 1411875868051998, guid: 34314bc443db4437a96318abffebd9e1, type: 2}
+  chikenDrum: {fileID: 1716361778050010, guid: 187ccc598988c4ac0a1b79fb33bcf89c, type: 2}
+  fish: {fileID: 1670961206985296, guid: f60dbe5f3e89e4b738c4c373f3705138, type: 2}
   lime: {fileID: 1541628108268850, guid: 6f7e57d158bd24b11bd783889b0e7dc7, type: 2}
   status: 0
 --- !u!114 &1917934972
@@ -11756,7 +11849,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &2126238957
+--- !u!43 &2103313871
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

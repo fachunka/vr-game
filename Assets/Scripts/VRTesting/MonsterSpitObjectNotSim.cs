@@ -19,6 +19,9 @@ public class MonsterSpitObjectNotSim : MonoBehaviour
     private bool isDrifting = false;
     bool releaseObjectInHand;
 
+    GameObject inHand;
+    Component[] grabObjects;
+
     // Use this for initialization
     void Start()
     {
@@ -33,6 +36,8 @@ public class MonsterSpitObjectNotSim : MonoBehaviour
         randomPositionFromMonsterPlant = new Vector3(0.8f, 0.5f, Random.Range(-0.2f, 0.2f));
 
         releaseObjectInHand = false;
+
+        inHand = GameObject.Find("[CameraRig]");
     }
 
     // Update is called once per frame
@@ -40,15 +45,18 @@ public class MonsterSpitObjectNotSim : MonoBehaviour
     {
         ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript.GetComponent<ControllerGrabObject>();
 
+        //debug
+        Debug.Log(ControllerGrabObjectScript.objectInHand);
+
         //release the object in hand
         if (releaseObjectInHand == true)
         {
             if (ControllerGrabObjectScript.objectInHand != null)
             {
-                if (ControllerGrabObjectScript.objectInHand)
-                {
+                //if (ControllerGrabObjectScript.objectInHand)
+                //{
                     ControllerGrabObjectScript.ReleaseObjectControlledByOtherScript();
-                }
+                //}
 
             }
             releaseObjectInHand = false;
