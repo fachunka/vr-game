@@ -46,7 +46,7 @@ public class MonsterSpitObjectNotSim : MonoBehaviour
         ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript.GetComponent<ControllerGrabObject>();
 
         //debug
-        Debug.Log(ControllerGrabObjectScript.objectInHand);
+        //Debug.Log(ControllerGrabObjectScript.objectInHand);
 
         //release the object in hand
         if (releaseObjectInHand == true)

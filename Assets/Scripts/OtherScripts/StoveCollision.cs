@@ -25,10 +25,20 @@ public class StoveCollision : MonoBehaviour
         objectColliding = 0;
     }
 
+    public void Reset()
+    {
+        ingredientsCollided = false;
+        cornmealTouching = false;
+        mirendaLeafTouching = false;
+        chickenTouching = false;
+        objectColliding = 0;
+    }
     //-----------------------------------------------------------------------------------------------------------------
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(objectColliding);
+
         BlinkButton BlinkButtonScript = gameObContainingScript.GetComponent<BlinkButton>();
 
         //Debug.Log("Number of object colliding stove2: " + objectColliding);

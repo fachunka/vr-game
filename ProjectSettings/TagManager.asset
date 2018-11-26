@@ -23,6 +23,7 @@ TagManager:
   - Lime
   - StoryObject
   - Meat
+  - MonsterPlant
   layers:
   - Default
   - TransparentFX
