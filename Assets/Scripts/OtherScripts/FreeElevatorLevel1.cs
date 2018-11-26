@@ -8,21 +8,26 @@ public class FreeElevatorLevel1 : MonoBehaviour
     bool ugaliTouching;
     bool bottleTouching;
 
+    public bool freeAll;
+
     // Use this for initialization
     void Start()
     {
         ugaliTouching = false;
         bottleTouching = false;
+
+        freeAll = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (ugaliTouching == true && bottleTouching == true)
         {
             print("particle effect activated");
 
+            //send bool to particlelauncher
+            freeAll = true;
         }
     }
 

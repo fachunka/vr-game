@@ -10,6 +10,9 @@ public class OutlineControl : MonoBehaviour
     public Renderer meshRenderer;
     public Material instancedMaterial;
 
+    //GameObject to get FreeElevatorLevel1 Script
+    public GameObject gameObContainingScript;
+
     public float interpolationSpeed;
 
     // animate the game object from 1.0 to 1.1 and back
@@ -27,7 +30,7 @@ public class OutlineControl : MonoBehaviour
 
         interpolationSpeed = 1.45f;
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -42,5 +45,16 @@ public class OutlineControl : MonoBehaviour
         }
 
         instancedMaterial.SetFloat("_OutlineWidth", dissolveAmount);
+
+        //----------------------------------------------------------------------
+        //remove outline when all puzzle solved
+        FreeElevatorLevel1 FreeElevatorLevel1Script = gameObContainingScript.GetComponent<FreeElevatorLevel1>();
+
+        if (FreeElevatorLevel1Script.freeAll == true || Input.GetKeyDown("o"))
+        {
+            minimum = 0;
+            maximum = 0;
+        }
     }
+
 }
