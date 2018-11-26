@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 4681313813907466}
   - component: {fileID: 33414032582029758}
   - component: {fileID: 23104920160457468}
+  - component: {fileID: 114398380457892288}
   m_Layer: 0
   m_Name: button_up_1
   m_TagString: Untagged
@@ -180,7 +181,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100002, guid: e74734df5912f421ab25226582eca1ec, type: 3}
+  - {fileID: 2100000, guid: 2a59fb98dff7d4eb696a43f06f6b13df, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -347,3 +348,16 @@ MonoBehaviour:
   gameObContainingScript: {fileID: 0}
   Ugali: {fileID: 1932257191682992, guid: 3acd838de522a45cfaf68e174500f157, type: 2}
   StoveUgaliDish: {fileID: 0}
+--- !u!114 &114398380457892288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612220781999778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c2b224c56b342a1bb1a605bf5fe4ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 2a59fb98dff7d4eb696a43f06f6b13df, type: 2}
+  turnOnBlinkButton: 0

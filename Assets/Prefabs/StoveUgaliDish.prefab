@@ -26,6 +26,8 @@ GameObject:
   - component: {fileID: 23643783096469656}
   - component: {fileID: 33187324148181778}
   - component: {fileID: 114135662536483658}
+  - component: {fileID: 114380896506840428}
+  - component: {fileID: 114482839165728664}
   m_Layer: 0
   m_Name: StoveUgaliDish
   m_TagString: Untagged
@@ -156,4 +158,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3261ad03aeba7413aa9a1a06ece92802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObContainingScript: {fileID: 0}
   ingredientsCollided: 0
+  objectColliding: 0
+--- !u!114 &114380896506840428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1411469721980238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d84db606c4e6478fb45b53d0e799d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObContainingScript: {fileID: 1411469721980238}
+  gameObContainingScript2: {fileID: 0}
+--- !u!114 &114482839165728664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1411469721980238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2408752de69415c8acffa8e537ffd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -14,12 +14,16 @@ public class ReplaceUgali : MonoBehaviour
     bool replaceObjects;
     bool handNotTouchedButtonBefore;
 
+    public bool buttonPressed;
+
     // Use this for initialization
     void Start()
     {
         replaceObjects = false;
         handNotTouchedButtonBefore = true;
         UgaliPosition = new Vector3(0, 0.6f, 0);
+
+        buttonPressed = false;
     }
 
     // Update is called once per frame
@@ -28,7 +32,7 @@ public class ReplaceUgali : MonoBehaviour
         if (replaceObjects == true)
         {
             //run this in 2seconds(after 2seconds)
-            Invoke("Replace", 3);
+            Invoke("Replace", 2);
             replaceObjects = false;
         }
     }
@@ -40,6 +44,8 @@ public class ReplaceUgali : MonoBehaviour
         //if gamecontroller collider with button
         if (other.gameObject.tag == "GameController")
         {
+            buttonPressed = true;
+
             print("button clicked");
 
             //if all the ingredients are colliding with stove
@@ -51,15 +57,24 @@ public class ReplaceUgali : MonoBehaviour
                     print("replacing with Uganda dish");
                     replaceObjects = true;
                     StoveCollisionScript.ingredientsCollided = false;
-                     
+
                     handNotTouchedButtonBefore = false;
                 }
+            }
+
+            //------------------------------------------------------------------
+            //if button clicked but 3 ingredients don't match, delete them all
+            if (handNotTouchedButtonBefore == true)
+            {
+                handNotTouchedButtonBefore = false;
             }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        buttonPressed = false;
+
         handNotTouchedButtonBefore = true;
     }
 
@@ -71,15 +86,4 @@ public class ReplaceUgali : MonoBehaviour
         Destroy(GameObject.FindWithTag("Chicken"));
         Destroy(GameObject.FindWithTag("MirendaLeaf"));
     }
-
-    //private void OnCollisionStay(Collision collision)
-    //{
-    //    List<GameObject> allCollisions = new List<GameObject>();
-
-    //    allCollisions.Add(collision.gameObject);
-
-    //    Debug.Log(allCollisions.Count);
-
-    //    //Debug.Log(collision.Length);
-    //}
 }

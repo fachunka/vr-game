@@ -5,19 +5,21 @@ using UnityEngine;
 public class PushButtonFoodDispenser : MonoBehaviour
 {
     [SerializeField]
-    private GameObject meat;
+    private GameObject pork;
+    public GameObject chikenDrum;
+    public GameObject fish;
     public GameObject lime;
 
     public float status;
 
-    Vector3 positionPork;
+    Vector3 positionAdjust;
 
     // Use this for initialization
     void Start()
     {
-        positionPork = new Vector3(0.1f, 0, 0.3f);
+        positionAdjust = new Vector3(0.1f, 0, 0.3f);
 
-        status = 1;
+        status = 0;
     }
 
     // Update is called once per frame
@@ -30,24 +32,27 @@ public class PushButtonFoodDispenser : MonoBehaviour
     {
         if (other.gameObject.tag == "Button")
         {
-            if (status % 2 == 0)
+            if (status % 4 == 0)
             {
                 //create pork prefab
-                Instantiate(meat, transform.position + positionPork, Quaternion.identity);
+                Instantiate(pork, transform.position + positionAdjust, Quaternion.identity);
             }
 
-            else
+            else if(status % 4 == 1)
             {
-                Instantiate(lime, transform.position + positionPork, Quaternion.identity);
+                Instantiate(chikenDrum, transform.position + positionAdjust, Quaternion.identity);
             }
-            //create object called lime
-            //Debug.Log("button pushed");
-            //GameObject Lime = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            //Lime.AddComponent<Rigidbody>();
-            //Lime.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-            //Lime.transform.position = new Vector3(-2, 2, 0.2f);
 
-            //new Vector3(-2, 2, 0.2f)
+            else if (status % 4 == 2)
+            {
+                Instantiate(fish, transform.position + positionAdjust, Quaternion.identity);
+            }
+
+            else if (status % 4 == 3)
+            {
+                Instantiate(lime, transform.position + positionAdjust, Quaternion.identity);
+            }
+
         }
 
         if (other.gameObject.tag == "ButtonCategory")
