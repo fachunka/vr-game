@@ -38,8 +38,9 @@ public class Key : MonoBehaviour
         //    Destroy(objectInHand);
         //}
 
+        cutleryBox cutleryBox1Script = gameObContainingScript.GetComponent<cutleryBox>();
 
-        if (keyInBox == true)
+        if (cutleryBox1Script.keyed == true)
         {
             print("Key destroyed?");
 
@@ -47,7 +48,7 @@ public class Key : MonoBehaviour
             //{
                // ControllerGrabObjectScript.ReleaseObjectControlledByOtherScript();
            // }
-            //Destroy(this.gameObject);
+            Destroy(this.gameObject);
             //Destroy(GameObject.FindWithTag("Key"));
 
         }
@@ -57,19 +58,18 @@ public class Key : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-  
-        if (other.gameObject.name == "boxClosedPrefab")
-        {
-            keyInBox = true;
-            print("collided key");
-            print(keyInBox);
 
-            print("Key destroyed?!?!?!");
+        // if (other.gameObject.name == "boxClosedPrefab")
+        //{
+           // keyInBox = true;
+           // print("collided key");
+            //print(keyInBox);
+
+            //print("Key destroyed?!?!?!");
 
 
             //Destroy(this.gameObject);
             //Destroy(GameObject.FindWithTag("Key"));
-        }
-
+        //}
     }
 }
