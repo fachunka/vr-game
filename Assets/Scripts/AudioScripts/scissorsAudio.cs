@@ -11,6 +11,5 @@ public class scissorsAudio : MonoBehaviour {
 		int randScissor = Random.Range (0, scissorClips.Length);
 		scissorSource.clip = scissorClips[randScissor];
 		scissorSource.Play();
-		print("scissor audio clip");
 	}
 }
