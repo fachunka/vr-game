@@ -6,48 +6,52 @@ using UnityEngine.Audio;
 public class storyAudioTrigger : MonoBehaviour
 {
 	public AudioMixerSnapshot storySnapshot;
-	public float transitionTimeFadeIn = 1.5f;
+	public float transitionTimeFadeIn = 1.5f;	// duration of fade in
 
-    public GameObject fryingObject;
-    public float waitBeforeFrying;
-    //	public GameObject sound1;
+//    public GameObject animation0;
+//    public float waitBeforeAnimation0;
 
-    public float waitBeforeVoiceOver;
+    public float waitBeforeVoiceOver;	// wait before starting the voice over clip
 
-	public GameObject animation2;
-	public float startTimeSound2;
-//	public GameObject sound2;
+	public GameObject animation1;	// bulgogi
+	public float startTimeAnimation1;
 
-	public GameObject friendObject;
+	public GameObject animation2;	// frying pan
+	public float startTimeAnimation2;
+	public AudioMixerSnapshot fryingStartsSnapshot;
+
+	public GameObject animation3;	// cutting the meat
+	public float startTimeAnimation3;
+
+	public AudioMixerSnapshot fryingFadesSnapshot;	// frying fades down
+    public float fadeFryingTime;
+
+	public GameObject friendObject;		// friend: "What?"
     public AudioClip friendShockedClip;
     public float startTimeFriendShocked;
-    public AudioClip friendAgreedClip;
+
+	public GameObject animation4;	// scissor
+	public float startTimeAnimation4;
+
+	public GameObject animation5;	// Korean BBQ
+	public float startTimeAnimation5;
+
+
+    public AudioClip friendAgreedClip;	// friend: "Aha!"
     public float startTimeFriendAgreed;
 
-    //	public GameObject sound3;
+//	public GameObject animation6;
+//	public float startTimeAnimation6;
 
-    public GameObject animation4;
-	public float startTimeSound4;
-//	public GameObject sound4;
-
-	public GameObject animation5;
-	public float startTimeSound5;
-//	public GameObject sound5;
-
-	public GameObject animation6;
-	public float startTimeSound6;
-    //	public GameObject sound6;
-
-    public float fadeFryingTime;
-    public float fryingVolume2;
-	public float startTimeFadeOut;
-
+	public float startTimeFadeOut;	// story scene fade out starting time
 	public AudioMixerSnapshot endStorySnapshot;
-	public float transitionTimeFadeOut = 3.0f;
+	public float transitionTimeFadeOut = 3.0f;	// duration of fade out
 
 
-	private bool fryingRunning = false;
+	private bool animation0Running = false;
+	private bool sound1Running = false;
 	private bool sound2Running = false;
+	private bool sound3Running = false;
 	private bool friendShockedRunning = false;
 	private bool sound4Running = false;
 	private bool sound5Running = false;
@@ -63,27 +67,32 @@ public class storyAudioTrigger : MonoBehaviour
 
     void Start()
     {
-		fryingObject.SetActive(false);
+//		animation0.SetActive(false);
+		animation1.SetActive(false);
 		animation2.SetActive(false);
+		animation3.SetActive(false);
 		friendObject.SetActive(false);
 		animation4.SetActive(false);
 		animation5.SetActive(false);
-		animation6.SetActive(false);
+//		animation6.SetActive(false);
 
 		storySnapshot.TransitionTo(transitionTimeFadeIn);
 
-        StartCoroutine(playAnimation1());
+//        StartCoroutine(playAnimation1());
 		StartCoroutine(playVoiceOver());
 
 	}
 
-    IEnumerator playAnimation1()
+/*    IEnumerator playAnimation1()
     {
         yield return new WaitForSeconds(waitBeforeFrying);
-        fryingObject.SetActive(true);
-        fryingRunning = true;
+        animation0.SetActive(true);
+        animation0Running = true;
         yield return new WaitForSeconds(0);
     }
+
+	*/
+
     IEnumerator playVoiceOver()
 	{
   	    voiceOverAudioSource = GetComponent<AudioSource>();
@@ -98,10 +107,23 @@ public class storyAudioTrigger : MonoBehaviour
     {
 
 
-	    if (voiceOverAudioSource.time >= startTimeSound2 && voiceOverAudioSource.time < (startTimeSound2 + 0.5) && sound2Running == false)
+	    if (voiceOverAudioSource.time >= startTimeAnimation1 && voiceOverAudioSource.time < (startTimeAnimation1 + 0.5) && sound1Running == false)
+		{
+		    animation1.SetActive(true);
+		    sound1Running = true;
+		}
+
+	    if (voiceOverAudioSource.time >= startTimeAnimation2 && voiceOverAudioSource.time < (startTimeAnimation2 + 0.5) && sound2Running == false)
 		{
 		    animation2.SetActive(true);
 		    sound2Running = true;
+			fryingStartsSnapshot.TransitionTo(2.0f);
+		}
+
+	    if (voiceOverAudioSource.time >= startTimeAnimation3 && voiceOverAudioSource.time < (startTimeAnimation3 + 0.5) && sound3Running == false)
+		{
+		    animation3.SetActive(true);
+		    sound3Running = true;
 		}
 
 		if (voiceOverAudioSource.time >= startTimeFriendShocked && voiceOverAudioSource.time < (startTimeFriendShocked + 0.5) && friendShockedRunning == false)
@@ -113,23 +135,23 @@ public class storyAudioTrigger : MonoBehaviour
             friendAudioSource.Play();
         }
 
-        if (voiceOverAudioSource.time >= startTimeSound4 && voiceOverAudioSource.time < (startTimeSound4 + 0.5) && sound4Running == false)
+        if (voiceOverAudioSource.time >= startTimeAnimation4 && voiceOverAudioSource.time < (startTimeAnimation4 + 0.5) && sound4Running == false)
 		{
 		    animation4.SetActive(true);
 		    sound4Running = true;
 		}
 
-	    if (voiceOverAudioSource.time >= startTimeSound5 && voiceOverAudioSource.time < (startTimeSound5 + 0.5) && sound5Running == false)
+	    if (voiceOverAudioSource.time >= startTimeAnimation5 && voiceOverAudioSource.time < (startTimeAnimation5 + 0.5) && sound5Running == false)
 		{
 	    	animation5.SetActive(true);
 		    sound5Running = true;
 		}
 
-		if (voiceOverAudioSource.time >= startTimeSound6 && voiceOverAudioSource.time < (startTimeSound6 + 0.5) && sound6Running == false)
-		{
-	    	animation6.SetActive(true);
-		    sound6Running = true;
-		}
+//		if (voiceOverAudioSource.time >= startTimeAnimation6 && voiceOverAudioSource.time < (startTimeAnimation6 + 0.5) && sound6Running == false)
+//		{
+//	    	animation6.SetActive(true);
+//		    sound6Running = true;
+//		}
 
         if (voiceOverAudioSource.time >= startTimeFriendAgreed && voiceOverAudioSource.time < (startTimeFriendAgreed + 0.5) && friendAgreedRunning == false)
         {
@@ -142,8 +164,9 @@ public class storyAudioTrigger : MonoBehaviour
 
         if (voiceOverAudioSource.time >= fadeFryingTime && voiceOverAudioSource.time < (fadeFryingTime + 0.5) && fadeFryingRunning == false)
         {
-            fryingAudioSource = fryingObject.GetComponent<AudioSource>();
-            fryingAudioSource.volume = fryingVolume2;
+//            fryingAudioSource = animation2.GetComponent<AudioSource>();
+//            fryingAudioSource.volume = fryingVolume2;
+			fryingFadesSnapshot.TransitionTo(2.0f);
             fadeFryingRunning = true;
         }
 
