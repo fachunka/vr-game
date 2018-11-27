@@ -10,6 +10,10 @@ public class FreeElevatorLevel1 : MonoBehaviour
 
     public bool freeAll;
 
+    bool stopParticle;
+
+    public ParticleSystem particleLauncher;
+
     // Use this for initialization
     void Start()
     {
@@ -17,6 +21,7 @@ public class FreeElevatorLevel1 : MonoBehaviour
         bottleTouching = false;
 
         freeAll = false;
+        stopParticle = true;
     }
 
     // Update is called once per frame
@@ -24,17 +29,20 @@ public class FreeElevatorLevel1 : MonoBehaviour
     {
         if (ugaliTouching == true && bottleTouching == true)
         {
+            if (stopParticle == true)
+            { 
             //print("particle effect activated");
 
             //send bool to particlelauncher
             freeAll = true;
 
-            ugaliTouching = false;
-            bottleTouching = false;
+            TurnOnParticle();
+            stopParticle = false;
+            }
         }
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Ugali")
         {
@@ -47,5 +55,25 @@ public class FreeElevatorLevel1 : MonoBehaviour
             bottleTouching = true;
         }
 
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ugali")
+        {
+            //print("cornmealTouching");
+            ugaliTouching = false;
+
+        }
+        if (collision.gameObject.tag == "Bottle")
+        {
+            bottleTouching = false;
+        }
+    }
+
+    void TurnOnParticle()
+    {
+        print("particle effect activated");
+        particleLauncher.Play();
     }
 }

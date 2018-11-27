@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    public GameObject chestHalf;
+    //public GameObject chestHalf;
     public GameObject gameObContainingScript;
     //GameObject inHand;
     //Component[] grabObjects;
@@ -23,6 +23,7 @@ public class Key : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript.GetComponent<ControllerGrabObject>();
 
         //grabObjects = inHand.GetComponentsInChildren<ControllerGrabObject>();
 
@@ -40,13 +41,13 @@ public class Key : MonoBehaviour
 
         if (keyInBox == true)
         {
-
-           
             print("Key destroyed?");
 
-            //ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript.GetComponent<ControllerGrabObject>();
-            //ControllerGrabObjectScript.ReleaseObjectControlledByOtherScript();
-            Destroy(this.gameObject);
+            //if (ControllerGrabObjectScript.objectInHand != null)
+            //{
+               // ControllerGrabObjectScript.ReleaseObjectControlledByOtherScript();
+           // }
+            //Destroy(this.gameObject);
             //Destroy(GameObject.FindWithTag("Key"));
 
         }

@@ -7,28 +7,23 @@ public class ParticleLauncher : MonoBehaviour
     public GameObject gameObContainingScript;
     public ParticleSystem particleLauncher;
 
+    bool turnedOnParticle;
+
     // Use this for initialization
     void Start()
     {
-
+        turnedOnParticle = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        FreeElevatorLevel1 FreeElevatorLevel1Script = gameObContainingScript.GetComponent<FreeElevatorLevel1>();
 
-        if (FreeElevatorLevel1Script.freeAll == true || Input.GetKeyDown("p"))
-        {
-            TurnOnParticle();
-        }
     }
 
     void TurnOnParticle()
     {
-        print("particle effect activated");
+            print("particle effect activated");
             particleLauncher.Play();
-
-            //FreeElevatorLevel1Script.freeAll = false;
     }
 }
