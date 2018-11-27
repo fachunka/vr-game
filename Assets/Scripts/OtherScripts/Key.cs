@@ -6,6 +6,9 @@ public class Key : MonoBehaviour
 {
     public GameObject chestHalf;
     public GameObject gameObContainingScript;
+    GameObject inHand;
+    Component[] grabObjects;
+    GameObject objectInHand;
 
     private bool keyInBox;
 
@@ -13,15 +16,40 @@ public class Key : MonoBehaviour
     void Start()
     {
         keyInBox = false;
+        inHand = GameObject.Find("[CameraRig]");
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        grabObjects = inHand.GetComponentsInChildren<ControllerGrabObject>();
+
+        foreach (ControllerGrabObject grabObj in grabObjects)
+        {
+            Debug.Log(grabObj.objectInHandName);
+            objectInHand = grabObj.objectInHand;
+
+        }
+
+        if (objectInHand.tag == "Scissors")
+        {
+            Destroy(objectInHand);
+        }
+
+
         if (keyInBox == true)
         {
+
+           
             print("Key destroyed?");
+
+            //ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript.GetComponent<ControllerGrabObject>();
+            //ControllerGrabObjectScript.ReleaseObjectControlledByOtherScript();
             Destroy(this.gameObject);
+            //Destroy(GameObject.FindWithTag("Key"));
+
         }
 
 
@@ -36,8 +64,11 @@ public class Key : MonoBehaviour
             print("collided key");
             print(keyInBox);
 
-            Destroy(GameObject.FindWithTag("Key"));
+            print("Key destroyed?!?!?!");
 
+
+            //Destroy(this.gameObject);
+            //Destroy(GameObject.FindWithTag("Key"));
         }
 
     }

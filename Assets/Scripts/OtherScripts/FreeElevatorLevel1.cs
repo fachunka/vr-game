@@ -24,7 +24,7 @@ public class FreeElevatorLevel1 : MonoBehaviour
     {
         if (ugaliTouching == true && bottleTouching == true)
         {
-            print("particle effect activated");
+            //print("particle effect activated");
 
             //send bool to particlelauncher
             freeAll = true;
