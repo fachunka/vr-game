@@ -7,7 +7,7 @@ public class MaskSceneChange : MonoBehaviour {
 
     private bool masked;
     public string sceneName;
-    private float fadeDuration = 2f;
+    private float fadeDuration = 1f;
     public GameObject fadeObject;
 
 
@@ -26,6 +26,8 @@ public class MaskSceneChange : MonoBehaviour {
         SteamVR_Fade.Start(Color.clear, 0f);
         //set and start fade to
         SteamVR_Fade.Start(Color.white, fadeDuration);
+        Debug.Log('3');
+
     }
 
     private void FadeFromWhite()
@@ -34,6 +36,28 @@ public class MaskSceneChange : MonoBehaviour {
         SteamVR_Fade.Start(Color.white, 0f);
         //set and start fade to
         SteamVR_Fade.Start(Color.clear, fadeDuration);
+        Debug.Log('4');
+
+    }
+
+    private void FadeFromBlack()
+    {
+        //set start color
+        SteamVR_Fade.Start(Color.black, 0f);
+        //set and start fade to
+        SteamVR_Fade.Start(Color.clear, fadeDuration);
+        Debug.Log('4');
+
+    }
+
+    private void FadeToBlack()
+    {
+        //set start color
+        SteamVR_Fade.Start(Color.clear, 0f);
+        //set and start fade to
+        SteamVR_Fade.Start(Color.black, fadeDuration);
+        Debug.Log('3');
+
     }
 
     //Update is called once per frame
@@ -47,10 +71,18 @@ public class MaskSceneChange : MonoBehaviour {
             //fadeObjectScript.color = new Color(0, 0, 0, 1);
             //SteamVR_Fade.Start(Color.black, 20.25f);
             //SteamVR_LoadLevel.Begin(sceneName);
-            FadeToWhite();
-            //SteamVR_LoadLevel.Begin(sceneName);
-            Invoke("FadeFromWhite", fadeDuration);
+            // FadeToWhite();
+            // Invoke("FadeFromWhite", fadeDuration);
 
+            Debug.Log('1');
+            //SteamVR_LoadLevel.Begin(sceneName);
+            FadeToBlack();
+
+            Debug.Log('2');
+            SteamVR_LoadLevel.Begin(sceneName);
+
+
+            masked = false;
         }
 
     }
