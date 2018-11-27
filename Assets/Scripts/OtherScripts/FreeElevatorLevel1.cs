@@ -28,6 +28,9 @@ public class FreeElevatorLevel1 : MonoBehaviour
 
             //send bool to particlelauncher
             freeAll = true;
+
+            ugaliTouching = false;
+            bottleTouching = false;
         }
     }
 

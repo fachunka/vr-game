@@ -6,9 +6,9 @@ public class Key : MonoBehaviour
 {
     public GameObject chestHalf;
     public GameObject gameObContainingScript;
-    GameObject inHand;
-    Component[] grabObjects;
-    GameObject objectInHand;
+    //GameObject inHand;
+    //Component[] grabObjects;
+    //GameObject objectInHand;
 
     private bool keyInBox;
 
@@ -16,7 +16,7 @@ public class Key : MonoBehaviour
     void Start()
     {
         keyInBox = false;
-        inHand = GameObject.Find("[CameraRig]");
+        //inHand = GameObject.Find("[CameraRig]");
 
     }
 
@@ -24,19 +24,18 @@ public class Key : MonoBehaviour
     void Update()
     {
 
-        grabObjects = inHand.GetComponentsInChildren<ControllerGrabObject>();
+        //grabObjects = inHand.GetComponentsInChildren<ControllerGrabObject>();
 
-        foreach (ControllerGrabObject grabObj in grabObjects)
-        {
-            Debug.Log(grabObj.objectInHandName);
-            objectInHand = grabObj.objectInHand;
+        //foreach (ControllerGrabObject grabObj in grabObjects)
+        //{
+        //    Debug.Log(grabObj.objectInHandName);
+        //    objectInHand = grabObj.objectInHand;
+        //}
 
-        }
-
-        if (objectInHand.tag == "Scissors")
-        {
-            Destroy(objectInHand);
-        }
+        //if (objectInHand.tag == "Scissors")
+        //{
+        //    Destroy(objectInHand);
+        //}
 
 
         if (keyInBox == true)

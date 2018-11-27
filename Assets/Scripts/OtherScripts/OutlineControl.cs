@@ -52,8 +52,8 @@ public class OutlineControl : MonoBehaviour
 
         if (FreeElevatorLevel1Script.freeAll == true || Input.GetKeyDown("o"))
         {
-            //minimum = 0;
-            //maximum = 0;
+            minimum = 0;
+            maximum = 0;
         }
     }
 
