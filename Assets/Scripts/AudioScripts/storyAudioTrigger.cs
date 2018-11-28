@@ -23,7 +23,7 @@ public class storyAudioTrigger : MonoBehaviour
 	public GameObject animation3;	// cutting the meat
 	public float startTimeAnimation3;
 
-	public AudioMixerSnapshot fryingFadesSnapshot;	// frying fades down
+	public AudioMixerSnapshot fryingFadesSnapshot;	// frying fades to the background
     public float fadeFryingTime;
 
 	public GameObject friendObject;		// friend: "What?"
@@ -32,6 +32,9 @@ public class storyAudioTrigger : MonoBehaviour
 
 	public GameObject animation4;	// scissor
 	public float startTimeAnimation4;
+
+	public AudioMixerSnapshot scissorsFadesSnapshot;	// scissors fade to the background
+    public float fadeScissorsTime;
 
 	public GameObject animation5;	// Korean BBQ
 	public float startTimeAnimation5;
@@ -117,7 +120,7 @@ public class storyAudioTrigger : MonoBehaviour
 		{
 		    animation2.SetActive(true);
 		    sound2Running = true;
-			fryingStartsSnapshot.TransitionTo(2.0f);
+			fryingStartsSnapshot.TransitionTo(4.0f);
 		}
 
 	    if (voiceOverAudioSource.time >= startTimeAnimation3 && voiceOverAudioSource.time < (startTimeAnimation3 + 0.5) && sound3Running == false)
@@ -169,6 +172,11 @@ public class storyAudioTrigger : MonoBehaviour
 			fryingFadesSnapshot.TransitionTo(2.0f);
             fadeFryingRunning = true;
         }
+
+        if (voiceOverAudioSource.time >= fadeScissorsTime && voiceOverAudioSource.time < (fadeScissorsTime + 0.5))
+		{
+			scissorsFadesSnapshot.TransitionTo(3);
+		}
 
         if (voiceOverAudioSource.time >= startTimeFadeOut && voiceOverAudioSource.time < (startTimeFadeOut + 0.5) && fadeOutRunning == false)
 		{
