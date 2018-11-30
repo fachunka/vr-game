@@ -7,7 +7,7 @@ public class cutleryBox : MonoBehaviour {
 	public bool keyed = false;
 	// public GameObject toDestroy;
 	public GameObject toReplace;
-	private Vector3 slightlyOpenPos = new Vector3(0.85f, 1.68f, 1);
+	private Vector3 slightlyOpenPos;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +25,7 @@ public class cutleryBox : MonoBehaviour {
 
 						Destroy(this.transform.parent.gameObject);
 
-						Instantiate(toReplace, slightlyOpenPos, Quaternion.identity);
+						Instantiate(toReplace, slightlyOpenPos, Quaternion.Euler(new Vector3(0, 180, 0)));
 						print("keyed");
 				}
 

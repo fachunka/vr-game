@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class PushButtonFoodDispenser : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject pork;
+    public GameObject pork;
     public GameObject chikenDrum;
     public GameObject fish;
     public GameObject lime;
 
     public float status;
 
-    Vector3 positionAdjust;
+    public Vector3 positionAdjust;
 
     // Use this for initialization
     void Start()
     {
-        positionAdjust = new Vector3(0.1f, 0, 0.3f);
+        positionAdjust = new Vector3(-0.175f, 0, -0.175f);
 
         status = 0;
     }

@@ -11,12 +11,12 @@ public class PushButtonFoodDispenser2 : MonoBehaviour {
 
     public float status;
 
-    Vector3 positionAdjust;
+    public Vector3 positionAdjust;
 
     // Use this for initialization
     void Start()
     {
-        positionAdjust = new Vector3(0.1f, 0, 0.3f);
+        positionAdjust = new Vector3(-0.175f, 0, -0.175f);
 
         status = 0;
     }
