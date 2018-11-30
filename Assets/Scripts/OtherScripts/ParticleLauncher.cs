@@ -29,6 +29,15 @@ public class ParticleLauncher : MonoBehaviour
             }
         }
 
+       else if (FreeElevatorLevel1Script.freeAll == false)
+        {
+            if (stopParticle == false)
+            {
+                TurnOnParticle();
+                stopParticle = true;
+            }
+        }
+
     }
 
     void TurnOnParticle()
@@ -36,4 +45,12 @@ public class ParticleLauncher : MonoBehaviour
             print("particle effect activated");
             particleLauncher.Play();
     }
+
+    void TurnOffParticle()
+    {
+        print("particle effect activated");
+        particleLauncher.Stop();
+    }
+
+
 }
