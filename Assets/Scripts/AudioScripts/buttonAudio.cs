@@ -15,7 +15,9 @@ public class buttonAudio : MonoBehaviour
         {
             if (enter)
             {
+                float pitch = 1.0f + Random.Range(-0.05f, 0.05f);
                 audioSource.clip = audioClip;
+                audioSource.pitch = pitch;
                 audioSource.Play();
             }
         }
