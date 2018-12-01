@@ -8,6 +8,7 @@ public class PushButtonFoodDispenser : MonoBehaviour
     public GameObject chikenDrum;
     public GameObject fish;
     public GameObject lime;
+    private GameObject meatDispenserAudioSource;
 
     public float status;
 
@@ -35,21 +36,29 @@ public class PushButtonFoodDispenser : MonoBehaviour
             {
                 //create pork prefab
                 Instantiate(pork, transform.position + positionAdjust, Quaternion.identity);
+                meatDispenserAudioSource = GameObject.Find("Dispenser_meat");
+                meatDispenserAudioSource.SendMessage("playPrintFood");
             }
 
             else if(status % 4 == 1)
             {
                 Instantiate(chikenDrum, transform.position + positionAdjust, Quaternion.identity);
+                meatDispenserAudioSource = GameObject.Find("Dispenser_meat");
+                meatDispenserAudioSource.SendMessage("playPrintFood");
             }
 
             else if (status % 4 == 2)
             {
                 Instantiate(fish, transform.position + positionAdjust, Quaternion.identity);
+                meatDispenserAudioSource = GameObject.Find("Dispenser_meat");
+                meatDispenserAudioSource.SendMessage("playPrintFood");
             }
 
             else if (status % 4 == 3)
             {
                 Instantiate(lime, transform.position + positionAdjust, Quaternion.identity);
+                meatDispenserAudioSource = GameObject.Find("Dispenser_meat");
+                meatDispenserAudioSource.SendMessage("playPrintFood");
             }
 
         }
