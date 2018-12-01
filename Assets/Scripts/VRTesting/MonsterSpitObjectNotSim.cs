@@ -19,25 +19,32 @@ public class MonsterSpitObjectNotSim : MonoBehaviour
     private bool isDrifting = false;
     bool releaseObjectInHand;
 
-    GameObject inHand;
-    Component[] grabObjects;
+    //GameObject inHand;
+    //Component[] grabObjects;
+
+    //to restore what object was in hand before colliding with the monsterplant
+    public GameObject previousObjectInHand;
 
     // Use this for initialization
     void Start()
     {
-        ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript.GetComponent<ControllerGrabObject>();
+        //ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript.GetComponent<ControllerGrabObject>();
 
-        if (ControllerGrabObjectScript.objectInHand != null)
-        {
-            startPosition = ControllerGrabObjectScript.objectInHand.transform.position;
-            startRotation = ControllerGrabObjectScript.objectInHand.transform.rotation;
-        }
+        //if (ControllerGrabObjectScript.objectInHand != null)
+        //{
+        //    startPosition = ControllerGrabObjectScript.objectInHand.transform.position;
+        //    startRotation = ControllerGrabObjectScript.objectInHand.transform.rotation;
+        //}
+
+        //setting startpoint as moster plant position to make the code easier
+        startPosition = monsterPlant.transform.position;
+        startRotation = monsterPlant.transform.rotation;
 
         randomPositionFromMonsterPlant = new Vector3(0.8f, 0.5f, Random.Range(-0.2f, 0.2f));
 
         releaseObjectInHand = false;
 
-        inHand = GameObject.Find("[CameraRig]");
+        //inHand = GameObject.Find("[CameraRig]");
     }
 
     // Update is called once per frame
@@ -55,8 +62,12 @@ public class MonsterSpitObjectNotSim : MonoBehaviour
             {
                 //if (ControllerGrabObjectScript.objectInHand)
                 //{
-                    ControllerGrabObjectScript.ReleaseObjectControlledByOtherScript();
+                ControllerGrabObjectScript.ReleaseObjectControlledByOtherScript();
                 //}
+
+                //restoring the object that was in hand
+                previousObjectInHand = ControllerGrabObjectScript.objectInHand;
+                Debug.Log(previousObjectInHand);
 
             }
             releaseObjectInHand = false;
@@ -71,18 +82,24 @@ public class MonsterSpitObjectNotSim : MonoBehaviour
 
         if (isDrifting)
         {
+            //if it's greater than the driftSeconds, stop drifting
             drifterTimer += Time.deltaTime;
             if (drifterTimer > driftSeconds)
             {
                 StopDrift();
             }
+
+            //another wise drifting
             else
             {
                 float ratio = drifterTimer / driftSeconds;
 
                 //should change to object that was in hand
-                ControllerGrabObjectScript.objectInHand.transform.position = Vector3.Lerp(driftPosition, monsterPlant.transform.position + randomPositionFromMonsterPlant, ratio);
-                ControllerGrabObjectScript.objectInHand.transform.rotation = Quaternion.Slerp(driftRotation, startRotation, ratio);
+                //ControllerGrabObjectScript.objectInHand.transform.position = Vector3.Lerp(driftPosition, monsterPlant.transform.position + randomPositionFromMonsterPlant, ratio);
+                //ControllerGrabObjectScript.objectInHand.transform.rotation = Quaternion.Slerp(driftRotation, startRotation, ratio);
+
+                previousObjectInHand.transform.position = Vector3.Lerp(driftPosition, monsterPlant.transform.position + randomPositionFromMonsterPlant, ratio);
+                previousObjectInHand.transform.rotation = Quaternion.Slerp(driftRotation, startRotation, ratio);
             }
         }
     }
@@ -104,11 +121,10 @@ public class MonsterSpitObjectNotSim : MonoBehaviour
         isDrifting = true;
         drifterTimer = 0;
 
-        ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript.GetComponent<ControllerGrabObject>();
-        driftPosition = ControllerGrabObjectScript.objectInHand.transform.position;
-        driftRotation = ControllerGrabObjectScript.objectInHand.transform.rotation;
+        driftPosition = monsterPlant.transform.position;
+        driftRotation = monsterPlant.transform.rotation;
 
-        Rigidbody rb = ControllerGrabObjectScript.objectInHand.GetComponent<Rigidbody>();
+        Rigidbody rb = previousObjectInHand.GetComponent<Rigidbody>();
         if (rb != null)
         {
             rb.velocity = Vector3.zero;
@@ -121,11 +137,10 @@ public class MonsterSpitObjectNotSim : MonoBehaviour
     {
         isDrifting = false;
 
-        ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript.GetComponent<ControllerGrabObject>();
-        ControllerGrabObjectScript.objectInHand.transform.position = monsterPlant.transform.position + randomPositionFromMonsterPlant;
-        ControllerGrabObjectScript.objectInHand.transform.rotation = startRotation;
+        previousObjectInHand.transform.position = monsterPlant.transform.position + randomPositionFromMonsterPlant;
+        previousObjectInHand.transform.rotation = startRotation;
 
-        Rigidbody rb = ControllerGrabObjectScript.objectInHand.GetComponent<Rigidbody>();
+        Rigidbody rb = previousObjectInHand.GetComponent<Rigidbody>();
         if (rb != null)
         {
             rb.velocity = Vector3.zero;
