@@ -9,6 +9,10 @@ public class PushButtonFoodDispenser2 : MonoBehaviour {
     public GameObject mirandaLeaf;
     public GameObject banana;
 
+    public float printTime = 1.5f;
+
+    private GameObject vegiDispenserAudioSource;
+    
     public float status;
 
     public Vector3 positionAdjust;
@@ -33,23 +37,26 @@ public class PushButtonFoodDispenser2 : MonoBehaviour {
         {
             if (status % 4 == 0)
             {
-                //create pork prefab
-                Instantiate(lime, transform.position + positionAdjust, Quaternion.identity);
+                StartCoroutine(printLime());
+//                Instantiate(lime, transform.position + positionAdjust, Quaternion.identity);
             }
 
             else if (status % 4 == 1)
             {
-                Instantiate(cornMeal, transform.position + positionAdjust, Quaternion.identity);
+                StartCoroutine(printCornMeal());
+//                Instantiate(cornMeal, transform.position + positionAdjust, Quaternion.identity);
             }
 
             else if (status % 4 == 2)
             {
-                Instantiate(mirandaLeaf, transform.position + positionAdjust, Quaternion.identity);
+                StartCoroutine(printMirandaLeaf());
+//                Instantiate(mirandaLeaf, transform.position + positionAdjust, Quaternion.identity);
             }
 
             else if (status % 4 == 3)
             {
-                Instantiate(banana, transform.position + positionAdjust, Quaternion.identity);
+                StartCoroutine(printBanana());
+//                Instantiate(banana, transform.position + positionAdjust, Quaternion.identity);
             }
 
         }
@@ -60,4 +67,45 @@ public class PushButtonFoodDispenser2 : MonoBehaviour {
         }
 
     }
+
+    IEnumerator printLime()
+    {
+        vegiDispenserAudioSource = GameObject.Find("Dispenser_vegi");
+        vegiDispenserAudioSource.SendMessage("playPrintFood");
+
+        yield return new WaitForSeconds(printTime);
+        Instantiate(lime, transform.position + positionAdjust, Quaternion.identity);
+        yield return(0);
+    }
+
+    IEnumerator printCornMeal()
+    {
+        vegiDispenserAudioSource = GameObject.Find("Dispenser_vegi");
+        vegiDispenserAudioSource.SendMessage("playPrintFood");
+
+        yield return new WaitForSeconds(printTime);
+        Instantiate(cornMeal, transform.position + positionAdjust, Quaternion.identity);
+        yield return(0);
+    }
+
+    IEnumerator printMirandaLeaf()
+    {
+        vegiDispenserAudioSource = GameObject.Find("Dispenser_vegi");
+        vegiDispenserAudioSource.SendMessage("playPrintFood");
+
+        yield return new WaitForSeconds(printTime);
+        Instantiate(mirandaLeaf, transform.position + positionAdjust, Quaternion.identity);
+        yield return(0);
+    }
+
+    IEnumerator printBanana()
+    {
+        vegiDispenserAudioSource = GameObject.Find("Dispenser_vegi");
+        vegiDispenserAudioSource.SendMessage("playPrintFood");
+
+       yield return new WaitForSeconds(printTime);
+        Instantiate(banana, transform.position + positionAdjust, Quaternion.identity);
+        yield return(0);
+    }
+
 }

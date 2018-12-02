@@ -33,9 +33,10 @@ AudioMixerController:
     - 4e1df7d6b467a2e4a8b3d3b20af44943
     - df98c37c7933d4345bdf154e80b9c020
     - 9073537b253376e43abe5d897be16f8a
+    - 3e0a770444a0848b6856107855fe9505
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 245307777762569424}
+  m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -81,9 +82,17 @@ AudioMixerSnapshotController:
     91877e12507624087856d4cceb0e8c59: -80
     216c3ba207a03468fb65a7e37006ee40: 0
     8b3737853a2844e63bfad4ac06be9a0b: 0
+    7e33dca51c06649c3ba16a02c6c5e86b: 12
     c043f7168e2844de59746833f2aa6b8c: 20000
+    d2b18086c8648448db16bd68dccc6bbd: 0
     92f88ac650c584815a9a9dcdfcafca8e: 22
+    49efda4761daf48598b7d176f6e08212: 0
+    b7c8d677f28c642fd875f89056bb9694: 0
+    550821391ce544833a373c6b56bf5798: 10
+    8630c72afba894ddd9ceb8dfb412e1ba: 100
+    6de42f7a99ad140a09eaa17229ef2adc: 0
     edfe860b19b694a3ea7d16fd9a80fede: 100
+    760f88cc952334246b873e477f5cf8f2: 20000
     f153abbda440548ed8a1b27f96860438: 0
     57847e3e2bef046f6aa901f8acc2b1f0: 0
     80069aae5d72c4dbd9e5386ed1864a0f: 0
@@ -105,6 +114,24 @@ AudioMixerGroupController:
   m_Pitch: 542a32bc7d77c4cfd98396b009b802af
   m_Effects:
   - {fileID: 244385298008376816}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &243109724014893060
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: dearVR-Puzzle
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 3e0a770444a0848b6856107855fe9505
+  m_Children: []
+  m_Volume: 789af984d17574b71ab75302f38e3590
+  m_Pitch: 044f16572b7f44020aec3bedcfade95d
+  m_Effects:
+  - {fileID: 244517283613540468}
+  - {fileID: 244423176905171382}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -173,7 +200,8 @@ AudioMixerGroupController:
   m_Name: PuzzleAudio
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: d6341421a6be348119be1d7f29ec6588
-  m_Children: []
+  m_Children:
+  - {fileID: 243109724014893060}
   m_Volume: 9eca49d64f7f7465e8e4e130f338559c
   m_Pitch: 42dd6cadf2c804f8fa3eab5463999b2e
   m_Effects:
@@ -335,6 +363,37 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &244423176905171382
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 45cdc1d77e0ab4aa59fcd3d7f9f91693
+  m_EffectName: dearVR Reverb
+  m_MixLevel: 96ceef4b7447a4e388e1774361e10a3c
+  m_Parameters:
+  - m_ParameterName: Gain
+    m_GUID: 49efda4761daf48598b7d176f6e08212
+  - m_ParameterName: Reverb
+    m_GUID: 6de42f7a99ad140a09eaa17229ef2adc
+  - m_ParameterName: Room Selection
+    m_GUID: 7e33dca51c06649c3ba16a02c6c5e86b
+  - m_ParameterName: Mute
+    m_GUID: d2b18086c8648448db16bd68dccc6bbd
+  - m_ParameterName: ReverbLP
+    m_GUID: 760f88cc952334246b873e477f5cf8f2
+  - m_ParameterName: RoomSize
+    m_GUID: 8630c72afba894ddd9ceb8dfb412e1ba
+  - m_ParameterName: Bass Boost
+    m_GUID: 7403c25fd448a42ce9fd98cdff8ac398
+  - m_ParameterName: Bypass
+    m_GUID: b7c8d677f28c642fd875f89056bb9694
+  - m_ParameterName: ReverbID
+    m_GUID: 550821391ce544833a373c6b56bf5798
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &244423847088584772
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -344,6 +403,19 @@ AudioMixerEffectController:
   m_EffectID: d98eb35afedb3244ca55664c5a16f3f3
   m_EffectName: Attenuation
   m_MixLevel: 3b13941843c29d14693612afd9cfc508
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &244517283613540468
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 9feb299249ea64804855558aa198a135
+  m_EffectName: Attenuation
+  m_MixLevel: 0494d81bf8ae945c2907c4cd9048ad57
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
