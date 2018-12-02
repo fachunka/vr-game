@@ -63,10 +63,22 @@ public class storyAudioTrigger : MonoBehaviour
     private bool fadeOutRunning = false;
     private bool fadeFryingRunning = false;
 
-
     AudioSource voiceOverAudioSource;
     AudioSource fryingAudioSource;
     AudioSource friendAudioSource;
+
+    //Scene change vars
+    public string sceneName;
+    private float fadeDuration = 1f;
+    private SteamVR_TrackedObject trackedObj;
+    public GameObject gameObContainingScript;
+
+
+
+    //private SteamVR_Controller.Device Controller
+    //{
+    //    get { return SteamVR_Controller.Input((int)trackedObj.index); }
+    //}
 
     void Start()
     {
@@ -109,8 +121,9 @@ public class storyAudioTrigger : MonoBehaviour
     void Update()
     {
 
+        //SteamVR_TrackedObject SteamVR_TrackedObjectScript = gameObContainingScript.GetComponent<SteamVR_TrackedObject>();
 
-	    if (voiceOverAudioSource.time >= startTimeAnimation1 && voiceOverAudioSource.time < (startTimeAnimation1 + 0.5) && sound1Running == false)
+        if (voiceOverAudioSource.time >= startTimeAnimation1 && voiceOverAudioSource.time < (startTimeAnimation1 + 0.5) && sound1Running == false)
 		{
 		    animation1.SetActive(true);
 		    sound1Running = true;
@@ -182,8 +195,27 @@ public class storyAudioTrigger : MonoBehaviour
 		{
 			endStorySnapshot.TransitionTo(transitionTimeFadeOut);
             fadeOutRunning = true;
-		}
-	}
+            FadeToBlack();
+            SteamVR_LoadLevel.Begin(sceneName);
+        }
 
- 
+        //if (fadeOutRunning == true && Controller.GetHairTriggerDown())
+        //if (Controller.GetHairTriggerDown())
+        //{
+
+        //    FadeToBlack();
+        //        SteamVR_LoadLevel.Begin(sceneName);
+
+        //}
+    }
+
+    private void FadeToBlack()
+    {
+        //set start color
+        SteamVR_Fade.Start(Color.clear, 0f);
+        //set and start fade to
+        SteamVR_Fade.Start(Color.black, fadeDuration);
+    }
+
+
 }

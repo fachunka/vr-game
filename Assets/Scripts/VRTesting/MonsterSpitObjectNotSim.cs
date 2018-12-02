@@ -112,6 +112,8 @@ public class MonsterSpitObjectNotSim : MonoBehaviour
         {
             Debug.Log("Something wrong feeded");
             releaseObjectInHand = true;
+            gameObject.SendMessage("playSpit");     // call playSpit function (play spit sound) in the monsterPlantAudio.cs
+
         }
 
     }
