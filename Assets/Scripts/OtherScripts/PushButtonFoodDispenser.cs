@@ -40,32 +40,24 @@ public class PushButtonFoodDispenser : MonoBehaviour
                 //create pork prefab
                 StartCoroutine(printPork());
 //                Instantiate(pork, transform.position + positionAdjust, Quaternion.identity);
-                meatDispenserAudioSource = GameObject.Find("Dispenser_meat");
-                meatDispenserAudioSource.SendMessage("playPrintFood");
             }
 
             else if(status % 4 == 1)
             {
                 StartCoroutine(printChicken());
 //                Instantiate(chikenDrum, transform.position + positionAdjust, Quaternion.identity);
-                meatDispenserAudioSource = GameObject.Find("Dispenser_meat");
-                meatDispenserAudioSource.SendMessage("playPrintFood");
             }
 
             else if (status % 4 == 2)
             {
                 StartCoroutine(printFish());
 //                Instantiate(fish, transform.position + positionAdjust, Quaternion.identity);
-                meatDispenserAudioSource = GameObject.Find("Dispenser_meat");
-                meatDispenserAudioSource.SendMessage("playPrintFood");
             }
 
             else if (status % 4 == 3)
             {
                 StartCoroutine(printLime());
 //                Instantiate(lime, transform.position + positionAdjust, Quaternion.identity);
-                meatDispenserAudioSource = GameObject.Find("Dispenser_meat");
-                meatDispenserAudioSource.SendMessage("playPrintFood");
             }
 
         }
@@ -79,6 +71,8 @@ public class PushButtonFoodDispenser : MonoBehaviour
 
     IEnumerator printPork()
     {
+        meatDispenserAudioSource = GameObject.Find("Dispenser_meat");
+        meatDispenserAudioSource.SendMessage("playPrintFood");
         yield return new WaitForSeconds(printTime);
         Instantiate(pork, transform.position + positionAdjust, Quaternion.identity);
         yield return(0);
@@ -86,6 +80,8 @@ public class PushButtonFoodDispenser : MonoBehaviour
 
     IEnumerator printChicken()
     {
+        meatDispenserAudioSource = GameObject.Find("Dispenser_meat");
+        meatDispenserAudioSource.SendMessage("playPrintFood");
         yield return new WaitForSeconds(printTime);
         Instantiate(chikenDrum, transform.position + positionAdjust, Quaternion.identity);
         yield return(0);
@@ -93,6 +89,8 @@ public class PushButtonFoodDispenser : MonoBehaviour
 
     IEnumerator printFish()
     {
+        meatDispenserAudioSource = GameObject.Find("Dispenser_meat");
+        meatDispenserAudioSource.SendMessage("playPrintFood");
         yield return new WaitForSeconds(printTime);
         Instantiate(fish, transform.position + positionAdjust, Quaternion.identity);
         yield return(0);
@@ -100,6 +98,8 @@ public class PushButtonFoodDispenser : MonoBehaviour
 
     IEnumerator printLime()
     {
+        meatDispenserAudioSource = GameObject.Find("Dispenser_meat");
+        meatDispenserAudioSource.SendMessage("playPrintFood");
         yield return new WaitForSeconds(printTime);
         Instantiate(lime, transform.position + positionAdjust, Quaternion.identity);
         yield return(0);
