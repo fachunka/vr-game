@@ -8,6 +8,10 @@ public class BlinkButton : MonoBehaviour
 
     public bool turnOnBlinkButton;
 
+    public AudioClip beepClip;
+    public AudioSource beepSource;
+    private bool beepPlaying = false;
+
     void Start()
     {
         turnOnBlinkButton = false;
@@ -26,12 +30,26 @@ public class BlinkButton : MonoBehaviour
             if (Mathf.Ceil(Time.fixedTime) % 2 == 0)
             {
                 material.EnableKeyword("_EMISSION");
+                playBeep();
             }
             else
             {
                 material.DisableKeyword("_EMISSION");
+                beepPlaying = false;
             }
         }
     }
+
+    void playBeep()
+    {
+        if (beepPlaying == false)
+        {
+            beepSource.clip = beepClip;
+            beepSource.loop = false;
+            beepSource.Play();
+            beepPlaying = true;
+        }
+    }
+
 
 }
