@@ -30,7 +30,6 @@ public class PushButtonFoodDispenser : MonoBehaviour
     {
     }
 
-    //when the player touches button create lime
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Button")
