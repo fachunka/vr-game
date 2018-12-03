@@ -8,6 +8,7 @@ public class PushButtonFoodDispenser2 : MonoBehaviour {
     public GameObject cornMeal;
     public GameObject mirandaLeaf;
     public GameObject banana;
+    public GameObject dispenserVeg;
 
     public float status;
 
@@ -16,7 +17,7 @@ public class PushButtonFoodDispenser2 : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        positionAdjust = new Vector3(-0.175f, 0, -0.175f);
+        positionAdjust = new Vector3(0, 0.26f, 0);
 
         status = 0;
     }
@@ -34,22 +35,22 @@ public class PushButtonFoodDispenser2 : MonoBehaviour {
             if (status % 4 == 0)
             {
                 //create pork prefab
-                Instantiate(lime, transform.position + positionAdjust, Quaternion.identity);
+                Instantiate(lime, dispenserVeg.transform.position + positionAdjust, Quaternion.identity);
             }
 
             else if (status % 4 == 1)
             {
-                Instantiate(cornMeal, transform.position + positionAdjust, Quaternion.identity);
+                Instantiate(cornMeal, dispenserVeg.transform.position + positionAdjust, Quaternion.identity);
             }
 
             else if (status % 4 == 2)
             {
-                Instantiate(mirandaLeaf, transform.position + positionAdjust, Quaternion.identity);
+                Instantiate(mirandaLeaf, dispenserVeg.transform.position + positionAdjust, Quaternion.identity);
             }
 
             else if (status % 4 == 3)
             {
-                Instantiate(banana, transform.position + positionAdjust, Quaternion.identity);
+                Instantiate(banana, dispenserVeg.transform.position + positionAdjust, Quaternion.identity);
             }
 
         }

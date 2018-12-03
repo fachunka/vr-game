@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4983380740597092}
   - component: {fileID: 33727488914653136}
   - component: {fileID: 23794165033173636}
-  - component: {fileID: 65091674673084248}
   - component: {fileID: 54681581837991720}
+  - component: {fileID: 65694940826686256}
   m_Layer: 0
   m_Name: MirendaLeaf
   m_TagString: MirendaLeaf
@@ -100,7 +100,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65091674673084248
+--- !u!65 &65694940826686256
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,5 +110,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.11369644, y: 0.052336425, z: 0.11610755}
+  m_Center: {x: -0.0024532247, y: 0.0011076201, z: -0.0005254131}

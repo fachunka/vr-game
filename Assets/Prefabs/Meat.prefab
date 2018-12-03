@@ -94,7 +94,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: cf1e5ea5e9369401b9b51085f1bccdbb, type: 2}
+  - {fileID: 2100000, guid: 5af658f0975ac4e39b3b4c2a6804098b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -355,6 +355,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38bb4f8c2e1984af4a7f5aa4b218b299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MainTexture: {fileID: 2800000, guid: bb0d5cc376ce14aa98c078d023ef4c1c, type: 3}
+  m_MainTexture: {fileID: 2800000, guid: 3277723dffc9c4e16a049864bfb8385f, type: 3}
   meatTextureChanged: 0
   cameraRig: {fileID: 0}

@@ -8,6 +8,7 @@ public class PushButtonFoodDispenser : MonoBehaviour
     public GameObject chikenDrum;
     public GameObject fish;
     public GameObject lime;
+    public GameObject dispenserMeat;
 
     public float printTime = 3.0f;
 
@@ -20,7 +21,7 @@ public class PushButtonFoodDispenser : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        positionAdjust = new Vector3(-0.175f, 0, -0.175f);
+        positionAdjust = new Vector3(0, 0.26f, 0);
 
         status = 0;
     }
@@ -80,28 +81,28 @@ public class PushButtonFoodDispenser : MonoBehaviour
     IEnumerator printPork()
     {
         yield return new WaitForSeconds(printTime);
-        Instantiate(pork, transform.position + positionAdjust, Quaternion.identity);
+        Instantiate(pork, dispenserMeat.transform.position + positionAdjust, Quaternion.identity);
         yield return(0);
     }
 
     IEnumerator printChicken()
     {
         yield return new WaitForSeconds(printTime);
-        Instantiate(chikenDrum, transform.position + positionAdjust, Quaternion.identity);
+        Instantiate(chikenDrum, dispenserMeat.transform.position + positionAdjust, Quaternion.identity);
         yield return(0);
     }
 
     IEnumerator printFish()
     {
         yield return new WaitForSeconds(printTime);
-        Instantiate(fish, transform.position + positionAdjust, Quaternion.identity);
+        Instantiate(fish, dispenserMeat.transform.position + positionAdjust, Quaternion.identity);
         yield return(0);
     }
 
     IEnumerator printLime()
     {
         yield return new WaitForSeconds(printTime);
-        Instantiate(lime, transform.position + positionAdjust, Quaternion.identity);
+        Instantiate(lime, dispenserMeat.transform.position + positionAdjust, Quaternion.identity);
         yield return(0);
     }
 
