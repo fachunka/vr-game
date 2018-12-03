@@ -457,7 +457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 2a59fb98dff7d4eb696a43f06f6b13df, type: 2}
   turnOnBlinkButton: 0
-  beepClip: {fileID: 8300000, guid: 035d571c029454c6c9c0f29c476a1b9e, type: 3}
+  beepClip: {fileID: 8300000, guid: bf586a24b10f94f09b7111711e79bc93, type: 3}
   beepSource: {fileID: 82371206635581486}
 --- !u!114 &114913436479757638
 MonoBehaviour:

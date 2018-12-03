@@ -7,11 +7,12 @@ public class ugaliAudio : MonoBehaviour
 {
 
     public AudioClip ugaliClip;
-    public AudioSource ugaliSource;
     public float MaxVol = 1.0f;
 
     public float fadeInTime = 1.0f;
     public float fadeOutTime = 0.5f;
+
+    private AudioSource audioSource;
 
     private float volume = 0.0f;
 
@@ -19,14 +20,13 @@ public class ugaliAudio : MonoBehaviour
 
     void start()
     {
-        ugaliSource.volume = 0.0f;
+        audioSource.volume = 0.0f;
     }
 
     void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.tag == "Stove" && isPlaying == false)
             {
-                Debug.Log("touching stove");
                 StopCoroutine(fadeOut());
                 StartCoroutine(fadeIn());
             }
@@ -36,14 +36,16 @@ public class ugaliAudio : MonoBehaviour
     IEnumerator fadeIn()
     {
         isPlaying = true;
-        ugaliSource.clip = ugaliClip;
-        ugaliSource.loop = true;
-        ugaliSource.Play();
+
+        audioSource = gameObject.GetComponent<AudioSource>();
+        audioSource.clip = ugaliClip;
+        audioSource.loop = true;
+        audioSource.Play();
 
         while (volume < MaxVol)
         {
             volume += Time.deltaTime / fadeInTime;
-            ugaliSource.volume = volume;
+            audioSource.volume = volume;
             yield return new WaitForSeconds(0);
         }
     }
@@ -60,15 +62,17 @@ public class ugaliAudio : MonoBehaviour
     {
         isPlaying = false;
 
+        audioSource = gameObject.GetComponent<AudioSource>();
+
         while (volume > 0.0f)
         {
             volume -= Time.deltaTime / fadeOutTime;
-            ugaliSource.volume = volume;
+            audioSource.volume = volume;
             yield return new WaitForSeconds(0);
         }
 
-        ugaliSource.volume = 0.0f;
-        ugaliSource.Stop();
+        audioSource.volume = 0.0f;
+        audioSource.Stop();
 
     }
 
