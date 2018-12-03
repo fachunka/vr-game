@@ -25,11 +25,11 @@ GameObject:
   - component: {fileID: 65628324790716404}
   m_Layer: 0
   m_Name: Ugali
-  m_TagString: Ugali
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4418796021147362
 Transform:
   m_ObjectHideFlags: 1

@@ -68,6 +68,12 @@ public class storyAudioTrigger : MonoBehaviour
     AudioSource fryingAudioSource;
     AudioSource friendAudioSource;
 
+    //change scene
+    public string sceneName;
+    private float fadeDuration = 1f;
+    private SteamVR_TrackedObject trackedObj;
+    public GameObject gameObContainingScript;
+
     void Start()
     {
 //		animation0.SetActive(false);
@@ -182,8 +188,19 @@ public class storyAudioTrigger : MonoBehaviour
 		{
 			endStorySnapshot.TransitionTo(transitionTimeFadeOut);
             fadeOutRunning = true;
-		}
+            FadeToBlack();
+            SteamVR_LoadLevel.Begin(sceneName);
+        }
 	}
 
- 
+    private void FadeToBlack()
+    {
+        //set start color
+        SteamVR_Fade.Start(Color.clear, 0f);
+        //set and start fade to
+        SteamVR_Fade.Start(Color.black, fadeDuration);
+
+    }
+
+
 }

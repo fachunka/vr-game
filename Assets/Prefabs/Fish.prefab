@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4499520563239662}
   - component: {fileID: 33633619633916064}
   - component: {fileID: 23145481926263888}
-  - component: {fileID: 65876541621559538}
   - component: {fileID: 54817245000194128}
+  - component: {fileID: 65762306352407130}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1670961206985296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.028, y: 1.9, z: -1.429}
-  m_LocalScale: {x: 0.1, y: 0.01, z: 0.05}
+  m_LocalPosition: {x: -0.311, y: 0.96, z: -0.967}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: c8825d5320cd8432487ba599b76b0143, type: 2}
+  - {fileID: 2100000, guid: 8e7580bfda8e24e858edc42770ee0070, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,7 +84,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1670961206985296}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 2e83e5421718f43bcb72592807fa4e1e, type: 3}
 --- !u!54 &54817245000194128
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -100,7 +100,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65876541621559538
+--- !u!65 &65762306352407130
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,5 +110,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.6005215, y: 0.22276902, z: 0.11471867}
+  m_Center: {x: 0.055783547, y: 0.006513145, z: 0.000000014901161}
