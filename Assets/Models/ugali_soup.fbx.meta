@@ -1,18 +1,36 @@
 fileFormatVersion: 2
-guid: 76f5144fc9b0a405aaf436e5625219d5
+guid: 848676cdd21de44e480d78089f5fc1f9
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: blinn1
-    2100002: lambert5
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pCube1
+    100000: bowl
+    100002: chicken
+    100004: mrenda
+    100006: ugali
+    100008: //RootNode
+    400000: bowl
+    400002: chicken
+    400004: mrenda
+    400006: ugali
+    400008: //RootNode
+    2100000: lambert1
+    2100002: lambert3
+    2100004: lambert2
+    2300000: bowl
+    2300002: chicken
+    2300004: mrenda
+    2300006: ugali
+    3300000: bowl
+    3300002: chicken
+    3300004: mrenda
+    3300006: ugali
+    4300000: mrenda
+    4300002: ugali
+    4300004: chicken
+    4300006: bowl
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -41,13 +59,13 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.3
+    globalScale: 0.13
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
-    importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -68,7 +86,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

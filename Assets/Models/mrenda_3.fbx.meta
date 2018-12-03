@@ -1,18 +1,29 @@
 fileFormatVersion: 2
-guid: 76f5144fc9b0a405aaf436e5625219d5
+guid: a3af1c9dce27840549dc838fa37840cd
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pPlane33
+    100004: pPlane34
+    100006: pPlane36
     400000: //RootNode
-    2100000: blinn1
-    2100002: lambert5
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pCube1
+    400002: pPlane33
+    400004: pPlane34
+    400006: pPlane36
+    2100000: lambert2
+    2300000: pPlane33
+    2300002: pPlane34
+    2300004: pPlane36
+    3300000: pPlane33
+    3300002: pPlane34
+    3300004: pPlane36
+    4300000: pPlane33
+    4300002: pPlane34
+    4300004: pPlane36
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -41,13 +52,13 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.3
+    globalScale: 0.005
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
-    importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1

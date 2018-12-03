@@ -1,18 +1,17 @@
 fileFormatVersion: 2
-guid: 76f5144fc9b0a405aaf436e5625219d5
+guid: 327d348d73adc4a9b9966276a1d6e9af
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: blinn1
-    2100002: lambert5
+    2100000: Grass_material
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCube1
+    4300000: pPlane130
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -45,9 +44,9 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
-    importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -60,7 +59,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
