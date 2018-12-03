@@ -85,7 +85,7 @@ public class MaskSceneChange : MonoBehaviour {
 
             audioSource = gameObject.GetComponent<AudioSource>();
             audioSource.loop = false;
-            audioSource.Play();           
+            audioSource.Play();
 
             masked = false;
         }

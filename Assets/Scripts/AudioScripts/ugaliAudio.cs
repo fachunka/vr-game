@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class meatAudio : MonoBehaviour
+public class ugaliAudio : MonoBehaviour
 {
 
-    public AudioClip meatClip;
-    public AudioSource meatSource;
+    public AudioClip ugaliClip;
+    public AudioSource ugaliSource;
     public float MaxVol = 1.0f;
 
     public float fadeInTime = 1.0f;
@@ -19,13 +19,14 @@ public class meatAudio : MonoBehaviour
 
     void start()
     {
-        meatSource.volume = 0.0f;
+        ugaliSource.volume = 0.0f;
     }
 
     void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.tag == "Stove" && isPlaying == false)
             {
+                Debug.Log("touching stove");
                 StopCoroutine(fadeOut());
                 StartCoroutine(fadeIn());
             }
@@ -35,14 +36,14 @@ public class meatAudio : MonoBehaviour
     IEnumerator fadeIn()
     {
         isPlaying = true;
-        meatSource.clip = meatClip;
-        meatSource.loop = true;
-        meatSource.Play();
+        ugaliSource.clip = ugaliClip;
+        ugaliSource.loop = true;
+        ugaliSource.Play();
 
         while (volume < MaxVol)
         {
             volume += Time.deltaTime / fadeInTime;
-            meatSource.volume = volume;
+            ugaliSource.volume = volume;
             yield return new WaitForSeconds(0);
         }
     }
@@ -62,12 +63,12 @@ public class meatAudio : MonoBehaviour
         while (volume > 0.0f)
         {
             volume -= Time.deltaTime / fadeOutTime;
-            meatSource.volume = volume;
+            ugaliSource.volume = volume;
             yield return new WaitForSeconds(0);
         }
 
-        meatSource.volume = 0.0f;
-        meatSource.Stop();
+        ugaliSource.volume = 0.0f;
+        ugaliSource.Stop();
 
     }
 
