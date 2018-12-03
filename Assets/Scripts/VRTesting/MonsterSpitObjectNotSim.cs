@@ -60,14 +60,14 @@ public class MonsterSpitObjectNotSim : MonoBehaviour
         {
             if (ControllerGrabObjectScript.objectInHand != null)
             {
+                previousObjectInHand = ControllerGrabObjectScript.objectInHand;
+                Debug.Log(previousObjectInHand);
                 //if (ControllerGrabObjectScript.objectInHand)
                 //{
                 ControllerGrabObjectScript.ReleaseObjectControlledByOtherScript();
                 //}
 
                 //restoring the object that was in hand
-                previousObjectInHand = ControllerGrabObjectScript.objectInHand;
-                Debug.Log(previousObjectInHand);
 
             }
             releaseObjectInHand = false;
