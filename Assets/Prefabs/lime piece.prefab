@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23686419093852164}
   - component: {fileID: 54882404577130128}
   - component: {fileID: 136911187100462904}
+  - component: {fileID: 64071016041250292}
   m_Layer: 0
   m_Name: lime piece
   m_TagString: Lime
@@ -100,6 +101,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64071016041250292
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1541628108268850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 07b3c833d972842a6babbde78ae23c0d, type: 3}
 --- !u!136 &136911187100462904
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -108,8 +123,8 @@ CapsuleCollider:
   m_GameObject: {fileID: 1541628108268850}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.024566585
-  m_Height: 0.04969609
-  m_Direction: 1
+  m_Enabled: 0
+  m_Radius: 0.015
+  m_Height: 0.01
+  m_Direction: 2
   m_Center: {x: 0, y: -0.0004785005, z: 0}
