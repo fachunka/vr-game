@@ -32,7 +32,7 @@ public class changeFoodDispenserCategoryVeg : MonoBehaviour {
             //print("change to pork texture");
             m_Renderer.material.SetTexture("_MainTex", m_LimeTexture);
             //porkTextureChanged = true;
-            print("PushButtonFoodDispenserScript: " + ButtonVegChangeScript.status % 4);
+            //print("PushButtonFoodDispenserScript: " + ButtonVegChangeScript.status % 4);
 
             gameObject.SendMessage("playMeatScreen", 1f);     // play meat screen beep up (call playMeatScreen function with float 0 in meatScreenAudio.cs script)
         }
@@ -42,7 +42,7 @@ public class changeFoodDispenserCategoryVeg : MonoBehaviour {
             m_Renderer.material.SetTexture("_MainTex", m_CornmealTexture);
 
             gameObject.SendMessage("playMeatScreen", 2f);     // play meat screen beep down (call playMeatScreen function with int 1 in meatScreenAudio.cs script)
-            print("PushButtonFoodDispenserScript: " + ButtonVegChangeScript.status % 4);
+            //print("PushButtonFoodDispenserScript: " + ButtonVegChangeScript.status % 4);
 
         }
         else if (ButtonVegChangeScript.status % 4 == 2)
@@ -51,7 +51,7 @@ public class changeFoodDispenserCategoryVeg : MonoBehaviour {
             m_Renderer.material.SetTexture("_MainTex", m_MirendaTexture);
 
             gameObject.SendMessage("playMeatScreen", 3f);     // play meat screen beep down (call playMeatScreen function with int 1 in meatScreenAudio.cs script)
-            print("PushButtonFoodDispenserScript: " + ButtonVegChangeScript.status % 4);
+            //print("PushButtonFoodDispenserScript: " + ButtonVegChangeScript.status % 4);
 
         }
         else if (ButtonVegChangeScript.status % 4 == 3)
@@ -60,7 +60,7 @@ public class changeFoodDispenserCategoryVeg : MonoBehaviour {
             m_Renderer.material.SetTexture("_MainTex", m_BananaTexture);
 
             gameObject.SendMessage("playMeatScreen", 4f);     // play meat screen beep down (call playMeatScreen function with int 1 in meatScreenAudio.cs script)
-            print("PushButtonFoodDispenserScript: " + ButtonVegChangeScript.status % 4);
+            //print("PushButtonFoodDispenserScript: " + ButtonVegChangeScript.status % 4);
 
         }
 
