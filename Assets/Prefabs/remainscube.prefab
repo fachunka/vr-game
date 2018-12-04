@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 4426806071999076}
   m_Layer: 0
   m_Name: remainscube
-  m_TagString: Untagged
+  m_TagString: MeatChunk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,8 +125,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1526648636904938}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.13646, y: 0.88126, z: -0.48182}
+  m_LocalRotation: {x: -0, y: 0.75730205, z: -0, w: 0.65306485}
+  m_LocalPosition: {x: 0.6719, y: 2.0838, z: -2.1709}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4645894921645316}
@@ -135,7 +135,7 @@ Transform:
   - {fileID: 4545937852875202}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 98.454, z: 0}
 --- !u!4 &4545937852875202
 Transform:
   m_ObjectHideFlags: 1

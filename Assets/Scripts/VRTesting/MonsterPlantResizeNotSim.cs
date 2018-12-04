@@ -60,8 +60,8 @@ public class MonsterPlantResizeNotSim : MonoBehaviour
             if (other.gameObject.tag == "MeatChunk")
             {
                 Debug.Log("Monster feeded");
-                transform.localScale = new Vector3(0.15f, 0.3f, 0.15f);
-                transform.Translate(0, -0.38f, 0);
+                transform.localScale = new Vector3(12.5f, 12.5f, 12.5f);
+                transform.Translate(0, 0.4f, 0);
                 monsterFeeded = true;
             }
         }

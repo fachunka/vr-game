@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33821783675684276}
   - component: {fileID: 23993179934227548}
   - component: {fileID: 54699228599080270}
-  - component: {fileID: 65235557304593082}
+  - component: {fileID: 65578020560920776}
   m_Layer: 0
   m_Name: Cornmeal
   m_TagString: Cornmeal
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1494292572960022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.39, y: 1.5315, z: -1.959}
+  m_LocalPosition: {x: -0.39, y: 1.62, z: -1.959}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e4b100b09c1754e71bf15e08d45af9f3, type: 2}
+  - {fileID: 2100000, guid: 19d800792dc4d486f8394d114e627ed9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,7 +84,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1494292572960022}
-  m_Mesh: {fileID: 4300002, guid: 848676cdd21de44e480d78089f5fc1f9, type: 3}
+  m_Mesh: {fileID: 4300000, guid: e72d9542a8d4e46ffbede5c20320db4e, type: 3}
 --- !u!54 &54699228599080270
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -100,7 +100,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65235557304593082
+--- !u!65 &65578020560920776
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,5 +110,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.15099587, y: 0.052207395, z: 0.12906423}
-  m_Center: {x: 0.0052138567, y: 0.013172094, z: 0.0068076197}
+  m_Size: {x: 0.07926458, y: 0.110159814, z: 0.051863145}
+  m_Center: {x: 0.0003030505, y: -0.0005200915, z: 0}
