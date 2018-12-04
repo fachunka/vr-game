@@ -24,13 +24,13 @@ public class changeFoodDispenserCategory : MonoBehaviour {
         {
             m_Renderer.material.SetTexture("_MainTex", m_PorkTexture);
 
-            gameObject.SendMessage("playMeatScreen", 1f);     // play meat screen beep up (call playMeatScreen function with float 0 in meatScreenAudio.cs script)
+            gameObject.SendMessage("playMeatScreen", 1f);     // play meat screen beep up (call playMeatScreen function with float 1 in meatScreenAudio.cs script)
         }
         else if (ButtonMeatChangeScript.status % 3 == 1)
         {
             m_Renderer.material.SetTexture("_MainTex", m_ChickenTexture);
 
-            gameObject.SendMessage("playMeatScreen", 2f);     // play meat screen beep down (call playMeatScreen function with int 1 in meatScreenAudio.cs script)
+            gameObject.SendMessage("playMeatScreen", 2f);     // play meat screen beep down (call playMeatScreen function with int 2 in meatScreenAudio.cs script)
 
         }
 
@@ -38,7 +38,7 @@ public class changeFoodDispenserCategory : MonoBehaviour {
         {
             m_Renderer.material.SetTexture("_MainTex", m_FishTexture);
 
-            gameObject.SendMessage("playMeatScreen", 3f);     // play meat screen beep down (call playMeatScreen function with int 1 in meatScreenAudio.cs script)
+            gameObject.SendMessage("playMeatScreen", 3f);     // play meat screen beep down (call playMeatScreen function with int 3 in meatScreenAudio.cs script)
 
         }
     }

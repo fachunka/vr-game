@@ -33,7 +33,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1618891580215708
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 23524795281575776}
   instancedMaterial: {fileID: 2100000, guid: 1ba94d7c9343f4def8cafaf0874e7019, type: 2}
+  gameObContainingScript: {fileID: 0}
   interpolationSpeed: 0
 --- !u!114 &114770595119236858
 MonoBehaviour:

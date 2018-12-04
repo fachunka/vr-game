@@ -63,6 +63,8 @@ public class MonsterPlantResizeNotSim : MonoBehaviour
                 transform.localScale = new Vector3(12.5f, 12.5f, 12.5f);
                 transform.Translate(0, 0.4f, 0);
                 monsterFeeded = true;
+
+                gameObject.SendMessage("playEating");
             }
         }
     }

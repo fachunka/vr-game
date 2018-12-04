@@ -6,13 +6,13 @@ using UnityEngine.Audio;
 public class meatScreenAudio : MonoBehaviour
 {
 
-    public AudioClip beepPork;
-    public AudioClip beepChicken;
+    public AudioClip beepClip;
     public AudioSource screenSource;
 
     private int beepNumberInt = 0;
     private bool porkPlayed = false;
     private bool chickenPlayed = false;
+    private bool fishPlayed = false;
 
     public void playMeatScreen(float beepNumber)        // receives beepNumber float (SendMessage) from changeFoodDispenserCategory.cs script
     {
@@ -20,18 +20,26 @@ public class meatScreenAudio : MonoBehaviour
  
         if (beepNumberInt == 1 && porkPlayed == false)
         {
-            screenSource.clip = beepPork;
+            screenSource.clip = beepClip;
             screenSource.Play();
             porkPlayed = true;
-            chickenPlayed = false;
+            Debug.Log("play pork beep");
         }
 
         if (beepNumberInt == 2 && chickenPlayed == false)
         {
-            screenSource.clip = beepChicken;
+            screenSource.clip = beepClip;
             screenSource.Play();
             chickenPlayed = true;
-            porkPlayed = false;
+            Debug.Log("play chicken beep");
+        }
+
+        if (beepNumberInt == 3 && fishPlayed == false)
+        {
+            screenSource.clip = beepClip;
+            screenSource.Play();
+            fishPlayed = true;
+            Debug.Log("play fish beep");
         }
 
     }

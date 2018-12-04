@@ -8,8 +8,12 @@ public class cutleryBoxHalfOpen : MonoBehaviour {
 	// public GameObject toDestroy;
 	public GameObject toReplace;
 	public GameObject scissorsBox;
+	public GameObject knifeBox;
+	public GameObject forkBox;
 	private Vector3 slightlyOpenPos;
 	private Vector3 scissorsPos;
+	private Vector3 knifePos;
+	private Vector3 forkPos;
 	// Use this for initialization
 	void Start () {
 
@@ -25,12 +29,24 @@ public class cutleryBoxHalfOpen : MonoBehaviour {
 
 						slightlyOpenPos = this.transform.parent.transform.position;
                         scissorsPos = this.transform.parent.transform.position;
+						knifePos = this.transform.parent.transform.position;
+						forkPos = this.transform.parent.transform.position;
                         scissorsPos.y += 0.1f;
+						scissorsPos.z += 0.1f;
+						forkPos.x += 0.1f;
+						forkPos.y += 0.1f;
+						forkPos.z += 0.1f;
+						knifePos.x -= 0.1f;
+						knifePos.y += 0.1f;
+						knifePos.z += 0.1f;
+
 
                         Destroy(this.transform.parent.gameObject);
 
 						Instantiate(toReplace, slightlyOpenPos, Quaternion.Euler(new Vector3(0, 180, 0)));
 						Instantiate(scissorsBox, scissorsPos, Quaternion.identity);
+						Instantiate(forkBox, scissorsPos, Quaternion.identity);
+						Instantiate(knifeBox, scissorsPos, Quaternion.identity);
 						print("limed");
 
 				}

@@ -10,6 +10,7 @@ public class ControllerGrabObject : MonoBehaviour
 
     //HandAnimation, added by Jung
     public bool onTriggerEnterActivated = false;
+    public bool GetOutStoryScene = false;
     //
 
     //figure out whether object is released and sends it to returnPosition script, added by Jung
@@ -81,6 +82,7 @@ public class ControllerGrabObject : MonoBehaviour
 
             //added by Jung
             releasedObject = false;
+            GetOutStoryScene = true;
             //
         }
 

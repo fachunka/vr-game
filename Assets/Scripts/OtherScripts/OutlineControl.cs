@@ -28,7 +28,7 @@ public class OutlineControl : MonoBehaviour
         meshRenderer = gameObject.GetComponent<Renderer>();
         instancedMaterial = meshRenderer.material;
 
-        interpolationSpeed = 1.45f;
+        interpolationSpeed = 0.4f;
     }
 
     // Update is called once per frame

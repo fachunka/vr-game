@@ -2496,8 +2496,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.42952037, y: 0.1076287, z: 0.3083377}
-  m_Center: {x: 0.000106692314, y: 0.0010239482, z: -0.0014621019}
+  m_Size: {x: 0.41712976, y: 0.090204, z: 0.3083377}
+  m_Center: {x: -0.00025773048, y: -0.0026203394, z: -0.0014621019}
 --- !u!65 &65826011357954998
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2508,8 +2508,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.43395084, y: 0.09292136, z: 0.29560032}
-  m_Center: {x: -0.0036612153, y: -0.008193798, z: 0.0013141483}
+  m_Size: {x: 0.4164582, y: 0.09128857, z: 0.29560032}
+  m_Center: {x: -0.0007457733, y: -0.0023629665, z: 0.0013141483}
 --- !u!65 &65835149494203896
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2648,6 +2648,8 @@ MonoBehaviour:
   toReplace: {fileID: 1203142612451316, guid: 3d37f987b43e94194b5242657083837c, type: 2}
   scissorsBox: {fileID: 1200463573016142, guid: a2e1c43418ad54b84a2fcb8577a7cfca,
     type: 2}
+  knifeBox: {fileID: 1101472692546992, guid: 54d97e3a0e99ad34dbe5e356bc6546cb, type: 2}
+  forkBox: {fileID: 1281768284988690, guid: 4bfcc43df9b8896408ceb190d5d9574f, type: 2}
 --- !u!114 &114754223049996628
 MonoBehaviour:
   m_ObjectHideFlags: 1
