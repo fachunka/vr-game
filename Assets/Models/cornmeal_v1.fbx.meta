@@ -1,21 +1,14 @@
 fileFormatVersion: 2
-guid: 82189d2833a634561b457bd4779e9d03
+guid: e72d9542a8d4e46ffbede5c20320db4e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: recipe_frames
-    100002: recipe_screen
-    100004: //RootNode
-    400000: recipe_frames
-    400002: recipe_screen
-    400004: //RootNode
-    2100000: lambert1
-    2300000: recipe_frames
-    2300002: recipe_screen
-    3300000: recipe_frames
-    3300002: recipe_screen
-    4300000: recipe_screen
-    4300002: recipe_frames
+    100000: //RootNode
+    400000: //RootNode
+    2100000: aiStandardSurface4
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: cornmeal_3
   externalObjects: {}
   materials:
     importMaterials: 0
