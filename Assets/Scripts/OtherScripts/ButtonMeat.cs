@@ -14,7 +14,7 @@ public class ButtonMeat : MonoBehaviour {
 
     public Vector3 positionAdjust;
 
-    public float printTime = 1.0f;
+    public float printTime = 0.0f;
     private GameObject meatDispenserAudioSource;
 
     // Use this for initialization
@@ -38,8 +38,6 @@ public class ButtonMeat : MonoBehaviour {
             if (other.gameObject.tag == "GameController")
             {
                 
-                if (other.gameObject.tag == "Button")
-                {
                     if (ButtonMeatChangeScript.status % 3 == 0)
                     {
                         //create pork prefab
@@ -62,7 +60,6 @@ public class ButtonMeat : MonoBehaviour {
                         meatDispenserAudioSource.SendMessage("playPrintFood");
                     }
                 }
-            }
         }
     }
 

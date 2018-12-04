@@ -22,6 +22,7 @@ public class ButtonMeatChange : MonoBehaviour {
         if (other.gameObject.tag == "GameController")
         {
             status += 1;
+            print(status);
         }
 
     }
