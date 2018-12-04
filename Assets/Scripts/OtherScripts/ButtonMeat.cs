@@ -14,7 +14,7 @@ public class ButtonMeat : MonoBehaviour {
 
     public Vector3 positionAdjust;
 
-    public float printTime = 0.0f;
+    public float printTime = 1.5f;
     private GameObject meatDispenserAudioSource;
 
     // Use this for initialization
@@ -40,7 +40,6 @@ public class ButtonMeat : MonoBehaviour {
                 
                     if (ButtonMeatChangeScript.status % 3 == 0)
                     {
-                        //create pork prefab
                         StartCoroutine(printPork());
                         meatDispenserAudioSource = GameObject.Find("Dispenser_meat");
                         meatDispenserAudioSource.SendMessage("playPrintFood");
