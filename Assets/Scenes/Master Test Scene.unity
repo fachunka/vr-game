@@ -6544,7 +6544,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0aff993848cc64d159d0735995d040f7, type: 2}
+      objectReference: {fileID: 2100000, guid: 1ba94d7c9343f4def8cafaf0874e7019, type: 2}
     - target: {fileID: 23673220826252896, guid: 701f7a4fc4576460f9f874df798f3b02,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -6572,6 +6572,10 @@ Prefab:
     - target: {fileID: 1679163694249206, guid: 701f7a4fc4576460f9f874df798f3b02, type: 2}
       propertyPath: m_Name
       value: bottle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679163694249206, guid: 701f7a4fc4576460f9f874df798f3b02, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 701f7a4fc4576460f9f874df798f3b02, type: 2}
@@ -9166,15 +9170,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4719072540280832, guid: 9be9e43b5a1144d21a4ec2a207f56a56, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.207
+      value: 0.805
       objectReference: {fileID: 0}
     - target: {fileID: 4719072540280832, guid: 9be9e43b5a1144d21a4ec2a207f56a56, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.064
+      value: 1.462
       objectReference: {fileID: 0}
     - target: {fileID: 4719072540280832, guid: 9be9e43b5a1144d21a4ec2a207f56a56, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -2.194
+      value: -2.011
       objectReference: {fileID: 0}
     - target: {fileID: 4719072540280832, guid: 9be9e43b5a1144d21a4ec2a207f56a56, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9201,6 +9205,11 @@ Prefab:
       propertyPath: gameObContainingScript
       value: 
       objectReference: {fileID: 1099099967}
+    - target: {fileID: 23136051759382158, guid: 9be9e43b5a1144d21a4ec2a207f56a56,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e4b100b09c1754e71bf15e08d45af9f3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9e43b5a1144d21a4ec2a207f56a56, type: 2}
   m_IsPrefabAsset: 0
@@ -10681,7 +10690,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4310852252424704, guid: 101220cdf0393f842915a732e9635e25, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.5611058
+      value: 1.574
       objectReference: {fileID: 0}
     - target: {fileID: 4310852252424704, guid: 101220cdf0393f842915a732e9635e25, type: 2}
       propertyPath: m_LocalPosition.z
