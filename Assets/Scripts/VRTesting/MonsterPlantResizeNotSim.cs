@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterPlantResizeNotSim : MonoBehaviour
 {
     public GameObject gameObContainingScript;
+    public GameObject gameObContainingScript2;
     public bool monsterFeeded = false;
     bool meatChunkDeleted = false;
 
@@ -26,12 +27,23 @@ public class MonsterPlantResizeNotSim : MonoBehaviour
 
                 //find object that collided with monster, release it and delete the gameobject
                 ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript.GetComponent<ControllerGrabObject>();
+                ControllerGrabObject ControllerGrabObjectScript2 = gameObContainingScript2.GetComponent<ControllerGrabObject>();
+
                 if (ControllerGrabObjectScript.objectInHand != null)
                 {
                     if (ControllerGrabObjectScript.objectInHand)
                     {
                         ControllerGrabObjectScript.ReleaseObjectControlledByOtherScript();
                         Destroy(ControllerGrabObjectScript.objectInHand);
+                    }
+                }
+
+                if (ControllerGrabObjectScript2.objectInHand != null)
+                {
+                    if (ControllerGrabObjectScript2.objectInHand)
+                    {
+                        ControllerGrabObjectScript2.ReleaseObjectControlledByOtherScript();
+                        Destroy(ControllerGrabObjectScript2.objectInHand);
                     }
                 }
 

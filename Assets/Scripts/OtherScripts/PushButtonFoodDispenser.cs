@@ -7,7 +7,6 @@ public class PushButtonFoodDispenser : MonoBehaviour
     public GameObject pork;
     public GameObject chikenDrum;
     public GameObject fish;
-    public GameObject lime;
     public GameObject dispenserMeat;
 
     public float printTime = 3.0f;
@@ -36,7 +35,7 @@ public class PushButtonFoodDispenser : MonoBehaviour
     {
         if (other.gameObject.tag == "Button")
         {
-            if (status % 4 == 0)
+            if (status % 3 == 0)
             {
                 //create pork prefab
                 StartCoroutine(printPork());
@@ -45,7 +44,7 @@ public class PushButtonFoodDispenser : MonoBehaviour
                 meatDispenserAudioSource.SendMessage("playPrintFood");
             }
 
-            else if(status % 4 == 1)
+            else if(status % 3 == 1)
             {
                 StartCoroutine(printChicken());
 //                Instantiate(chikenDrum, transform.position + positionAdjust, Quaternion.identity);
@@ -53,7 +52,7 @@ public class PushButtonFoodDispenser : MonoBehaviour
                 meatDispenserAudioSource.SendMessage("playPrintFood");
             }
 
-            else if (status % 4 == 2)
+            else if (status % 3 == 2)
             {
                 StartCoroutine(printFish());
 //                Instantiate(fish, transform.position + positionAdjust, Quaternion.identity);
@@ -61,13 +60,6 @@ public class PushButtonFoodDispenser : MonoBehaviour
                 meatDispenserAudioSource.SendMessage("playPrintFood");
             }
 
-            else if (status % 4 == 3)
-            {
-                StartCoroutine(printLime());
-//                Instantiate(lime, transform.position + positionAdjust, Quaternion.identity);
-                meatDispenserAudioSource = GameObject.Find("Dispenser_meat");
-                meatDispenserAudioSource.SendMessage("playPrintFood");
-            }
 
         }
 
@@ -99,11 +91,5 @@ public class PushButtonFoodDispenser : MonoBehaviour
         yield return(0);
     }
 
-    IEnumerator printLime()
-    {
-        yield return new WaitForSeconds(printTime);
-        Instantiate(lime, dispenserMeat.transform.position + positionAdjust, Quaternion.identity);
-        yield return(0);
-    }
 
 }
