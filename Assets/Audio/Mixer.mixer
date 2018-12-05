@@ -15,6 +15,8 @@ AudioMixerController:
   - {fileID: 245126519941367508}
   - {fileID: 245625155681914558}
   - {fileID: 245307777762569424}
+  - {fileID: 245316671690670924}
+  - {fileID: 245510217188068770}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -33,9 +35,11 @@ AudioMixerController:
     - 4e1df7d6b467a2e4a8b3d3b20af44943
     - df98c37c7933d4345bdf154e80b9c020
     - 9073537b253376e43abe5d897be16f8a
+    - d3ac18558cc457f43a2530b34a265b2f
+    - 4e954a450fc10294aa8524d265c7b227
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 245625155681914558}
+  m_TargetSnapshot: {fileID: 245510217188068770}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -45,6 +49,7 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 1ab16f3d2d5864f878d0fb4f73b8f033
   m_Children:
+  - {fileID: 243468591940667160}
   - {fileID: 243623359943734346}
   - {fileID: 243006220436545970}
   m_Volume: 7301af3c275c34a0cb1f07a1c420bcde
@@ -84,6 +89,7 @@ AudioMixerSnapshotController:
     c043f7168e2844de59746833f2aa6b8c: 20000
     92f88ac650c584815a9a9dcdfcafca8e: 22
     edfe860b19b694a3ea7d16fd9a80fede: 100
+    d122253b50575204ab6fa6168599489c: -80
     f153abbda440548ed8a1b27f96860438: 0
     57847e3e2bef046f6aa901f8acc2b1f0: 0
     80069aae5d72c4dbd9e5386ed1864a0f: 0
@@ -126,6 +132,24 @@ AudioMixerGroupController:
   m_Pitch: bf448e42f0b96374c9c93665cf95a62b
   m_Effects:
   - {fileID: 244825888095279820}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &243468591940667160
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UgaliAudio
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: d3ac18558cc457f43a2530b34a265b2f
+  m_Children:
+  - {fileID: 243807402426879840}
+  m_Volume: 0fa488a27dec6964bbabb8c55de6afc4
+  m_Pitch: 28fb10864497c5e4f81c1748df82841c
+  m_Effects:
+  - {fileID: 244950276505986824}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -196,6 +220,23 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: 244111993231440986}
   - {fileID: 244574001151837934}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &243807402426879840
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UgaliRain
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 4e954a450fc10294aa8524d265c7b227
+  m_Children: []
+  m_Volume: d122253b50575204ab6fa6168599489c
+  m_Pitch: 874b0e8727fa20b468be02866793f95b
+  m_Effects:
+  - {fileID: 244668679388039550}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -392,6 +433,19 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &244668679388039550
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 9b0311de931fd3b4e883911069957f4e
+  m_EffectName: Attenuation
+  m_MixLevel: a475c6564f108fd4f95d538e08b4b3fe
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &244704797480830412
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -493,6 +547,19 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &244950276505986824
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: d2361f09a2aef324ab3fa93c9cbbc31d
+  m_EffectName: Attenuation
+  m_MixLevel: 0bf5099ec4a4a984381583c38bf7dc95
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!245 &245082919139982360
 AudioMixerSnapshotController:
   m_ObjectHideFlags: 0
@@ -528,6 +595,7 @@ AudioMixerSnapshotController:
     6fec178a3ee6fa941939f0f2e92368a9: -11.944499
     1052e3eaa2add499bad24fb777ce3c6d: 3
     edfe860b19b694a3ea7d16fd9a80fede: 100
+    d122253b50575204ab6fa6168599489c: -80
     872cdd9b5d9e442aa8cc74ceb7aec595: 20000
     8d697f2c0e8744e6ca0c2a46bd74cd03: 0
     e5ec1fcccb6c04a4295b5214ff120fe3: 0
@@ -579,6 +647,7 @@ AudioMixerSnapshotController:
     6fec178a3ee6fa941939f0f2e92368a9: -12.498478
     1052e3eaa2add499bad24fb777ce3c6d: 3
     edfe860b19b694a3ea7d16fd9a80fede: 100
+    d122253b50575204ab6fa6168599489c: -80
     872cdd9b5d9e442aa8cc74ceb7aec595: 20000
     8d697f2c0e8744e6ca0c2a46bd74cd03: 0
     e5ec1fcccb6c04a4295b5214ff120fe3: 0
@@ -624,6 +693,7 @@ AudioMixerSnapshotController:
     6fec178a3ee6fa941939f0f2e92368a9: -12.498478
     1052e3eaa2add499bad24fb777ce3c6d: 3
     edfe860b19b694a3ea7d16fd9a80fede: 100
+    d122253b50575204ab6fa6168599489c: -80
     8d697f2c0e8744e6ca0c2a46bd74cd03: 0
     e5ec1fcccb6c04a4295b5214ff120fe3: 0
     67e7a2fcc2c2e4f23a509996f305c06c: 0
@@ -635,6 +705,50 @@ AudioMixerSnapshotController:
     1325fdee979e344d6953027b6b92479d: 0
     46811bfe3b8164ed6919873dfa8d9fd1: 0.88
     5c4c3c2f648fb4859bcda2e1be3f4d5c: 100
+  m_TransitionOverrides: {}
+--- !u!245 &245316671690670924
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UgaliRain
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: b067dc0fb6a9856428bc9ec93f73d53c
+  m_FloatValues:
+    a726d24049ba644f7b30c7ace43d5d41: 1
+    91877e12507624087856d4cceb0e8c59: -80
+    216c3ba207a03468fb65a7e37006ee40: 0
+    8b3737853a2844e63bfad4ac06be9a0b: 0
+    c043f7168e2844de59746833f2aa6b8c: 20000
+    92f88ac650c584815a9a9dcdfcafca8e: 22
+    edfe860b19b694a3ea7d16fd9a80fede: 100
+    d122253b50575204ab6fa6168599489c: -0.002441872
+    f153abbda440548ed8a1b27f96860438: 0
+    57847e3e2bef046f6aa901f8acc2b1f0: 0
+    80069aae5d72c4dbd9e5386ed1864a0f: 0
+    46811bfe3b8164ed6919873dfa8d9fd1: 0.88
+  m_TransitionOverrides: {}
+--- !u!245 &245510217188068770
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UgaliRainFade
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 98f7b249db543184eace9f154f7091da
+  m_FloatValues:
+    a726d24049ba644f7b30c7ace43d5d41: 1
+    91877e12507624087856d4cceb0e8c59: -80
+    216c3ba207a03468fb65a7e37006ee40: 0
+    8b3737853a2844e63bfad4ac06be9a0b: 0
+    c043f7168e2844de59746833f2aa6b8c: 20000
+    92f88ac650c584815a9a9dcdfcafca8e: 22
+    edfe860b19b694a3ea7d16fd9a80fede: 100
+    d122253b50575204ab6fa6168599489c: -11.535824
+    f153abbda440548ed8a1b27f96860438: 0
+    57847e3e2bef046f6aa901f8acc2b1f0: 0
+    80069aae5d72c4dbd9e5386ed1864a0f: 0
+    46811bfe3b8164ed6919873dfa8d9fd1: 0.88
   m_TransitionOverrides: {}
 --- !u!245 &245625155681914558
 AudioMixerSnapshotController:
@@ -671,6 +785,7 @@ AudioMixerSnapshotController:
     6fec178a3ee6fa941939f0f2e92368a9: -12.498478
     1052e3eaa2add499bad24fb777ce3c6d: 3
     edfe860b19b694a3ea7d16fd9a80fede: 100
+    d122253b50575204ab6fa6168599489c: -80
     872cdd9b5d9e442aa8cc74ceb7aec595: 20000
     8d697f2c0e8744e6ca0c2a46bd74cd03: 0
     e5ec1fcccb6c04a4295b5214ff120fe3: 0
@@ -722,6 +837,7 @@ AudioMixerSnapshotController:
     6fec178a3ee6fa941939f0f2e92368a9: -11.944499
     1052e3eaa2add499bad24fb777ce3c6d: 3
     edfe860b19b694a3ea7d16fd9a80fede: 100
+    d122253b50575204ab6fa6168599489c: -80
     872cdd9b5d9e442aa8cc74ceb7aec595: 20000
     8d697f2c0e8744e6ca0c2a46bd74cd03: 0
     e5ec1fcccb6c04a4295b5214ff120fe3: 0
