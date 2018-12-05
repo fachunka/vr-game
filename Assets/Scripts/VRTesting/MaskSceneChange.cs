@@ -10,6 +10,7 @@ public class MaskSceneChange : MonoBehaviour {
     private float fadeDuration = 1f;
     public GameObject fadeObject;
 
+    private AudioSource audioSource;
 
     // Use this for initialization
     void Start () {
@@ -81,6 +82,9 @@ public class MaskSceneChange : MonoBehaviour {
             Debug.Log('2');
             SteamVR_LoadLevel.Begin(sceneName);
 
+            audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.loop = false;
+            audioSource.Play();
 
             masked = false;
         }
