@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4070309486342620}
   m_Layer: 0
-  m_Name: Button2
+  m_Name: ButtonMeatCate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 114119504441168254}
   - component: {fileID: 82616528918778586}
   - component: {fileID: 114308236934106086}
+  - component: {fileID: 114692024669551130}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Button
@@ -112,7 +113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4271190271890656}
   m_Layer: 0
-  m_Name: Button
+  m_Name: ButtonMeat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,6 +154,8 @@ GameObject:
   - component: {fileID: 114106370768030310}
   - component: {fileID: 82589681537896446}
   - component: {fileID: 114976973178946810}
+  - component: {fileID: 114677658768047988}
+  - component: {fileID: 114002087976115904}
   m_Layer: 0
   m_Name: Cylinder2
   m_TagString: ButtonCategory
@@ -406,7 +409,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 24df29f47aa90406f8068d9da131f2f2, type: 2}
+  - {fileID: 2100000, guid: e3deadf8cddc6264c83f143d2e041a52, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1045,7 +1048,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1139,7 +1142,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243623359943734346, guid: 65cc1c8c5b9f9472a9f58495ea1f3d8f,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d0fa7118ff971424c844c56adb90f44f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1235,7 +1238,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243623359943734346, guid: 65cc1c8c5b9f9472a9f58495ea1f3d8f,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d0fa7118ff971424c844c56adb90f44f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1321,6 +1324,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114002087976115904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1663644115594098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6084b1d7dcad1e4bae6407a8a2ad619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: 0
 --- !u!114 &114106370768030310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1462,7 +1477,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54335fa07f44540ddbcf1b96442face5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  printFoodClip: {fileID: 8300000, guid: f058f6b897a274cf0a41c6eed40ed99b, type: 3}
+  printFoodClip: {fileID: 8300000, guid: b9a2416f848c34457b5e93283d8ca2e1, type: 3}
+--- !u!114 &114677658768047988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1663644115594098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6084b1d7dcad1e4bae6407a8a2ad619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: 0
+--- !u!114 &114692024669551130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1251376992023638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e252351514b81b4ba39b2106e601989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pork: {fileID: 1411875868051998, guid: 34314bc443db4437a96318abffebd9e1, type: 2}
+  chikenDrum: {fileID: 1716361778050010, guid: 187ccc598988c4ac0a1b79fb33bcf89c, type: 2}
+  fish: {fileID: 1670961206985296, guid: f60dbe5f3e89e4b738c4c373f3705138, type: 2}
+  dispenserMeat: {fileID: 1979515917814934}
+  gameObContainingScript: {fileID: 1663644115594098}
+  positionAdjust: {x: 0, y: 0, z: 0}
+  printTime: 1.4
 --- !u!114 &114857227614873936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1474,11 +1519,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c393e1dc658334708bb2993b79724feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObContainingScript: {fileID: 0}
-  m_PorkTexture: {fileID: 2800000, guid: 2ccc8b9c003784de8b882c00a9ed30a0, type: 3}
-  m_ChickenTexture: {fileID: 2800000, guid: b2b111c469a7b4a30b7fdf79a35a1399, type: 3}
-  porkTextureChanged: 0
-  chickenTextureChanged: 1
+  gameObContainingScript: {fileID: 1663644115594098}
+  m_PorkTexture: {fileID: 2800000, guid: 0bb0cdbee1945cc4789533f6085e74ed, type: 3}
+  m_ChickenTexture: {fileID: 2800000, guid: a9c5019fd006e924e8d63e1e12341265, type: 3}
+  m_FishTexture: {fileID: 2800000, guid: 3c510f73a1781d542b904e00ecc4454f, type: 3}
 --- !u!114 &114942214809445734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1492,10 +1536,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   occlusionWallMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   obstructionWallMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   occlusionRayUpdateTime: 1
   obstructionRayUpdateTime: 1
   audioSource: {fileID: 0}
@@ -1544,10 +1588,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   occlusionWallMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   obstructionWallMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   occlusionRayUpdateTime: 1
   obstructionRayUpdateTime: 1
   audioSource: {fileID: 0}
@@ -1594,8 +1638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0942cf9f4ce44c2a0bb689ef78bdbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beepPork: {fileID: 8300000, guid: bc80672212e834bbdb18cf281660b713, type: 3}
-  beepChicken: {fileID: 8300000, guid: bc80672212e834bbdb18cf281660b713, type: 3}
+  beepClip: {fileID: 8300000, guid: bc80672212e834bbdb18cf281660b713, type: 3}
   screenSource: {fileID: 82372403894601512}
 --- !u!145 &145592364662040174
 SpringJoint:

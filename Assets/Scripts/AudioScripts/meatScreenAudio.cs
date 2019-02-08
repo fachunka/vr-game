@@ -23,23 +23,26 @@ public class meatScreenAudio : MonoBehaviour
             screenSource.clip = beepClip;
             screenSource.Play();
             porkPlayed = true;
-            Debug.Log("play pork beep");
+            chickenPlayed = false;
+            fishPlayed = false; 
         }
 
         if (beepNumberInt == 2 && chickenPlayed == false)
         {
             screenSource.clip = beepClip;
             screenSource.Play();
+            porkPlayed = false;
             chickenPlayed = true;
-            Debug.Log("play chicken beep");
+            fishPlayed = false; 
         }
 
         if (beepNumberInt == 3 && fishPlayed == false)
         {
             screenSource.clip = beepClip;
             screenSource.Play();
+            porkPlayed = false;
+            chickenPlayed = false;
             fishPlayed = true;
-            Debug.Log("play fish beep");
         }
 
     }

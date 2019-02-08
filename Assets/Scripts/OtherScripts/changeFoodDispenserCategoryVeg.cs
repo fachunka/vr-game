@@ -34,14 +34,14 @@ public class changeFoodDispenserCategoryVeg : MonoBehaviour {
             //porkTextureChanged = true;
             //print("PushButtonFoodDispenserScript: " + ButtonVegChangeScript.status % 4);
 
-            gameObject.SendMessage("playMeatScreen", 1f);     // play meat screen beep up (call playMeatScreen function with float 0 in meatScreenAudio.cs script)
+            gameObject.SendMessage("playVegiScreen", 1f);     // play beep (call playVegiScreen function with float 1 in vegiScreenAudio.cs script)
         }
         else if (ButtonVegChangeScript.status % 4 == 1)
         {
             //print("change to chicken texture");
             m_Renderer.material.SetTexture("_MainTex", m_CornmealTexture);
 
-            gameObject.SendMessage("playMeatScreen", 2f);     // play meat screen beep down (call playMeatScreen function with int 1 in meatScreenAudio.cs script)
+            gameObject.SendMessage("playVegiScreen", 2f);     // play beep (call playVegiScreen function with float 2 in vegiScreenAudio.cs script)
             //print("PushButtonFoodDispenserScript: " + ButtonVegChangeScript.status % 4);
 
         }
@@ -50,7 +50,7 @@ public class changeFoodDispenserCategoryVeg : MonoBehaviour {
             //print("change to chicken texture");
             m_Renderer.material.SetTexture("_MainTex", m_MirendaTexture);
 
-            gameObject.SendMessage("playMeatScreen", 3f);     // play meat screen beep down (call playMeatScreen function with int 1 in meatScreenAudio.cs script)
+            gameObject.SendMessage("playVegiScreen", 3f);     // play beep (call playVegiScreen function with float 3 in vegiScreenAudio.cs script)
             //print("PushButtonFoodDispenserScript: " + ButtonVegChangeScript.status % 4);
 
         }
@@ -59,7 +59,7 @@ public class changeFoodDispenserCategoryVeg : MonoBehaviour {
             //print("change to chicken texture");
             m_Renderer.material.SetTexture("_MainTex", m_BananaTexture);
 
-            gameObject.SendMessage("playMeatScreen", 4f);     // play meat screen beep down (call playMeatScreen function with int 1 in meatScreenAudio.cs script)
+            gameObject.SendMessage("playVegiScreen", 4f);     // play beep (call playVegiScreen function with float 4 in vegiScreenAudio.cs script)
             //print("PushButtonFoodDispenserScript: " + ButtonVegChangeScript.status % 4);
 
         }
