@@ -8,6 +8,7 @@ public class cutleryBox : MonoBehaviour {
 	// public GameObject toDestroy;
 	public GameObject toReplace;
 	private Vector3 slightlyOpenPos;
+    private int BoxKey = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -16,17 +17,19 @@ public class cutleryBox : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-				// print(this.transform.parent.transform.position);
-				// print(this.transform.parent.name);
+        // print(this.transform.parent.transform.position);
+        // print(this.transform.parent.name);
 
-				if (keyed == true)
+                BoxKey = PlayerPrefs.GetInt("BoxKey");
+
+				if (BoxKey == 1)
 				{
 						slightlyOpenPos = this.transform.parent.transform.position;
 
 						Destroy(this.transform.parent.gameObject);
 
 						Instantiate(toReplace, slightlyOpenPos, Quaternion.Euler(new Vector3(0, 180, 0)));
-						print("keyed");
+						//print("keyed");
 				}
 
 	}
@@ -35,8 +38,9 @@ public class cutleryBox : MonoBehaviour {
 	{
 			if (other.gameObject.tag == "Key")
 			{
-					keyed = true;
-					print("collided key");
+					//keyed = true;
+                    PlayerPrefs.SetInt("BoxKey", 1);
+					//print("collided key");
 			}
 
 	}
