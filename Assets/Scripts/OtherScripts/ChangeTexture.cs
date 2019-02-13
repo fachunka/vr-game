@@ -33,7 +33,7 @@ public class ChangeTexture : MonoBehaviour
         //Debug.Log("CurrentTime" + currentTime);
         //Debug.Log("DeltaTime" + Time.fixedTime);
 
-        if (Time.fixedTime - currentTime >= 3 && currentTime > 0)
+        if (Time.fixedTime - currentTime >= 1 && currentTime > 0)
         {
             m_Renderer.material.SetTexture("_MainTex", m_MainTexture);
             meatTextureChanged = true;
