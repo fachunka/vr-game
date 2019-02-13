@@ -6,7 +6,8 @@ public class UIMenuNotSim : MonoBehaviour {
 
     public Canvas UICanvas;
     public Canvas UICanvasMainUI;
-    public GameObject gameObContainingScript;
+    //public GameObject gameObContainingScript;
+    private int savedMonsterFeeded = 0;
 
     bool enableScriptAppear;
 
@@ -24,8 +25,11 @@ public class UIMenuNotSim : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        MonsterPlantResizeNotSim MonsterPlantResizeNotSimeScript = gameObContainingScript.GetComponent<MonsterPlantResizeNotSim>();
-        if (MonsterPlantResizeNotSimeScript.monsterFeeded == true)
+        //MonsterPlantResizeNotSim MonsterPlantResizeNotSimeScript = gameObContainingScript.GetComponent<MonsterPlantResizeNotSim>();
+        savedMonsterFeeded = PlayerPrefs.GetInt("savedMonsterFeeded");
+
+
+        if (savedMonsterFeeded == 1)
         {
             enableScriptAppear = true;
         }

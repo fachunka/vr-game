@@ -5,6 +5,7 @@ using UnityEngine;
 public class cutleryBoxHalfOpen : MonoBehaviour {
 
 	private bool limed = false;
+    private int LimedBox = 0;
 	// public GameObject toDestroy;
 	public GameObject toReplace;
 	public GameObject scissorsBox;
@@ -24,30 +25,32 @@ public class cutleryBoxHalfOpen : MonoBehaviour {
 				// print(this.transform.parent.transform.position);
 				// print(this.transform.parent.name);
 
-				if (limed == true)
+                LimedBox = PlayerPrefs.GetInt("LimedBox");
+
+        if (LimedBox == 1)
 				{
 
-						slightlyOpenPos = this.transform.parent.transform.position;
-                        scissorsPos = this.transform.parent.transform.position;
-						knifePos = this.transform.parent.transform.position;
-						forkPos = this.transform.parent.transform.position;
-                        scissorsPos.y += 0.1f;
-						scissorsPos.z += 0.1f;
-						forkPos.x += 0.1f;
-						forkPos.y += 0.1f;
-						forkPos.z += 0.1f;
-						knifePos.x -= 0.1f;
-						knifePos.y += 0.1f;
-						knifePos.z += 0.1f;
+				    slightlyOpenPos = this.transform.parent.transform.position;
+                    scissorsPos = this.transform.parent.transform.position;
+				    knifePos = this.transform.parent.transform.position;
+				    forkPos = this.transform.parent.transform.position;
+                    scissorsPos.y += 0.1f;
+				    scissorsPos.z += 0.1f;
+				    forkPos.x += 0.1f;
+				    forkPos.y += 0.1f;
+				    forkPos.z += 0.1f;
+				    knifePos.x -= 0.1f;
+				    knifePos.y += 0.1f;
+				    knifePos.z += 0.1f;
 
 
-                        Destroy(this.transform.parent.gameObject);
+                    Destroy(this.transform.parent.gameObject);
 
-						Instantiate(toReplace, slightlyOpenPos, Quaternion.Euler(new Vector3(0, 180, 0)));
-						Instantiate(scissorsBox, scissorsPos, Quaternion.identity);
-						Instantiate(forkBox, scissorsPos, Quaternion.identity);
-						Instantiate(knifeBox, scissorsPos, Quaternion.identity);
-						print("limed");
+				    Instantiate(toReplace, slightlyOpenPos, Quaternion.Euler(new Vector3(0, 180, 0)));
+				    Instantiate(scissorsBox, scissorsPos, Quaternion.identity);
+				    Instantiate(forkBox, scissorsPos, Quaternion.identity);
+				    Instantiate(knifeBox, scissorsPos, Quaternion.identity);
+				    print("limed");
 
 				}
 
@@ -60,7 +63,8 @@ public class cutleryBoxHalfOpen : MonoBehaviour {
 
 			if (other.gameObject.tag == "Lime")
 			{
-					limed = true;
+                    PlayerPrefs.SetInt("LimedBox", 1);
+                    limed = true;
 					print("collided lime");
 
 			}

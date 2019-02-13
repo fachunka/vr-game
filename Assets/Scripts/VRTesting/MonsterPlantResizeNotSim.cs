@@ -9,6 +9,11 @@ public class MonsterPlantResizeNotSim : MonoBehaviour
     public bool monsterFeeded = false;
     bool meatChunkDeleted = false;
 
+    private int savedMonsterFeeded = 0;
+    private int savedMeatChunkDeleted = 0;
+
+    private bool makeItSmallOnce = false;
+
     // Use this for initialization
     void Start()
     {
@@ -18,12 +23,20 @@ public class MonsterPlantResizeNotSim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //Debug.Log(PlayerPrefs.GetInt("savedMonsterFeeded").ToString());
+        //Debug.Log(PlayerPrefs.GetInt("savedMeatChunkDeleted").ToString());
+
+
+        savedMonsterFeeded = PlayerPrefs.GetInt("savedMonsterFeeded");
+        savedMeatChunkDeleted = PlayerPrefs.GetInt("savedMeatChunkDeleted");
+
         //if meatchunk collides, make it disappear
-        if (monsterFeeded == true)
+        if (savedMonsterFeeded == 1)
         {
-            if (meatChunkDeleted == false)
+            if (savedMeatChunkDeleted == 0)
             {
-                Debug.Log("Monster feeded, deleting meat chunk");
+               //Debug.Log("Monster feeded, deleting meat chunk");
 
                 //find object that collided with monster, release it and delete the gameobject
                 ControllerGrabObject ControllerGrabObjectScript = gameObContainingScript.GetComponent<ControllerGrabObject>();
@@ -48,21 +61,36 @@ public class MonsterPlantResizeNotSim : MonoBehaviour
                 }
 
                 meatChunkDeleted = true;
+                PlayerPrefs.SetInt("savedMeatChunkDeleted", 1);
+
+
+
             }
+            if (makeItSmallOnce == false)
+            {
+                transform.localScale = new Vector3(12.5f, 12.5f, 12.5f);
+                transform.Translate(0, 0.4f, 0);
+                makeItSmallOnce = true;
+            }
+
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
+
+        savedMonsterFeeded = PlayerPrefs.GetInt("savedMonsterFeeded");
+        savedMeatChunkDeleted = PlayerPrefs.GetInt("savedMeatChunkDeleted");
+
         //if object collides with meat chunk, make it small
-        if (monsterFeeded == false)
+        if (savedMonsterFeeded == 0)
         {
             if (other.gameObject.tag == "MeatChunk")
             {
-                Debug.Log("Monster feeded");
-                transform.localScale = new Vector3(12.5f, 12.5f, 12.5f);
-                transform.Translate(0, 0.4f, 0);
+                //Debug.Log("Monster feeded");
+                
                 monsterFeeded = true;
+                PlayerPrefs.SetInt("savedMonsterFeeded", 1);
 
                 gameObject.SendMessage("playEating");
             }
