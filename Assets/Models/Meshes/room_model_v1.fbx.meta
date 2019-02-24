@@ -1,0 +1,1095 @@
+fileFormatVersion: 2
+guid: 48e57981ba4b71946ac3979f6bf53ee8
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: another_room
+    100002: AUTOMAT
+    100004: bg_light_screen_L
+    100006: bg_light_screen_R
+    100008: bg_screen
+    100010: bg_screen_light
+    100012: big_lamp
+    100014: button_10
+    100016: button_11
+    100018: button_12
+    100020: button_4
+    100022: button_6
+    100024: button_7
+    100026: button_8
+    100028: button_9
+    100030: CEILING
+    100032: ceiling
+    100034: ceiling_group
+    100036: ceiling_railing
+    100038: chair1
+    100040: chair2
+    100042: chair3
+    100044: chair4
+    100046: door_L_2
+    100048: door_L_2 1
+    100050: door_R_1
+    100052: door_R_1 1
+    100054: DOORWAY
+    100056: DOORWAY2
+    100058: edges_1
+    100060: edges_1_light
+    100062: edges_2
+    100064: edges_2_light
+    100066: edges_3
+    100068: edges_3_light
+    100070: edges_4
+    100072: edges_4_light
+    100074: edges_5
+    100076: edges_5_light
+    100078: edges_6
+    100080: edges_6_light
+    100082: edges_7
+    100084: edges_7_light
+    100086: edges_8
+    100088: edges_8_light
+    100090: edges_L
+    100092: edges_R
+    100094: elevator
+    100096: elevator_lights
+    100098: fan
+    100100: FLOOR
+    100102: floor
+    100104: floor_pattern
+    100106: KITCHEN
+    100108: kitchen_edge
+    100110: lamp
+    100112: lamp 1
+    100114: lamp 2
+    100116: lamp 3
+    100118: lamp10
+    100120: lamp11
+    100122: lamp12
+    100124: lamp16
+    100126: lamp16_light
+    100128: lamp2
+    100130: lamp2_light
+    100132: lamp5
+    100134: lamp5_light
+    100136: lamp6
+    100138: lamp6_ligh
+    100140: lamp7
+    100142: lamp7_light
+    100144: lamp8
+    100146: lamp8 1
+    100148: lamp8_light
+    100150: lamp_holder1
+    100152: lamp_holder2
+    100154: lamp_holder3
+    100156: lamp_holder4
+    100158: lamp_holder5
+    100160: lamp_holder6
+    100162: lamp_holders
+    100164: lamp_light
+    100166: lamp_light 1
+    100168: light
+    100170: light 1
+    100172: light1
+    100174: light2
+    100176: light3
+    100178: light4
+    100180: order_table_L
+    100182: order_table_R
+    100184: order_table_screen_L
+    100186: order_table_screen_R
+    100188: panel
+    100190: panel1
+    100192: panel1 1
+    100194: panel12
+    100196: panel13
+    100198: panel2
+    100200: panel2 1
+    100202: panel2 2
+    100204: panel3
+    100206: panel3 1
+    100208: panel3 2
+    100210: panel4
+    100212: panel4 1
+    100214: panel4 2
+    100216: panel5
+    100218: panel5 1
+    100220: panel5 2
+    100222: panel6
+    100224: panel6 1
+    100226: panels
+    100228: pipe1
+    100230: pipe1 1
+    100232: pipe1 2
+    100234: pipe1 3
+    100236: pipe1 4
+    100238: pipe1 5
+    100240: pipe2
+    100242: pipe2 1
+    100244: pipe2 2
+    100246: pipe2 3
+    100248: pipe2 4
+    100250: pipe2 5
+    100252: pipe3
+    100254: pipe3 1
+    100256: pipe3 2
+    100258: pipe3 3
+    100260: pipe3 4
+    100262: pipe3 5
+    100264: pipe4
+    100266: pipe4 1
+    100268: pipe4 2
+    100270: pipe4 3
+    100272: pipe4 4
+    100274: pipe4 5
+    100276: pipe5
+    100278: pipe5 1
+    100280: pipe5 2
+    100282: pipe5 3
+    100284: pipe5 4
+    100286: pipe5 5
+    100288: pipe6
+    100290: pipe6 1
+    100292: pipe6 2
+    100294: pipe6 3
+    100296: pipe6 4
+    100298: pipe6 5
+    100300: pipe_holder0
+    100302: pipe_holder1
+    100304: pipe_holder2
+    100306: pipe_holder3
+    100308: pipe_holder4
+    100310: pipe_holder5
+    100312: pipe_L
+    100314: pipe_R
+    100316: pipes
+    100318: plant_leafs
+    100320: PLANT_WALL1
+    100322: Pot
+    100324: recipe_screen
+    100326: recipe_screen_frame
+    100328: //RootNode
+    100330: room_number_frame
+    100332: room_number_frame 1
+    100334: room_number_screen
+    100336: room_number_screen 1
+    100338: screen_frame_L
+    100340: screen_frame_R
+    100342: screen_plane_L
+    100344: screen_plane_R
+    100346: side_lamps
+    100348: sink
+    100350: slots
+    100352: soil
+    100354: speaker
+    100356: speaker 1
+    100358: stove_button_off
+    100360: stove_button_on
+    100362: stove_frame
+    100364: stove_glass
+    100366: table
+    100368: tap
+    100370: tap1
+    100372: tap2
+    100374: vent1
+    100376: vent10
+    100378: vent11
+    100380: vent12
+    100382: vent2
+    100384: vent3
+    100386: vent4
+    100388: vent5
+    100390: vent6
+    100392: vent7
+    100394: vent8
+    100396: vent9
+    100398: ventilation
+    100400: wall
+    100402: wall 1
+    100404: wall 2
+    100406: wall 3
+    100408: wall 4
+    100410: wall 5
+    100412: WELCOMESCREEN
+    400000: another_room
+    400002: AUTOMAT
+    400004: bg_light_screen_L
+    400006: bg_light_screen_R
+    400008: bg_screen
+    400010: bg_screen_light
+    400012: big_lamp
+    400014: button_10
+    400016: button_11
+    400018: button_12
+    400020: button_4
+    400022: button_6
+    400024: button_7
+    400026: button_8
+    400028: button_9
+    400030: CEILING
+    400032: ceiling
+    400034: ceiling_group
+    400036: ceiling_railing
+    400038: chair1
+    400040: chair2
+    400042: chair3
+    400044: chair4
+    400046: door_L_2
+    400048: door_L_2 1
+    400050: door_R_1
+    400052: door_R_1 1
+    400054: DOORWAY
+    400056: DOORWAY2
+    400058: edges_1
+    400060: edges_1_light
+    400062: edges_2
+    400064: edges_2_light
+    400066: edges_3
+    400068: edges_3_light
+    400070: edges_4
+    400072: edges_4_light
+    400074: edges_5
+    400076: edges_5_light
+    400078: edges_6
+    400080: edges_6_light
+    400082: edges_7
+    400084: edges_7_light
+    400086: edges_8
+    400088: edges_8_light
+    400090: edges_L
+    400092: edges_R
+    400094: elevator
+    400096: elevator_lights
+    400098: fan
+    400100: FLOOR
+    400102: floor
+    400104: floor_pattern
+    400106: KITCHEN
+    400108: kitchen_edge
+    400110: lamp
+    400112: lamp 1
+    400114: lamp 2
+    400116: lamp 3
+    400118: lamp10
+    400120: lamp11
+    400122: lamp12
+    400124: lamp16
+    400126: lamp16_light
+    400128: lamp2
+    400130: lamp2_light
+    400132: lamp5
+    400134: lamp5_light
+    400136: lamp6
+    400138: lamp6_ligh
+    400140: lamp7
+    400142: lamp7_light
+    400144: lamp8
+    400146: lamp8 1
+    400148: lamp8_light
+    400150: lamp_holder1
+    400152: lamp_holder2
+    400154: lamp_holder3
+    400156: lamp_holder4
+    400158: lamp_holder5
+    400160: lamp_holder6
+    400162: lamp_holders
+    400164: lamp_light
+    400166: lamp_light 1
+    400168: light
+    400170: light 1
+    400172: light1
+    400174: light2
+    400176: light3
+    400178: light4
+    400180: order_table_L
+    400182: order_table_R
+    400184: order_table_screen_L
+    400186: order_table_screen_R
+    400188: panel
+    400190: panel1
+    400192: panel1 1
+    400194: panel12
+    400196: panel13
+    400198: panel2
+    400200: panel2 1
+    400202: panel2 2
+    400204: panel3
+    400206: panel3 1
+    400208: panel3 2
+    400210: panel4
+    400212: panel4 1
+    400214: panel4 2
+    400216: panel5
+    400218: panel5 1
+    400220: panel5 2
+    400222: panel6
+    400224: panel6 1
+    400226: panels
+    400228: pipe1
+    400230: pipe1 1
+    400232: pipe1 2
+    400234: pipe1 3
+    400236: pipe1 4
+    400238: pipe1 5
+    400240: pipe2
+    400242: pipe2 1
+    400244: pipe2 2
+    400246: pipe2 3
+    400248: pipe2 4
+    400250: pipe2 5
+    400252: pipe3
+    400254: pipe3 1
+    400256: pipe3 2
+    400258: pipe3 3
+    400260: pipe3 4
+    400262: pipe3 5
+    400264: pipe4
+    400266: pipe4 1
+    400268: pipe4 2
+    400270: pipe4 3
+    400272: pipe4 4
+    400274: pipe4 5
+    400276: pipe5
+    400278: pipe5 1
+    400280: pipe5 2
+    400282: pipe5 3
+    400284: pipe5 4
+    400286: pipe5 5
+    400288: pipe6
+    400290: pipe6 1
+    400292: pipe6 2
+    400294: pipe6 3
+    400296: pipe6 4
+    400298: pipe6 5
+    400300: pipe_holder0
+    400302: pipe_holder1
+    400304: pipe_holder2
+    400306: pipe_holder3
+    400308: pipe_holder4
+    400310: pipe_holder5
+    400312: pipe_L
+    400314: pipe_R
+    400316: pipes
+    400318: plant_leafs
+    400320: PLANT_WALL1
+    400322: Pot
+    400324: recipe_screen
+    400326: recipe_screen_frame
+    400328: //RootNode
+    400330: room_number_frame
+    400332: room_number_frame 1
+    400334: room_number_screen
+    400336: room_number_screen 1
+    400338: screen_frame_L
+    400340: screen_frame_R
+    400342: screen_plane_L
+    400344: screen_plane_R
+    400346: side_lamps
+    400348: sink
+    400350: slots
+    400352: soil
+    400354: speaker
+    400356: speaker 1
+    400358: stove_button_off
+    400360: stove_button_on
+    400362: stove_frame
+    400364: stove_glass
+    400366: table
+    400368: tap
+    400370: tap1
+    400372: tap2
+    400374: vent1
+    400376: vent10
+    400378: vent11
+    400380: vent12
+    400382: vent2
+    400384: vent3
+    400386: vent4
+    400388: vent5
+    400390: vent6
+    400392: vent7
+    400394: vent8
+    400396: vent9
+    400398: ventilation
+    400400: wall
+    400402: wall 1
+    400404: wall 2
+    400406: wall 3
+    400408: wall 4
+    400410: wall 5
+    400412: WELCOMESCREEN
+    2100000: lambert6_green
+    2100002: lambert5
+    2100004: lambert2_white
+    2100006: aiS_light
+    2100008: lambert3_black
+    2100010: aiStandardSurface3
+    2100012: lambert1
+    2100014: aiStandardSurface6
+    2100016: aiStandardSurface1
+    2100018: aiStandardSurface11
+    2100020: aiStandardSurface13
+    2100022: aiStandardSurface12
+    2100024: aiStandardSurface7
+    2100026: aiStandardSurface8
+    2100028: aiStandardSurface2_screen
+    2100030: aiStandardSurface14_big_button
+    2100032: aiStandardSurface4_door
+    2100034: aiStandardSurface5
+    2100036: aiStandardSurface15_recipe
+    2100038: aiStandardSurface10
+    2100040: aiStandardSurface9
+    2100042: aiStandardSurface16_broken
+    2100044: lambert7_yellow
+    2300000: another_room
+    2300002: bg_light_screen_L
+    2300004: bg_light_screen_R
+    2300006: bg_screen
+    2300008: bg_screen_light
+    2300010: button_10
+    2300012: button_11
+    2300014: button_12
+    2300016: button_4
+    2300018: button_6
+    2300020: button_7
+    2300022: button_8
+    2300024: button_9
+    2300026: ceiling
+    2300028: ceiling_railing
+    2300030: chair1
+    2300032: chair2
+    2300034: chair3
+    2300036: chair4
+    2300038: door_L_2
+    2300040: door_L_2 1
+    2300042: door_R_1
+    2300044: door_R_1 1
+    2300046: edges_1
+    2300048: edges_1_light
+    2300050: edges_2
+    2300052: edges_2_light
+    2300054: edges_3
+    2300056: edges_3_light
+    2300058: edges_4
+    2300060: edges_4_light
+    2300062: edges_5
+    2300064: edges_5_light
+    2300066: edges_6
+    2300068: edges_6_light
+    2300070: edges_7
+    2300072: edges_7_light
+    2300074: edges_8
+    2300076: edges_8_light
+    2300078: edges_L
+    2300080: edges_R
+    2300082: elevator
+    2300084: elevator_lights
+    2300086: fan
+    2300088: floor
+    2300090: floor_pattern
+    2300092: kitchen_edge
+    2300094: lamp
+    2300096: lamp 1
+    2300098: lamp 2
+    2300100: lamp 3
+    2300102: lamp10
+    2300104: lamp11
+    2300106: lamp12
+    2300108: lamp16
+    2300110: lamp16_light
+    2300112: lamp2
+    2300114: lamp2_light
+    2300116: lamp5
+    2300118: lamp5_light
+    2300120: lamp6
+    2300122: lamp6_ligh
+    2300124: lamp7
+    2300126: lamp7_light
+    2300128: lamp8
+    2300130: lamp8 1
+    2300132: lamp8_light
+    2300134: lamp_holder1
+    2300136: lamp_holder2
+    2300138: lamp_holder3
+    2300140: lamp_holder4
+    2300142: lamp_holder5
+    2300144: lamp_holder6
+    2300146: lamp_light
+    2300148: lamp_light 1
+    2300150: light
+    2300152: light 1
+    2300154: light1
+    2300156: light2
+    2300158: light3
+    2300160: light4
+    2300162: order_table_L
+    2300164: order_table_R
+    2300166: order_table_screen_L
+    2300168: order_table_screen_R
+    2300170: panel
+    2300172: panel1
+    2300174: panel1 1
+    2300176: panel12
+    2300178: panel13
+    2300180: panel2
+    2300182: panel2 1
+    2300184: panel2 2
+    2300186: panel3
+    2300188: panel3 1
+    2300190: panel3 2
+    2300192: panel4
+    2300194: panel4 1
+    2300196: panel4 2
+    2300198: panel5
+    2300200: panel5 1
+    2300202: panel5 2
+    2300204: panel6
+    2300206: panel6 1
+    2300208: pipe1
+    2300210: pipe1 1
+    2300212: pipe1 2
+    2300214: pipe1 3
+    2300216: pipe1 4
+    2300218: pipe1 5
+    2300220: pipe2
+    2300222: pipe2 1
+    2300224: pipe2 2
+    2300226: pipe2 3
+    2300228: pipe2 4
+    2300230: pipe2 5
+    2300232: pipe3
+    2300234: pipe3 1
+    2300236: pipe3 2
+    2300238: pipe3 3
+    2300240: pipe3 4
+    2300242: pipe3 5
+    2300244: pipe4
+    2300246: pipe4 1
+    2300248: pipe4 2
+    2300250: pipe4 3
+    2300252: pipe4 4
+    2300254: pipe4 5
+    2300256: pipe5
+    2300258: pipe5 1
+    2300260: pipe5 2
+    2300262: pipe5 3
+    2300264: pipe5 4
+    2300266: pipe5 5
+    2300268: pipe6
+    2300270: pipe6 1
+    2300272: pipe6 2
+    2300274: pipe6 3
+    2300276: pipe6 4
+    2300278: pipe6 5
+    2300280: pipe_holder0
+    2300282: pipe_holder1
+    2300284: pipe_holder2
+    2300286: pipe_holder3
+    2300288: pipe_holder4
+    2300290: pipe_holder5
+    2300292: pipe_L
+    2300294: pipe_R
+    2300296: plant_leafs
+    2300298: Pot
+    2300300: recipe_screen
+    2300302: recipe_screen_frame
+    2300304: room_number_frame
+    2300306: room_number_frame 1
+    2300308: room_number_screen
+    2300310: room_number_screen 1
+    2300312: screen_frame_L
+    2300314: screen_frame_R
+    2300316: screen_plane_L
+    2300318: screen_plane_R
+    2300320: sink
+    2300322: soil
+    2300324: speaker
+    2300326: speaker 1
+    2300328: stove_button_off
+    2300330: stove_button_on
+    2300332: stove_frame
+    2300334: stove_glass
+    2300336: table
+    2300338: tap
+    2300340: tap1
+    2300342: tap2
+    2300344: vent1
+    2300346: vent10
+    2300348: vent11
+    2300350: vent12
+    2300352: vent2
+    2300354: vent3
+    2300356: vent4
+    2300358: vent5
+    2300360: vent6
+    2300362: vent7
+    2300364: vent8
+    2300366: vent9
+    2300368: wall
+    2300370: wall 1
+    2300372: wall 2
+    2300374: wall 3
+    2300376: wall 4
+    2300378: wall 5
+    3300000: another_room
+    3300002: bg_light_screen_L
+    3300004: bg_light_screen_R
+    3300006: bg_screen
+    3300008: bg_screen_light
+    3300010: button_10
+    3300012: button_11
+    3300014: button_12
+    3300016: button_4
+    3300018: button_6
+    3300020: button_7
+    3300022: button_8
+    3300024: button_9
+    3300026: ceiling
+    3300028: ceiling_railing
+    3300030: chair1
+    3300032: chair2
+    3300034: chair3
+    3300036: chair4
+    3300038: door_L_2
+    3300040: door_L_2 1
+    3300042: door_R_1
+    3300044: door_R_1 1
+    3300046: edges_1
+    3300048: edges_1_light
+    3300050: edges_2
+    3300052: edges_2_light
+    3300054: edges_3
+    3300056: edges_3_light
+    3300058: edges_4
+    3300060: edges_4_light
+    3300062: edges_5
+    3300064: edges_5_light
+    3300066: edges_6
+    3300068: edges_6_light
+    3300070: edges_7
+    3300072: edges_7_light
+    3300074: edges_8
+    3300076: edges_8_light
+    3300078: edges_L
+    3300080: edges_R
+    3300082: elevator
+    3300084: elevator_lights
+    3300086: fan
+    3300088: floor
+    3300090: floor_pattern
+    3300092: kitchen_edge
+    3300094: lamp
+    3300096: lamp 1
+    3300098: lamp 2
+    3300100: lamp 3
+    3300102: lamp10
+    3300104: lamp11
+    3300106: lamp12
+    3300108: lamp16
+    3300110: lamp16_light
+    3300112: lamp2
+    3300114: lamp2_light
+    3300116: lamp5
+    3300118: lamp5_light
+    3300120: lamp6
+    3300122: lamp6_ligh
+    3300124: lamp7
+    3300126: lamp7_light
+    3300128: lamp8
+    3300130: lamp8 1
+    3300132: lamp8_light
+    3300134: lamp_holder1
+    3300136: lamp_holder2
+    3300138: lamp_holder3
+    3300140: lamp_holder4
+    3300142: lamp_holder5
+    3300144: lamp_holder6
+    3300146: lamp_light
+    3300148: lamp_light 1
+    3300150: light
+    3300152: light 1
+    3300154: light1
+    3300156: light2
+    3300158: light3
+    3300160: light4
+    3300162: order_table_L
+    3300164: order_table_R
+    3300166: order_table_screen_L
+    3300168: order_table_screen_R
+    3300170: panel
+    3300172: panel1
+    3300174: panel1 1
+    3300176: panel12
+    3300178: panel13
+    3300180: panel2
+    3300182: panel2 1
+    3300184: panel2 2
+    3300186: panel3
+    3300188: panel3 1
+    3300190: panel3 2
+    3300192: panel4
+    3300194: panel4 1
+    3300196: panel4 2
+    3300198: panel5
+    3300200: panel5 1
+    3300202: panel5 2
+    3300204: panel6
+    3300206: panel6 1
+    3300208: pipe1
+    3300210: pipe1 1
+    3300212: pipe1 2
+    3300214: pipe1 3
+    3300216: pipe1 4
+    3300218: pipe1 5
+    3300220: pipe2
+    3300222: pipe2 1
+    3300224: pipe2 2
+    3300226: pipe2 3
+    3300228: pipe2 4
+    3300230: pipe2 5
+    3300232: pipe3
+    3300234: pipe3 1
+    3300236: pipe3 2
+    3300238: pipe3 3
+    3300240: pipe3 4
+    3300242: pipe3 5
+    3300244: pipe4
+    3300246: pipe4 1
+    3300248: pipe4 2
+    3300250: pipe4 3
+    3300252: pipe4 4
+    3300254: pipe4 5
+    3300256: pipe5
+    3300258: pipe5 1
+    3300260: pipe5 2
+    3300262: pipe5 3
+    3300264: pipe5 4
+    3300266: pipe5 5
+    3300268: pipe6
+    3300270: pipe6 1
+    3300272: pipe6 2
+    3300274: pipe6 3
+    3300276: pipe6 4
+    3300278: pipe6 5
+    3300280: pipe_holder0
+    3300282: pipe_holder1
+    3300284: pipe_holder2
+    3300286: pipe_holder3
+    3300288: pipe_holder4
+    3300290: pipe_holder5
+    3300292: pipe_L
+    3300294: pipe_R
+    3300296: plant_leafs
+    3300298: Pot
+    3300300: recipe_screen
+    3300302: recipe_screen_frame
+    3300304: room_number_frame
+    3300306: room_number_frame 1
+    3300308: room_number_screen
+    3300310: room_number_screen 1
+    3300312: screen_frame_L
+    3300314: screen_frame_R
+    3300316: screen_plane_L
+    3300318: screen_plane_R
+    3300320: sink
+    3300322: soil
+    3300324: speaker
+    3300326: speaker 1
+    3300328: stove_button_off
+    3300330: stove_button_on
+    3300332: stove_frame
+    3300334: stove_glass
+    3300336: table
+    3300338: tap
+    3300340: tap1
+    3300342: tap2
+    3300344: vent1
+    3300346: vent10
+    3300348: vent11
+    3300350: vent12
+    3300352: vent2
+    3300354: vent3
+    3300356: vent4
+    3300358: vent5
+    3300360: vent6
+    3300362: vent7
+    3300364: vent8
+    3300366: vent9
+    3300368: wall
+    3300370: wall 1
+    3300372: wall 2
+    3300374: wall 3
+    3300376: wall 4
+    3300378: wall 5
+    4300000: plant_leafs
+    4300002: soil
+    4300004: Pot
+    4300006: wall
+    4300008: lamp6
+    4300010: lamp6_ligh
+    4300012: lamp5
+    4300014: lamp5_light
+    4300016: lamp7
+    4300018: lamp7_light
+    4300020: lamp8_light
+    4300022: lamp8
+    4300024: panel1
+    4300026: panel2
+    4300028: panel3
+    4300030: panel4
+    4300032: panel5
+    4300034: panel6
+    4300036: panel12
+    4300038: panel13
+    4300040: edges_1
+    4300042: edges_2
+    4300044: edges_3
+    4300046: edges_4
+    4300048: edges_5
+    4300050: edges_6
+    4300052: edges_7
+    4300054: edges_8
+    4300056: edges_1_light
+    4300058: edges_2_light
+    4300060: edges_3_light
+    4300062: edges_4_light
+    4300064: edges_5_light
+    4300066: edges_6_light
+    4300068: edges_7_light
+    4300070: edges_8_light
+    4300072: wall
+    4300074: tap2
+    4300076: tap1
+    4300078: tap
+    4300080: sink
+    4300082: bg_screen
+    4300084: kitchen_edge
+    4300086: lamp16_light
+    4300088: lamp16
+    4300090: lamp2
+    4300092: lamp2_light
+    4300094: stove_glass
+    4300096: stove_frame
+    4300098: fan
+    4300100: panel
+    4300102: panel2
+    4300104: panel3
+    4300106: panel4
+    4300108: panel5
+    4300110: panel6
+    4300112: stove_button_off
+    4300114: stove_button_on
+    4300116: pipe_L
+    4300118: pipe_R
+    4300120: wall
+    4300122: edges_L
+    4300124: edges_R
+    4300126: order_table_screen_L
+    4300128: order_table_screen_R
+    4300130: screen_frame_L
+    4300132: screen_frame_R
+    4300134: screen_plane_L
+    4300136: screen_plane_R
+    4300138: order_table_L
+    4300140: order_table_R
+    4300142: bg_light_screen_L
+    4300144: bg_light_screen_R
+    4300146: panel1
+    4300148: panel2
+    4300150: panel3
+    4300152: panel4
+    4300154: panel5
+    4300156: button_12
+    4300158: button_11
+    4300160: button_10
+    4300162: button_9
+    4300164: button_8
+    4300166: button_7
+    4300168: button_6
+    4300170: button_4
+    4300172: wall
+    4300174: lamp_light
+    4300176: lamp
+    4300178: door_R_1
+    4300180: door_L_2
+    4300182: speaker
+    4300184: room_number_screen
+    4300186: room_number_frame
+    4300188: wall
+    4300190: recipe_screen
+    4300192: recipe_screen_frame
+    4300194: light
+    4300196: ceiling
+    4300198: ceiling_railing
+    4300200: light
+    4300202: lamp
+    4300204: lamp_holder6
+    4300206: lamp_holder5
+    4300208: lamp_holder4
+    4300210: lamp_holder3
+    4300212: lamp_holder2
+    4300214: lamp_holder1
+    4300216: vent1
+    4300218: vent2
+    4300220: vent3
+    4300222: vent4
+    4300224: vent5
+    4300226: vent6
+    4300228: vent7
+    4300230: vent8
+    4300232: vent9
+    4300234: vent10
+    4300236: vent11
+    4300238: vent12
+    4300240: pipe_holder0
+    4300242: pipe6
+    4300244: pipe5
+    4300246: pipe4
+    4300248: pipe3
+    4300250: pipe2
+    4300252: pipe1
+    4300254: pipe_holder1
+    4300256: pipe6
+    4300258: pipe5
+    4300260: pipe4
+    4300262: pipe3
+    4300264: pipe2
+    4300266: pipe1
+    4300268: pipe_holder2
+    4300270: pipe6
+    4300272: pipe5
+    4300274: pipe4
+    4300276: pipe3
+    4300278: pipe2
+    4300280: pipe1
+    4300282: pipe_holder3
+    4300284: pipe6
+    4300286: pipe5
+    4300288: pipe4
+    4300290: pipe3
+    4300292: pipe2
+    4300294: pipe1
+    4300296: pipe_holder4
+    4300298: pipe6
+    4300300: pipe5
+    4300302: pipe4
+    4300304: pipe3
+    4300306: pipe2
+    4300308: pipe1
+    4300310: pipe_holder5
+    4300312: pipe6
+    4300314: pipe5
+    4300316: pipe4
+    4300318: pipe3
+    4300320: pipe2
+    4300322: pipe1
+    4300324: light1
+    4300326: lamp8
+    4300328: light2
+    4300330: lamp10
+    4300332: light3
+    4300334: lamp11
+    4300336: light4
+    4300338: lamp12
+    4300340: floor_pattern
+    4300342: floor
+    4300344: elevator_lights
+    4300346: elevator
+    4300348: wall
+    4300350: lamp_light
+    4300352: lamp
+    4300354: door_R_1
+    4300356: door_L_2
+    4300358: speaker
+    4300360: room_number_screen
+    4300362: room_number_frame
+    4300364: another_room
+    4300366: lamp
+    4300368: bg_screen_light
+    4300370: table
+    4300372: chair1
+    4300374: chair2
+    4300376: chair3
+    4300378: chair4
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
