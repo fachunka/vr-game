@@ -2951,7 +2951,127 @@ ModelImporter:
     4301106: room_number_frame
     4301108: top_door2
     4301110: top_door
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Room_number
+    second: {fileID: 2100000, guid: d81625f97867b4952bb10b65bbfc118a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiS_light
+    second: {fileID: 2100000, guid: c88133e136ce44338af1a65f044eedda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: animal_products_sign
+    second: {fileID: 2100000, guid: 4c077298a646349b69085b65ae22bc3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: automat_bg_screen
+    second: {fileID: 2100000, guid: 10f39d98b511344588e4e41b5f016ff4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: big_button
+    second: {fileID: 2100000, guid: 208aecc83916f47528f2f879b5332eb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: af1294276dcab417abe2b14d9868af9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey
+    second: {fileID: 2100000, guid: 33cd5950a364d4406abbca506528d4a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey2
+    second: {fileID: 2100000, guid: 56e5e89c35c314f348d59cab9c397293, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey3
+    second: {fileID: 2100000, guid: 100ad33102593430c8b1535fb452aaab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_door
+    second: {fileID: 2100000, guid: 959b9dc5d213141b8a55a0fccde64a01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: meat_orde
+    second: {fileID: 2100000, guid: 5cc56dd31efb0416092c0e1d2a9a9a90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: off_button
+    second: {fileID: 2100000, guid: e710ca17555ed4b2eb587bd922666bb9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: on_button
+    second: {fileID: 2100000, guid: d419f13978fd9477893bb69a27d93d80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plant_bg_screen
+    second: {fileID: 2100000, guid: f1418baf636f44e688ad6667f8d0f0fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plant_order
+    second: {fileID: 2100000, guid: 645d4c18260cd4a85b657ee1e2fa6eb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plant_products_sign
+    second: {fileID: 2100000, guid: 3c0d3af136e2a457cb799a44d8767599, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: recipe_screen1
+    second: {fileID: 2100000, guid: 50e9a670b5c4d49249f652dd9d9ed836, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stove_material
+    second: {fileID: 2100000, guid: 06a8ba16ecc5947c3bc490e9ac829a04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vent_broken
+    second: {fileID: 2100000, guid: 4d573b54f437f4277a76b5850f139927, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vent_mat
+    second: {fileID: 2100000, guid: 10462363a6f41462391061022277e5ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vent_material
+    second: {fileID: 2100000, guid: 10462363a6f41462391061022277e5ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: welcome_screen_light
+    second: {fileID: 2100000, guid: 63bde2aa5b6294d63bf7098a7def420c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white
+    second: {fileID: 2100000, guid: c8c9de1ed05cd458384e31e14baabb95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yellow
+    second: {fileID: 2100000, guid: b27529123dcd040778cc5a8061e9c2fb, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
