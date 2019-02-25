@@ -1,0 +1,280 @@
+fileFormatVersion: 2
+guid: 72bad572ad60b144dadbac93d040f4c1
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: AUTOMAT
+    100002: //RootNode
+    100004: bg_light_screen_L
+    100006: bg_light_screen_R
+    100008: button_10
+    100010: button_11
+    100012: button_12
+    100014: button_4
+    100016: button_6
+    100018: button_7
+    100020: button_8
+    100022: button_9
+    100024: edges_L
+    100026: edges_R
+    100028: order_table_L
+    100030: order_table_R
+    100032: order_table_screen_L
+    100034: order_table_screen_R
+    100036: panel1
+    100038: panel2
+    100040: panel3
+    100042: panel4
+    100044: panel5
+    100046: pipe_L
+    100048: pipe_R
+    100050: screen_frame_L
+    100052: screen_frame_R
+    100054: screen_plane_L
+    100056: screen_plane_R
+    100058: wall5
+    400000: AUTOMAT
+    400002: //RootNode
+    400004: bg_light_screen_L
+    400006: bg_light_screen_R
+    400008: button_10
+    400010: button_11
+    400012: button_12
+    400014: button_4
+    400016: button_6
+    400018: button_7
+    400020: button_8
+    400022: button_9
+    400024: edges_L
+    400026: edges_R
+    400028: order_table_L
+    400030: order_table_R
+    400032: order_table_screen_L
+    400034: order_table_screen_R
+    400036: panel1
+    400038: panel2
+    400040: panel3
+    400042: panel4
+    400044: panel5
+    400046: pipe_L
+    400048: pipe_R
+    400050: screen_frame_L
+    400052: screen_frame_R
+    400054: screen_plane_L
+    400056: screen_plane_R
+    400058: wall5
+    2100000: white
+    2100002: plant_products_sign
+    2100004: big_button
+    2100006: plant_order
+    2100008: automat_bg_screen
+    2100010: black
+    2100012: animal_products_sign
+    2100014: meat_orde
+    2300000: bg_light_screen_L
+    2300002: bg_light_screen_R
+    2300004: button_10
+    2300006: button_11
+    2300008: button_12
+    2300010: button_4
+    2300012: button_6
+    2300014: button_7
+    2300016: button_8
+    2300018: button_9
+    2300020: edges_L
+    2300022: edges_R
+    2300024: order_table_L
+    2300026: order_table_R
+    2300028: order_table_screen_L
+    2300030: order_table_screen_R
+    2300032: panel1
+    2300034: panel2
+    2300036: panel3
+    2300038: panel4
+    2300040: panel5
+    2300042: pipe_L
+    2300044: pipe_R
+    2300046: screen_frame_L
+    2300048: screen_frame_R
+    2300050: screen_plane_L
+    2300052: screen_plane_R
+    2300054: wall5
+    3300000: bg_light_screen_L
+    3300002: bg_light_screen_R
+    3300004: button_10
+    3300006: button_11
+    3300008: button_12
+    3300010: button_4
+    3300012: button_6
+    3300014: button_7
+    3300016: button_8
+    3300018: button_9
+    3300020: edges_L
+    3300022: edges_R
+    3300024: order_table_L
+    3300026: order_table_R
+    3300028: order_table_screen_L
+    3300030: order_table_screen_R
+    3300032: panel1
+    3300034: panel2
+    3300036: panel3
+    3300038: panel4
+    3300040: panel5
+    3300042: pipe_L
+    3300044: pipe_R
+    3300046: screen_frame_L
+    3300048: screen_frame_R
+    3300050: screen_plane_L
+    3300052: screen_plane_R
+    3300054: wall5
+    4300000: panel1
+    4300002: panel2
+    4300004: panel3
+    4300006: panel4
+    4300008: panel5
+    4300010: screen_frame_L
+    4300012: screen_plane_L
+    4300014: button_9
+    4300016: button_10
+    4300018: button_11
+    4300020: button_12
+    4300022: order_table_L
+    4300024: order_table_screen_L
+    4300026: pipe_L
+    4300028: bg_light_screen_L
+    4300030: edges_L
+    4300032: screen_frame_R
+    4300034: screen_plane_R
+    4300036: order_table_R
+    4300038: button_8
+    4300040: button_7
+    4300042: button_6
+    4300044: button_4
+    4300046: order_table_screen_R
+    4300048: bg_light_screen_R
+    4300050: pipe_R
+    4300052: edges_R
+    4300054: wall5
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: animal_products_sign
+    second: {fileID: 2100000, guid: 4c077298a646349b69085b65ae22bc3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: automat_bg_screen
+    second: {fileID: 2100000, guid: f1418baf636f44e688ad6667f8d0f0fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: big_button
+    second: {fileID: 2100000, guid: 208aecc83916f47528f2f879b5332eb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: af1294276dcab417abe2b14d9868af9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: meat_orde
+    second: {fileID: 2100000, guid: 5cc56dd31efb0416092c0e1d2a9a9a90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plant_order
+    second: {fileID: 2100000, guid: 645d4c18260cd4a85b657ee1e2fa6eb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plant_products_sign
+    second: {fileID: 2100000, guid: 3c0d3af136e2a457cb799a44d8767599, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white
+    second: {fileID: 2100000, guid: c8c9de1ed05cd458384e31e14baabb95, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
