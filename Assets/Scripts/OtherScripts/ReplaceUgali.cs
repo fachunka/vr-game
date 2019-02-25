@@ -21,7 +21,7 @@ public class ReplaceUgali : MonoBehaviour
     {
         replaceObjects = false;
         handNotTouchedButtonBefore = true;
-        UgaliPosition = new Vector3(-0.76f, 0.1f, 0);
+        UgaliPosition = new Vector3(0, 0.11f, -0.8f);
 
         buttonPressed = false;
     }
