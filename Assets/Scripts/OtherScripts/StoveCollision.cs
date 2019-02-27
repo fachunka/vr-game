@@ -47,6 +47,7 @@ public class StoveCollision : MonoBehaviour
         if (cornmealTouching == true & mirendaLeafTouching == true && chickenTouching == true)
         {
             ingredientsCollided = true;
+           // print("colliding?");
         }
 
         else
@@ -70,34 +71,34 @@ public class StoveCollision : MonoBehaviour
     }
 
     //-----------------------------------------------------------------------------------------------------------------
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.tag == "Cornmeal")
         {
-            //print("cornmealTouching");
+           // print("cornmealTouching");
             cornmealTouching = true;
         }
 
         if (collision.gameObject.tag == "MirendaLeaf")
         {
-            //print("mirendaLeafTouching");
+           // print("mirendaLeafTouching");
             mirendaLeafTouching = true;
         }
 
         if (collision.gameObject.tag == "Chicken")
         {
-            //print("chickenTouching");
+           // print("chickenTouching");
             chickenTouching = true;
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         //count objects colliding with the stove
         objectColliding++;
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider collision)
     {
         objectColliding--;
     }

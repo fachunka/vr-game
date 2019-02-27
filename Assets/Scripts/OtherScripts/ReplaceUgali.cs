@@ -47,10 +47,12 @@ public class ReplaceUgali : MonoBehaviour
             buttonPressed = true;
 
             print("button clicked");
+            print(StoveCollisionScript.ingredientsCollided);
 
             //if all the ingredients are colliding with stove
             if (StoveCollisionScript.ingredientsCollided == true)
             {
+                print("true?");
                 //if hands were not touching the button before(to prevent clicking button several times once)
                 if (handNotTouchedButtonBefore == true)
                 {

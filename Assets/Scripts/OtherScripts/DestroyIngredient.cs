@@ -40,10 +40,13 @@ public class DestroyIngredient : MonoBehaviour
                 //if button is pressed
                 if (ReplaceUgaliScript.buttonPressed == true)
                 {
-                    //destory game objects colliding with stove2
+                    print("Hello");
+
+                    //destroy game objects colliding with stove2
                     foreach (GameObject gObject in currentCollisions)
                     {
-                        Destroy(gObject.gameObject);
+                        print(gObject.gameObject);
+                        //Destroy(gObject.gameObject);
                         StoveCollisionScript.Reset();
                     }
                 }
@@ -53,8 +56,9 @@ public class DestroyIngredient : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {
+     //   print(col.gameObject);
         currentCollisions.Add(col.gameObject);
         
     }
