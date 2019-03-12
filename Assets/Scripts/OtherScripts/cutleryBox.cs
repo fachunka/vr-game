@@ -28,7 +28,7 @@ public class cutleryBox : MonoBehaviour {
 
 						Destroy(this.transform.parent.gameObject);
 
-						Instantiate(toReplace, slightlyOpenPos, Quaternion.Euler(new Vector3(0, 180, 0)));
+						Instantiate(toReplace, slightlyOpenPos, Quaternion.Euler(new Vector3(90, -180, 0)));
 						//print("keyed");
 				}
 

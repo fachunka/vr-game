@@ -17,6 +17,8 @@ public class ControllerGrabObject : MonoBehaviour
     public bool releasedObject = false;
     //
 
+    public bool triggerDown;
+
     private SteamVR_Controller.Device Controller
     {
         get { return SteamVR_Controller.Input((int)trackedObj.index); }
@@ -84,6 +86,9 @@ public class ControllerGrabObject : MonoBehaviour
             releasedObject = false;
             GetOutStoryScene = true;
             //
+
+            triggerDown = true;
+            Debug.Log("trigger is down");
         }
 
         if (Controller.GetHairTriggerUp())
@@ -94,6 +99,7 @@ public class ControllerGrabObject : MonoBehaviour
             }
 
             //added by Jung
+            triggerDown = false;
             releasedObject = true;
             //
         }
