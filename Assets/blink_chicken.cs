@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlinkButton : MonoBehaviour
+public class blink_chicken : MonoBehaviour
 {
     public Material material;
 
