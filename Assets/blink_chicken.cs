@@ -28,8 +28,12 @@ public class blink_chicken : MonoBehaviour
                 material.EnableKeyword("_EMISSION");
                 //material.SetColor("_EmissionColor", Color.green);
                 playBeep();
-            Debug.Log("hello");
-
+        }
+        else if (turnOnBlinkButton == false)
+        {
+            material.DisableKeyword("_EMISSION");
+            //material.SetColor("_EmissionColor", Color.green);
+            playBeep();
         }
     }
 

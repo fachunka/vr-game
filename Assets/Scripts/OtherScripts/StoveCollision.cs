@@ -66,7 +66,6 @@ public class StoveCollision : MonoBehaviour
         if (chickenTouching == true)
         {
             ChickenButtonScript.turnOnBlinkButton = true;
-            Debug.Log(true);
         }
 
 
@@ -74,8 +73,6 @@ public class StoveCollision : MonoBehaviour
         {
             ChickenButtonScript.turnOnBlinkButton = false;
             ChickenButtonScript.material.DisableKeyword("_EMISSION");
-            Debug.Log(false);
-
         }
 
         if (cornmealTouching == true)
@@ -87,8 +84,6 @@ public class StoveCollision : MonoBehaviour
         else if (cornmealTouching == false)
         {
             CornmealButtonScript.turnOnBlinkButton = false;
-            CornmealButtonScript.material.DisableKeyword("_EMISSION");
-
         }
 
         if (mirendaLeafTouching == true)
@@ -100,8 +95,6 @@ public class StoveCollision : MonoBehaviour
         else if (mirendaLeafTouching == false)
         {
             MirendaButtonScript.turnOnBlinkButton = false;
-            MirendaButtonScript.material.DisableKeyword("_EMISSION");
-
         }
 
 
@@ -123,33 +116,58 @@ public class StoveCollision : MonoBehaviour
     //-----------------------------------------------------------------------------------------------------------------
     private void OnTriggerStay(Collider collision)
     {
-        if (collision.gameObject.tag == "Cornmeal")
-        {
-            print("cornmealTouching");
-            cornmealTouching = true;
-        }
 
-        if (collision.gameObject.tag == "MirendaLeaf")
-        {
-           // print("mirendaLeafTouching");
-            mirendaLeafTouching = true;
-        }
-
-        if (collision.gameObject.tag == "Chicken")
-        {
-           // print("chickenTouching");
-            chickenTouching = true;
-        }
     }
 
     private void OnTriggerEnter(Collider collision)
     {
         //count objects colliding with the stove
         objectColliding++;
+
+        if (collision.gameObject.tag == "Cornmeal")
+        {
+            print("cornmealTouching");
+            cornmealTouching = true;
+        }
+
+
+
+        if (collision.gameObject.tag == "MirendaLeaf")
+        {
+            // print("mirendaLeafTouching");
+            mirendaLeafTouching = true;
+        }
+
+
+        if (collision.gameObject.tag == "Chicken")
+        {
+            // print("chickenTouching");
+            chickenTouching = true;
+        }
+     
     }
 
     private void OnTriggerExit(Collider collision)
     {
         objectColliding--;
+
+            print("cornmealTouching");
+        if (collision.gameObject.tag == "Cornmeal")
+        {
+            cornmealTouching = false;
+        }
+
+
+
+        if (collision.gameObject.tag == "MirendaLeaf")
+        {
+            mirendaLeafTouching = false;
+        }
+
+
+        if (collision.gameObject.tag == "Chicken")
+        {
+            chickenTouching = false;
+        }
     }
 }

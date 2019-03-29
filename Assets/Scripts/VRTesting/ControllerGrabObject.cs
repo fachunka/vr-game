@@ -88,7 +88,7 @@ public class ControllerGrabObject : MonoBehaviour
             //
 
             triggerDown = true;
-            Debug.Log("trigger is down");
+           // Debug.Log("trigger is down");
         }
 
         if (Controller.GetHairTriggerUp())

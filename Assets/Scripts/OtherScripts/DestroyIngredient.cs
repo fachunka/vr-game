@@ -40,7 +40,6 @@ public class DestroyIngredient : MonoBehaviour
                 //if button is pressed
                 if (ReplaceUgaliScript.buttonPressed == true)
                 {
-                    print("Hello");
 
                     //destroy game objects colliding with stove2
                     foreach (GameObject gObject in currentCollisions)
