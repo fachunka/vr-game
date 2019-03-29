@@ -6,6 +6,10 @@ public class StoveCollision : MonoBehaviour
 {
     public GameObject gameObContainingScript;
 
+    public GameObject gameObLightupChicken;
+    public GameObject gameObLightupMirenda;
+    public GameObject gameObLightupCornmeal;
+
     public bool ingredientsCollided;
 
     bool cornmealTouching;
@@ -41,6 +45,10 @@ public class StoveCollision : MonoBehaviour
 
         BlinkButton BlinkButtonScript = gameObContainingScript.GetComponent<BlinkButton>();
 
+         blink_chicken ChickenButtonScript = gameObLightupChicken.GetComponent<blink_chicken>();
+        blink_mirenda MirendaButtonScript = gameObLightupMirenda.GetComponent<blink_mirenda>();
+        blink_cornmeal CornmealButtonScript = gameObLightupCornmeal.GetComponent<blink_cornmeal>();
+
         //Debug.Log("Number of object colliding stove2: " + objectColliding);
 
         //if all three ingredients for ugali dish is colliding with the stove, then send bool ingredientsCollided to "ReplaceUgali" script
@@ -54,6 +62,48 @@ public class StoveCollision : MonoBehaviour
         {
             ingredientsCollided = false;
         }
+
+        if (chickenTouching == true)
+        {
+            ChickenButtonScript.turnOnBlinkButton = true;
+            Debug.Log(true);
+        }
+
+
+        else if (chickenTouching == false)
+        {
+            ChickenButtonScript.turnOnBlinkButton = false;
+            ChickenButtonScript.material.DisableKeyword("_EMISSION");
+            Debug.Log(false);
+
+        }
+
+        if (cornmealTouching == true)
+        {
+            CornmealButtonScript.turnOnBlinkButton = true;
+        }
+
+
+        else if (cornmealTouching == false)
+        {
+            CornmealButtonScript.turnOnBlinkButton = false;
+            CornmealButtonScript.material.DisableKeyword("_EMISSION");
+
+        }
+
+        if (mirendaLeafTouching == true)
+        {
+            MirendaButtonScript.turnOnBlinkButton = true;
+        }
+
+
+        else if (mirendaLeafTouching == false)
+        {
+            MirendaButtonScript.turnOnBlinkButton = false;
+            MirendaButtonScript.material.DisableKeyword("_EMISSION");
+
+        }
+
 
         //-----------------------------------------
         //activate button blinking
@@ -75,7 +125,7 @@ public class StoveCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Cornmeal")
         {
-           // print("cornmealTouching");
+            print("cornmealTouching");
             cornmealTouching = true;
         }
 
