@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlinkButton : MonoBehaviour
+public class blink_cornmeal : MonoBehaviour
 {
     public Material material;
 
@@ -24,18 +24,17 @@ public class BlinkButton : MonoBehaviour
     {
         if (turnOnBlinkButton == true)
         {
-            if (Mathf.Ceil(Time.fixedTime) % 2 == 0)
-            {
+
                 material.EnableKeyword("_EMISSION");
                 //material.SetColor("_EmissionColor", Color.green);
                 playBeep();
-            }
-            else
-            {
-                material.DisableKeyword("_EMISSION");
-                //material.SetColor("_EmissionColor", Color.red);
-                beepPlaying = false;
-            }
+
+        }
+        else if (turnOnBlinkButton == false)
+        {
+            material.DisableKeyword("_EMISSION");
+            //material.SetColor("_EmissionColor", Color.green);
+            playBeep();
         }
     }
 
