@@ -87,7 +87,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WorldScale: 20
+    - _WorldScale: 115
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.9960785, g: 0.8431373, b: 0.3019608, a: 1}
