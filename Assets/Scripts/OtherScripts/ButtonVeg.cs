@@ -11,11 +11,14 @@ public class ButtonVeg : MonoBehaviour {
     public GameObject dispenserVeg;
 
     public GameObject gameObContainingScript;
+    public GameObject gameObContainingScriptTwo;
 
     public Vector3 positionAdjust;
 
     public float printTime = 1.5f;
     private GameObject vegiDispenserAudioSource;
+
+    private bool controllerTouching;
 
     // Use this for initialization
     void Start()
@@ -26,51 +29,83 @@ public class ButtonVeg : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (gameObContainingScript && gameObContainingScriptTwo)
+        {
+            ButtonVegChange ButtonVegChangeScript = gameObContainingScript.GetComponent<ButtonVegChange>();
+            ControllerGrabObject triggerDownScript = gameObContainingScriptTwo.GetComponent<ControllerGrabObject>();
+
+            Debug.Log(triggerDownScript.triggerDown);
+
+
+                if (triggerDownScript.triggerDown == true)
+                 {
+                    if (controllerTouching == true) {
+ 
+                            if (ButtonVegChangeScript.status % 4 == 0)
+                            {
+                                StartCoroutine(printLime());
+                                vegiDispenserAudioSource = GameObject.Find("Dispenser_vegi");
+                                vegiDispenserAudioSource.SendMessage("playPrintFood");
+
+                            }
+
+                            else if (ButtonVegChangeScript.status % 4 == 1)
+                            {
+                                StartCoroutine(printCornMeal());
+                                vegiDispenserAudioSource = GameObject.Find("Dispenser_vegi");
+                                vegiDispenserAudioSource.SendMessage("playPrintFood");
+                            }
+
+                            else if (ButtonVegChangeScript.status % 4 == 2)
+                            {
+                                StartCoroutine(printMirandaLeaf());
+                                vegiDispenserAudioSource = GameObject.Find("Dispenser_vegi");
+                                vegiDispenserAudioSource.SendMessage("playPrintFood");
+                            }
+
+                            else if (ButtonVegChangeScript.status % 4 == 3)
+                            {
+                                StartCoroutine(printBanana());
+                                vegiDispenserAudioSource = GameObject.Find("Dispenser_vegi");
+                                vegiDispenserAudioSource.SendMessage("playPrintFood");
+                            }
+
+                        triggerDownScript.triggerDown = false;
+
+
+                    }
+
+
+            }
+        }
+
     }
 
     //when the player touches button create lime
     void OnTriggerEnter(Collider other)
     {
-        if (gameObContainingScript)
+
+        if (other.gameObject.tag == "GameController")
         {
-            ButtonVegChange ButtonVegChangeScript = gameObContainingScript.GetComponent<ButtonVegChange>();
-
-            if (other.gameObject.tag == "GameController")
-            {
-                if (ButtonVegChangeScript.status % 4 == 0)
-                {
-                    StartCoroutine(printLime());
-                    vegiDispenserAudioSource = GameObject.Find("Dispenser_vegi");
-                    vegiDispenserAudioSource.SendMessage("playPrintFood");
-                }
-
-                else if (ButtonVegChangeScript.status % 4 == 1)
-                {
-                    StartCoroutine(printCornMeal());
-                    vegiDispenserAudioSource = GameObject.Find("Dispenser_vegi");
-                    vegiDispenserAudioSource.SendMessage("playPrintFood");
-                }
-
-                else if (ButtonVegChangeScript.status % 4 == 2)
-                {
-                    StartCoroutine(printMirandaLeaf());
-                    vegiDispenserAudioSource = GameObject.Find("Dispenser_vegi");
-                    vegiDispenserAudioSource.SendMessage("playPrintFood");
-                }
-
-                else if (ButtonVegChangeScript.status % 4 == 3)
-                {
-                    StartCoroutine(printBanana());
-                    vegiDispenserAudioSource = GameObject.Find("Dispenser_vegi");
-                    vegiDispenserAudioSource.SendMessage("playPrintFood");
-                }
-
-            }
+            controllerTouching = true;
         }
+
+
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+
+        if (other.gameObject.tag == "GameController")
+        {
+            controllerTouching = false;
+        }
+
+
     }
 
 
-        IEnumerator printLime()
+    IEnumerator printLime()
         {
             yield return new WaitForSeconds(printTime);
             Instantiate(lime, dispenserVeg.transform.position + positionAdjust, Quaternion.identity);
