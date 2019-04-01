@@ -1,0 +1,1849 @@
+fileFormatVersion: 2
+guid: 85e510ef2250ad743b7dd5831e584bce
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: A_bg_light_screen_L
+    100002: A_bg_light_screen_R
+    100004: A_button_1
+    100006: A_button_2
+    100008: A_button_3
+    100010: A_button_4
+    100012: A_button_5
+    100014: A_button_6
+    100016: A_button_7
+    100018: A_button_8
+    100020: A_edges_L
+    100022: A_edges_R
+    100024: A_order_table_L
+    100026: A_order_table_R
+    100028: A_order_table_screen_L
+    100030: A_order_table_screen_R
+    100032: A_panel_1
+    100034: A_pipe_L
+    100036: A_pipe_R
+    100038: A_screen_frame_L
+    100040: A_screen_frame_R
+    100042: A_screen_plane_L
+    100044: A_screen_plane_R
+    100046: A_wall
+    100048: Another_room
+    100050: AUTOMAT
+    100052: bg_screen_light
+    100054: broken_floor
+    100056: C_ceiling
+    100058: C_lamp
+    100060: C_lamp_holders
+    100062: C_pipeholders
+    100064: C_pipes_1
+    100066: C_pipes_2
+    100068: C_pipes_3
+    100070: C_railing
+    100072: C_sidelamps
+    100074: C_vent1
+    100076: C_vent10
+    100078: C_vent11
+    100080: C_vent12
+    100082: C_vent2
+    100084: C_vent3
+    100086: C_vent4
+    100088: C_vent5
+    100090: C_vent6
+    100092: C_vent7
+    100094: C_vent8
+    100096: C_vent9
+    100098: C_ventilations
+    100100: CEILING
+    100102: CEILING_1
+    100104: ceiling_1
+    100106: CEILING_1 1
+    100108: ceiling_1 1
+    100110: CEILING_1 2
+    100112: ceiling_1 2
+    100114: ceiling_railing_1
+    100116: ceiling_railing_1 1
+    100118: ceiling_railing_1 2
+    100120: chair1
+    100122: chair2
+    100124: chair3
+    100126: chair4
+    100128: chair5
+    100130: chair6
+    100132: chair7
+    100134: chair8
+    100136: D1_door_L1
+    100138: D1_door_L1 1
+    100140: D1_door_L1 10
+    100142: D1_door_L1 11
+    100144: D1_door_L1 12
+    100146: D1_door_L1 13
+    100148: D1_door_L1 14
+    100150: D1_door_L1 15
+    100152: D1_door_L1 16
+    100154: D1_door_L1 17
+    100156: D1_door_L1 2
+    100158: D1_door_L1 3
+    100160: D1_door_L1 4
+    100162: D1_door_L1 5
+    100164: D1_door_L1 6
+    100166: D1_door_L1 7
+    100168: D1_door_L1 8
+    100170: D1_door_L1 9
+    100172: D1_door_R1
+    100174: D1_door_R1 1
+    100176: D1_door_R1 10
+    100178: D1_door_R1 11
+    100180: D1_door_R1 12
+    100182: D1_door_R1 13
+    100184: D1_door_R1 14
+    100186: D1_door_R1 15
+    100188: D1_door_R1 16
+    100190: D1_door_R1 17
+    100192: D1_door_R1 2
+    100194: D1_door_R1 3
+    100196: D1_door_R1 4
+    100198: D1_door_R1 5
+    100200: D1_door_R1 6
+    100202: D1_door_R1 7
+    100204: D1_door_R1 8
+    100206: D1_door_R1 9
+    100208: D1_lamp
+    100210: D1_lamp 1
+    100212: D1_lamp 10
+    100214: D1_lamp 11
+    100216: D1_lamp 12
+    100218: D1_lamp 13
+    100220: D1_lamp 14
+    100222: D1_lamp 15
+    100224: D1_lamp 16
+    100226: D1_lamp 17
+    100228: D1_lamp 2
+    100230: D1_lamp 3
+    100232: D1_lamp 4
+    100234: D1_lamp 5
+    100236: D1_lamp 6
+    100238: D1_lamp 7
+    100240: D1_lamp 8
+    100242: D1_lamp 9
+    100244: D1_room_number_frame
+    100246: D1_room_number_frame 1
+    100248: D1_room_number_frame 10
+    100250: D1_room_number_frame 11
+    100252: D1_room_number_frame 12
+    100254: D1_room_number_frame 13
+    100256: D1_room_number_frame 14
+    100258: D1_room_number_frame 15
+    100260: D1_room_number_frame 16
+    100262: D1_room_number_frame 17
+    100264: D1_room_number_frame 2
+    100266: D1_room_number_frame 3
+    100268: D1_room_number_frame 4
+    100270: D1_room_number_frame 5
+    100272: D1_room_number_frame 6
+    100274: D1_room_number_frame 7
+    100276: D1_room_number_frame 8
+    100278: D1_room_number_frame 9
+    100280: D1_room_number_screen
+    100282: D1_room_number_screen 1
+    100284: D1_room_number_screen 10
+    100286: D1_room_number_screen 11
+    100288: D1_room_number_screen 12
+    100290: D1_room_number_screen 13
+    100292: D1_room_number_screen 14
+    100294: D1_room_number_screen 15
+    100296: D1_room_number_screen 16
+    100298: D1_room_number_screen 17
+    100300: D1_room_number_screen 2
+    100302: D1_room_number_screen 3
+    100304: D1_room_number_screen 4
+    100306: D1_room_number_screen 5
+    100308: D1_room_number_screen 6
+    100310: D1_room_number_screen 7
+    100312: D1_room_number_screen 8
+    100314: D1_room_number_screen 9
+    100316: D1_speaker
+    100318: D1_speaker 1
+    100320: D1_speaker 10
+    100322: D1_speaker 11
+    100324: D1_speaker 12
+    100326: D1_speaker 13
+    100328: D1_speaker 14
+    100330: D1_speaker 15
+    100332: D1_speaker 16
+    100334: D1_speaker 17
+    100336: D1_speaker 2
+    100338: D1_speaker 3
+    100340: D1_speaker 4
+    100342: D1_speaker 5
+    100344: D1_speaker 6
+    100346: D1_speaker 7
+    100348: D1_speaker 8
+    100350: D1_speaker 9
+    100352: D_1
+    100354: D_1 1
+    100356: D_1 2
+    100358: D_2
+    100360: D_2 1
+    100362: D_2 2
+    100364: D_3
+    100366: D_3 1
+    100368: D_3 2
+    100370: D_4
+    100372: D_4 1
+    100374: D_4 2
+    100376: D_5
+    100378: D_5 1
+    100380: D_5 2
+    100382: D_6
+    100384: D_6 1
+    100386: D_6 2
+    100388: D_door_L
+    100390: D_door_R
+    100392: D_lamp
+    100394: D_room_number_frame
+    100396: D_room_number_screen
+    100398: D_speaker
+    100400: D_wall
+    100402: D_window_big
+    100404: D_window_small
+    100406: DOORWAY
+    100408: edges_1
+    100410: edges_1_light
+    100412: edges_2
+    100414: edges_2_light
+    100416: edges_3
+    100418: edges_3_light
+    100420: edges_4
+    100422: edges_4_light
+    100424: edges_5
+    100426: edges_5_light
+    100428: edges_6
+    100430: edges_6_light
+    100432: edges_7
+    100434: edges_7_light
+    100436: edges_8
+    100438: edges_8_light
+    100440: F_elevator
+    100442: F_elevator_lights
+    100444: F_floor
+    100446: F_floor_pattern
+    100448: FLOOR
+    100450: floor
+    100452: floor 1
+    100454: floor 2
+    100456: FLOOR_1
+    100458: FLOOR_1 1
+    100460: FLOOR_1 2
+    100462: floor_pattern
+    100464: floor_pattern 1
+    100466: floor_pattern 2
+    100468: K_bg_screen
+    100470: K_door_L
+    100472: K_door_R
+    100474: K_edge
+    100476: K_fan
+    100478: K_hinge_1
+    100480: K_hinge_2
+    100482: K_hinge_3
+    100484: K_hinge_4
+    100486: K_hinge_door_1
+    100488: K_hinge_door_2
+    100490: K_hinge_door_3
+    100492: K_hinge_door_4
+    100494: K_lamp_1
+    100496: K_lamp_2
+    100498: K_panels
+    100500: K_sink
+    100502: K_stove_button_on
+    100504: K_stove_frame
+    100506: K_stove_glass
+    100508: K_tap_holder
+    100510: K_tap_L
+    100512: K_tap_middle
+    100514: K_tap_R
+    100516: K_wall
+    100518: Key_v6
+    100520: KITCHEN
+    100522: //RootNode
+    100524: lamp
+    100526: lamp_1
+    100528: lamp_1 1
+    100530: lamp_1 2
+    100532: lamp_holders_1
+    100534: lamp_holders_1 1
+    100536: lamp_holders_1 2
+    100538: MODEL
+    100540: P_lamp_1
+    100542: P_lamp_2
+    100544: P_lamp_3
+    100546: P_lamp_4
+    100548: P_panels
+    100550: P_Slots
+    100552: P_wall
+    100554: PART_1
+    100556: PART_2
+    100558: PART_3
+    100560: pipe_holders_1
+    100562: pipe_holders_1 1
+    100564: pipe_holders_1 2
+    100566: pipes_1
+    100568: pipes_1 1
+    100570: pipes_1 2
+    100572: PLANT_WALL
+    100574: S_bg_light
+    100576: S_edges
+    100578: S_glass_hover
+    100580: S_panels
+    100582: S_plate_hover
+    100584: S_table
+    100586: S_wall
+    100588: SHRINE_WALL
+    100590: sidelamps_1
+    100592: sidelamps_1 1
+    100594: table
+    100596: table2
+    100598: top_door_1
+    100600: top_door_2
+    100602: TUNNEL_PART
+    100604: vent1
+    100606: vent1 1
+    100608: vent1 2
+    100610: vent10
+    100612: vent10 1
+    100614: vent10 2
+    100616: vent11
+    100618: vent11 1
+    100620: vent11 2
+    100622: vent12
+    100624: vent12 1
+    100626: vent12 2
+    100628: vent2
+    100630: vent2 1
+    100632: vent2 2
+    100634: vent3
+    100636: vent3 1
+    100638: vent3 2
+    100640: vent4
+    100642: vent4 1
+    100644: vent4 2
+    100646: vent5
+    100648: vent5 1
+    100650: vent5 2
+    100652: vent6
+    100654: vent6 1
+    100656: vent6 2
+    100658: vent7
+    100660: vent7 1
+    100662: vent7 2
+    100664: vent8
+    100666: vent8 1
+    100668: vent8 2
+    100670: vent9
+    100672: vent9 1
+    100674: vent9 2
+    100676: ventilation_1
+    100678: ventilation_1 1
+    100680: ventilation_1 2
+    100682: W_recipe_screen
+    100684: W_recipe_screen_frame
+    100686: W_wall
+    100688: W_wall_lights
+    100690: WALLS_1
+    100692: WALLS_1 1
+    100694: WALLS_1 2
+    100696: WELCOMESCREEN
+    400000: A_bg_light_screen_L
+    400002: A_bg_light_screen_R
+    400004: A_button_1
+    400006: A_button_2
+    400008: A_button_3
+    400010: A_button_4
+    400012: A_button_5
+    400014: A_button_6
+    400016: A_button_7
+    400018: A_button_8
+    400020: A_edges_L
+    400022: A_edges_R
+    400024: A_order_table_L
+    400026: A_order_table_R
+    400028: A_order_table_screen_L
+    400030: A_order_table_screen_R
+    400032: A_panel_1
+    400034: A_pipe_L
+    400036: A_pipe_R
+    400038: A_screen_frame_L
+    400040: A_screen_frame_R
+    400042: A_screen_plane_L
+    400044: A_screen_plane_R
+    400046: A_wall
+    400048: Another_room
+    400050: AUTOMAT
+    400052: bg_screen_light
+    400054: broken_floor
+    400056: C_ceiling
+    400058: C_lamp
+    400060: C_lamp_holders
+    400062: C_pipeholders
+    400064: C_pipes_1
+    400066: C_pipes_2
+    400068: C_pipes_3
+    400070: C_railing
+    400072: C_sidelamps
+    400074: C_vent1
+    400076: C_vent10
+    400078: C_vent11
+    400080: C_vent12
+    400082: C_vent2
+    400084: C_vent3
+    400086: C_vent4
+    400088: C_vent5
+    400090: C_vent6
+    400092: C_vent7
+    400094: C_vent8
+    400096: C_vent9
+    400098: C_ventilations
+    400100: CEILING
+    400102: CEILING_1
+    400104: ceiling_1
+    400106: CEILING_1 1
+    400108: ceiling_1 1
+    400110: CEILING_1 2
+    400112: ceiling_1 2
+    400114: ceiling_railing_1
+    400116: ceiling_railing_1 1
+    400118: ceiling_railing_1 2
+    400120: chair1
+    400122: chair2
+    400124: chair3
+    400126: chair4
+    400128: chair5
+    400130: chair6
+    400132: chair7
+    400134: chair8
+    400136: D1_door_L1
+    400138: D1_door_L1 1
+    400140: D1_door_L1 10
+    400142: D1_door_L1 11
+    400144: D1_door_L1 12
+    400146: D1_door_L1 13
+    400148: D1_door_L1 14
+    400150: D1_door_L1 15
+    400152: D1_door_L1 16
+    400154: D1_door_L1 17
+    400156: D1_door_L1 2
+    400158: D1_door_L1 3
+    400160: D1_door_L1 4
+    400162: D1_door_L1 5
+    400164: D1_door_L1 6
+    400166: D1_door_L1 7
+    400168: D1_door_L1 8
+    400170: D1_door_L1 9
+    400172: D1_door_R1
+    400174: D1_door_R1 1
+    400176: D1_door_R1 10
+    400178: D1_door_R1 11
+    400180: D1_door_R1 12
+    400182: D1_door_R1 13
+    400184: D1_door_R1 14
+    400186: D1_door_R1 15
+    400188: D1_door_R1 16
+    400190: D1_door_R1 17
+    400192: D1_door_R1 2
+    400194: D1_door_R1 3
+    400196: D1_door_R1 4
+    400198: D1_door_R1 5
+    400200: D1_door_R1 6
+    400202: D1_door_R1 7
+    400204: D1_door_R1 8
+    400206: D1_door_R1 9
+    400208: D1_lamp
+    400210: D1_lamp 1
+    400212: D1_lamp 10
+    400214: D1_lamp 11
+    400216: D1_lamp 12
+    400218: D1_lamp 13
+    400220: D1_lamp 14
+    400222: D1_lamp 15
+    400224: D1_lamp 16
+    400226: D1_lamp 17
+    400228: D1_lamp 2
+    400230: D1_lamp 3
+    400232: D1_lamp 4
+    400234: D1_lamp 5
+    400236: D1_lamp 6
+    400238: D1_lamp 7
+    400240: D1_lamp 8
+    400242: D1_lamp 9
+    400244: D1_room_number_frame
+    400246: D1_room_number_frame 1
+    400248: D1_room_number_frame 10
+    400250: D1_room_number_frame 11
+    400252: D1_room_number_frame 12
+    400254: D1_room_number_frame 13
+    400256: D1_room_number_frame 14
+    400258: D1_room_number_frame 15
+    400260: D1_room_number_frame 16
+    400262: D1_room_number_frame 17
+    400264: D1_room_number_frame 2
+    400266: D1_room_number_frame 3
+    400268: D1_room_number_frame 4
+    400270: D1_room_number_frame 5
+    400272: D1_room_number_frame 6
+    400274: D1_room_number_frame 7
+    400276: D1_room_number_frame 8
+    400278: D1_room_number_frame 9
+    400280: D1_room_number_screen
+    400282: D1_room_number_screen 1
+    400284: D1_room_number_screen 10
+    400286: D1_room_number_screen 11
+    400288: D1_room_number_screen 12
+    400290: D1_room_number_screen 13
+    400292: D1_room_number_screen 14
+    400294: D1_room_number_screen 15
+    400296: D1_room_number_screen 16
+    400298: D1_room_number_screen 17
+    400300: D1_room_number_screen 2
+    400302: D1_room_number_screen 3
+    400304: D1_room_number_screen 4
+    400306: D1_room_number_screen 5
+    400308: D1_room_number_screen 6
+    400310: D1_room_number_screen 7
+    400312: D1_room_number_screen 8
+    400314: D1_room_number_screen 9
+    400316: D1_speaker
+    400318: D1_speaker 1
+    400320: D1_speaker 10
+    400322: D1_speaker 11
+    400324: D1_speaker 12
+    400326: D1_speaker 13
+    400328: D1_speaker 14
+    400330: D1_speaker 15
+    400332: D1_speaker 16
+    400334: D1_speaker 17
+    400336: D1_speaker 2
+    400338: D1_speaker 3
+    400340: D1_speaker 4
+    400342: D1_speaker 5
+    400344: D1_speaker 6
+    400346: D1_speaker 7
+    400348: D1_speaker 8
+    400350: D1_speaker 9
+    400352: D_1
+    400354: D_1 1
+    400356: D_1 2
+    400358: D_2
+    400360: D_2 1
+    400362: D_2 2
+    400364: D_3
+    400366: D_3 1
+    400368: D_3 2
+    400370: D_4
+    400372: D_4 1
+    400374: D_4 2
+    400376: D_5
+    400378: D_5 1
+    400380: D_5 2
+    400382: D_6
+    400384: D_6 1
+    400386: D_6 2
+    400388: D_door_L
+    400390: D_door_R
+    400392: D_lamp
+    400394: D_room_number_frame
+    400396: D_room_number_screen
+    400398: D_speaker
+    400400: D_wall
+    400402: D_window_big
+    400404: D_window_small
+    400406: DOORWAY
+    400408: edges_1
+    400410: edges_1_light
+    400412: edges_2
+    400414: edges_2_light
+    400416: edges_3
+    400418: edges_3_light
+    400420: edges_4
+    400422: edges_4_light
+    400424: edges_5
+    400426: edges_5_light
+    400428: edges_6
+    400430: edges_6_light
+    400432: edges_7
+    400434: edges_7_light
+    400436: edges_8
+    400438: edges_8_light
+    400440: F_elevator
+    400442: F_elevator_lights
+    400444: F_floor
+    400446: F_floor_pattern
+    400448: FLOOR
+    400450: floor
+    400452: floor 1
+    400454: floor 2
+    400456: FLOOR_1
+    400458: FLOOR_1 1
+    400460: FLOOR_1 2
+    400462: floor_pattern
+    400464: floor_pattern 1
+    400466: floor_pattern 2
+    400468: K_bg_screen
+    400470: K_door_L
+    400472: K_door_R
+    400474: K_edge
+    400476: K_fan
+    400478: K_hinge_1
+    400480: K_hinge_2
+    400482: K_hinge_3
+    400484: K_hinge_4
+    400486: K_hinge_door_1
+    400488: K_hinge_door_2
+    400490: K_hinge_door_3
+    400492: K_hinge_door_4
+    400494: K_lamp_1
+    400496: K_lamp_2
+    400498: K_panels
+    400500: K_sink
+    400502: K_stove_button_on
+    400504: K_stove_frame
+    400506: K_stove_glass
+    400508: K_tap_holder
+    400510: K_tap_L
+    400512: K_tap_middle
+    400514: K_tap_R
+    400516: K_wall
+    400518: Key_v6
+    400520: KITCHEN
+    400522: //RootNode
+    400524: lamp
+    400526: lamp_1
+    400528: lamp_1 1
+    400530: lamp_1 2
+    400532: lamp_holders_1
+    400534: lamp_holders_1 1
+    400536: lamp_holders_1 2
+    400538: MODEL
+    400540: P_lamp_1
+    400542: P_lamp_2
+    400544: P_lamp_3
+    400546: P_lamp_4
+    400548: P_panels
+    400550: P_Slots
+    400552: P_wall
+    400554: PART_1
+    400556: PART_2
+    400558: PART_3
+    400560: pipe_holders_1
+    400562: pipe_holders_1 1
+    400564: pipe_holders_1 2
+    400566: pipes_1
+    400568: pipes_1 1
+    400570: pipes_1 2
+    400572: PLANT_WALL
+    400574: S_bg_light
+    400576: S_edges
+    400578: S_glass_hover
+    400580: S_panels
+    400582: S_plate_hover
+    400584: S_table
+    400586: S_wall
+    400588: SHRINE_WALL
+    400590: sidelamps_1
+    400592: sidelamps_1 1
+    400594: table
+    400596: table2
+    400598: top_door_1
+    400600: top_door_2
+    400602: TUNNEL_PART
+    400604: vent1
+    400606: vent1 1
+    400608: vent1 2
+    400610: vent10
+    400612: vent10 1
+    400614: vent10 2
+    400616: vent11
+    400618: vent11 1
+    400620: vent11 2
+    400622: vent12
+    400624: vent12 1
+    400626: vent12 2
+    400628: vent2
+    400630: vent2 1
+    400632: vent2 2
+    400634: vent3
+    400636: vent3 1
+    400638: vent3 2
+    400640: vent4
+    400642: vent4 1
+    400644: vent4 2
+    400646: vent5
+    400648: vent5 1
+    400650: vent5 2
+    400652: vent6
+    400654: vent6 1
+    400656: vent6 2
+    400658: vent7
+    400660: vent7 1
+    400662: vent7 2
+    400664: vent8
+    400666: vent8 1
+    400668: vent8 2
+    400670: vent9
+    400672: vent9 1
+    400674: vent9 2
+    400676: ventilation_1
+    400678: ventilation_1 1
+    400680: ventilation_1 2
+    400682: W_recipe_screen
+    400684: W_recipe_screen_frame
+    400686: W_wall
+    400688: W_wall_lights
+    400690: WALLS_1
+    400692: WALLS_1 1
+    400694: WALLS_1 2
+    400696: WELCOMESCREEN
+    2100000: soil1
+    2100002: aiS_light
+    2100004: white
+    2100006: grey
+    2100008: vent_mat
+    2100010: vent_material
+    2100012: black
+    2100014: yellow
+    2100016: lambert1
+    2100018: Room_number
+    2100020: grey3
+    2100022: grey5
+    2100024: stove_material
+    2100026: on_button
+    2100028: plant_bg_screen
+    2100030: table3
+    2100032: recipe_screen1
+    2100034: welcome_screen_light
+    2100036: plant_order
+    2100038: meat_orde
+    2100040: plant_products_sign
+    2100042: animal_products_sign
+    2100044: automat_bg_screen
+    2100046: big_button
+    2100048: grey2
+    2300000: A_bg_light_screen_L
+    2300002: A_bg_light_screen_R
+    2300004: A_button_1
+    2300006: A_button_2
+    2300008: A_button_3
+    2300010: A_button_4
+    2300012: A_button_5
+    2300014: A_button_6
+    2300016: A_button_7
+    2300018: A_button_8
+    2300020: A_edges_L
+    2300022: A_edges_R
+    2300024: A_order_table_L
+    2300026: A_order_table_R
+    2300028: A_order_table_screen_L
+    2300030: A_order_table_screen_R
+    2300032: A_panel_1
+    2300034: A_pipe_L
+    2300036: A_pipe_R
+    2300038: A_screen_frame_L
+    2300040: A_screen_frame_R
+    2300042: A_screen_plane_L
+    2300044: A_screen_plane_R
+    2300046: A_wall
+    2300048: Another_room
+    2300050: bg_screen_light
+    2300052: broken_floor
+    2300054: C_ceiling
+    2300056: C_lamp
+    2300058: C_lamp_holders
+    2300060: C_pipeholders
+    2300062: C_pipes_1
+    2300064: C_pipes_2
+    2300066: C_pipes_3
+    2300068: C_railing
+    2300070: C_sidelamps
+    2300072: C_vent1
+    2300074: C_vent10
+    2300076: C_vent11
+    2300078: C_vent12
+    2300080: C_vent2
+    2300082: C_vent3
+    2300084: C_vent4
+    2300086: C_vent5
+    2300088: C_vent6
+    2300090: C_vent7
+    2300092: C_vent8
+    2300094: C_vent9
+    2300096: ceiling_1
+    2300098: ceiling_1 1
+    2300100: ceiling_1 2
+    2300102: ceiling_railing_1
+    2300104: ceiling_railing_1 1
+    2300106: ceiling_railing_1 2
+    2300108: chair1
+    2300110: chair2
+    2300112: chair3
+    2300114: chair4
+    2300116: chair5
+    2300118: chair6
+    2300120: chair7
+    2300122: chair8
+    2300124: D1_door_L1
+    2300126: D1_door_L1 1
+    2300128: D1_door_L1 10
+    2300130: D1_door_L1 11
+    2300132: D1_door_L1 12
+    2300134: D1_door_L1 13
+    2300136: D1_door_L1 14
+    2300138: D1_door_L1 15
+    2300140: D1_door_L1 16
+    2300142: D1_door_L1 17
+    2300144: D1_door_L1 2
+    2300146: D1_door_L1 3
+    2300148: D1_door_L1 4
+    2300150: D1_door_L1 5
+    2300152: D1_door_L1 6
+    2300154: D1_door_L1 7
+    2300156: D1_door_L1 8
+    2300158: D1_door_L1 9
+    2300160: D1_door_R1
+    2300162: D1_door_R1 1
+    2300164: D1_door_R1 10
+    2300166: D1_door_R1 11
+    2300168: D1_door_R1 12
+    2300170: D1_door_R1 13
+    2300172: D1_door_R1 14
+    2300174: D1_door_R1 15
+    2300176: D1_door_R1 16
+    2300178: D1_door_R1 17
+    2300180: D1_door_R1 2
+    2300182: D1_door_R1 3
+    2300184: D1_door_R1 4
+    2300186: D1_door_R1 5
+    2300188: D1_door_R1 6
+    2300190: D1_door_R1 7
+    2300192: D1_door_R1 8
+    2300194: D1_door_R1 9
+    2300196: D1_lamp
+    2300198: D1_lamp 1
+    2300200: D1_lamp 10
+    2300202: D1_lamp 11
+    2300204: D1_lamp 12
+    2300206: D1_lamp 13
+    2300208: D1_lamp 14
+    2300210: D1_lamp 15
+    2300212: D1_lamp 16
+    2300214: D1_lamp 17
+    2300216: D1_lamp 2
+    2300218: D1_lamp 3
+    2300220: D1_lamp 4
+    2300222: D1_lamp 5
+    2300224: D1_lamp 6
+    2300226: D1_lamp 7
+    2300228: D1_lamp 8
+    2300230: D1_lamp 9
+    2300232: D1_room_number_frame
+    2300234: D1_room_number_frame 1
+    2300236: D1_room_number_frame 10
+    2300238: D1_room_number_frame 11
+    2300240: D1_room_number_frame 12
+    2300242: D1_room_number_frame 13
+    2300244: D1_room_number_frame 14
+    2300246: D1_room_number_frame 15
+    2300248: D1_room_number_frame 16
+    2300250: D1_room_number_frame 17
+    2300252: D1_room_number_frame 2
+    2300254: D1_room_number_frame 3
+    2300256: D1_room_number_frame 4
+    2300258: D1_room_number_frame 5
+    2300260: D1_room_number_frame 6
+    2300262: D1_room_number_frame 7
+    2300264: D1_room_number_frame 8
+    2300266: D1_room_number_frame 9
+    2300268: D1_room_number_screen
+    2300270: D1_room_number_screen 1
+    2300272: D1_room_number_screen 10
+    2300274: D1_room_number_screen 11
+    2300276: D1_room_number_screen 12
+    2300278: D1_room_number_screen 13
+    2300280: D1_room_number_screen 14
+    2300282: D1_room_number_screen 15
+    2300284: D1_room_number_screen 16
+    2300286: D1_room_number_screen 17
+    2300288: D1_room_number_screen 2
+    2300290: D1_room_number_screen 3
+    2300292: D1_room_number_screen 4
+    2300294: D1_room_number_screen 5
+    2300296: D1_room_number_screen 6
+    2300298: D1_room_number_screen 7
+    2300300: D1_room_number_screen 8
+    2300302: D1_room_number_screen 9
+    2300304: D1_speaker
+    2300306: D1_speaker 1
+    2300308: D1_speaker 10
+    2300310: D1_speaker 11
+    2300312: D1_speaker 12
+    2300314: D1_speaker 13
+    2300316: D1_speaker 14
+    2300318: D1_speaker 15
+    2300320: D1_speaker 16
+    2300322: D1_speaker 17
+    2300324: D1_speaker 2
+    2300326: D1_speaker 3
+    2300328: D1_speaker 4
+    2300330: D1_speaker 5
+    2300332: D1_speaker 6
+    2300334: D1_speaker 7
+    2300336: D1_speaker 8
+    2300338: D1_speaker 9
+    2300340: D_door_L
+    2300342: D_door_R
+    2300344: D_lamp
+    2300346: D_room_number_frame
+    2300348: D_room_number_screen
+    2300350: D_speaker
+    2300352: D_wall
+    2300354: D_window_big
+    2300356: D_window_small
+    2300358: edges_1
+    2300360: edges_1_light
+    2300362: edges_2
+    2300364: edges_2_light
+    2300366: edges_3
+    2300368: edges_3_light
+    2300370: edges_4
+    2300372: edges_4_light
+    2300374: edges_5
+    2300376: edges_5_light
+    2300378: edges_6
+    2300380: edges_6_light
+    2300382: edges_7
+    2300384: edges_7_light
+    2300386: edges_8
+    2300388: edges_8_light
+    2300390: F_elevator
+    2300392: F_elevator_lights
+    2300394: F_floor
+    2300396: F_floor_pattern
+    2300398: floor
+    2300400: floor 1
+    2300402: floor 2
+    2300404: floor_pattern
+    2300406: floor_pattern 1
+    2300408: floor_pattern 2
+    2300410: K_bg_screen
+    2300412: K_door_L
+    2300414: K_door_R
+    2300416: K_edge
+    2300418: K_fan
+    2300420: K_hinge_1
+    2300422: K_hinge_2
+    2300424: K_hinge_3
+    2300426: K_hinge_4
+    2300428: K_hinge_door_1
+    2300430: K_hinge_door_2
+    2300432: K_hinge_door_3
+    2300434: K_hinge_door_4
+    2300436: K_lamp_1
+    2300438: K_lamp_2
+    2300440: K_panels
+    2300442: K_sink
+    2300444: K_stove_button_on
+    2300446: K_stove_frame
+    2300448: K_stove_glass
+    2300450: K_tap_holder
+    2300452: K_tap_L
+    2300454: K_tap_middle
+    2300456: K_tap_R
+    2300458: K_wall
+    2300460: Key_v6
+    2300462: lamp
+    2300464: lamp_1
+    2300466: lamp_1 1
+    2300468: lamp_1 2
+    2300470: lamp_holders_1
+    2300472: lamp_holders_1 1
+    2300474: lamp_holders_1 2
+    2300476: P_lamp_1
+    2300478: P_lamp_2
+    2300480: P_lamp_3
+    2300482: P_lamp_4
+    2300484: P_panels
+    2300486: P_wall
+    2300488: pipe_holders_1
+    2300490: pipe_holders_1 1
+    2300492: pipe_holders_1 2
+    2300494: pipes_1
+    2300496: pipes_1 1
+    2300498: pipes_1 2
+    2300500: S_bg_light
+    2300502: S_edges
+    2300504: S_glass_hover
+    2300506: S_panels
+    2300508: S_plate_hover
+    2300510: S_table
+    2300512: S_wall
+    2300514: sidelamps_1
+    2300516: sidelamps_1 1
+    2300518: table
+    2300520: table2
+    2300522: top_door_1
+    2300524: top_door_2
+    2300526: vent1
+    2300528: vent1 1
+    2300530: vent1 2
+    2300532: vent10
+    2300534: vent10 1
+    2300536: vent10 2
+    2300538: vent11
+    2300540: vent11 1
+    2300542: vent11 2
+    2300544: vent12
+    2300546: vent12 1
+    2300548: vent12 2
+    2300550: vent2
+    2300552: vent2 1
+    2300554: vent2 2
+    2300556: vent3
+    2300558: vent3 1
+    2300560: vent3 2
+    2300562: vent4
+    2300564: vent4 1
+    2300566: vent4 2
+    2300568: vent5
+    2300570: vent5 1
+    2300572: vent5 2
+    2300574: vent6
+    2300576: vent6 1
+    2300578: vent6 2
+    2300580: vent7
+    2300582: vent7 1
+    2300584: vent7 2
+    2300586: vent8
+    2300588: vent8 1
+    2300590: vent8 2
+    2300592: vent9
+    2300594: vent9 1
+    2300596: vent9 2
+    2300598: W_recipe_screen
+    2300600: W_recipe_screen_frame
+    2300602: W_wall
+    2300604: W_wall_lights
+    2300606: WALLS_1
+    2300608: WALLS_1 1
+    2300610: WALLS_1 2
+    3300000: A_bg_light_screen_L
+    3300002: A_bg_light_screen_R
+    3300004: A_button_1
+    3300006: A_button_2
+    3300008: A_button_3
+    3300010: A_button_4
+    3300012: A_button_5
+    3300014: A_button_6
+    3300016: A_button_7
+    3300018: A_button_8
+    3300020: A_edges_L
+    3300022: A_edges_R
+    3300024: A_order_table_L
+    3300026: A_order_table_R
+    3300028: A_order_table_screen_L
+    3300030: A_order_table_screen_R
+    3300032: A_panel_1
+    3300034: A_pipe_L
+    3300036: A_pipe_R
+    3300038: A_screen_frame_L
+    3300040: A_screen_frame_R
+    3300042: A_screen_plane_L
+    3300044: A_screen_plane_R
+    3300046: A_wall
+    3300048: Another_room
+    3300050: bg_screen_light
+    3300052: broken_floor
+    3300054: C_ceiling
+    3300056: C_lamp
+    3300058: C_lamp_holders
+    3300060: C_pipeholders
+    3300062: C_pipes_1
+    3300064: C_pipes_2
+    3300066: C_pipes_3
+    3300068: C_railing
+    3300070: C_sidelamps
+    3300072: C_vent1
+    3300074: C_vent10
+    3300076: C_vent11
+    3300078: C_vent12
+    3300080: C_vent2
+    3300082: C_vent3
+    3300084: C_vent4
+    3300086: C_vent5
+    3300088: C_vent6
+    3300090: C_vent7
+    3300092: C_vent8
+    3300094: C_vent9
+    3300096: ceiling_1
+    3300098: ceiling_1 1
+    3300100: ceiling_1 2
+    3300102: ceiling_railing_1
+    3300104: ceiling_railing_1 1
+    3300106: ceiling_railing_1 2
+    3300108: chair1
+    3300110: chair2
+    3300112: chair3
+    3300114: chair4
+    3300116: chair5
+    3300118: chair6
+    3300120: chair7
+    3300122: chair8
+    3300124: D1_door_L1
+    3300126: D1_door_L1 1
+    3300128: D1_door_L1 10
+    3300130: D1_door_L1 11
+    3300132: D1_door_L1 12
+    3300134: D1_door_L1 13
+    3300136: D1_door_L1 14
+    3300138: D1_door_L1 15
+    3300140: D1_door_L1 16
+    3300142: D1_door_L1 17
+    3300144: D1_door_L1 2
+    3300146: D1_door_L1 3
+    3300148: D1_door_L1 4
+    3300150: D1_door_L1 5
+    3300152: D1_door_L1 6
+    3300154: D1_door_L1 7
+    3300156: D1_door_L1 8
+    3300158: D1_door_L1 9
+    3300160: D1_door_R1
+    3300162: D1_door_R1 1
+    3300164: D1_door_R1 10
+    3300166: D1_door_R1 11
+    3300168: D1_door_R1 12
+    3300170: D1_door_R1 13
+    3300172: D1_door_R1 14
+    3300174: D1_door_R1 15
+    3300176: D1_door_R1 16
+    3300178: D1_door_R1 17
+    3300180: D1_door_R1 2
+    3300182: D1_door_R1 3
+    3300184: D1_door_R1 4
+    3300186: D1_door_R1 5
+    3300188: D1_door_R1 6
+    3300190: D1_door_R1 7
+    3300192: D1_door_R1 8
+    3300194: D1_door_R1 9
+    3300196: D1_lamp
+    3300198: D1_lamp 1
+    3300200: D1_lamp 10
+    3300202: D1_lamp 11
+    3300204: D1_lamp 12
+    3300206: D1_lamp 13
+    3300208: D1_lamp 14
+    3300210: D1_lamp 15
+    3300212: D1_lamp 16
+    3300214: D1_lamp 17
+    3300216: D1_lamp 2
+    3300218: D1_lamp 3
+    3300220: D1_lamp 4
+    3300222: D1_lamp 5
+    3300224: D1_lamp 6
+    3300226: D1_lamp 7
+    3300228: D1_lamp 8
+    3300230: D1_lamp 9
+    3300232: D1_room_number_frame
+    3300234: D1_room_number_frame 1
+    3300236: D1_room_number_frame 10
+    3300238: D1_room_number_frame 11
+    3300240: D1_room_number_frame 12
+    3300242: D1_room_number_frame 13
+    3300244: D1_room_number_frame 14
+    3300246: D1_room_number_frame 15
+    3300248: D1_room_number_frame 16
+    3300250: D1_room_number_frame 17
+    3300252: D1_room_number_frame 2
+    3300254: D1_room_number_frame 3
+    3300256: D1_room_number_frame 4
+    3300258: D1_room_number_frame 5
+    3300260: D1_room_number_frame 6
+    3300262: D1_room_number_frame 7
+    3300264: D1_room_number_frame 8
+    3300266: D1_room_number_frame 9
+    3300268: D1_room_number_screen
+    3300270: D1_room_number_screen 1
+    3300272: D1_room_number_screen 10
+    3300274: D1_room_number_screen 11
+    3300276: D1_room_number_screen 12
+    3300278: D1_room_number_screen 13
+    3300280: D1_room_number_screen 14
+    3300282: D1_room_number_screen 15
+    3300284: D1_room_number_screen 16
+    3300286: D1_room_number_screen 17
+    3300288: D1_room_number_screen 2
+    3300290: D1_room_number_screen 3
+    3300292: D1_room_number_screen 4
+    3300294: D1_room_number_screen 5
+    3300296: D1_room_number_screen 6
+    3300298: D1_room_number_screen 7
+    3300300: D1_room_number_screen 8
+    3300302: D1_room_number_screen 9
+    3300304: D1_speaker
+    3300306: D1_speaker 1
+    3300308: D1_speaker 10
+    3300310: D1_speaker 11
+    3300312: D1_speaker 12
+    3300314: D1_speaker 13
+    3300316: D1_speaker 14
+    3300318: D1_speaker 15
+    3300320: D1_speaker 16
+    3300322: D1_speaker 17
+    3300324: D1_speaker 2
+    3300326: D1_speaker 3
+    3300328: D1_speaker 4
+    3300330: D1_speaker 5
+    3300332: D1_speaker 6
+    3300334: D1_speaker 7
+    3300336: D1_speaker 8
+    3300338: D1_speaker 9
+    3300340: D_door_L
+    3300342: D_door_R
+    3300344: D_lamp
+    3300346: D_room_number_frame
+    3300348: D_room_number_screen
+    3300350: D_speaker
+    3300352: D_wall
+    3300354: D_window_big
+    3300356: D_window_small
+    3300358: edges_1
+    3300360: edges_1_light
+    3300362: edges_2
+    3300364: edges_2_light
+    3300366: edges_3
+    3300368: edges_3_light
+    3300370: edges_4
+    3300372: edges_4_light
+    3300374: edges_5
+    3300376: edges_5_light
+    3300378: edges_6
+    3300380: edges_6_light
+    3300382: edges_7
+    3300384: edges_7_light
+    3300386: edges_8
+    3300388: edges_8_light
+    3300390: F_elevator
+    3300392: F_elevator_lights
+    3300394: F_floor
+    3300396: F_floor_pattern
+    3300398: floor
+    3300400: floor 1
+    3300402: floor 2
+    3300404: floor_pattern
+    3300406: floor_pattern 1
+    3300408: floor_pattern 2
+    3300410: K_bg_screen
+    3300412: K_door_L
+    3300414: K_door_R
+    3300416: K_edge
+    3300418: K_fan
+    3300420: K_hinge_1
+    3300422: K_hinge_2
+    3300424: K_hinge_3
+    3300426: K_hinge_4
+    3300428: K_hinge_door_1
+    3300430: K_hinge_door_2
+    3300432: K_hinge_door_3
+    3300434: K_hinge_door_4
+    3300436: K_lamp_1
+    3300438: K_lamp_2
+    3300440: K_panels
+    3300442: K_sink
+    3300444: K_stove_button_on
+    3300446: K_stove_frame
+    3300448: K_stove_glass
+    3300450: K_tap_holder
+    3300452: K_tap_L
+    3300454: K_tap_middle
+    3300456: K_tap_R
+    3300458: K_wall
+    3300460: Key_v6
+    3300462: lamp
+    3300464: lamp_1
+    3300466: lamp_1 1
+    3300468: lamp_1 2
+    3300470: lamp_holders_1
+    3300472: lamp_holders_1 1
+    3300474: lamp_holders_1 2
+    3300476: P_lamp_1
+    3300478: P_lamp_2
+    3300480: P_lamp_3
+    3300482: P_lamp_4
+    3300484: P_panels
+    3300486: P_wall
+    3300488: pipe_holders_1
+    3300490: pipe_holders_1 1
+    3300492: pipe_holders_1 2
+    3300494: pipes_1
+    3300496: pipes_1 1
+    3300498: pipes_1 2
+    3300500: S_bg_light
+    3300502: S_edges
+    3300504: S_glass_hover
+    3300506: S_panels
+    3300508: S_plate_hover
+    3300510: S_table
+    3300512: S_wall
+    3300514: sidelamps_1
+    3300516: sidelamps_1 1
+    3300518: table
+    3300520: table2
+    3300522: top_door_1
+    3300524: top_door_2
+    3300526: vent1
+    3300528: vent1 1
+    3300530: vent1 2
+    3300532: vent10
+    3300534: vent10 1
+    3300536: vent10 2
+    3300538: vent11
+    3300540: vent11 1
+    3300542: vent11 2
+    3300544: vent12
+    3300546: vent12 1
+    3300548: vent12 2
+    3300550: vent2
+    3300552: vent2 1
+    3300554: vent2 2
+    3300556: vent3
+    3300558: vent3 1
+    3300560: vent3 2
+    3300562: vent4
+    3300564: vent4 1
+    3300566: vent4 2
+    3300568: vent5
+    3300570: vent5 1
+    3300572: vent5 2
+    3300574: vent6
+    3300576: vent6 1
+    3300578: vent6 2
+    3300580: vent7
+    3300582: vent7 1
+    3300584: vent7 2
+    3300586: vent8
+    3300588: vent8 1
+    3300590: vent8 2
+    3300592: vent9
+    3300594: vent9 1
+    3300596: vent9 2
+    3300598: W_recipe_screen
+    3300600: W_recipe_screen_frame
+    3300602: W_wall
+    3300604: W_wall_lights
+    3300606: WALLS_1
+    3300608: WALLS_1 1
+    3300610: WALLS_1 2
+    4300000: sidelamps_1
+    4300002: ceiling_1
+    4300004: ceiling_railing_1
+    4300006: lamp_holders_1
+    4300008: vent1
+    4300010: vent2
+    4300012: vent3
+    4300014: vent4
+    4300016: vent5
+    4300018: vent6
+    4300020: vent7
+    4300022: vent8
+    4300024: vent9
+    4300026: vent10
+    4300028: vent11
+    4300030: vent12
+    4300032: pipes_1
+    4300034: pipe_holders_1
+    4300036: lamp_1
+    4300038: floor_pattern
+    4300040: floor
+    4300042: broken_floor
+    4300044: WALLS_1
+    4300046: D1_room_number_frame
+    4300048: D1_room_number_screen
+    4300050: D1_speaker
+    4300052: D1_lamp
+    4300054: D1_door_L1
+    4300056: D1_door_R1
+    4300058: D1_room_number_frame
+    4300060: D1_room_number_screen
+    4300062: D1_speaker
+    4300064: D1_lamp
+    4300066: D1_door_L1
+    4300068: D1_door_R1
+    4300070: D1_room_number_frame
+    4300072: D1_room_number_screen
+    4300074: D1_speaker
+    4300076: D1_lamp
+    4300078: D1_door_L1
+    4300080: D1_door_R1
+    4300082: D1_room_number_frame
+    4300084: D1_room_number_screen
+    4300086: D1_speaker
+    4300088: D1_lamp
+    4300090: D1_door_L1
+    4300092: D1_door_R1
+    4300094: D1_room_number_frame
+    4300096: D1_room_number_screen
+    4300098: D1_speaker
+    4300100: D1_lamp
+    4300102: D1_door_L1
+    4300104: D1_door_R1
+    4300106: D1_room_number_frame
+    4300108: D1_room_number_screen
+    4300110: D1_speaker
+    4300112: D1_lamp
+    4300114: D1_door_L1
+    4300116: D1_door_R1
+    4300118: sidelamps_1
+    4300120: ceiling_1
+    4300122: ceiling_railing_1
+    4300124: lamp_holders_1
+    4300126: vent1
+    4300128: vent2
+    4300130: vent3
+    4300132: vent4
+    4300134: vent5
+    4300136: vent6
+    4300138: vent7
+    4300140: vent8
+    4300142: vent9
+    4300144: vent10
+    4300146: vent11
+    4300148: vent12
+    4300150: pipes_1
+    4300152: pipe_holders_1
+    4300154: lamp_1
+    4300156: floor_pattern
+    4300158: floor
+    4300160: WALLS_1
+    4300162: D1_room_number_frame
+    4300164: D1_room_number_screen
+    4300166: D1_speaker
+    4300168: D1_lamp
+    4300170: D1_door_L1
+    4300172: D1_door_R1
+    4300174: D1_room_number_frame
+    4300176: D1_room_number_screen
+    4300178: D1_speaker
+    4300180: D1_lamp
+    4300182: D1_door_L1
+    4300184: D1_door_R1
+    4300186: D1_room_number_frame
+    4300188: D1_room_number_screen
+    4300190: D1_speaker
+    4300192: D1_lamp
+    4300194: D1_door_L1
+    4300196: D1_door_R1
+    4300198: D1_room_number_frame
+    4300200: D1_room_number_screen
+    4300202: D1_speaker
+    4300204: D1_lamp
+    4300206: D1_door_L1
+    4300208: D1_door_R1
+    4300210: D1_room_number_frame
+    4300212: D1_room_number_screen
+    4300214: D1_speaker
+    4300216: D1_lamp
+    4300218: D1_door_L1
+    4300220: D1_door_R1
+    4300222: D1_room_number_frame
+    4300224: D1_room_number_screen
+    4300226: D1_speaker
+    4300228: D1_lamp
+    4300230: D1_door_L1
+    4300232: D1_door_R1
+    4300234: ceiling_1
+    4300236: ceiling_railing_1
+    4300238: lamp_holders_1
+    4300240: vent1
+    4300242: vent2
+    4300244: vent3
+    4300246: vent4
+    4300248: vent5
+    4300250: vent6
+    4300252: vent7
+    4300254: vent8
+    4300256: vent9
+    4300258: vent10
+    4300260: vent11
+    4300262: vent12
+    4300264: pipes_1
+    4300266: pipe_holders_1
+    4300268: lamp_1
+    4300270: floor_pattern
+    4300272: floor
+    4300274: WALLS_1
+    4300276: D1_room_number_frame
+    4300278: D1_room_number_screen
+    4300280: D1_speaker
+    4300282: D1_lamp
+    4300284: D1_door_L1
+    4300286: D1_door_R1
+    4300288: D1_room_number_frame
+    4300290: D1_room_number_screen
+    4300292: D1_speaker
+    4300294: D1_lamp
+    4300296: D1_door_L1
+    4300298: D1_door_R1
+    4300300: D1_room_number_frame
+    4300302: D1_room_number_screen
+    4300304: D1_speaker
+    4300306: D1_lamp
+    4300308: D1_door_L1
+    4300310: D1_door_R1
+    4300312: D1_room_number_frame
+    4300314: D1_room_number_screen
+    4300316: D1_speaker
+    4300318: D1_lamp
+    4300320: D1_door_L1
+    4300322: D1_door_R1
+    4300324: D1_room_number_frame
+    4300326: D1_room_number_screen
+    4300328: D1_speaker
+    4300330: D1_lamp
+    4300332: D1_door_L1
+    4300334: D1_door_R1
+    4300336: D1_room_number_frame
+    4300338: D1_room_number_screen
+    4300340: D1_speaker
+    4300342: D1_lamp
+    4300344: D1_door_L1
+    4300346: D1_door_R1
+    4300348: top_door_2
+    4300350: top_door_1
+    4300352: K_door_L
+    4300354: K_hinge_door_3
+    4300356: K_hinge_door_4
+    4300358: K_door_R
+    4300360: K_hinge_door_2
+    4300362: K_hinge_door_1
+    4300364: Key_v6
+    4300366: K_wall
+    4300368: K_bg_screen
+    4300370: K_edge
+    4300372: K_lamp_1
+    4300374: K_lamp_2
+    4300376: K_stove_glass
+    4300378: K_stove_frame
+    4300380: K_panels
+    4300382: K_fan
+    4300384: K_stove_button_on
+    4300386: K_sink
+    4300388: K_tap_middle
+    4300390: K_tap_R
+    4300392: K_tap_L
+    4300394: K_tap_holder
+    4300396: K_hinge_1
+    4300398: K_hinge_2
+    4300400: K_hinge_3
+    4300402: K_hinge_4
+    4300404: P_wall
+    4300406: P_panels
+    4300408: edges_1
+    4300410: edges_2
+    4300412: edges_3
+    4300414: edges_4
+    4300416: edges_5
+    4300418: edges_6
+    4300420: edges_7
+    4300422: edges_8
+    4300424: edges_1_light
+    4300426: edges_2_light
+    4300428: edges_3_light
+    4300430: edges_4_light
+    4300432: edges_5_light
+    4300434: edges_6_light
+    4300436: edges_7_light
+    4300438: edges_8_light
+    4300440: P_lamp_1
+    4300442: P_lamp_4
+    4300444: P_lamp_3
+    4300446: P_lamp_2
+    4300448: S_plate_hover
+    4300450: S_glass_hover
+    4300452: S_table
+    4300454: S_wall
+    4300456: S_bg_light
+    4300458: S_edges
+    4300460: S_panels
+    4300462: W_wall
+    4300464: W_recipe_screen
+    4300466: W_recipe_screen_frame
+    4300468: W_wall_lights
+    4300470: D_wall
+    4300472: D_lamp
+    4300474: D_speaker
+    4300476: D_room_number_screen
+    4300478: D_room_number_frame
+    4300480: D_door_R
+    4300482: D_window_small
+    4300484: D_door_L
+    4300486: D_window_big
+    4300488: A_pipe_L
+    4300490: A_pipe_R
+    4300492: A_wall
+    4300494: A_edges_L
+    4300496: A_edges_R
+    4300498: A_order_table_screen_L
+    4300500: A_order_table_screen_R
+    4300502: A_screen_frame_L
+    4300504: A_screen_frame_R
+    4300506: A_screen_plane_L
+    4300508: A_screen_plane_R
+    4300510: A_order_table_L
+    4300512: A_order_table_R
+    4300514: A_bg_light_screen_L
+    4300516: A_bg_light_screen_R
+    4300518: A_panel_1
+    4300520: A_button_1
+    4300522: A_button_2
+    4300524: A_button_3
+    4300526: A_button_4
+    4300528: A_button_5
+    4300530: A_button_6
+    4300532: A_button_7
+    4300534: A_button_8
+    4300536: C_pipes_1
+    4300538: C_pipes_2
+    4300540: C_pipes_3
+    4300542: C_pipeholders
+    4300544: C_sidelamps
+    4300546: C_ceiling
+    4300548: C_railing
+    4300550: C_lamp
+    4300552: C_lamp_holders
+    4300554: C_vent1
+    4300556: C_vent2
+    4300558: C_vent3
+    4300560: C_vent4
+    4300562: C_vent5
+    4300564: C_vent6
+    4300566: C_vent7
+    4300568: C_vent8
+    4300570: C_vent9
+    4300572: C_vent10
+    4300574: C_vent11
+    4300576: C_vent12
+    4300578: F_floor_pattern
+    4300580: F_floor
+    4300582: F_elevator_lights
+    4300584: F_elevator
+    4300586: Another_room
+    4300588: lamp
+    4300590: bg_screen_light
+    4300592: table
+    4300594: chair1
+    4300596: chair2
+    4300598: chair3
+    4300600: chair4
+    4300602: table2
+    4300604: chair5
+    4300606: chair6
+    4300608: chair7
+    4300610: chair8
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Room_number
+    second: {fileID: 2100000, guid: 61f4551d0bd59491d930c29a895c23c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiS_light
+    second: {fileID: 2100000, guid: c88133e136ce44338af1a65f044eedda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: animal_products_sign
+    second: {fileID: 2100000, guid: 4c077298a646349b69085b65ae22bc3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: automat_bg_screen
+    second: {fileID: 2100000, guid: 10f39d98b511344588e4e41b5f016ff4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: big_button
+    second: {fileID: 2100000, guid: 208aecc83916f47528f2f879b5332eb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: af1294276dcab417abe2b14d9868af9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey
+    second: {fileID: 2100000, guid: 56e5e89c35c314f348d59cab9c397293, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey2
+    second: {fileID: 2100000, guid: 100ad33102593430c8b1535fb452aaab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey3
+    second: {fileID: 2100000, guid: 093dbada5f4174e3b9447d9af2acd703, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey5
+    second: {fileID: 2100000, guid: 8ac3bd7d4dc1c4796877ee56ea2751a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 9c01d7dbb8467408ab82b727320a46f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: meat_orde
+    second: {fileID: 2100000, guid: 5cc56dd31efb0416092c0e1d2a9a9a90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: on_button
+    second: {fileID: 2100000, guid: d419f13978fd9477893bb69a27d93d80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plant_bg_screen
+    second: {fileID: 2100000, guid: f1418baf636f44e688ad6667f8d0f0fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plant_order
+    second: {fileID: 2100000, guid: 645d4c18260cd4a85b657ee1e2fa6eb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plant_products_sign
+    second: {fileID: 2100000, guid: 3c0d3af136e2a457cb799a44d8767599, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: soil1
+    second: {fileID: 2100000, guid: 09898052aa8bc42b58a3ba3041260972, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stove_material
+    second: {fileID: 2100000, guid: e84f533bca1ed4155b53d223db686b7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table3
+    second: {fileID: 2100000, guid: ee012b89ddcd74dd98acba41665b0ca9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vent_mat
+    second: {fileID: 2100000, guid: 10462363a6f41462391061022277e5ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vent_material
+    second: {fileID: 2100000, guid: 10462363a6f41462391061022277e5ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: welcome_screen_light
+    second: {fileID: 2100000, guid: 50e9a670b5c4d49249f652dd9d9ed836, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white
+    second: {fileID: 2100000, guid: c8c9de1ed05cd458384e31e14baabb95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yellow
+    second: {fileID: 2100000, guid: b27529123dcd040778cc5a8061e9c2fb, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
