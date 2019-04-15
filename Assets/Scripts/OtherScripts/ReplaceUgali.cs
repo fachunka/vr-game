@@ -47,7 +47,7 @@ public class ReplaceUgali : MonoBehaviour
             buttonPressed = true;
 
             print("button clicked");
-            print(StoveCollisionScript.ingredientsCollided);
+        //print(StoveCollisionScript.ingredientsCollided);
 
             //if all the ingredients are colliding with stove
             if (StoveCollisionScript.ingredientsCollided == true)

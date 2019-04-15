@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lime Story Scene.unity
     guid: bbcc1743e3b1347c0b40fa224217d68d
+  - enabled: 1
+    path: Assets/Scenes/The Master Scene.unity
+    guid: 00ae788ff9c304172a7b8657139655a8
   m_configObjects: {}
