@@ -6,7 +6,6 @@ public class cutleryBoxHalfOpen : MonoBehaviour {
 
 	private bool limed = false;
     private int LimedBox = 0;
-	// public GameObject toDestroy;
 	public GameObject toReplace;
 	public GameObject scissorsBox;
 	public GameObject knifeBox;

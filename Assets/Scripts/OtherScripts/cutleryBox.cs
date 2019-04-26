@@ -5,7 +5,6 @@ using UnityEngine;
 public class cutleryBox : MonoBehaviour {
 
 	public bool keyed = false;
-	// public GameObject toDestroy;
 	public GameObject toReplace;
 	private Vector3 slightlyOpenPos;
     private int BoxKey = 0;
