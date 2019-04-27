@@ -34,6 +34,7 @@ public class MonsterPlantResizeNotSim : MonoBehaviour
         //if meatchunk collides, make it disappear
         if (savedMonsterFeeded == 1)
         {
+            //Debug.Log("meatchunk collides");
             if (savedMeatChunkDeleted == 0)
             {
                //Debug.Log("Monster feeded, deleting meat chunk");
@@ -68,8 +69,8 @@ public class MonsterPlantResizeNotSim : MonoBehaviour
             }
             if (makeItSmallOnce == false)
             {
-                transform.localScale = new Vector3(12.5f, 12.5f, 12.5f);
-                transform.Translate(0, 1.35f, 0);
+                transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+                transform.localPosition = new Vector3(-0.2f, 2.2f, -2f);
                 makeItSmallOnce = true;
             }
 
@@ -78,13 +79,14 @@ public class MonsterPlantResizeNotSim : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-
+        //Debug.Log("trigger works");
         savedMonsterFeeded = PlayerPrefs.GetInt("savedMonsterFeeded");
         savedMeatChunkDeleted = PlayerPrefs.GetInt("savedMeatChunkDeleted");
 
         //if object collides with meat chunk, make it small
         if (savedMonsterFeeded == 0)
         {
+            //Debug.Log("does this work");
             if (other.gameObject.tag == "MeatChunk")
             {
                 //Debug.Log("Monster feeded");

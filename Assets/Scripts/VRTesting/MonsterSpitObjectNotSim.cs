@@ -106,6 +106,7 @@ public class MonsterSpitObjectNotSim : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("trigger works");
         //if collided except meatchunk, controller, recipescreen, plane, etc. 
         //then spit 
         if (other.gameObject.tag != "MeatChunk" & other.gameObject.tag != "GameController" & other.gameObject.tag != "MainCamera" & other.gameObject.tag != "RecipeScreen" & other.gameObject.tag != "Plane")
