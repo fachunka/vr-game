@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: 4917ca45bb457954dab9b600b0f90aa8
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: leaf_1
+    100002: leaf_2
+    100004: leaf_3
+    100006: leaf_4
+    100008: leaf_5
+    100010: leaf_6
+    100012: leaf_7
+    100014: leaf_8
+    100016: plant_leafs1
+    100018: plant_leafs2
+    100020: plant_leafs3
+    100022: //RootNode
+    100024: plant_v4
+    100026: room_walls
+    100028: soil
+    100030: vine_v10
+    100032: vine_v4
+    100034: vine_v5
+    100036: vine_v6
+    100038: vine_v7
+    100040: vine_v8
+    100042: vine_v9
+    400000: leaf_1
+    400002: leaf_2
+    400004: leaf_3
+    400006: leaf_4
+    400008: leaf_5
+    400010: leaf_6
+    400012: leaf_7
+    400014: leaf_8
+    400016: plant_leafs1
+    400018: plant_leafs2
+    400020: plant_leafs3
+    400022: //RootNode
+    400024: plant_v4
+    400026: room_walls
+    400028: soil
+    400030: vine_v10
+    400032: vine_v4
+    400034: vine_v5
+    400036: vine_v6
+    400038: vine_v7
+    400040: vine_v8
+    400042: vine_v9
+    2100000: pot_mat
+    2100002: grey3
+    2100004: green
+    2100006: grey5
+    2100008: lambert1
+    2100010: soil1
+    2300000: leaf_1
+    2300002: leaf_2
+    2300004: leaf_3
+    2300006: leaf_4
+    2300008: leaf_5
+    2300010: leaf_6
+    2300012: leaf_7
+    2300014: leaf_8
+    2300016: plant_leafs1
+    2300018: plant_leafs2
+    2300020: plant_leafs3
+    2300022: plant_v4
+    2300024: room_walls
+    2300026: soil
+    2300028: vine_v10
+    2300030: vine_v4
+    2300032: vine_v5
+    2300034: vine_v6
+    2300036: vine_v7
+    2300038: vine_v8
+    2300040: vine_v9
+    3300000: leaf_1
+    3300002: leaf_2
+    3300004: leaf_3
+    3300006: leaf_4
+    3300008: leaf_5
+    3300010: leaf_6
+    3300012: leaf_7
+    3300014: leaf_8
+    3300016: plant_leafs1
+    3300018: plant_leafs2
+    3300020: plant_leafs3
+    3300022: plant_v4
+    3300024: room_walls
+    3300026: soil
+    3300028: vine_v10
+    3300030: vine_v4
+    3300032: vine_v5
+    3300034: vine_v6
+    3300036: vine_v7
+    3300038: vine_v8
+    3300040: vine_v9
+    4300000: leaf_8
+    4300002: leaf_6
+    4300004: leaf_7
+    4300006: leaf_4
+    4300008: leaf_5
+    4300010: leaf_2
+    4300012: leaf_3
+    4300014: leaf_1
+    4300016: plant_v4
+    4300018: plant_leafs1
+    4300020: plant_leafs2
+    4300022: plant_leafs3
+    4300024: vine_v10
+    4300026: vine_v9
+    4300028: vine_v6
+    4300030: vine_v5
+    4300032: vine_v4
+    4300034: vine_v8
+    4300036: vine_v7
+    4300038: room_walls
+    4300040: soil
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: green
+    second: {fileID: 2100000, guid: c1eab5d67ecba4c51b30b435665206f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey3
+    second: {fileID: 2100000, guid: c1eab5d67ecba4c51b30b435665206f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey5
+    second: {fileID: 2100000, guid: c1eab5d67ecba4c51b30b435665206f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 093dbada5f4174e3b9447d9af2acd703, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pot_mat
+    second: {fileID: 2100000, guid: c1eab5d67ecba4c51b30b435665206f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: soil1
+    second: {fileID: 2100000, guid: 8ac3bd7d4dc1c4796877ee56ea2751a9, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
