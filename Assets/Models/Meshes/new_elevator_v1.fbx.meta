@@ -35,7 +35,22 @@ ModelImporter:
     4300004: Elevator_rail
     4300006: Elevator_lights
     4300008: Elevator
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiS_light
+    second: {fileID: 2100000, guid: c88133e136ce44338af1a65f044eedda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 73745050749b7af4db35080288766d9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white
+    second: {fileID: 2100000, guid: c8c9de1ed05cd458384e31e14baabb95, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
