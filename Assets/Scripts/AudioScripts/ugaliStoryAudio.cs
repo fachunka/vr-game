@@ -5,8 +5,8 @@ using UnityEngine.Audio;
 
 public class ugaliStoryAudio : MonoBehaviour
 {
-	public AudioMixerSnapshot rainSnapshot;
-	public float rainFadeInDuration = 1.5f;		// duration of fade in
+	public AudioMixerSnapshot storyAudioSnapshot;
+	public float fadeInDuration = 1.5f;		// duration of fade in
 
 	public AudioSource thunderSource;
 	public AudioClip thunderClip;
@@ -17,9 +17,14 @@ public class ugaliStoryAudio : MonoBehaviour
 	public AudioSource rainSource2;
 	public AudioClip rainClip2;
 
-	public AudioMixerSnapshot rainFadeSnapshot;
-	public float rainFadeDownAt = 5.0f;    // rain fade down start time
-	public float rainFadeDownDuration = 5.0f;    // rain fade down duration
+	public float waitBeforeVO = 7.0F;
+	
+	public AudioSource voiceOverSource;
+	public AudioClip voiceOverClip;
+
+	public AudioMixerSnapshot fadeOutSnapshot;
+	public float fadeDownAt = 5.0f;    // storyscape audio fade down start time
+	public float fadeDownDuration = 5.0f;    // storyscape fade down duration
 
 	public string sceneName;	// next scene
 	private float fadeDuration = 1f;
@@ -35,7 +40,9 @@ public class ugaliStoryAudio : MonoBehaviour
 		thunderSource.Play();
 
 		StartCoroutine(playRain());
-		rainSnapshot.TransitionTo(rainFadeInDuration);
+		storyAudioSnapshot.TransitionTo(fadeInDuration);
+
+		StartCoroutine(playVoiceOver());
 	}
 
     IEnumerator playRain()
@@ -48,14 +55,22 @@ public class ugaliStoryAudio : MonoBehaviour
 		rainSource2.loop = true;
 		rainSource2.Play();
 
-		yield return new WaitForSeconds(rainFadeDownAt);
-		rainFadeSnapshot.TransitionTo(rainFadeDownDuration);
+		yield return new WaitForSeconds(fadeDownAt);
+		fadeOutSnapshot.TransitionTo(fadeDownDuration);
 
 		yield return new WaitForSeconds(sceneChangeAt);
 
 		FadeToBlack();
 		yield return new WaitForSeconds(fadeDuration);
         SteamVR_LoadLevel.Begin(sceneName);
+	}
+	
+	IEnumerator playVoiceOver()
+	{
+		yield return new WaitForSeconds(waitBeforeVO);
+		voiceOverSource.clip = voiceOverClip;
+		voiceOverSource.loop = false;
+		voiceOverSource.Play();
 	}
 
     private void FadeToBlack()
