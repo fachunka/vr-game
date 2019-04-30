@@ -55,9 +55,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1659025866581064}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.64, y: 1.65, z: -1.47}
-  m_LocalScale: {x: 2.8, y: 2.8, z: 2.8}
+  m_LocalRotation: {x: 0.4781509, y: 0.478147, z: 0.5209337, w: 0.520937}
+  m_LocalPosition: {x: 0.43457025, y: 0.7275622, z: 0.7133711}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4774776748827372}
   m_Father: {fileID: 0}
@@ -188,4 +188,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fa343bc66e0417e8ae8f11585902c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chestHalf: {fileID: 1820254755362716, guid: 5f5eb262abbda4ece9a5d9745bd4591c, type: 2}
