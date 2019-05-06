@@ -14,7 +14,7 @@ public class MonsterSpitObjectNotSim : MonoBehaviour
 
     Quaternion startRotation, driftRotation;
 
-    public float driftSeconds = 0.3f;
+    public float driftSeconds;
     private float drifterTimer = 0;
     private bool isDrifting = false;
     bool releaseObjectInHand;

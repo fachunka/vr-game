@@ -70,7 +70,7 @@ public class MonsterPlantResizeNotSim : MonoBehaviour
             if (makeItSmallOnce == false)
             {
                 transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
-                transform.localPosition = new Vector3(-0.2f, 2.2f, -2f);
+                transform.localPosition = new Vector3(-0.1f, 2.2f, -2.15f);
                 makeItSmallOnce = true;
             }
 
