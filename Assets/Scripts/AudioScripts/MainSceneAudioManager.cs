@@ -9,7 +9,7 @@ public float waitBeforeHelperVoice;
     public AudioSource helperAudioSource;
     public AudioClip helperAudioClip1;
     public AudioClip helperAudioClip2;
-    public AudioClip helperAudioClip3;
+    // public AudioClip helperAudioClip3;
 
 	private GameObject elevatorAudio1;
 	private GameObject elevatorAudio2;
@@ -38,8 +38,8 @@ public float waitBeforeHelperVoice;
 
     IEnumerator playHelper()
     {
-        yield return new WaitForSeconds(waitBeforeHelperVoice);
         helperAudioSource.clip = helperAudioClip1;
+        yield return new WaitForSeconds(waitBeforeHelperVoice);
         helperAudioSource.loop = false;
         helperAudioSource.Play();
         yield return new WaitForSeconds(0);
@@ -64,7 +64,7 @@ public float waitBeforeHelperVoice;
 
 	IEnumerator playHelper2()
 	{
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(2);
         helperAudioSource.clip = helperAudioClip2;
         helperAudioSource.loop = false;
         helperAudioSource.Play();
