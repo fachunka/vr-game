@@ -46,7 +46,7 @@ public class cutleryDoor : MonoBehaviour {
 
         LimedBox = PlayerPrefs.GetInt("LimedBox");
 
-        Debug.Log(LimedBox);
+        //Debug.Log(LimedBox);
         if (LimedBox == 1 && slightlyOpen == true)
         {
 
