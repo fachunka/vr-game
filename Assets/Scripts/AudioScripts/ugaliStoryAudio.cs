@@ -17,6 +17,9 @@ public class ugaliStoryAudio : MonoBehaviour
 	public AudioSource rainSource2;
 	public AudioClip rainClip2;
 
+	public AudioSource rainSource3;
+	public AudioClip rainClip3;
+
 	public float waitBeforeVO = 7.0F;
 	
 	public AudioSource voiceOverSource;
@@ -33,8 +36,18 @@ public class ugaliStoryAudio : MonoBehaviour
 
 	public float sceneChangeAt = 10.0f;		// time to change the scene
 
+	public GameObject animation1;
+	public GameObject animation2;
+
+	public float showAnimation1;	// time to show first animation (relative to voice over playback time)
+	public float showAnimation2;	// time to show second animation (relative to voice over playback time)
+
+
     void Start()
     {
+		animation1.SetActive(false);
+		animation2.SetActive(false);
+
 		thunderSource.clip = thunderClip;
 		thunderSource.loop = false;
 		thunderSource.Play();
@@ -55,6 +68,10 @@ public class ugaliStoryAudio : MonoBehaviour
 		rainSource2.loop = true;
 		rainSource2.Play();
 
+		rainSource3.clip = rainClip3;
+		rainSource3.loop = true;
+		rainSource3.Play();
+
 		yield return new WaitForSeconds(fadeDownAt);
 		fadeOutSnapshot.TransitionTo(fadeDownDuration);
 
@@ -72,6 +89,21 @@ public class ugaliStoryAudio : MonoBehaviour
 		voiceOverSource.loop = false;
 		voiceOverSource.Play();
 	}
+
+	void Update ()
+	{
+		if (voiceOverSource.time >= showAnimation1 && voiceOverSource.time < (showAnimation1 + 0.5))
+		{
+			animation1.SetActive(true);
+		}
+
+		if (voiceOverSource.time >= showAnimation2 && voiceOverSource.time < (showAnimation2 + 0.5))
+		{
+			animation2.SetActive(true);
+		}
+
+	}
+
 
     private void FadeToBlack()
     {
