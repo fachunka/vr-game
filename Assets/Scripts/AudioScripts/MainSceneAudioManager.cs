@@ -9,7 +9,7 @@ public float waitBeforeHelperVoice;
     public AudioSource helperAudioSource;
     public AudioClip helperAudioClip1;
     public AudioClip helperAudioClip2;
-    // public AudioClip helperAudioClip3;
+    public AudioClip helperAudioClip3;
 
 	private GameObject elevatorAudio1;
 	private GameObject elevatorAudio2;
@@ -60,12 +60,25 @@ public float waitBeforeHelperVoice;
 			StartCoroutine(playHelper2());
 		}
 
+		if (Input.GetKeyDown(KeyCode.H))
+        {
+			StartCoroutine(playHelper3());
+        }
 	}
 
 	IEnumerator playHelper2()
 	{
 		yield return new WaitForSeconds(2);
         helperAudioSource.clip = helperAudioClip2;
+        helperAudioSource.loop = false;
+        helperAudioSource.Play();
+        yield return new WaitForSeconds(0);
+	}
+
+	IEnumerator playHelper3()
+	{
+		yield return new WaitForSeconds(0);
+        helperAudioSource.clip = helperAudioClip3;
         helperAudioSource.loop = false;
         helperAudioSource.Play();
         yield return new WaitForSeconds(0);
