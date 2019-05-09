@@ -16,10 +16,15 @@ public float waitBeforeHelperVoice;
 	private AudioSource elevatorSource1;
 	private AudioSource elevatorSource2;
 
+	public AudioClip elevatorStartClip1;
+	public AudioClip elevatorStartClip2;
+
 	public AudioClip elevatorStopClip1;
 	public AudioClip elevatorStopClip2;
+
 	
 	private bool clip1Played = false;
+	private bool helper3isPlaying = false;
 
 	void Start ()
 	{
@@ -30,6 +35,9 @@ public float waitBeforeHelperVoice;
 
 		elevatorSource1 = elevatorAudio1.GetComponent<AudioSource>();
 		elevatorSource2 = elevatorAudio2.GetComponent<AudioSource>();
+
+		elevatorSource1.clip = elevatorStartClip1;
+		elevatorSource2.clip = elevatorStartClip2;
 
 		elevatorSource1.Play();
 		elevatorSource2.Play();
@@ -47,7 +55,7 @@ public float waitBeforeHelperVoice;
 
 	void Update ()
 	{
-		if (helperAudioSource.time >= helperAudioSource.clip.length && !clip1Played)
+		if (helperAudioSource.time >= helperAudioSource.clip.length && !clip1Played && !helper3isPlaying)
 		{
 			clip1Played = true;
 
@@ -63,13 +71,23 @@ public float waitBeforeHelperVoice;
 		if (Input.GetKeyDown(KeyCode.H))
         {
 			StartCoroutine(playHelper3());
+			helper3isPlaying = true;
         }
+
+		if (helperAudioSource.time >= 7.0f && helperAudioSource.time < 7.05f && helper3isPlaying == true)
+		{
+			elevatorSource1.clip = elevatorStartClip1;
+			elevatorSource2.clip = elevatorStartClip2;
+
+			elevatorSource1.Play();
+			elevatorSource2.Play();
+		}
 	}
 
 	IEnumerator playHelper2()
 	{
-		yield return new WaitForSeconds(2);
         helperAudioSource.clip = helperAudioClip2;
+		yield return new WaitForSeconds(2);
         helperAudioSource.loop = false;
         helperAudioSource.Play();
         yield return new WaitForSeconds(0);
@@ -77,8 +95,8 @@ public float waitBeforeHelperVoice;
 
 	IEnumerator playHelper3()
 	{
-		yield return new WaitForSeconds(0);
         helperAudioSource.clip = helperAudioClip3;
+		yield return new WaitForSeconds(0);
         helperAudioSource.loop = false;
         helperAudioSource.Play();
         yield return new WaitForSeconds(0);

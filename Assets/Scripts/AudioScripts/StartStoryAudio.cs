@@ -24,8 +24,8 @@ public class StartStoryAudio : MonoBehaviour
 
     IEnumerator playVideoSound()
     {
-        yield return new WaitForSeconds(waitBeforeVideoSound);
         videoAudioSource.clip = videoAudioClip;
+        yield return new WaitForSeconds(waitBeforeVideoSound);
         videoAudioSource.loop = false;
         videoAudioSource.Play();
         yield return new WaitForSeconds(0);
