@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0010860051, g: 0.0011236441, b: 0.0010860051, a: 1}
+  m_IndirectSpecularColor: {r: 0.0011065134, g: 0.0011211833, b: 0.0011065134, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -174,39 +174,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.14, y: 0.07, z: 0.05}
   m_Center: {x: 0, y: -0.04, z: 0.02}
---- !u!21 &81498341
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,11 +357,11 @@ Prefab:
     - target: {fileID: 3380982, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1572858773}
+      objectReference: {fileID: 1817542559}
     - target: {fileID: 2348914, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 81498341}
+      objectReference: {fileID: 973211270}
     - target: {fileID: 11489174, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
       propertyPath: borderThickness
       value: 0.2
@@ -585,6 +552,39 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f35fa249b5008c44ac2998be6f82d4d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!21 &973211270
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1003530601
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,7 +973,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 80, z: 0}
---- !u!43 &1572858773
+--- !u!1 &1619117130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1619117132}
+  - component: {fileID: 1619117131}
+  m_Layer: 0
+  m_Name: Lime_text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1619117131
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1619117130}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 8e31d310834c242d1a676b08da4b2955, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.048, y: 2.048}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1619117132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1619117130}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 3.17, z: -1.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!43 &1817542559
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1128,81 +1203,6 @@ Mesh:
   m_MeshMetrics[0]: 1
   m_MeshMetrics[1]: 1
   m_MeshOptimized: 0
---- !u!1 &1619117130
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1619117132}
-  - component: {fileID: 1619117131}
-  m_Layer: 0
-  m_Name: Lime_text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1619117131
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1619117130}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8e31d310834c242d1a676b08da4b2955, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 2.048, y: 2.048}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1619117132
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1619117130}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 3.17, z: -1.69}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &1848104498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,16 +1211,17 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1848104502}
-  - component: {fileID: 1848104501}
   - component: {fileID: 1848104500}
   - component: {fileID: 1848104499}
+  - component: {fileID: 1848104501}
+  - component: {fileID: 1848104503}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1848104499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1251,9 +1252,9 @@ AudioSource:
   m_GameObject: {fileID: 1848104498}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243006220436545970, guid: 65cc1c8c5b9f9472a9f58495ea1f3d8f,
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 65cc1c8c5b9f9472a9f58495ea1f3d8f,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 82dca414ec2534fa2afdacb6cb025b23, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 43337e411852e4c668f3d9bdfc0625a6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1347,41 +1348,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1848104498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31fd964a0be474692bcf5f55307da344, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d43f7a6ca7b540a09ae92e1fae02a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   storySnapshot: {fileID: 245787217528966168, guid: 65cc1c8c5b9f9472a9f58495ea1f3d8f,
     type: 2}
   transitionTimeFadeIn: 1.5
-  waitBeforeVoiceOver: 3.5
-  animation1: {fileID: 0}
-  startTimeAnimation1: 1.8
-  animation2: {fileID: 0}
-  startTimeAnimation2: 3.2
-  fryingStartsSnapshot: {fileID: 245082919139982360, guid: 65cc1c8c5b9f9472a9f58495ea1f3d8f,
-    type: 2}
-  animation3: {fileID: 0}
-  startTimeAnimation3: 11.2
-  fryingFadesSnapshot: {fileID: 245126519941367508, guid: 65cc1c8c5b9f9472a9f58495ea1f3d8f,
-    type: 2}
-  fadeFryingTime: 9
-  friendObject: {fileID: 0}
-  friendShockedClip: {fileID: 8300000, guid: 66208cdd38d534612a06edc46f0be5a3, type: 3}
-  startTimeFriendShocked: 16.5
-  animation4: {fileID: 0}
-  startTimeAnimation4: 19
-  scissorsFadesSnapshot: {fileID: 245625155681914558, guid: 65cc1c8c5b9f9472a9f58495ea1f3d8f,
-    type: 2}
-  fadeScissorsTime: 22
-  animation5: {fileID: 0}
-  startTimeAnimation5: 36
-  friendAgreedClip: {fileID: 8300000, guid: a4a310b3fb7b34b22bfd5c7350bf4607, type: 3}
-  startTimeFriendAgreed: 40
-  startTimeFadeOut: 44.8
-  endStorySnapshot: {fileID: 245307777762569424, guid: 65cc1c8c5b9f9472a9f58495ea1f3d8f,
-    type: 2}
-  transitionTimeFadeOut: 7
-  sceneName: The Master Scene
+  waitBeforeVoiceOver: 2
+  animation1: {fileID: 1043773487}
+  startTimeAnimation1: 20
+  animation2: {fileID: 1175400330}
+  startTimeAnimation2: 23
+  animation3: {fileID: 335409748}
+  startTimeAnimation3: 26
+  animation4: {fileID: 1539436621}
+  startTimeAnimation4: 30
+  startTimeFadeOut: 0
+  endStorySnapshot: {fileID: 24500006, guid: 65cc1c8c5b9f9472a9f58495ea1f3d8f, type: 2}
+  transitionTimeFadeOut: 3
+  sceneName: 
   gameObContainingScript: {fileID: 0}
 --- !u!4 &1848104502
 Transform:
@@ -1390,9 +1375,61 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1848104498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0922003, y: 1.7500001, z: -0.050000135}
+  m_LocalPosition: {x: -0.04, y: 3.11, z: -2.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1848104503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1848104498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1461815862, guid: 6fc5cdeb2b2664cd69b743656e623709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  occlusionWallMask:
+    serializedVersion: 2
+    m_Bits: 55
+  obstructionWallMask:
+    serializedVersion: 2
+    m_Bits: 55
+  occlusionRayUpdateTime: 1
+  obstructionRayUpdateTime: 1
+  audioSource: {fileID: 0}
+  clipIsPlaying: 0
+  gainLevel: 0
+  directLevel: 0
+  reflectionLevel: 0
+  reverbLevel: 0
+  azimuthCorrection: 1
+  distanceCorrection: 1
+  useUnityDistance: 0
+  auralization: 0
+  roomPreset: 40
+  internalReverb: 1
+  performanceMode: 0
+  dearVRPlayOnAwake: 0
+  bypass: 0
+  bypassPerformance: 0
+  reverbStopOverlap: 1
+  inputChannel: 0
+  reflectionLP: 20000
+  reverbLP: 20000
+  roomSize: 100
+  bassBoost: 0
+  occlusionLevel: 0.6
+  obsturctionLevel: 0.6
+  occlusionActiv: 0
+  obstructionActiv: 0
+  forceOcclusion: 0
+  forceObstruction: 0
+  occlusionDebugRayCast: 0
+  occlusionRayUpdateFreq: 0.2
+  obstructionRayUpdateFreq: 0.2
+  obstructionDebugRayCast: 0
+  reverbSends: []
