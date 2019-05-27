@@ -30,6 +30,10 @@ public class LiftSceneAudioManager : MonoBehaviour
     private bool liftHasStopped = false;
     private bool endOfClip1 = false;
 
+    public string sceneName;
+    private float fadeDuration = 1f;
+    private SteamVR_TrackedObject trackedObj;
+
     void Start()
     {
         StartCoroutine(playHelper());
@@ -59,7 +63,8 @@ public class LiftSceneAudioManager : MonoBehaviour
 
     void Update()
     {
-
+        Debug.Log(helperAudioSource.time);
+        Debug.Log(liftHasStopped);
         // Bring from another script if lift is moving or not
         if (gameObContainingScript)
         {
@@ -83,7 +88,6 @@ public class LiftSceneAudioManager : MonoBehaviour
         if (endOfClip1 == true && !clip1Played && !helper3isPlaying && liftHasStopped == true)
         {
             clip1Played = true;
-            Debug.Log("hello");
             elevatorSource1.clip = elevatorStopClip1;
             elevatorSource2.clip = elevatorStopClip2;
 
@@ -108,6 +112,20 @@ public class LiftSceneAudioManager : MonoBehaviour
             elevatorSource1.Play();
             elevatorSource2.Play();
         }
+        if (helperAudioSource.time >= 21.5f && liftHasStopped == true)
+        {
+            FadeToBlack();
+            SteamVR_LoadLevel.Begin(sceneName);
+        }
+    }
+
+    private void FadeToBlack()
+    {
+        //set start color
+        SteamVR_Fade.Start(Color.clear, 0f);
+        //set and start fade to
+        SteamVR_Fade.Start(Color.black, fadeDuration);
+
     }
 
     IEnumerator playHelper2()

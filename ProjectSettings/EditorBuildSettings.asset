@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/The Master Scene.unity
     guid: 00ae788ff9c304172a7b8657139655a8
+  - enabled: 1
+    path: Assets/Scenes/Start Scene.unity
+    guid: 8e614d387162c9a4787f049c3a83f292
+  - enabled: 1
+    path: Assets/Scenes/The Lift Scene.unity
+    guid: f19058fb978d7df449fc40362f8165c5
   m_configObjects: {}
