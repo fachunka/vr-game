@@ -150,17 +150,17 @@ public class limeStoryAudio : MonoBehaviour
 		    sound4Running = true;
 		}
 
-	    // if (voiceOverAudioSource.time >= startTimeAnimation5 && voiceOverAudioSource.time < (startTimeAnimation5 + 0.5) && sound5Running == false)
-		// {
-	    // 	animation5.SetActive(true);
-		//     sound5Running = true;
-		// }
+        // if (voiceOverAudioSource.time >= startTimeAnimation5 && voiceOverAudioSource.time < (startTimeAnimation5 + 0.5) && sound5Running == false)
+        // {
+        // 	animation5.SetActive(true);
+        //     sound5Running = true;
+        // }
 
-//		if (voiceOverAudioSource.time >= startTimeAnimation6 && voiceOverAudioSource.time < (startTimeAnimation6 + 0.5) && sound6Running == false)
-//		{
-//	    	animation6.SetActive(true);
-//		    sound6Running = true;
-//		}
+        //		if (voiceOverAudioSource.time >= startTimeAnimation6 && voiceOverAudioSource.time < (startTimeAnimation6 + 0.5) && sound6Running == false)
+        //		{
+        //	    	animation6.SetActive(true);
+        //		    sound6Running = true;
+        //		}
 
         // if (voiceOverAudioSource.time >= startTimeFriendAgreed && voiceOverAudioSource.time < (startTimeFriendAgreed + 0.5) && friendAgreedRunning == false)
         // {
@@ -171,18 +171,18 @@ public class limeStoryAudio : MonoBehaviour
         //     friendAudioSource.Play();
         // }
 
-//         if (voiceOverAudioSource.time >= fadeFryingTime && voiceOverAudioSource.time < (fadeFryingTime + 0.5) && fadeFryingRunning == false)
-//         {
-// //            fryingAudioSource = animation2.GetComponent<AudioSource>();
-// //            fryingAudioSource.volume = fryingVolume2;
-// 			fryingFadesSnapshot.TransitionTo(2.0f);
-//             fadeFryingRunning = true;
-//         }
+        //         if (voiceOverAudioSource.time >= fadeFryingTime && voiceOverAudioSource.time < (fadeFryingTime + 0.5) && fadeFryingRunning == false)
+        //         {
+        // //            fryingAudioSource = animation2.GetComponent<AudioSource>();
+        // //            fryingAudioSource.volume = fryingVolume2;
+        // 			fryingFadesSnapshot.TransitionTo(2.0f);
+        //             fadeFryingRunning = true;
+        //         }
 
         // if (voiceOverAudioSource.time >= fadeScissorsTime && voiceOverAudioSource.time < (fadeScissorsTime + 0.5))
-		// {
-		// 	scissorsFadesSnapshot.TransitionTo(3);
-		// }
+        // {
+        // 	scissorsFadesSnapshot.TransitionTo(3);
+        // }
 
         if (voiceOverAudioSource.time >= startTimeFadeOut && voiceOverAudioSource.time < (startTimeFadeOut + 0.5) && fadeOutRunning == false)
 		{

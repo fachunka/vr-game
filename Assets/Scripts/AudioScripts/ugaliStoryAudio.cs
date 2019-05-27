@@ -26,15 +26,15 @@ public class ugaliStoryAudio : MonoBehaviour
 	public AudioClip voiceOverClip;
 
 	public AudioMixerSnapshot fadeOutSnapshot;
-	public float fadeDownAt = 5.0f;    // storyscape audio fade down start time
-	public float fadeDownDuration = 5.0f;    // storyscape fade down duration
+	//public float fadeDownAt = 5.0f;    // storyscape audio fade down start time
+	//public float fadeDownDuration = 5.0f;    // storyscape fade down duration
 
 	public string sceneName;	// next scene
 	private float fadeDuration = 1f;
 //    private SteamVR_TrackedObject trackedObj;
 //    public GameObject gameObContainingScript;
 
-	public float sceneChangeAt = 10.0f;		// time to change the scene
+	public float sceneChangeAt;		// time to change the scene
 
 	public GameObject animation1;
 	public GameObject animation2;
@@ -72,13 +72,13 @@ public class ugaliStoryAudio : MonoBehaviour
 		rainSource3.loop = true;
 		rainSource3.Play();
 
-		yield return new WaitForSeconds(fadeDownAt);
-		fadeOutSnapshot.TransitionTo(fadeDownDuration);
+		//yield return new waitforseconds(fadedownat);
+		//fadeoutsnapshot.transitionto(fadedownduration);
 
-		yield return new WaitForSeconds(sceneChangeAt);
+		//yield return new waitforseconds(scenechangeat);
 
 		FadeToBlack();
-		yield return new WaitForSeconds(fadeDuration);
+		yield return new WaitForSeconds(sceneChangeAt);
         SteamVR_LoadLevel.Begin(sceneName);
 	}
 	
