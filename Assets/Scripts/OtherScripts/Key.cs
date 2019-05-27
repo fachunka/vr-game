@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    //public GameObject gameObContainingScript;
+    public GameObject gameObContainingScript;
     private int BoxKey;
+    private bool destroyed = false;
 
     void Start()
     {
@@ -17,15 +18,26 @@ public class Key : MonoBehaviour
         BoxKey = PlayerPrefs.GetInt("BoxKey");
 
 
-        //cutleryBox cutleryBox1Script = gameObContainingScript.GetComponent<cutleryBox>();
+        ControllerGrabObject deleteObjectInHand = gameObContainingScript.GetComponent<ControllerGrabObject>();
+
+        //Debug.Log(deleteObjectInHand.objectInHand);
+        //Debug.Log(deleteObjectInHand.collidingObject);
 
         if (BoxKey == 1)
         {
             print("Key destroyed?");
-
             Destroy(this.gameObject);
-
         }
+
+        //if (BoxKey == 1 && destroyed == false)
+        //{
+        //    destroyed = true;
+        //    deleteObjectInHand.objectInHand = null;
+        //    deleteObjectInHand.collidingObject = null;
+        //    deleteObjectInHand.onTriggerEnterActivated = false;
+        //    deleteObjectInHand.releasedObject = true;
+        //}
+
 
 
     }

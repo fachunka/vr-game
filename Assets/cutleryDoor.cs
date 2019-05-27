@@ -90,6 +90,7 @@ public class cutleryDoor : MonoBehaviour {
             PlayerPrefs.SetInt("LimedBox", 1);
             limed = true;
             print("collided lime");
+            //Destroy(other.gameObject);
 
         }
 
