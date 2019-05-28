@@ -5,8 +5,14 @@ using UnityEngine;
 //if ugali dish and bottle are placed on the table, show particle effect and elevator activates + remove outlines from the storyobject
 public class FreeElevatorLevel1 : MonoBehaviour
 {
-    bool ugaliTouching;
-    bool bottleTouching;
+    //private bool ugaliTouching = false;
+    //private bool bottleTouching = false;
+
+    //public bool freeAll = false;
+    //private bool playOnce = false;
+
+    private bool ugaliTouching;
+    private bool bottleTouching;
 
     public bool freeAll;
     private bool playOnce;
@@ -27,8 +33,8 @@ public class FreeElevatorLevel1 : MonoBehaviour
     {
         ugaliTouching = false;
         bottleTouching = false;
-        playOnce = false;
         freeAll = false;
+        playOnce = false;
     }
 
     // Update is called once per frame
@@ -50,13 +56,12 @@ public class FreeElevatorLevel1 : MonoBehaviour
         {
             playOnce = true;
             StartCoroutine(playHelper());
-
+            Debug.Log("hello");
 
         }
 
         if (helperAudioSource.time >= 15.5f && freeAll == true)
         {
-            Debug.Log("hello");
             FadeToBlack();
             SteamVR_LoadLevel.Begin(sceneName);
         }

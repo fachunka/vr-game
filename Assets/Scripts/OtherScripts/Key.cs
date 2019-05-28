@@ -25,8 +25,8 @@ public class Key : MonoBehaviour
 
         if (BoxKey == 1)
         {
-            print("Key destroyed?");
-            Destroy(this.gameObject);
+            //print("Key destroyed?");
+            //Destroy(this.gameObject);
         }
 
         //if (BoxKey == 1 && destroyed == false)

@@ -70,7 +70,7 @@ public class cutleryDoor : MonoBehaviour {
             //Instantiate(scissorsBox, scissorsPos, Quaternion.identity);
             //Instantiate(forkBox, scissorsPos, Quaternion.identity);
             //Instantiate(knifeBox, scissorsPos, Quaternion.identity);
-            print("limed");
+            //print("limed");
 
         }
     }
