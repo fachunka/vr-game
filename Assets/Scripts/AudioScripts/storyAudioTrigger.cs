@@ -8,9 +8,6 @@ public class storyAudioTrigger : MonoBehaviour
 	public AudioMixerSnapshot storySnapshot;
 	public float transitionTimeFadeIn = 1.5f;	// duration of fade in
 
-//    public GameObject animation0;
-//    public float waitBeforeAnimation0;
-
     public float waitBeforeVoiceOver;	// wait before starting the voice over clip
 
 	public GameObject animation1;	// bulgogi
@@ -43,9 +40,6 @@ public class storyAudioTrigger : MonoBehaviour
     public AudioClip friendAgreedClip;	// friend: "Aha!"
     public float startTimeFriendAgreed;
 
-//	public GameObject animation6;
-//	public float startTimeAnimation6;
-
 	public float startTimeFadeOut;	// story scene fade out starting time
 	public AudioMixerSnapshot endStorySnapshot;
 	public float transitionTimeFadeOut = 3.0f;	// duration of fade out
@@ -76,18 +70,15 @@ public class storyAudioTrigger : MonoBehaviour
 
     void Start()
     {
-//		animation0.SetActive(false);
 		animation1.SetActive(false);
 		animation2.SetActive(false);
 		animation3.SetActive(false);
 		friendObject.SetActive(false);
 		animation4.SetActive(false);
 		animation5.SetActive(false);
-//		animation6.SetActive(false);
 
 		storySnapshot.TransitionTo(transitionTimeFadeIn);
 
-//        StartCoroutine(playAnimation1());
 		StartCoroutine(playVoiceOver());
 
 	}
@@ -156,12 +147,6 @@ public class storyAudioTrigger : MonoBehaviour
 		    sound5Running = true;
 		}
 
-//		if (voiceOverAudioSource.time >= startTimeAnimation6 && voiceOverAudioSource.time < (startTimeAnimation6 + 0.5) && sound6Running == false)
-//		{
-//	    	animation6.SetActive(true);
-//		    sound6Running = true;
-//		}
-
         if (voiceOverAudioSource.time >= startTimeFriendAgreed && voiceOverAudioSource.time < (startTimeFriendAgreed + 0.5) && friendAgreedRunning == false)
         {
             friendObject.SetActive(true);
@@ -173,8 +158,6 @@ public class storyAudioTrigger : MonoBehaviour
 
         if (voiceOverAudioSource.time >= fadeFryingTime && voiceOverAudioSource.time < (fadeFryingTime + 0.5) && fadeFryingRunning == false)
         {
-//            fryingAudioSource = animation2.GetComponent<AudioSource>();
-//            fryingAudioSource.volume = fryingVolume2;
 			fryingFadesSnapshot.TransitionTo(2.0f);
             fadeFryingRunning = true;
         }

@@ -35,7 +35,7 @@ AudioMixerController:
     - 9073537b253376e43abe5d897be16f8a
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 245787217528966168}
+  m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -715,7 +715,7 @@ AudioMixerSnapshotController:
     92f88ac650c584815a9a9dcdfcafca8e: 30
     9eca49d64f7f7465e8e4e130f338559c: -80
     5bdfddf65db6341678574368e111d622: 0
-    de432038cc99a9941894d4b7e38a4ddc: -6.133707
+    de432038cc99a9941894d4b7e38a4ddc: -5.7224793
     b67b4279c6c47444c8977c44dfd21714: 2
     35841fe9bd0064e0b9bc2fe097b323ba: 0
     ccee668a243ca46af9ec5354c883f830: 30
