@@ -33,7 +33,7 @@ public class destructionController : MonoBehaviour
         //if time has changed 3seconds, instantiate meatchunk
         if (touchingScissors == true)
         {
-            if (Time.fixedTime - currentTime >= 3 && currentTime > 0)
+            if (Time.fixedTime - currentTime >= 1 && currentTime > 0)
             {
                 print("breaking meat");
                 Instantiate(remains, transform.position, transform.rotation);

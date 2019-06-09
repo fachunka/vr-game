@@ -6,6 +6,7 @@ using UnityEngine;
 public class ReplaceUgali : MonoBehaviour
 {
     public GameObject gameObContainingScript;
+    public GameObject gameObContainingScriptTwo;
     public GameObject Ugali;
     public GameObject StoveUgaliDish;
 
@@ -41,36 +42,46 @@ public class ReplaceUgali : MonoBehaviour
     {
         StoveCollision StoveCollisionScript = gameObContainingScript.GetComponent<StoveCollision>();
 
-        //if gamecontroller collider with button
-        if (other.gameObject.tag == "GameController")
-        {
-            buttonPressed = true;
+        ControllerGrabObject triggerDownScript = gameObContainingScriptTwo.GetComponent<ControllerGrabObject>();
 
-            print("button clicked");
-        //print(StoveCollisionScript.ingredientsCollided);
+        //if trigger down
 
-            //if all the ingredients are colliding with stove
-            if (StoveCollisionScript.ingredientsCollided == true)
+        //if (triggerDownScript.triggerDown == true)
+        //{
+            Debug.Log("Trigger alhaalla");
+        
+            //if gamecontroller collider with button
+            if (other.gameObject.tag == "GameController")
             {
-                print("true?");
-                //if hands were not touching the button before(to prevent clicking button several times once)
+                buttonPressed = true;
+
+                print("button clicked");
+                //print(StoveCollisionScript.ingredientsCollided);
+
+                //if all the ingredients are colliding with stove
+                if (StoveCollisionScript.ingredientsCollided == true)
+                {
+                    print("true?");
+                    //if hands were not touching the button before(to prevent clicking button several times once)
+                    if (handNotTouchedButtonBefore == true)
+                    {
+                        print("replacing with Uganda dish");
+                        replaceObjects = true;
+                        StoveCollisionScript.ingredientsCollided = false;
+
+                        handNotTouchedButtonBefore = false;
+                    }
+                }
+
+                //------------------------------------------------------------------
+                //if button clicked but 3 ingredients don't match, delete them all
                 if (handNotTouchedButtonBefore == true)
                 {
-                    print("replacing with Uganda dish");
-                    replaceObjects = true;
-                    StoveCollisionScript.ingredientsCollided = false;
-
                     handNotTouchedButtonBefore = false;
                 }
             }
-
-            //------------------------------------------------------------------
-            //if button clicked but 3 ingredients don't match, delete them all
-            if (handNotTouchedButtonBefore == true)
-            {
-                handNotTouchedButtonBefore = false;
-            }
-        }
+        //}
+        
     }
 
     private void OnTriggerExit(Collider other)
