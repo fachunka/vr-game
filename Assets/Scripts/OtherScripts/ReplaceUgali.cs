@@ -22,7 +22,7 @@ public class ReplaceUgali : MonoBehaviour
     {
         replaceObjects = false;
         handNotTouchedButtonBefore = true;
-        UgaliPosition = new Vector3(0.1f, 0.3f, -0.5f);
+        UgaliPosition = new Vector3(-0.1f, 0.1f, -0.5f);
 
         buttonPressed = false;
     }

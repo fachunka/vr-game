@@ -6,14 +6,14 @@ public class cutleryDoor : MonoBehaviour {
 
 
     //key variables
-    public bool keyed = false;
+    public bool keyed = true;
     public GameObject toReplace;
     private Vector3 slightlyOpenPos;
-    private int BoxKey = 0;
+    private int BoxKey = 1;
 
     //lime variables
     private bool limed = false;
-    private bool slightlyOpen = false;
+    private bool slightlyOpen = true;
     private int LimedBox = 0;
     //public GameObject scissorsBox;
     //public GameObject knifeBox;
