@@ -5,9 +5,6 @@ using UnityEngine.Audio;
 
 public class ugaliStoryAudio : MonoBehaviour
 {
-	public AudioMixerSnapshot storyAudioSnapshot;
-	public float fadeInDuration = 1.5f;		// duration of fade in
-
 	public AudioSource thunderSource;
 	public AudioClip thunderClip;
 
@@ -25,9 +22,10 @@ public class ugaliStoryAudio : MonoBehaviour
 	public AudioSource voiceOverSource;
 	public AudioClip voiceOverClip;
 
+	private float volume = 1.0f;
+
 	public float startTimeFadeOut;	// story scene fade out starting time
-	public AudioMixerSnapshot endStorySnapshot;
-	public float transitionTimeFadeOut = 3.0f;	// duration of fade out
+	public float fadeOutTime = 3.0f;	// duration of fade out
 
 
 	public string sceneName;	// next scene
@@ -43,6 +41,8 @@ public class ugaliStoryAudio : MonoBehaviour
 
     private bool fadeOutRunning = false;
 
+	public AudioClip exitStorySceneClip;
+
 
     void Start()
     {
@@ -54,7 +54,6 @@ public class ugaliStoryAudio : MonoBehaviour
 		thunderSource.Play();
 
 		StartCoroutine(playRain());
-		storyAudioSnapshot.TransitionTo(fadeInDuration);
 
 		StartCoroutine(playVoiceOver());
 	}
@@ -74,9 +73,7 @@ public class ugaliStoryAudio : MonoBehaviour
 		rainSource3.Play();
 
 		yield return new WaitForSeconds(startTimeFadeOut);
-		endStorySnapshot.TransitionTo(transitionTimeFadeOut);
-		FadeToBlack();
-        SteamVR_LoadLevel.Begin(sceneName);
+		StartCoroutine(fadeOut());
 	}
 	
 	IEnumerator playVoiceOver()
@@ -86,6 +83,37 @@ public class ugaliStoryAudio : MonoBehaviour
 		voiceOverSource.loop = false;
 		voiceOverSource.Play();
 	}
+
+  IEnumerator fadeOut()
+    {
+        while (volume > 0.0f)
+        {
+            volume -= Time.deltaTime / fadeOutTime;
+            rainSource1.volume = volume;
+            rainSource2.volume = volume;
+            rainSource3.volume = volume;
+			voiceOverSource.volume = volume;
+            yield return new WaitForSeconds(0);
+        }
+
+        rainSource1.volume = 0.0f;
+        rainSource2.volume = 0.0f;
+        rainSource3.volume = 0.0f;
+		voiceOverSource.volume = 0.0f;
+
+        rainSource1.Stop();
+        rainSource2.Stop();
+        rainSource3.Stop();
+		voiceOverSource.Stop();
+
+		FadeToBlack();
+
+		AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+		audioSource.clip = exitStorySceneClip;
+		audioSource.Play();
+
+        SteamVR_LoadLevel.Begin(sceneName);
+    }
 
 	void Update ()
 	{

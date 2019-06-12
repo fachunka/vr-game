@@ -5,8 +5,7 @@ using UnityEngine.Audio;
 
 public class storyAudioTrigger : MonoBehaviour
 {
-	public AudioMixerSnapshot storySnapshot;
-	public float transitionTimeFadeIn = 1.5f;	// duration of fade in
+	public float fadeInTime = 1.5f;	// duration of fade in
 
     public float waitBeforeVoiceOver;	// wait before starting the voice over clip
 
@@ -15,13 +14,13 @@ public class storyAudioTrigger : MonoBehaviour
 
 	public GameObject animation2;	// frying pan
 	public float startTimeAnimation2;
-	public AudioMixerSnapshot fryingStartsSnapshot;
 
 	public GameObject animation3;	// cutting the meat
 	public float startTimeAnimation3;
 
-	public AudioMixerSnapshot fryingFadesSnapshot;	// frying fades to the background
     public float fadeFryingTime;
+	public float fryingVolume = 0.45f;
+	public float fryingEndVolume = 0.1f;
 
 	public GameObject friendObject;		// friend: "What?"
     public AudioClip friendShockedClip;
@@ -29,9 +28,6 @@ public class storyAudioTrigger : MonoBehaviour
 
 	public GameObject animation4;	// scissor
 	public float startTimeAnimation4;
-
-	public AudioMixerSnapshot scissorsFadesSnapshot;	// scissors fade to the background
-    public float fadeScissorsTime;
 
 	public GameObject animation5;	// Korean BBQ
 	public float startTimeAnimation5;
@@ -41,8 +37,11 @@ public class storyAudioTrigger : MonoBehaviour
     public float startTimeFriendAgreed;
 
 	public float startTimeFadeOut;	// story scene fade out starting time
-	public AudioMixerSnapshot endStorySnapshot;
-	public float transitionTimeFadeOut = 3.0f;	// duration of fade out
+	public float fadeOutTime = 3.0f;	// duration of fade out
+
+	private GameObject party1;
+	private GameObject party2;
+	private GameObject party3;
 
 
 	private bool animation0Running = false;
@@ -61,6 +60,14 @@ public class storyAudioTrigger : MonoBehaviour
     AudioSource voiceOverAudioSource;
     AudioSource fryingAudioSource;
     AudioSource friendAudioSource;
+    AudioSource cuttingAudioSource;
+
+	AudioSource party1Source;
+	AudioSource party2Source;
+	AudioSource party3Source;
+
+	public AudioClip exitStorySceneClip;
+
 
     //change scene
     public string sceneName;
@@ -68,8 +75,14 @@ public class storyAudioTrigger : MonoBehaviour
     private SteamVR_TrackedObject trackedObj;
     public GameObject gameObContainingScript;
 
+	private float partyVolume = 0.0f;
+    private float MaxVol = 1.0f;
+
+	private float cuttingVolume = 1.0f;
+
     void Start()
     {
+
 		animation1.SetActive(false);
 		animation2.SetActive(false);
 		animation3.SetActive(false);
@@ -77,7 +90,18 @@ public class storyAudioTrigger : MonoBehaviour
 		animation4.SetActive(false);
 		animation5.SetActive(false);
 
-		storySnapshot.TransitionTo(transitionTimeFadeIn);
+		party1 = GameObject.Find("PartyAudio1");
+		party2 = GameObject.Find("PartyAudio2");
+		party3 = GameObject.Find("PartyAudio3");
+
+		party1Source = party1.GetComponent<AudioSource>();
+		party2Source = party2.GetComponent<AudioSource>();
+		party3Source = party3.GetComponent<AudioSource>();
+
+		fryingAudioSource = animation2.GetComponent<AudioSource>();
+		cuttingAudioSource = animation4.GetComponent<AudioSource>();
+
+		StartCoroutine(fadeIn());
 
 		StartCoroutine(playVoiceOver());
 
@@ -93,13 +117,83 @@ public class storyAudioTrigger : MonoBehaviour
 
 	*/
 
+    IEnumerator fadeIn()
+    {
+        while (partyVolume < MaxVol)
+        {
+            partyVolume += Time.deltaTime / fadeInTime;
+			party1Source.volume = partyVolume;
+			party2Source.volume = partyVolume;
+			party3Source.volume = partyVolume;
+            yield return new WaitForSeconds(0);
+        }
+    }
+
+
     IEnumerator playVoiceOver()
 	{
   	    voiceOverAudioSource = GetComponent<AudioSource>();
 		yield return new WaitForSeconds(waitBeforeVoiceOver);
 		voiceOverAudioSource.Play();
-		print("play");
 		yield return new WaitForSeconds(0);
+	}
+
+IEnumerator fadeFrying()
+    {
+        while (fryingVolume > fryingEndVolume)
+        {
+            fryingVolume -= Time.deltaTime / fadeFryingTime;
+            fryingAudioSource.volume = fryingVolume;
+            yield return new WaitForSeconds(0);
+        }
+    }
+
+IEnumerator fadeOutParty()
+    {
+        while (partyVolume > 0.0f)
+        {
+            partyVolume -= Time.deltaTime / fadeOutTime;
+			party1Source.volume = partyVolume;
+			party2Source.volume = partyVolume;
+			party3Source.volume = partyVolume;
+            yield return new WaitForSeconds(0);
+        }
+
+        party1Source.Stop();
+        party2Source.Stop();
+        party3Source.Stop();
+
+		FadeToBlack();
+
+		AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+		audioSource.clip = exitStorySceneClip;
+		audioSource.Play();
+
+        SteamVR_LoadLevel.Begin(sceneName);
+    }
+
+IEnumerator fadeOutFrying()
+    {
+        while (fryingVolume > 0.0f)
+        {
+            fryingVolume -= Time.deltaTime / fadeOutTime;
+			fryingAudioSource.volume = fryingVolume;
+            yield return new WaitForSeconds(0);
+        }
+
+        fryingAudioSource.Stop();
+    }
+
+IEnumerator fadeOutCutting()
+	{
+		while (cuttingVolume > 0.0f)
+		{
+			cuttingVolume -= Time.deltaTime / fadeOutTime;
+			cuttingAudioSource.volume = cuttingVolume;
+			yield return new WaitForSeconds(0);
+		}
+
+		cuttingAudioSource.Stop();
 	}
 
 
@@ -117,7 +211,8 @@ public class storyAudioTrigger : MonoBehaviour
 		{
 		    animation2.SetActive(true);
 		    sound2Running = true;
-			fryingStartsSnapshot.TransitionTo(4.0f);
+			StartCoroutine(fadeFrying());
+
 		}
 
 	    if (voiceOverAudioSource.time >= startTimeAnimation3 && voiceOverAudioSource.time < (startTimeAnimation3 + 0.5) && sound3Running == false)
@@ -158,21 +253,19 @@ public class storyAudioTrigger : MonoBehaviour
 
         if (voiceOverAudioSource.time >= fadeFryingTime && voiceOverAudioSource.time < (fadeFryingTime + 0.5) && fadeFryingRunning == false)
         {
-			fryingFadesSnapshot.TransitionTo(2.0f);
             fadeFryingRunning = true;
         }
 
-        if (voiceOverAudioSource.time >= fadeScissorsTime && voiceOverAudioSource.time < (fadeScissorsTime + 0.5))
-		{
-			scissorsFadesSnapshot.TransitionTo(3);
-		}
 
         if (voiceOverAudioSource.time >= startTimeFadeOut && voiceOverAudioSource.time < (startTimeFadeOut + 0.5) && fadeOutRunning == false)
 		{
-			endStorySnapshot.TransitionTo(transitionTimeFadeOut);
+			StartCoroutine(fadeOutParty());
+			StartCoroutine(fadeOutFrying());
+			StartCoroutine(fadeOutCutting());
+			// endStorySnapshot.TransitionTo(transitionTimeFadeOut);
             fadeOutRunning = true;
-            FadeToBlack();
-            SteamVR_LoadLevel.Begin(sceneName);
+            // FadeToBlack();
+            // SteamVR_LoadLevel.Begin(sceneName);
         }
 	}
 
