@@ -22,7 +22,7 @@ public class ugaliStoryAudio : MonoBehaviour
 	public AudioSource voiceOverSource;
 	public AudioClip voiceOverClip;
 
-	private float volume = 1.0f;
+	private float volume = 0.8f;
 
 	public float startTimeFadeOut;	// story scene fade out starting time
 	public float fadeOutTime = 3.0f;	// duration of fade out
@@ -84,6 +84,7 @@ public class ugaliStoryAudio : MonoBehaviour
 		voiceOverSource.Play();
 	}
 
+
   IEnumerator fadeOut()
     {
         while (volume > 0.0f)
@@ -117,6 +118,7 @@ public class ugaliStoryAudio : MonoBehaviour
 
 	void Update ()
 	{
+
 		if (voiceOverSource.time >= showAnimation1 && voiceOverSource.time < (showAnimation1 + 0.5))
 		{
 			animation1.SetActive(true);

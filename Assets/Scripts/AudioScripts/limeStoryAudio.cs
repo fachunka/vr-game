@@ -5,9 +5,6 @@ using UnityEngine.Audio;
 
 public class limeStoryAudio : MonoBehaviour
 {
-	public AudioMixerSnapshot storySnapshot;
-	public float transitionTimeFadeIn = 1.5f;	// duration of fade in
-
     public float waitBeforeVoiceOver;	// wait before starting the voice over clip
 
 	public GameObject animation1;
@@ -23,8 +20,7 @@ public class limeStoryAudio : MonoBehaviour
 	public float startTimeAnimation4;
 
 	public float startTimeFadeOut;	// story scene fade out starting time
-	public AudioMixerSnapshot endStorySnapshot;
-	public float transitionTimeFadeOut = 3.0f;	// duration of fade out
+	public float fadeOutTime = 3.0f;	// duration of fade out
 
 
 	private bool animation0Running = false;
@@ -39,14 +35,24 @@ public class limeStoryAudio : MonoBehaviour
     private bool fadeOutRunning = false;
     private bool fadeFryingRunning = false;
 
+	GameObject trafficObject;
+	GameObject radioObject;	
 
     AudioSource voiceOverAudioSource;
+	AudioSource trafficSource;
+	AudioSource radioSource;
+
+	private float volume = 1.0f;
+
+	public AudioClip exitStorySceneClip;
 
     //change scene
     public string sceneName;
     private float fadeDuration = 1f;
     private SteamVR_TrackedObject trackedObj;
     public GameObject gameObContainingScript;
+
+
 
     void Start()
     {
@@ -55,9 +61,13 @@ public class limeStoryAudio : MonoBehaviour
 		animation3.SetActive(false);
 		animation4.SetActive(false);
 
-		storySnapshot.TransitionTo(transitionTimeFadeIn);
-
 		StartCoroutine(playVoiceOver());
+
+		trafficObject = GameObject.Find("TrafficAudio");
+		radioObject = GameObject.Find("RadioAudio");
+
+		trafficSource = trafficObject.GetComponent<AudioSource>();
+		radioSource = radioObject.GetComponent<AudioSource>();
 
 	}
 
@@ -68,11 +78,34 @@ public class limeStoryAudio : MonoBehaviour
 		voiceOverAudioSource.Play();
 
 		yield return new WaitForSeconds(startTimeFadeOut);
-		endStorySnapshot.TransitionTo(transitionTimeFadeOut);
-		FadeToBlack();
-        SteamVR_LoadLevel.Begin(sceneName);
+
+		StartCoroutine(fadeOut());
 	}
 
+	IEnumerator fadeOut()
+	{
+        while (volume > 0.0f)
+        {
+            volume -= Time.deltaTime / fadeOutTime;
+            trafficSource.volume = volume;
+            radioSource.volume = volume;
+            yield return new WaitForSeconds(0);
+        }
+
+        trafficSource.volume = 0.0f;
+        radioSource.volume = 0.0f;
+
+        trafficSource.Stop();
+        radioSource.Stop();
+
+		FadeToBlack();
+
+		AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+		audioSource.clip = exitStorySceneClip;
+		audioSource.Play();
+
+        SteamVR_LoadLevel.Begin(sceneName);
+	}
 
     void Update()
     {
