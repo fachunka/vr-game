@@ -8,8 +8,12 @@ public class blink_cornmeal : MonoBehaviour
 
     public bool turnOnBlinkButton;
 
+    public AudioClip greenBeep;
+    public AudioClip redBeep;
+    
     private AudioSource audioSource;
-    private bool beepPlaying = false;
+    private bool greenBeepPlaying = false;
+    private bool redBeepPlaying = false;
 
     void Start()
     {
@@ -25,27 +29,41 @@ public class blink_cornmeal : MonoBehaviour
         if (turnOnBlinkButton == true)
         {
 
-                material.EnableKeyword("_EMISSION");
-                //material.SetColor("_EmissionColor", Color.green);
-                playBeep();
-
+            material.EnableKeyword("_EMISSION");
+            //material.SetColor("_EmissionColor", Color.green);
+            playGreenBeep();
+            redBeepPlaying = false;
         }
         else if (turnOnBlinkButton == false)
         {
             material.DisableKeyword("_EMISSION");
             //material.SetColor("_EmissionColor", Color.green);
-            playBeep();
+            playRedBeep();
+            greenBeepPlaying = false;
         }
     }
 
-    void playBeep()
+    void playGreenBeep()
     {
-        if (beepPlaying == false)
+        if (greenBeepPlaying == false)
         {
             audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.clip = greenBeep;
             audioSource.loop = false;
             audioSource.Play();
-            beepPlaying = true;
+            greenBeepPlaying = true;
+        }
+    }
+
+    void playRedBeep()
+    {
+        if (redBeepPlaying == false)
+        {
+            audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.clip = redBeep;
+            audioSource.loop = false;
+            audioSource.Play();
+            redBeepPlaying = true;
         }
     }
 }

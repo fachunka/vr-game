@@ -8,8 +8,12 @@ public class blink_chicken : MonoBehaviour
 
     public bool turnOnBlinkButton;
 
+    public AudioClip greenBeep;
+    public AudioClip redBeep;
+    
     private AudioSource audioSource;
-    private bool beepPlaying = false;
+    private bool greenBeepPlaying = false;
+    private bool redBeepPlaying = false;
 
     void Start()
     {
@@ -25,26 +29,42 @@ public class blink_chicken : MonoBehaviour
         if (turnOnBlinkButton == true)
         {
 
-                material.EnableKeyword("_EMISSION");
-                //material.SetColor("_EmissionColor", Color.green);
-                playBeep();
+            material.EnableKeyword("_EMISSION");
+            //material.SetColor("_EmissionColor", Color.green);
+            playGreenBeep();
+            redBeepPlaying = false;
         }
         else if (turnOnBlinkButton == false)
         {
             material.DisableKeyword("_EMISSION");
             //material.SetColor("_EmissionColor", Color.green);
-            playBeep();
+            playRedBeep();
+            greenBeepPlaying = false;
+        }
+
+    }
+
+    void playGreenBeep()
+    {
+        if (greenBeepPlaying == false)
+        {
+            audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.clip = greenBeep;
+            audioSource.loop = false;
+            audioSource.Play();
+            greenBeepPlaying = true;
         }
     }
 
-    void playBeep()
+    void playRedBeep()
     {
-        if (beepPlaying == false)
+        if (redBeepPlaying == false)
         {
             audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.clip = redBeep;
             audioSource.loop = false;
             audioSource.Play();
-            beepPlaying = true;
+            redBeepPlaying = true;
         }
     }
 }
