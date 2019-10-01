@@ -54,7 +54,7 @@ public class StartStoryAudio : MonoBehaviour
     {
         Debug.Log(videoAudioSource.time);
         FadeToBlack();
-        SteamVR_LoadLevel.Begin(sceneName);
+        //SteamVR_LoadLevel.Begin(sceneName);
 
         if (videoAudioSource.time >= startTimeAnimation2)
         {
@@ -77,7 +77,7 @@ public class StartStoryAudio : MonoBehaviour
             animation4.SetActive(false);
             animation5.SetActive(true);
         }
-        if (videoAudioSource.time >= videoAudioSource.clip.length)
+        if (videoAudioSource.time >= (videoAudioSource.clip.length - 0.5))
         {
             FadeToBlack();
             SteamVR_LoadLevel.Begin(sceneName);

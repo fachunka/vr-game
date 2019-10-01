@@ -63,8 +63,8 @@ public class LiftSceneAudioManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(helperAudioSource.time);
-        Debug.Log(liftHasStopped);
+        //Debug.Log(helperAudioSource.time);
+        //Debug.Log(liftHasStopped);
         // Bring from another script if lift is moving or not
         if (gameObContainingScript)
         {
@@ -80,9 +80,10 @@ public class LiftSceneAudioManager : MonoBehaviour
         }
 
         // Change boolean when audio clip is played
-        if (helperAudioSource.time >= helperAudioSource.clip.length) {
+        if (helperAudioSource.time >= (helperAudioSource.clip.length - 0.5)) {
             endOfClip1 = true;
         }
+
 
         // Play the second audio clip
         if (endOfClip1 == true && !clip1Played && !helper3isPlaying && liftHasStopped == true)
