@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: mp_plant_v1
-  m_Shader: {fileID: 4800000, guid: 5936b55f6f6324284ba5b0c8970c56d4, type: 3}
+  m_Shader: {fileID: 4800000, guid: d84268709d11078d11005b9844295342, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -85,5 +85,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.7169812, g: 0.64583737, b: 0.4362763, a: 1}
+    - _Color: {r: 0.21763112, g: 0.3490566, b: 0.103729084, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

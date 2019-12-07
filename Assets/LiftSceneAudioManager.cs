@@ -80,10 +80,10 @@ public class LiftSceneAudioManager : MonoBehaviour
         }
 
         // Change boolean when audio clip is played
-        if (helperAudioSource.time >= (helperAudioSource.clip.length - 0.5)) {
+        if (helperAudioSource.time >= (helperAudioSource.clip.length - 0.5))
+        {
             endOfClip1 = true;
         }
-
 
         // Play the second audio clip
         if (endOfClip1 == true && !clip1Played && !helper3isPlaying && liftHasStopped == true)
