@@ -6,14 +6,14 @@ public class cutleryDoor : MonoBehaviour {
 
 
     //key variables
-    public bool keyed = true;
+    public bool keyed = false;
     public GameObject toReplace;
     private Vector3 slightlyOpenPos;
-    private int BoxKey = 1;
+    private int BoxKey = 0;
 
     //lime variables
     private bool limed = false;
-    private bool slightlyOpen = true;
+    private bool slightlyOpen = false;
     private int LimedBox = 0;
     //public GameObject scissorsBox;
     //public GameObject knifeBox;
@@ -24,8 +24,8 @@ public class cutleryDoor : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -80,9 +80,10 @@ public class cutleryDoor : MonoBehaviour {
     {
         if (other.gameObject.tag == "Key")
         {
-            //keyed = true;
+            keyed = true;
             PlayerPrefs.SetInt("BoxKey", 1);
             print("collided key");
+
         }
 
         if (other.gameObject.tag == "Lime")

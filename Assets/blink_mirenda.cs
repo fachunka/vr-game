@@ -19,7 +19,7 @@ public class blink_mirenda : MonoBehaviour
     {
         turnOnBlinkButton = false;
         material.DisableKeyword("_EMISSION");
-        //material.SetColor("_EmissionColor", Color.red);
+        material.SetColor("_EmissionColor", Color.red);
 
     }
 
@@ -29,14 +29,14 @@ public class blink_mirenda : MonoBehaviour
         if (turnOnBlinkButton == true)
         {
             material.EnableKeyword("_EMISSION");
-            //material.SetColor("_EmissionColor", Color.green);
+            material.SetColor("_EmissionColor", Color.green);
             playGreenBeep();
             redBeepPlaying = false;
         }
         else if (turnOnBlinkButton == false)
         {
             material.DisableKeyword("_EMISSION");
-            //material.SetColor("_EmissionColor", Color.green);
+            material.SetColor("_EmissionColor", Color.green);
             playRedBeep();
             greenBeepPlaying = false;
         }

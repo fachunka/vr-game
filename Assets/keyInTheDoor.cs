@@ -11,7 +11,7 @@ public class keyInTheDoor : MonoBehaviour {
     void Start () {
 
         rend = GetComponent<Renderer>();
-        rend.enabled = true;
+        rend.enabled = false;
 
     }
 	

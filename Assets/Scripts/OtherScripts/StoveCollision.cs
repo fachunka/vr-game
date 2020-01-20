@@ -45,7 +45,7 @@ public class StoveCollision : MonoBehaviour
 
         BlinkButton BlinkButtonScript = gameObContainingScript.GetComponent<BlinkButton>();
 
-         blink_chicken ChickenButtonScript = gameObLightupChicken.GetComponent<blink_chicken>();
+        blink_chicken ChickenButtonScript = gameObLightupChicken.GetComponent<blink_chicken>();
         blink_mirenda MirendaButtonScript = gameObLightupMirenda.GetComponent<blink_mirenda>();
         blink_cornmeal CornmealButtonScript = gameObLightupCornmeal.GetComponent<blink_cornmeal>();
 
@@ -72,7 +72,7 @@ public class StoveCollision : MonoBehaviour
         else if (chickenTouching == false)
         {
             ChickenButtonScript.turnOnBlinkButton = false;
-            ChickenButtonScript.material.DisableKeyword("_EMISSION");
+            //ChickenButtonScript.material.DisableKeyword("_EMISSION");
         }
 
         if (cornmealTouching == true)
